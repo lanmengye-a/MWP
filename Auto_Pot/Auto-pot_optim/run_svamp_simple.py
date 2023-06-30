@@ -27,12 +27,22 @@ def get_rationales(args, question,few_prompt=None):
 import math
 import numpy as np
 # Question {question}
-# Principles for solutions
-# Firstly , we can define the variables and assign them with every number in Question
-# Secondly, variables' name binds the number's semantics in Question
-# Thirdly, the quantity of numbers is equal with the quantity of numbers in Question
-# Fourthly, Each equation only uses previously introduced variables instead of the number itself
-# Finally, store the result as a 'ans' variable
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 """
     if args.dry_run:
         print(full_prompt)
