@@ -1,0 +1,11 @@
+ python random_run_gpt3.py \
+ --label svampexpFormula_WoPG \
+ --ckpt_root ../checkpoints \
+ --model gpt3_rl_formulaWoPG \
+ --test_split test \
+ --shot_number 2 \
+ --prompt_format TQ-SA \
+ --seed 888 \
+ --cand_number 20 \
+ --embedding_size 128 \
+ --gpu 0

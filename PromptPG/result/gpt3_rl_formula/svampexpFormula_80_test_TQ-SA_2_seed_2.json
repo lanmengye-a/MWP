@@ -1,0 +1,2862 @@
+{
+  "acc": 71.0,
+  "correct": 71,
+  "count": 100,
+  "cand_pids": [
+    1921,
+    1924,
+    1472,
+    1359,
+    1581,
+    1743,
+    1942,
+    1570,
+    1741,
+    1467,
+    1498,
+    1674,
+    1227,
+    1963,
+    1332,
+    1834,
+    1716,
+    1855,
+    1170,
+    1897
+  ],
+  "args": {
+    "data_root": "../data/svamp",
+    "output_root": "results",
+    "model": "gpt3_rl_formula",
+    "option_inds": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F"
+    ],
+    "label": "svampexpFormula_80",
+    "test_split": "test",
+    "test_number": 100,
+    "save_every": 10,
+    "debug": false,
+    "prompt_format": "TQ-SA",
+    "shot_number": 2,
+    "seed": 2,
+    "engine": "text-davinci-002",
+    "temperature": 0.0,
+    "max_tokens": 512,
+    "top_p": 1.0,
+    "frequency_penalty": 0.0,
+    "presence_penalty": 0.0,
+    "gpu": "0",
+    "model_config": "bert-base-uncased",
+    "cand_number": 20,
+    "embedding_size": 128,
+    "ckpt_root": "../checkpoints",
+    "ckpt": "svampexpFormula_80/ckpt_best_reward.pt"
+  },
+  "results": {
+    "978": {
+      "Question": "Rebecca wants to split a collection of eggs into groups of number0. Rebecca has number1 marbles and number2 eggs.How many more eggs does Rebecca have than marbles?",
+      "shot_pids": [
+        1227,
+        1897
+      ],
+      "Numbers": "20.0 5.0 12.0",
+      "infixEquation": "(number2-number1)",
+      "Answer": "7",
+      "rawEquation": "Answer = (number2-number1).",
+      "infixEquationPre": "(c-b)",
+      "prediction": "7",
+      "true_false": true
+    },
+    "883": {
+      "Question": "There were number0 dollars in Olivia's wallet. She collected number1 more dollars from an atm. After she visited a supermarket there were number2 dollars left.How much more money did she spend at the supermarket than she collected at the atm?",
+      "shot_pids": [
+        1227,
+        1942
+      ],
+      "Numbers": "53.0 91.0 14.0",
+      "infixEquation": "(number0-number2)",
+      "Answer": "39",
+      "rawEquation": "Answer = ((number0+number1)-number2).",
+      "infixEquationPre": "((a+b)-c)",
+      "prediction": "130",
+      "true_false": false
+    },
+    "970": {
+      "Question": "There are number0 skittles in Steven's skittles collection. Steven also has number1 erasers. If the skittles and erasers are organized into number2 groupsHow big is each group?",
+      "shot_pids": [
+        1897,
+        1227
+      ],
+      "Numbers": "4502.0 4276.0 154.0",
+      "infixEquation": "((number0+number1)/number2)",
+      "Answer": "57",
+      "rawEquation": "Answer = (number0+number1)/number2.",
+      "infixEquationPre": "(a+b)",
+      "prediction": "8778",
+      "true_false": false
+    },
+    "869": {
+      "Question": "In Haley's class number0 boys love to play marbles and number1 boys love to play cards. If Haley has number2 marblesHow many will each of the boys receive?",
+      "shot_pids": [
+        1897,
+        1227
+      ],
+      "Numbers": "13.0 50.0 26.0",
+      "infixEquation": "(number2/number0)",
+      "Answer": "2",
+      "rawEquation": "Answer = ((number0+number1)*number2)/(number0+",
+      "infixEquationPre": "((a+b)*c)",
+      "prediction": "1638",
+      "true_false": false
+    },
+    "57": {
+      "Question": "Winter is almost here and most animals are migrating to warmer countries. There were number0 bird families living near the mountain. If number1 bird families flew away for winterHow many more bird families flew away for the winter than those that stayed behind?",
+      "shot_pids": [
+        1942,
+        1855
+      ],
+      "Numbers": "89.0 60.0",
+      "infixEquation": "(number1-(number0-number1))",
+      "Answer": "31",
+      "rawEquation": "Answer = (number1-number0).",
+      "infixEquationPre": "(b-a)",
+      "prediction": "-29",
+      "true_false": false
+    },
+    "93": {
+      "Question": "Paco had number0 cookies. He ate number1 cookies and gave number2 of them to his friend.How many more cookies did he eat than those he gave to his friend?",
+      "shot_pids": [
+        1855,
+        1942
+      ],
+      "Numbers": "17.0 14.0 13.0",
+      "infixEquation": "(number1-number2)",
+      "Answer": "1",
+      "rawEquation": "Answer = (number1 - number2).",
+      "infixEquationPre": "(b-c)",
+      "prediction": "1",
+      "true_false": true
+    },
+    "86": {
+      "Question": "number0 birds and number1 storks were sitting on the fence. number2 more birds came to join them.How many more storks than birds are sitting on the fence?",
+      "shot_pids": [
+        1716,
+        1227
+      ],
+      "Numbers": "2.0 6.0 3.0",
+      "infixEquation": "(number1-(number0+number2))",
+      "Answer": "1",
+      "rawEquation": "Answer = (number1-(number0+number2)).",
+      "infixEquationPre": "(b-(a+c))",
+      "prediction": "1",
+      "true_false": true
+    },
+    "369": {
+      "Question": "Edward spent $ number0. Then he received $ number1 from his friend. Now he has $ number2.How much did Edward have before he spent his money?",
+      "shot_pids": [
+        1716,
+        1942
+      ],
+      "Numbers": "17.0 10.0 7.0",
+      "infixEquation": "((number0-number1)+number2)",
+      "Answer": "14",
+      "rawEquation": "Answer = (number2-number1).",
+      "infixEquationPre": "(c-b)",
+      "prediction": "-3",
+      "true_false": false
+    },
+    "855": {
+      "Question": "Jesse's room is number0 feet long. If she needs a carpet of size number1 square feetWhat is the width of her room?",
+      "shot_pids": [
+        1227,
+        1716
+      ],
+      "Numbers": "7.0 14.0",
+      "infixEquation": "(number1/number0)",
+      "Answer": "2",
+      "rawEquation": "Answer = (number1/number0).",
+      "infixEquationPre": "(b/a)",
+      "prediction": "2",
+      "true_false": true
+    },
+    "173": {
+      "Question": "A grocery store had a total of number0 bottles of which number1 were bottles of regular soda and the rest were bottles of diet soda. They also had number2 apple.How many bottles of diet soda did they have?",
+      "shot_pids": [
+        1897,
+        1227
+      ],
+      "Numbers": "17.0 9.0 29.0",
+      "infixEquation": "(number0-number1)",
+      "Answer": "8",
+      "rawEquation": "Answer = (number0 - number1).",
+      "infixEquationPre": "(a-b)",
+      "prediction": "8",
+      "true_false": true
+    },
+    "753": {
+      "Question": "In a school there are number0 boys and number1 girls. number2 more girls joined the school.How many more girls than boys does the school have?",
+      "shot_pids": [
+        1227,
+        1897
+      ],
+      "Numbers": "362.0 257.0 403.0",
+      "infixEquation": "((number1+number2)-number0)",
+      "Answer": "298",
+      "rawEquation": "Answer= (number1+(number2)).",
+      "infixEquationPre": false,
+      "prediction": null,
+      "true_false": false
+    },
+    "828": {
+      "Question": "For the walls of the house he would use number0 nails in all to secure large planks of wood. If each plank needs number1 pieces of nails to be secured and an additional number2 nails were used.How many planks does John need for the house wall?",
+      "shot_pids": [
+        1897,
+        1855
+      ],
+      "Numbers": "11.0 3.0 8.0",
+      "infixEquation": "((number0-number2)/number1)",
+      "Answer": "1",
+      "rawEquation": "Answer = (number0/number1)+number2.",
+      "infixEquationPre": "(a/b)",
+      "prediction": "3.667",
+      "true_false": false
+    },
+    "685": {
+      "Question": "The school is planning a field trip. The school has number0 classrooms. There are number1 students in each classroom in the school. If there are number2 seats on each school busHow many buses are needed to take the trip?",
+      "shot_pids": [
+        1855,
+        1227
+      ],
+      "Numbers": "67.0 66.0 6.0",
+      "infixEquation": "(number0*(number1/number2))",
+      "Answer": "737",
+      "rawEquation": "Answer = (number0*number1)/(number2-1).",
+      "infixEquationPre": "(a*b)/(c-1)",
+      "prediction": "884.4",
+      "true_false": false
+    },
+    "874": {
+      "Question": "Lewis earns $ number0 every week during the number1 weeks of harvest. If he has to pay $ number2 taxHow much money will have at the end of the harvest season?",
+      "shot_pids": [
+        1855,
+        1227
+      ],
+      "Numbers": "21.0 216.0 702.0",
+      "infixEquation": "((number0*number06)-number2)",
+      "Answer": "3834",
+      "rawEquation": "Answer = (number0*number1)-(number2*number1).",
+      "infixEquationPre": "(a*b)-(c*b)",
+      "prediction": "-147096",
+      "true_false": false
+    },
+    "315": {
+      "Question": "Being his favorite, he saved checking on the grapevines for his last stop. He was told by number0 of the pickers that they fill number1 drums of grapes in number2 days.How many drums of grapes would be filled in each day?",
+      "shot_pids": [
+        1942,
+        1855
+      ],
+      "Numbers": "266.0 90.0 5.0",
+      "infixEquation": "(number1/number2)",
+      "Answer": "18",
+      "rawEquation": "Answer = (number1/number2).",
+      "infixEquationPre": "(b/c)",
+      "prediction": "18",
+      "true_false": true
+    },
+    "257": {
+      "Question": "Mary is baking a cake. The recipe calls for number0 cups of sugar and number1 cups of flour. She already put in number2 cups of flour and number3 cups of sugar.How many more cups of sugar does she need to add?",
+      "shot_pids": [
+        1942,
+        1227
+      ],
+      "Numbers": "11.0 9.0 12.0 10.0",
+      "infixEquation": "(number0-number3)",
+      "Answer": "1",
+      "rawEquation": "Answer = (number0-number2).",
+      "infixEquationPre": "(a-c)",
+      "prediction": "-1",
+      "true_false": false
+    },
+    "620": {
+      "Question": "Jake brought number0 balloons to the park. If Jake brought number1 more balloons than the number of balloons that Allan broughtHow many balloons did Allan bring to the park?",
+      "shot_pids": [
+        1227,
+        1942
+      ],
+      "Numbers": "6.0 4.0",
+      "infixEquation": "(number0-number1)",
+      "Answer": "2",
+      "rawEquation": "Answer = (number0-number1).",
+      "infixEquationPre": "(a-b)",
+      "prediction": "2",
+      "true_false": true
+    },
+    "217": {
+      "Question": "Adam could fit number0 action figures and number1 cabinets on each shelf in his room. His room has number2 shelves.How many total items could his shelves hold?",
+      "shot_pids": [
+        1942,
+        1855
+      ],
+      "Numbers": "8.0 10.0 4.0",
+      "infixEquation": "((number0+number1)*number2)",
+      "Answer": "72",
+      "rawEquation": "Answer = (number0*number1*number2).",
+      "infixEquationPre": "(a*b*c)",
+      "prediction": "320",
+      "true_false": false
+    },
+    "621": {
+      "Question": "At the arcade Dave had won number0 tickets and lost number1 tickets. If he used number2 to buy some toysHow many tickets did Dave have left?",
+      "shot_pids": [
+        1942,
+        1227
+      ],
+      "Numbers": "14.0 2.0 10.0",
+      "infixEquation": "((number0-number1)-number2)",
+      "Answer": "2",
+      "rawEquation": "Answer = (number0-number1-number2).",
+      "infixEquationPre": "(a-b-c)",
+      "prediction": "2",
+      "true_false": true
+    },
+    "36": {
+      "Question": "After eating a hearty meal they went to see the Buckingham palace. There, Rachel learned that number0 visitors came to the Buckingham palace on the previous day. If there were number1 visitors on that dayHow many visited the Buckingham palace within number2 days?",
+      "shot_pids": [
+        1942,
+        1227
+      ],
+      "Numbers": "703.0 246.0 25.0",
+      "infixEquation": "(number1+number0)",
+      "Answer": "949",
+      "rawEquation": "Answer = ((number0+number1)*number2).",
+      "infixEquationPre": "((a+b)*c)",
+      "prediction": "23725",
+      "true_false": false
+    },
+    "595": {
+      "Question": "He then went to see the oranges being harvested. He found out that they harvest number0 sacks per day and discard number1 of them.How many oranges do they harvest per day if each sack contains number2 oranges?",
+      "shot_pids": [
+        1897,
+        1855
+      ],
+      "Numbers": "76.0 64.0 50.0",
+      "infixEquation": "((number0-number1)*number2)",
+      "Answer": "600",
+      "rawEquation": "Answer = ((number0*number2)-number1).",
+      "infixEquationPre": "((a*c)-b)",
+      "prediction": "3736",
+      "true_false": false
+    },
+    "697": {
+      "Question": "Jack received number0 emails in the morning, number1 emails in the afternoon and number2 emails in the evening.How many more emails did Jack receive in the morning than in the afternoon?",
+      "shot_pids": [
+        1716,
+        1227
+      ],
+      "Numbers": "10.0 7.0 17.0",
+      "infixEquation": "(number0-number1)",
+      "Answer": "3",
+      "rawEquation": "Answer = (number0-(number1+number2)).",
+      "infixEquationPre": "(a-(b+c))",
+      "prediction": "-14",
+      "true_false": false
+    },
+    "162": {
+      "Question": "Paco had number0 sweet cookies and number1 salty cookies. He ate number2 salty cookies and number3 sweet cookies.How many more salty cookies than sweet cookies did he eat?",
+      "shot_pids": [
+        1855,
+        1942
+      ],
+      "Numbers": "40.0 25.0 28.0 15.0",
+      "infixEquation": "(number2-number3)",
+      "Answer": "13",
+      "rawEquation": "Answer = (number2-number3).",
+      "infixEquationPre": "(c-d)",
+      "prediction": "13",
+      "true_false": true
+    },
+    "441": {
+      "Question": "Paul got a box of some crayons for his birthday. During the school year he gave number0 crayons to his friends while he lost number1 crayons. If he only had number2 crayons leftHow many crayons had been lost or given away?",
+      "shot_pids": [
+        1855,
+        1227
+      ],
+      "Numbers": "52.0 535.0 492.0",
+      "infixEquation": "(number0+number1)",
+      "Answer": "587",
+      "rawEquation": "Answer = (number2-(number0+number1)).",
+      "infixEquationPre": "(c-(a+b))",
+      "prediction": "-95",
+      "true_false": false
+    },
+    "653": {
+      "Question": "For Gwen's birthday she received some dollars. She spent number0 dollars and has number1 dollars left with her.How much money did Gwen receive for her birthday?",
+      "shot_pids": [
+        1942,
+        1227
+      ],
+      "Numbers": "8.0 6.0",
+      "infixEquation": "(number0+number1)",
+      "Answer": "14",
+      "rawEquation": "Answer = (number0+number1).",
+      "infixEquationPre": "(a+b)",
+      "prediction": "14",
+      "true_false": true
+    },
+    "402": {
+      "Question": "The ring toss game at the carnival made the same amount of money each day. In total in number0 days they earned number1 dollars. Together with game they earned number2 dollars.How much did ring toss game make per day?",
+      "shot_pids": [
+        1855,
+        1897
+      ],
+      "Numbers": "30.0 420.0 22.0",
+      "infixEquation": "(number1/number0)",
+      "Answer": "14",
+      "rawEquation": "Answer = ((number1-number2)/number0).",
+      "infixEquationPre": "((b-c)/a)",
+      "prediction": "13.267",
+      "true_false": false
+    },
+    "822": {
+      "Question": "If you have number0 cookies in total and number1 bags having equal number of cookiesHow many cookies does each bag have?",
+      "shot_pids": [
+        1359,
+        1227
+      ],
+      "Numbers": "14.0 7.0",
+      "infixEquation": "(number0/number1)",
+      "Answer": "2",
+      "rawEquation": "Answer = (number0/number1).",
+      "infixEquationPre": "(a/b)",
+      "prediction": "2",
+      "true_false": true
+    },
+    "740": {
+      "Question": "He had a total of number0 saltwater animals in different aquariums. Each aquarium has number1 animals in it.How many aquariums did he have?",
+      "shot_pids": [
+        1942,
+        1227
+      ],
+      "Numbers": "40.0 2.0",
+      "infixEquation": "(number0/number1)",
+      "Answer": "20",
+      "rawEquation": "Answer = (number0/number1)",
+      "infixEquationPre": "(a/b)",
+      "prediction": "20",
+      "true_false": true
+    },
+    "880": {
+      "Question": "Rachel picked number0 apples from her tree. If the tree had number1 apples initially.How many apples are still there on the tree?",
+      "shot_pids": [
+        1942,
+        1227
+      ],
+      "Numbers": "4.0 7.0",
+      "infixEquation": "(number1-number0)",
+      "Answer": "3",
+      "rawEquation": "Answer = (number1-number0).",
+      "infixEquationPre": "(b-a)",
+      "prediction": "3",
+      "true_false": true
+    },
+    "521": {
+      "Question": "At the stop number0 more people got on the train. Initially there were number1 people on the train.How many people are there on the train now?",
+      "shot_pids": [
+        1855,
+        1716
+      ],
+      "Numbers": "8.0 11.0",
+      "infixEquation": "(number1+number0)",
+      "Answer": "19",
+      "rawEquation": "Answer = (number0+number1).",
+      "infixEquationPre": "(a+b)",
+      "prediction": "19",
+      "true_false": true
+    },
+    "380": {
+      "Question": "Frank was reading through his favorite book. The book had number0 chapters, each with the same number of pages. It has a total of number1 pages. It took Frank number2 days to finish the book.How many pages did he read per day?",
+      "shot_pids": [
+        1227,
+        1716
+      ],
+      "Numbers": "41.0 450.0 30.0",
+      "infixEquation": "(number1/number2)",
+      "Answer": "15",
+      "rawEquation": "Answer = (number1/number2).",
+      "infixEquationPre": "(b/c)",
+      "prediction": "15",
+      "true_false": true
+    },
+    "557": {
+      "Question": "Baker made number0 cakes. He sold some of them. If he still has number1 cakes leftHow many cakes did baker sell?",
+      "shot_pids": [
+        1227,
+        1942
+      ],
+      "Numbers": "54.0 13.0",
+      "infixEquation": "(number0-number1)",
+      "Answer": "41",
+      "rawEquation": "Answer = (number0-number1)",
+      "infixEquationPre": "(a-b)",
+      "prediction": "41",
+      "true_false": true
+    },
+    "958": {
+      "Question": "The grasshopper, the frog and the mouse had a jumping contest. The grasshopper jumped number0 inches. The grasshopper jumped number1 inches farther than the frog and the mouse jumped number2 inches lesser than the frog.How far did the mouse jump?",
+      "shot_pids": [
+        1942,
+        1227
+      ],
+      "Numbers": "39.0 19.0 12.0",
+      "infixEquation": "((number0-number1)-number2)",
+      "Answer": "8",
+      "rawEquation": "Answer = (number0-number1-number2).",
+      "infixEquationPre": "(a-b-c)",
+      "prediction": "8",
+      "true_false": true
+    },
+    "455": {
+      "Question": "number0 birds and number1 storks were sitting on the fence. number2 more birds came to join them.How many birds are sitting on the fence?",
+      "shot_pids": [
+        1716,
+        1227
+      ],
+      "Numbers": "4.0 46.0 6.0",
+      "infixEquation": "(number0+number2)",
+      "Answer": "10",
+      "rawEquation": "Answer = (number0+(number1*number2)).",
+      "infixEquationPre": "(a+(b*c))",
+      "prediction": "280",
+      "true_false": false
+    },
+    "514": {
+      "Question": "Tiffany was collecting cans for recycling. On monday she had number0 bags of cans. She found number1 bags of cans on the next day and number2 bags of cans the day after that.How many bags did she find after monday?",
+      "shot_pids": [
+        1942,
+        1227
+      ],
+      "Numbers": "8.0 10.0 4.0",
+      "infixEquation": "(number1+number2)",
+      "Answer": "14",
+      "rawEquation": "Answer = (number0+number1+number2).",
+      "infixEquationPre": "(a+b+c)",
+      "prediction": "22",
+      "true_false": false
+    },
+    "274": {
+      "Question": "Brenda's mother made cookies for number0 guests but number1 guests did not come. If she prepared number2 cookies and each guest had the same number of cookiesHow many did each of them have?",
+      "shot_pids": [
+        1942,
+        1227
+      ],
+      "Numbers": "10.0 9.0 18.0",
+      "infixEquation": "(number2/(number0-number1))",
+      "Answer": "18",
+      "rawEquation": "Answer = (number0/number1).",
+      "infixEquationPre": "(a/b)",
+      "prediction": "1.111",
+      "true_false": false
+    },
+    "922": {
+      "Question": "Frank was reading through his favorite book. The book had number0 chapters, each with the same number of pages. It has a total of number1 pages. It took Frank number2 days to finish the book.How many pages are in each chapter?",
+      "shot_pids": [
+        1716,
+        1227
+      ],
+      "Numbers": "3.0 594.0 607.0",
+      "infixEquation": "(number1/number0)",
+      "Answer": "198",
+      "rawEquation": "Answer = (number1/number0).",
+      "infixEquationPre": "(b/a)",
+      "prediction": "198",
+      "true_false": true
+    },
+    "980": {
+      "Question": "number0 red peaches and some more green peaches are in the basket. If there are a total of number1 peaches in the basketHow many green peaches are in the basket?",
+      "shot_pids": [
+        1581,
+        1897
+      ],
+      "Numbers": "10.0 15.0",
+      "infixEquation": "(number1-number0)",
+      "Answer": "5",
+      "rawEquation": "Answer = (number1-number0).",
+      "infixEquationPre": "(b-a)",
+      "prediction": "5",
+      "true_false": true
+    },
+    "891": {
+      "Question": "number0 red peaches, number1 yellow peaches and number2 green peaches are in the basket.How many more green peaches than red peaches are in the basket?",
+      "shot_pids": [
+        1227,
+        1897
+      ],
+      "Numbers": "7.0 71.0 8.0",
+      "infixEquation": "(number2-number0)",
+      "Answer": "1",
+      "rawEquation": "Answer = (number2-(number0-number1)).",
+      "infixEquationPre": "(c-(a-b))",
+      "prediction": "72",
+      "true_false": false
+    },
+    "28": {
+      "Question": "A grocery store had number0 bottles of regular soda, number1 bottles of diet soda and number2 bottles of lite soda.How many bottles of regular soda and diet soda did they have altogether?",
+      "shot_pids": [
+        1942,
+        1227
+      ],
+      "Numbers": "49.0 40.0 6.0",
+      "infixEquation": "(number1+number0)",
+      "Answer": "89",
+      "rawEquation": "Answer = (number0+number1).",
+      "infixEquationPre": "(a+b)",
+      "prediction": "89",
+      "true_false": true
+    },
+    "372": {
+      "Question": "For Gwen's birthday she received number0 dollars from her mom. Her dad gave her number1 more dollars. If she spent number2 dollars.How much money did she still have?",
+      "shot_pids": [
+        1942,
+        1227
+      ],
+      "Numbers": "2.0 4.0 3.0",
+      "infixEquation": "((number0+number1)-number2)",
+      "Answer": "3",
+      "rawEquation": "Answer = ((number0+number1)-number2).",
+      "infixEquationPre": "((a+b)-c)",
+      "prediction": "3",
+      "true_false": true
+    },
+    "476": {
+      "Question": "Lewis earns $ number0 every week during the harvest. If he earns a total of $ number1How many weeks did the harvest last?",
+      "shot_pids": [
+        1897,
+        1963
+      ],
+      "Numbers": "2.0 178.0",
+      "infixEquation": "(number1/number0)",
+      "Answer": "89",
+      "rawEquation": "Answer = (number1/number0)",
+      "infixEquationPre": "(b/a)",
+      "prediction": "89",
+      "true_false": true
+    },
+    "954": {
+      "Question": "Dave had number0 apps on his phone. After adding some he had number1 left.How many apps did he add?",
+      "shot_pids": [
+        1716,
+        1227
+      ],
+      "Numbers": "17.0 18.0",
+      "infixEquation": "(number1-number0)",
+      "Answer": "1",
+      "rawEquation": "Answer = (number1-number0).",
+      "infixEquationPre": "(b-a)",
+      "prediction": "1",
+      "true_false": true
+    },
+    "326": {
+      "Question": "There were number0 roses in the vase. Jessica cut some more roses from her flower garden which had a total of number1 roses. There are now number2 roses in the vase.How many roses did she cut?",
+      "shot_pids": [
+        1942,
+        1963
+      ],
+      "Numbers": "7.0 59.0 20.0",
+      "infixEquation": "(number2-number0)",
+      "Answer": "13",
+      "rawEquation": "Answer = (number2-number0).",
+      "infixEquationPre": "(c-a)",
+      "prediction": "13",
+      "true_false": true
+    },
+    "929": {
+      "Question": "After eating a hearty meal they went to see the Buckingham palace. There, Rachel learned that number0 visitors came to the Buckingham palace that day. If there were number1 visitors the previous day and number2 visitors the day before thatHow many visited the Buckingham palace within the past number3 days?",
+      "shot_pids": [
+        1942,
+        1227
+      ],
+      "Numbers": "512.0 471.0 808.0 89.0",
+      "infixEquation": "((number0+number1)+number2)",
+      "Answer": "1791",
+      "rawEquation": "Answer = ((number0+(number1*number2))*number3).",
+      "infixEquationPre": "((a+(b*c))*d)",
+      "prediction": "33916120",
+      "true_false": false
+    },
+    "389": {
+      "Question": "Debby bought number0 water bottles and number1 soda bottles when they were on sale. If she drank number2 water bottles and number3 soda bottles a dayHow many days would the soda bottles last?",
+      "shot_pids": [
+        1716,
+        1227
+      ],
+      "Numbers": "200.0 256.0 312.0 4.0",
+      "infixEquation": "(number1/number3)",
+      "Answer": "64",
+      "rawEquation": "Answer = (number1/(number2-number3)).",
+      "infixEquationPre": "(b/(c-d))",
+      "prediction": "0.831",
+      "true_false": false
+    },
+    "433": {
+      "Question": "Bobby ate number0 pieces of candy. Then he ate number1 more. He also ate number2 pieces of chocolate.How many pieces of candy and chocolate did Bobby eat altogether?",
+      "shot_pids": [
+        1227,
+        1942
+      ],
+      "Numbers": "33.0 4.0 14.0",
+      "infixEquation": "((number0+number1)+1number1)",
+      "Answer": "51",
+      "rawEquation": "Answer = (number0*(number0+number1+number2)).",
+      "infixEquationPre": "(a*(a+b+c))",
+      "prediction": "1683",
+      "true_false": false
+    },
+    "913": {
+      "Question": "David did number0 push-ups in gym class today. David did number1 more push-ups than Zachary.How many push-ups did Zachary and David do altogether?",
+      "shot_pids": [
+        1227,
+        1942
+      ],
+      "Numbers": "51.0 49.0",
+      "infixEquation": "((number0+number0)-number1)",
+      "Answer": "53",
+      "rawEquation": "Answer = (number0+number1).",
+      "infixEquationPre": "(a+b)",
+      "prediction": "100",
+      "true_false": false
+    },
+    "905": {
+      "Question": "Jesse's room is number0 feet long and number1 feet wide. If each tile is of size number2 square feetHow many tiles does she need to cover the whole floor?",
+      "shot_pids": [
+        1716,
+        1227
+      ],
+      "Numbers": "2.0 12.0 4.0",
+      "infixEquation": "((number0*1number0)/number2)",
+      "Answer": "6",
+      "rawEquation": "Answer = ((number0*number1)/number2).",
+      "infixEquationPre": "((a*b)/c)",
+      "prediction": "6",
+      "true_false": true
+    },
+    "538": {
+      "Question": "Josh had some marbles in his collection. He lost number0 marbles. If he has number1 marbles nowHow many marbles did he have in his collection?",
+      "shot_pids": [
+        1716,
+        1855
+      ],
+      "Numbers": "21.0 12.0",
+      "infixEquation": "(number0+number1)",
+      "Answer": "33",
+      "rawEquation": "Answer = (number1+number0).",
+      "infixEquationPre": "(b+a)",
+      "prediction": "33",
+      "true_false": true
+    },
+    "168": {
+      "Question": "Danny collects bottle caps. He found number0 bottle caps at the park while he threw away number1 old ones. Now he has number2 bottle caps in his collection.How many bottle caps did danny have at first?",
+      "shot_pids": [
+        1227,
+        1942
+      ],
+      "Numbers": "63.0 51.0 33.0",
+      "infixEquation": "((number2+number1)-number0)",
+      "Answer": "21",
+      "rawEquation": "Answer = (number2+number1).",
+      "infixEquationPre": "(c+b)",
+      "prediction": "84",
+      "true_false": false
+    },
+    "573": {
+      "Question": "The school is planning a field trip. The school has number0 classrooms. number1 school buses are fully filled with number2 seats on each school bus.How many students are in the school?",
+      "shot_pids": [
+        1897,
+        1227
+      ],
+      "Numbers": "84.0 95.0 118.0",
+      "infixEquation": "(number1*number2)",
+      "Answer": "11210",
+      "rawEquation": "Answer = (number0*number1*number2).",
+      "infixEquationPre": "(a*b*c)",
+      "prediction": "941640",
+      "true_false": false
+    },
+    "181": {
+      "Question": "A grocery store had number0 bottles of diet soda, number1 bottles of regular soda and number2 apples.How many more bottles of regular soda than diet soda did they have?",
+      "shot_pids": [
+        1942,
+        1227
+      ],
+      "Numbers": "54.0 83.0 12.0",
+      "infixEquation": "(number1-number0)",
+      "Answer": "29",
+      "rawEquation": "Answer = (number1-number0).",
+      "infixEquationPre": "(b-a)",
+      "prediction": "29",
+      "true_false": true
+    },
+    "241": {
+      "Question": "A grocery store had number0 bottles of regular soda, number1 bottles of diet soda and number2 bottles of lite soda.How many more bottles of regular soda did they have than diet soda?",
+      "shot_pids": [
+        1942,
+        1227
+      ],
+      "Numbers": "81.0 60.0 60.0",
+      "infixEquation": "(number0-number1)",
+      "Answer": "21",
+      "rawEquation": "Answer = (number0-number1).",
+      "infixEquationPre": "(a-b)",
+      "prediction": "21",
+      "true_false": true
+    },
+    "236": {
+      "Question": "Helen the hippo and her friends are preparing for thanksgiving at Helen's house. Helen baked number0 chocolate chip cookies and number1 raisin cookies yesterday. And she baked number2 raisin cookies and number3 chocolate chip cookies this morning.How many raisin cookies did Helen bake?",
+      "shot_pids": [
+        1942,
+        1467
+      ],
+      "Numbers": "144.0 397.0 85.0 403.0",
+      "infixEquation": "(number1+number2)",
+      "Answer": "482",
+      "rawEquation": "Answer = (number1+number2).",
+      "infixEquationPre": "(b+c)",
+      "prediction": "482",
+      "true_false": true
+    },
+    "24": {
+      "Question": "Jerry had number0 action figures on a shelf in his room. Later he added number1 more action figures to the shelf and removed some of the old ones. If there are number2 action figures on his shelf nowHow many action figures did he remove from the shelf?",
+      "shot_pids": [
+        1942,
+        1855
+      ],
+      "Numbers": "3.0 4.0 6.0",
+      "infixEquation": "((number0+number1)-number2)",
+      "Answer": "1",
+      "rawEquation": "Answer = (number0+number1-number2).",
+      "infixEquationPre": "(a+b-c)",
+      "prediction": "1",
+      "true_false": true
+    },
+    "180": {
+      "Question": "For the walls of the house he would use number0 large planks of wood. If each plank of wood needs number1 pieces of nails to be secured and in addition number2 nails are needed for some smaller planks.How many nails does John need for the house wall?",
+      "shot_pids": [
+        1897,
+        1855
+      ],
+      "Numbers": "13.0 17.0 8.0",
+      "infixEquation": "((number0*number1)+number2)",
+      "Answer": "229",
+      "rawEquation": "Answer = (number0*number1)+(number2).",
+      "infixEquationPre": "(a*b)+(c)",
+      "prediction": "229",
+      "true_false": true
+    },
+    "332": {
+      "Question": "Frank was reading through his favorite book. The book had number0 chapters each with number1 pages. It took frank number2 days to finish the book.How many chapters did he read per day?",
+      "shot_pids": [
+        1716,
+        1227
+      ],
+      "Numbers": "2.0 405.0 664.0",
+      "infixEquation": "(number2/number0)",
+      "Answer": "332",
+      "rawEquation": "Answer = (number0/number2).",
+      "infixEquationPre": "(a/c)",
+      "prediction": "0.003",
+      "true_false": false
+    },
+    "177": {
+      "Question": "The Razorback t-shirt shop makes $ number0 dollars off each t-shirt sold. During the Arkansas game and the Texas tech game they sold a total of number1 t-shirts. If they sold number2 t-shirts during the Arkansas gameHow much money did they make from selling the t-shirts during the arkansas game?",
+      "shot_pids": [
+        1897,
+        1227
+      ],
+      "Numbers": "98.0 163.0 89.0",
+      "infixEquation": "(number0*number2)",
+      "Answer": "8722",
+      "rawEquation": "Answer = $((number0*number1)-(number0*number2",
+      "infixEquationPre": "((a*b)",
+      "prediction": null,
+      "true_false": false
+    },
+    "139": {
+      "Question": "Jessica cut some roses from her flower garden to put in her vase. There are now number0 roses in the vase. If there were number1 roses in the vase initiallyHow many roses did she cut?",
+      "shot_pids": [
+        1227,
+        1963
+      ],
+      "Numbers": "19.0 3.0",
+      "infixEquation": "(number0-number1)",
+      "Answer": "16",
+      "rawEquation": "Answer = (number1-number0).",
+      "infixEquationPre": "(b-a)",
+      "prediction": "-16",
+      "true_false": false
+    },
+    "522": {
+      "Question": "Frank had number0 pieces of candy. He lost number1 of them. If he put the remaining pieces into bags with number2 pieces in each bagHow many bags would he have?",
+      "shot_pids": [
+        1942,
+        1227
+      ],
+      "Numbers": "33.0 24.0 9.0",
+      "infixEquation": "((number0-number1)/number2)",
+      "Answer": "1",
+      "rawEquation": "Answer = (number0-(number1*number2)).",
+      "infixEquationPre": "(a-(b*c))",
+      "prediction": "-183",
+      "true_false": false
+    },
+    "939": {
+      "Question": "There were number0 roses and number1 orchids in the vase. Jessica cut some more roses and orchids from her flower garden. There are now numbernumber3 roses and 2 orchids in the vase.How many more roses than orchids are there in the vase now?",
+      "shot_pids": [
+        1855,
+        1963
+      ],
+      "Numbers": "5.0 3.0 12.0 2.0",
+      "infixEquation": "(numbernumber3-number3)",
+      "Answer": "10",
+      "rawEquation": "Answer = (number3-2).",
+      "infixEquationPre": "(d-2)",
+      "prediction": null,
+      "true_false": false
+    },
+    "368": {
+      "Question": "Edward spent $ number0 to buy books and $ number1 to buy pens. Now he has $ number2.How much did Edward spend on books and pens?",
+      "shot_pids": [
+        1942,
+        1716
+      ],
+      "Numbers": "4.0 3.0 12.0",
+      "infixEquation": "(number0+number1)",
+      "Answer": "7",
+      "rawEquation": "Answer = (number0 + number1).",
+      "infixEquationPre": "(a+b)",
+      "prediction": "7",
+      "true_false": true
+    },
+    "526": {
+      "Question": "They decided to hold the party in their backyard. They have some sets of tables, each having the number0 chairs. If there are a total of number1 chairs in the backyardHow many sets of tables do they have?",
+      "shot_pids": [
+        1855,
+        1227
+      ],
+      "Numbers": "3.0 9.0",
+      "infixEquation": "(number1/number0)",
+      "Answer": "3",
+      "rawEquation": "Answer = (number1/number0).",
+      "infixEquationPre": "(b/a)",
+      "prediction": "3",
+      "true_false": true
+    },
+    "690": {
+      "Question": "Every day Ryan spends number0 hours on learning english and number1 hours on learning chinese. If he learns for number2 daysHow many hours does he spend on learning chinese in all?",
+      "shot_pids": [
+        1227,
+        1716
+      ],
+      "Numbers": "5.0 4.0 6.0",
+      "infixEquation": "(number1*number2)",
+      "Answer": "24",
+      "rawEquation": "Answer = (number1*number2).",
+      "infixEquationPre": "(b*c)",
+      "prediction": "24",
+      "true_false": true
+    },
+    "948": {
+      "Question": "Luke gained number0 points in each round of a game. If he played number1 rounds of a trivia gameHow many points did he score in the game?",
+      "shot_pids": [
+        1924,
+        1227
+      ],
+      "Numbers": "146.0 157.0",
+      "infixEquation": "(number1*number0)",
+      "Answer": "22922",
+      "rawEquation": "Answer = ((number0*number1)*100)/100",
+      "infixEquationPre": "((a*b)*100)",
+      "prediction": "2292200",
+      "true_false": false
+    },
+    "186": {
+      "Question": "Matthew had number0 crackers. If Matthew gave equal numbers of crackers to his number1 friends and still had number2 crackers leftHow many crackers did each friend eat?",
+      "shot_pids": [
+        1227,
+        1942
+      ],
+      "Numbers": "15.0 5.0 10.0",
+      "infixEquation": "((number0-number2)/number1)",
+      "Answer": "1",
+      "rawEquation": "Answer = ((number0-(number2))/number1).",
+      "infixEquationPre": "((a-(c))/b)",
+      "prediction": "1",
+      "true_false": true
+    },
+    "915": {
+      "Question": "A school has number0 pupils. There are number1 girls and the rest are boys.How many boys are there in that school?",
+      "shot_pids": [
+        1227,
+        1897
+      ],
+      "Numbers": "485.0 232.0",
+      "infixEquation": "(number0-number1)",
+      "Answer": "253",
+      "rawEquation": "Answer = (number0-number1).",
+      "infixEquationPre": "(a-b)",
+      "prediction": "253",
+      "true_false": true
+    },
+    "456": {
+      "Question": "Paco had number0 cookies. He ate some of them and had number1 cookies left.How many cookies did Paco eat?",
+      "shot_pids": [
+        1227,
+        1942
+      ],
+      "Numbers": "28.0 7.0",
+      "infixEquation": "(number0-number1)",
+      "Answer": "21",
+      "rawEquation": "Answer = (number0-number1).",
+      "infixEquationPre": "(a-b)",
+      "prediction": "21",
+      "true_false": true
+    },
+    "815": {
+      "Question": "At the stop number0 more people got on the bus. Initially there were number1 people on the bus.How many people are there on the bus now?",
+      "shot_pids": [
+        1716,
+        1227
+      ],
+      "Numbers": "13.0 4.0",
+      "infixEquation": "(number1+number0)",
+      "Answer": "17",
+      "rawEquation": "Answer = (number0+number1).",
+      "infixEquationPre": "(a+b)",
+      "prediction": "17",
+      "true_false": true
+    },
+    "424": {
+      "Question": "The Razorback t-shirt shop sells each t-shirt for $ number0 dollars. During the Arkansas and Texas tech game they offered a discount of $ number1 per t-shirt and sold number2 t-shirts.How much money did they make from selling the t-shirts?",
+      "shot_pids": [
+        1942,
+        1227
+      ],
+      "Numbers": "51.0 8.0 130.0",
+      "infixEquation": "((number0-number1)*number2)",
+      "Answer": "5590",
+      "rawEquation": "Answer = (number2*(number0-(number1/2))).",
+      "infixEquationPre": "(c*(a-(b/2)))",
+      "prediction": "6110",
+      "true_false": false
+    },
+    "752": {
+      "Question": "Nell collects cards. She had number0 baseball cards and number1 Ace cards. She gave some of her cards to Jeff and now has number2 Ace cards and number3 baseball cards left.How many more Ace cards than baseball cards does Nell have?",
+      "shot_pids": [
+        1942,
+        1227
+      ],
+      "Numbers": "239.0 38.0 376.0 111.0",
+      "infixEquation": "(number2-number3)",
+      "Answer": "265",
+      "rawEquation": "Answer = ((number2-number3)).",
+      "infixEquationPre": "((c-d))",
+      "prediction": "265",
+      "true_false": true
+    },
+    "537": {
+      "Question": "Steven has number0 peaches. Jake has number1 fewer peaches than Steven and number2 more peaches than Jill.How many peaches does Jake have?",
+      "shot_pids": [
+        1467,
+        1227
+      ],
+      "Numbers": "19.0 12.0 72.0",
+      "infixEquation": "(number0-number1)",
+      "Answer": "7",
+      "rawEquation": "Answer = (number0-number1-number2).",
+      "infixEquationPre": "(a-b-c)",
+      "prediction": "-65",
+      "true_false": false
+    },
+    "781": {
+      "Question": "The grasshopper, the frog and the mouse had a jumping contest. The grasshopper jumped number0 inches. The frog jumped number1 inches farther than the grasshopper and the mouse jumped number2 inches lesser than the frog.How much farther did the mouse jump than the grasshopper?",
+      "shot_pids": [
+        1897,
+        1227
+      ],
+      "Numbers": "24.0 33.0 5.0",
+      "infixEquation": "(number1-number2)",
+      "Answer": "28",
+      "rawEquation": "Answer = (number1-(number0+number2)).",
+      "infixEquationPre": "(b-(a+c))",
+      "prediction": "4",
+      "true_false": false
+    },
+    "959": {
+      "Question": "Being his favorite, he saved checking on the grapevines for his last stop. He was told by number0 of the pickers that they fill number1 drums of grapes in number2 days.How many drums of grapes would be filled per day?",
+      "shot_pids": [
+        1942,
+        1855
+      ],
+      "Numbers": "94.0 90.0 6.0",
+      "infixEquation": "(number1/number2)",
+      "Answer": "15",
+      "rawEquation": "Answer = (number1/number2).",
+      "infixEquationPre": "(b/c)",
+      "prediction": "15",
+      "true_false": true
+    },
+    "808": {
+      "Question": "He then went to see the oranges being harvested. He found out that they harvested number0 sacks of oranges.How many sacks did they harvest per day if they harvested for a total of number1 days?",
+      "shot_pids": [
+        1855,
+        1942
+      ],
+      "Numbers": "56.0 14.0",
+      "infixEquation": "(number0/number1)",
+      "Answer": "4",
+      "rawEquation": "Answer = (number0/number1).",
+      "infixEquationPre": "(a/b)",
+      "prediction": "4",
+      "true_false": true
+    },
+    "607": {
+      "Question": "Baker made number0 cakes and number1 pastries. If he sold number2 cakes and number3 pastriesHow many more cakes than pastries did baker make?",
+      "shot_pids": [
+        1963,
+        1897
+      ],
+      "Numbers": "126.0 48.0 115.0 81.0",
+      "infixEquation": "(number0-number1)",
+      "Answer": "78",
+      "rawEquation": "Answer = (number2-number3).",
+      "infixEquationPre": "(c-d)",
+      "prediction": "34",
+      "true_false": false
+    },
+    "362": {
+      "Question": "Mary is baking a cake. The recipe calls for number0 cups of flour number1 cups of sugar and number2 cups of salt. She already put in number3 cups of flour.How many more cups of sugar than cups of salt does she need to add now?",
+      "shot_pids": [
+        1716,
+        1942
+      ],
+      "Numbers": "6.0 8.0 7.0 5.0",
+      "infixEquation": "(number1-number2)",
+      "Answer": "1",
+      "rawEquation": "Answer = ((number1-number2)/number0)+number3.",
+      "infixEquationPre": "((b-c)/a)",
+      "prediction": "0.167",
+      "true_false": false
+    },
+    "370": {
+      "Question": "Julia played tag with number0 kids on monday, number1 kids on tuesday and number2 kids on wednesday.How many more kids did she play with on monday than on tuesday?",
+      "shot_pids": [
+        1942,
+        1227
+      ],
+      "Numbers": "9.0 7.0 96.0",
+      "infixEquation": "(number0-number1)",
+      "Answer": "2",
+      "rawEquation": "Answer = (number0-number1).",
+      "infixEquationPre": "(a-b)",
+      "prediction": "2",
+      "true_false": true
+    },
+    "879": {
+      "Question": "Marco and his dad went strawberry picking. Marco's strawberries weighed number0 pounds. If together their strawberries weighed number1 pounds.How much more did his dad's strawberries weigh than his?",
+      "shot_pids": [
+        1227,
+        1942
+      ],
+      "Numbers": "10.0 26.0",
+      "infixEquation": "((number1-number0)-number0)",
+      "Answer": "6",
+      "rawEquation": "Answer = (number1-number0).",
+      "infixEquationPre": "(b-a)",
+      "prediction": "16",
+      "true_false": false
+    },
+    "931": {
+      "Question": "White t - shirts can be purchased in packages of number0. If mom buys number1 packages of white t - shirts and number2 trousersHow many white t - shirts will she have?",
+      "shot_pids": [
+        1963,
+        1855
+      ],
+      "Numbers": "53.0 57.0 34.0",
+      "infixEquation": "(number0*number1)",
+      "Answer": "3021",
+      "rawEquation": "Answer = (number1*number0).",
+      "infixEquationPre": "(b*a)",
+      "prediction": "3021",
+      "true_false": true
+    },
+    "165": {
+      "Question": "An industrial machine made number0 shirts yesterday and number1 shirts today. It can make number2 shirts a minute.How many minutes did the machine work in all?",
+      "shot_pids": [
+        1855,
+        1716
+      ],
+      "Numbers": "13.0 3.0 8.0",
+      "infixEquation": "((number0+number1)/number2)",
+      "Answer": "2",
+      "rawEquation": "Answer = (60*(number0+number1)/number2).",
+      "infixEquationPre": "(60*(a+b)/c)",
+      "prediction": "120",
+      "true_false": false
+    },
+    "772": {
+      "Question": "Jack received number0 emails and number1 letters in the morning. He then received number2 emails and number3 letters in the afternoon.How many more emails did Jack receive in the morning than in the afternoon?",
+      "shot_pids": [
+        1942,
+        1227
+      ],
+      "Numbers": "10.0 12.0 3.0 44.0",
+      "infixEquation": "(number0-number2)",
+      "Answer": "7",
+      "rawEquation": "Answer = ((number0+number1)-(number2+number3)).",
+      "infixEquationPre": "((a+b)-(c+d))",
+      "prediction": "-25",
+      "true_false": false
+    },
+    "409": {
+      "Question": "Nell collects baseball cards. She gave number0 of her cards to Jeff and now has number1 cards left..How many cards did Nell have initially?",
+      "shot_pids": [
+        1942,
+        1227
+      ],
+      "Numbers": "301.0 154.0",
+      "infixEquation": "(number1+number0)",
+      "Answer": "455",
+      "rawEquation": "Answer = number0*number1",
+      "infixEquationPre": false,
+      "prediction": null,
+      "true_false": false
+    },
+    "732": {
+      "Question": "There are number0 students in a school. If the school has number1 students in each grades and each grade has the same number of studentsHow many grades are there in total?",
+      "shot_pids": [
+        1581,
+        1897
+      ],
+      "Numbers": "270.0 5.0",
+      "infixEquation": "(number0/number1)",
+      "Answer": "54",
+      "rawEquation": "Answer = (number0*number1).",
+      "infixEquationPre": "(a*b)",
+      "prediction": "1350",
+      "true_false": false
+    },
+    "756": {
+      "Question": "Julia played tag with number0 kids on monday. If she played tag with number1 more kids on monday than on tuesdayHow many kids did she play with on tuesday?",
+      "shot_pids": [
+        1942,
+        1227
+      ],
+      "Numbers": "16.0 12.0",
+      "infixEquation": "(number0-number1)",
+      "Answer": "4",
+      "rawEquation": "Answer = (number0-number1).",
+      "infixEquationPre": "(a-b)",
+      "prediction": "4",
+      "true_false": true
+    },
+    "472": {
+      "Question": "Rebecca wants to split a collection of eggs into groups of number0. Rebecca has number1 marbles and number2 eggs.How many groups will be created?",
+      "shot_pids": [
+        1897,
+        1227
+      ],
+      "Numbers": "5.0 10.0 15.0",
+      "infixEquation": "(1number0/number0)",
+      "Answer": "3",
+      "rawEquation": "Answer = (number1/number0).",
+      "infixEquationPre": "(b/a)",
+      "prediction": "2",
+      "true_false": false
+    },
+    "670": {
+      "Question": "Julia played tag with number0 kids on monday and number1 kids on tuesday. She played cards wtih number2 kids on wednesday.How many kids did she play tag with altogether?",
+      "shot_pids": [
+        1942,
+        1227
+      ],
+      "Numbers": "7.0 13.0 20.0",
+      "infixEquation": "(number0+number1)",
+      "Answer": "20",
+      "rawEquation": "Answer = (number0+number1+number2).",
+      "infixEquationPre": "(a+b+c)",
+      "prediction": "40",
+      "true_false": false
+    },
+    "543": {
+      "Question": "A book has number0 chapters. The first chapter is number1 pages long the second chapter is number2 pages long and the third chapter is number3 pages long.How many more pages does the first chapter have than the second chapter?",
+      "shot_pids": [
+        1855,
+        1227
+      ],
+      "Numbers": "3.0 91.0 23.0 25.0",
+      "infixEquation": "(number1-2number0)",
+      "Answer": "68",
+      "rawEquation": "Answer = (number1-number2).",
+      "infixEquationPre": "(b-c)",
+      "prediction": "68",
+      "true_false": true
+    },
+    "255": {
+      "Question": "A waiter had number0 customers. number1 customers left.How many customers does he still have?",
+      "shot_pids": [
+        1227,
+        1716
+      ],
+      "Numbers": "14.0 5.0",
+      "infixEquation": "(number0-number1)",
+      "Answer": "9",
+      "rawEquation": "Answer = (number0 - number1).",
+      "infixEquationPre": "(a-b)",
+      "prediction": "9",
+      "true_false": true
+    },
+    "501": {
+      "Question": "Faye had number0 packs of pencils each one having number1 pencils. She was placing her pencils into rows with number2 pencils in each row.How many rows could she make?",
+      "shot_pids": [
+        1716,
+        1227
+      ],
+      "Numbers": "35.0 4.0 2.0",
+      "infixEquation": "(number0*(number1/number2))",
+      "Answer": "70",
+      "rawEquation": "Answer = pencils/2",
+      "infixEquationPre": false,
+      "prediction": null,
+      "true_false": false
+    },
+    "285": {
+      "Question": "For the walls of the house he would use number0 large planks of wood and number1 small planks. If large planks together need number2 pieces of nails to be secured and small planks together need number3 nails.How many nails does John need for the house wall?",
+      "shot_pids": [
+        1963,
+        1855
+      ],
+      "Numbers": "12.0 10.0 15.0 5.0",
+      "infixEquation": "(number2+number3)",
+      "Answer": "20",
+      "rawEquation": "Answer = (number0*number2)+(number1*number3).",
+      "infixEquationPre": "(a*c)+(b*d)",
+      "prediction": "230",
+      "true_false": false
+    },
+    "510": {
+      "Question": "Shirley sold number0 boxes of trefoils.How many boxes are in each case if she needs to deliver number1 cases of boxes?",
+      "shot_pids": [
+        1716,
+        1227
+      ],
+      "Numbers": "10.0 5.0",
+      "infixEquation": "(number0/number1)",
+      "Answer": "2",
+      "rawEquation": "Answer = ((number0*number1)/number1).",
+      "infixEquationPre": "((a*b)/b)",
+      "prediction": "10",
+      "true_false": false
+    },
+    "512": {
+      "Question": "David did number0 more push-ups than Zachary in gym class today. If David did number1 push-upsHow many push-ups did Zachary and David do altogether?",
+      "shot_pids": [
+        1227,
+        1855
+      ],
+      "Numbers": "56.0 38.0",
+      "infixEquation": "((number1+number1)-number0)",
+      "Answer": "20",
+      "rawEquation": "Answer = (number1+number0).",
+      "infixEquationPre": "(b+a)",
+      "prediction": "94",
+      "true_false": false
+    },
+    "527": {
+      "Question": "Luke played a trivia game and scored number0 points. If he gained the number1 points in each roundHow many rounds did he play?",
+      "shot_pids": [
+        1924,
+        1227
+      ],
+      "Numbers": "154.0 11.0",
+      "infixEquation": "(number0/number1)",
+      "Answer": "14",
+      "rawEquation": "Answer = (number0/number1).",
+      "infixEquationPre": "(a/b)",
+      "prediction": "14",
+      "true_false": true
+    },
+    "851": {
+      "Question": "David did number0 more push-ups than Zachary in gym class today. If David did number1 push-upsHow many push-ups did Zachary do?",
+      "shot_pids": [
+        1227,
+        1855
+      ],
+      "Numbers": "30.0 37.0",
+      "infixEquation": "(number1-number0)",
+      "Answer": "7",
+      "rawEquation": "Answer = (number1 - number0).",
+      "infixEquationPre": "(b-a)",
+      "prediction": "7",
+      "true_false": true
+    },
+    "930": {
+      "Question": "He then went to see the oranges being harvested. He found out that they harvest number0 sacks of ripe oranges and number1 sacks of unripe oranges per day.How many more sacks of ripe oranges than unripe oranges are harvested per day?",
+      "shot_pids": [
+        1897,
+        1855
+      ],
+      "Numbers": "44.0 25.0",
+      "infixEquation": "(number0-number1)",
+      "Answer": "19",
+      "rawEquation": "Answer = (number0-number1).",
+      "infixEquationPre": "(a-b)",
+      "prediction": "19",
+      "true_false": true
+    },
+    "963": {
+      "Question": "Adam has number0 apples. Jackie has number1 apples.How many more apples does Jackie have than Adam?",
+      "shot_pids": [
+        1942,
+        1227
+      ],
+      "Numbers": "9.0 10.0",
+      "infixEquation": "(number1-number0)",
+      "Answer": "1",
+      "rawEquation": "Answer = (number1-number0).",
+      "infixEquationPre": "(b-a)",
+      "prediction": "1",
+      "true_false": true
+    },
+    "677": {
+      "Question": "Winter is almost here and most animals are migrating to warmer countries. There are number0 bird families living near the mountain. If number1 bird families flew away to africa and number2 bird families flew away to asiaHow many bird families flew away for the winter?",
+      "shot_pids": [
+        1897,
+        1855
+      ],
+      "Numbers": "18.0 38.0 80.0",
+      "infixEquation": "(number1+number2)",
+      "Answer": "118",
+      "rawEquation": "Answer = (number1+number2).",
+      "infixEquationPre": "(b+c)",
+      "prediction": "118",
+      "true_false": true
+    },
+    "465": {
+      "Question": "number0 campers went rowing on a day. number1 campers went rowing in the morning and some more campers went rowing in the afternoon.How many campers went rowing in the afternoon?",
+      "shot_pids": [
+        1855,
+        1227
+      ],
+      "Numbers": "46.0 43.0",
+      "infixEquation": "(number0-number1)",
+      "Answer": "3",
+      "rawEquation": "Answer = (number0-(number1)).",
+      "infixEquationPre": "(a-(b))",
+      "prediction": "3",
+      "true_false": true
+    },
+    "978": {
+      "Question": "Rebecca wants to split a collection of eggs into groups of number0. Rebecca has number1 marbles and number2 eggs.How many more eggs does Rebecca have than marbles?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "20.0 5.0 12.0",
+      "infixEquation": "(number2-number1)",
+      "Answer": "7",
+      "rawEquation": "Answer = (number2-number1).",
+      "infixEquationPre": "(c-b)",
+      "prediction": "7",
+      "true_false": true
+    },
+    "883": {
+      "Question": "There were number0 dollars in Olivia's wallet. She collected number1 more dollars from an atm. After she visited a supermarket there were number2 dollars left.How much more money did she spend at the supermarket than she collected at the atm?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "53.0 91.0 14.0",
+      "infixEquation": "(number0-number2)",
+      "Answer": "39",
+      "rawEquation": "Answer = (number2-number1).",
+      "infixEquationPre": "(c-b)",
+      "prediction": "-77",
+      "true_false": false
+    },
+    "970": {
+      "Question": "There are number0 skittles in Steven's skittles collection. Steven also has number1 erasers. If the skittles and erasers are organized into number2 groupsHow big is each group?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "4502.0 4276.0 154.0",
+      "infixEquation": "((number0+number1)/number2)",
+      "Answer": "57",
+      "rawEquation": "Answer = ((number0+number1)/number2).",
+      "infixEquationPre": "((a+b)/c)",
+      "prediction": "57",
+      "true_false": true
+    },
+    "869": {
+      "Question": "In Haley's class number0 boys love to play marbles and number1 boys love to play cards. If Haley has number2 marblesHow many will each of the boys receive?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "13.0 50.0 26.0",
+      "infixEquation": "(number2/number0)",
+      "Answer": "2",
+      "rawEquation": "Answer = (number2/(number0+number1)).",
+      "infixEquationPre": "(c/(a+b))",
+      "prediction": "0.413",
+      "true_false": false
+    },
+    "57": {
+      "Question": "Winter is almost here and most animals are migrating to warmer countries. There were number0 bird families living near the mountain. If number1 bird families flew away for winterHow many more bird families flew away for the winter than those that stayed behind?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "89.0 60.0",
+      "infixEquation": "(number1-(number0-number1))",
+      "Answer": "31",
+      "rawEquation": "Answer = (number1-number0)",
+      "infixEquationPre": "(b-a)",
+      "prediction": "-29",
+      "true_false": false
+    },
+    "93": {
+      "Question": "Paco had number0 cookies. He ate number1 cookies and gave number2 of them to his friend.How many more cookies did he eat than those he gave to his friend?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "17.0 14.0 13.0",
+      "infixEquation": "(number1-number2)",
+      "Answer": "1",
+      "rawEquation": "Answer = (number1-number2).",
+      "infixEquationPre": "(b-c)",
+      "prediction": "1",
+      "true_false": true
+    },
+    "86": {
+      "Question": "number0 birds and number1 storks were sitting on the fence. number2 more birds came to join them.How many more storks than birds are sitting on the fence?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "2.0 6.0 3.0",
+      "infixEquation": "(number1-(number0+number2))",
+      "Answer": "1",
+      "rawEquation": "Answer = (number1-(number0-number2)).",
+      "infixEquationPre": "(b-(a-c))",
+      "prediction": "7",
+      "true_false": false
+    },
+    "369": {
+      "Question": "Edward spent $ number0. Then he received $ number1 from his friend. Now he has $ number2.How much did Edward have before he spent his money?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "17.0 10.0 7.0",
+      "infixEquation": "((number0-number1)+number2)",
+      "Answer": "14",
+      "rawEquation": "Answer = $((number2-number1)+number0).",
+      "infixEquationPre": "((c-b)+a)",
+      "prediction": "14",
+      "true_false": true
+    },
+    "855": {
+      "Question": "Jesse's room is number0 feet long. If she needs a carpet of size number1 square feetWhat is the width of her room?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "7.0 14.0",
+      "infixEquation": "(number1/number0)",
+      "Answer": "2",
+      "rawEquation": "Answer = (number1/number0).",
+      "infixEquationPre": "(b/a)",
+      "prediction": "2",
+      "true_false": true
+    },
+    "173": {
+      "Question": "A grocery store had a total of number0 bottles of which number1 were bottles of regular soda and the rest were bottles of diet soda. They also had number2 apple.How many bottles of diet soda did they have?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "17.0 9.0 29.0",
+      "infixEquation": "(number0-number1)",
+      "Answer": "8",
+      "rawEquation": "Answer = (number0-(number1+number2)).",
+      "infixEquationPre": "(a-(b+c))",
+      "prediction": "-21",
+      "true_false": false
+    },
+    "753": {
+      "Question": "In a school there are number0 boys and number1 girls. number2 more girls joined the school.How many more girls than boys does the school have?",
+      "shot_pids": [
+        1855,
+        1472
+      ],
+      "Numbers": "362.0 257.0 403.0",
+      "infixEquation": "((number1+number2)-number0)",
+      "Answer": "298",
+      "rawEquation": "Answer = ((number1+number2)-number0).",
+      "infixEquationPre": "((b+c)-a)",
+      "prediction": "298",
+      "true_false": true
+    },
+    "828": {
+      "Question": "For the walls of the house he would use number0 nails in all to secure large planks of wood. If each plank needs number1 pieces of nails to be secured and an additional number2 nails were used.How many planks does John need for the house wall?",
+      "shot_pids": [
+        1855,
+        1472
+      ],
+      "Numbers": "11.0 3.0 8.0",
+      "infixEquation": "((number0-number2)/number1)",
+      "Answer": "1",
+      "rawEquation": "Answer = ((number0-number2)/number1).",
+      "infixEquationPre": "((a-c)/b)",
+      "prediction": "1",
+      "true_false": true
+    },
+    "685": {
+      "Question": "The school is planning a field trip. The school has number0 classrooms. There are number1 students in each classroom in the school. If there are number2 seats on each school busHow many buses are needed to take the trip?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "67.0 66.0 6.0",
+      "infixEquation": "(number0*(number1/number2))",
+      "Answer": "737",
+      "rawEquation": "Answer = (number0/number2).",
+      "infixEquationPre": "(a/c)",
+      "prediction": "11.167",
+      "true_false": false
+    },
+    "874": {
+      "Question": "Lewis earns $ number0 every week during the number1 weeks of harvest. If he has to pay $ number2 taxHow much money will have at the end of the harvest season?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "21.0 216.0 702.0",
+      "infixEquation": "((number0*number06)-number2)",
+      "Answer": "3834",
+      "rawEquation": "Answer = ((number0*number1)-number2).",
+      "infixEquationPre": "((a*b)-c)",
+      "prediction": "3834",
+      "true_false": true
+    },
+    "315": {
+      "Question": "Being his favorite, he saved checking on the grapevines for his last stop. He was told by number0 of the pickers that they fill number1 drums of grapes in number2 days.How many drums of grapes would be filled in each day?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "266.0 90.0 5.0",
+      "infixEquation": "(number1/number2)",
+      "Answer": "18",
+      "rawEquation": "Answer = (number1/number2).",
+      "infixEquationPre": "(b/c)",
+      "prediction": "18",
+      "true_false": true
+    },
+    "257": {
+      "Question": "Mary is baking a cake. The recipe calls for number0 cups of sugar and number1 cups of flour. She already put in number2 cups of flour and number3 cups of sugar.How many more cups of sugar does she need to add?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "11.0 9.0 12.0 10.0",
+      "infixEquation": "(number0-number3)",
+      "Answer": "1",
+      "rawEquation": "Answer = (number0-number2).",
+      "infixEquationPre": "(a-c)",
+      "prediction": "-1",
+      "true_false": false
+    },
+    "620": {
+      "Question": "Jake brought number0 balloons to the park. If Jake brought number1 more balloons than the number of balloons that Allan broughtHow many balloons did Allan bring to the park?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "6.0 4.0",
+      "infixEquation": "(number0-number1)",
+      "Answer": "2",
+      "rawEquation": "Answer = (number0 - number1).",
+      "infixEquationPre": "(a-b)",
+      "prediction": "2",
+      "true_false": true
+    },
+    "217": {
+      "Question": "Adam could fit number0 action figures and number1 cabinets on each shelf in his room. His room has number2 shelves.How many total items could his shelves hold?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "8.0 10.0 4.0",
+      "infixEquation": "((number0+number1)*number2)",
+      "Answer": "72",
+      "rawEquation": "Answer = ((number0 * number2) + (number1 * number2",
+      "infixEquationPre": "((a*c)",
+      "prediction": null,
+      "true_false": false
+    },
+    "621": {
+      "Question": "At the arcade Dave had won number0 tickets and lost number1 tickets. If he used number2 to buy some toysHow many tickets did Dave have left?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "14.0 2.0 10.0",
+      "infixEquation": "((number0-number1)-number2)",
+      "Answer": "2",
+      "rawEquation": "Answer = (number0-number1-number2),",
+      "infixEquationPre": "(a-b-c)",
+      "prediction": "2",
+      "true_false": true
+    },
+    "36": {
+      "Question": "After eating a hearty meal they went to see the Buckingham palace. There, Rachel learned that number0 visitors came to the Buckingham palace on the previous day. If there were number1 visitors on that dayHow many visited the Buckingham palace within number2 days?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "703.0 246.0 25.0",
+      "infixEquation": "(number1+number0)",
+      "Answer": "949",
+      "rawEquation": "Answer= ((number0+number1)*number2).",
+      "infixEquationPre": false,
+      "prediction": null,
+      "true_false": false
+    },
+    "595": {
+      "Question": "He then went to see the oranges being harvested. He found out that they harvest number0 sacks per day and discard number1 of them.How many oranges do they harvest per day if each sack contains number2 oranges?",
+      "shot_pids": [
+        1855,
+        1472
+      ],
+      "Numbers": "76.0 64.0 50.0",
+      "infixEquation": "((number0-number1)*number2)",
+      "Answer": "600",
+      "rawEquation": "Answer = ((number0*number2)-number1).",
+      "infixEquationPre": "((a*c)-b)",
+      "prediction": "3736",
+      "true_false": false
+    },
+    "697": {
+      "Question": "Jack received number0 emails in the morning, number1 emails in the afternoon and number2 emails in the evening.How many more emails did Jack receive in the morning than in the afternoon?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "10.0 7.0 17.0",
+      "infixEquation": "(number0-number1)",
+      "Answer": "3",
+      "rawEquation": "Answer = ((number0-number1)).",
+      "infixEquationPre": "((a-b))",
+      "prediction": "3",
+      "true_false": true
+    },
+    "162": {
+      "Question": "Paco had number0 sweet cookies and number1 salty cookies. He ate number2 salty cookies and number3 sweet cookies.How many more salty cookies than sweet cookies did he eat?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "40.0 25.0 28.0 15.0",
+      "infixEquation": "(number2-number3)",
+      "Answer": "13",
+      "rawEquation": "Answer = (number2-number3).",
+      "infixEquationPre": "(c-d)",
+      "prediction": "13",
+      "true_false": true
+    },
+    "441": {
+      "Question": "Paul got a box of some crayons for his birthday. During the school year he gave number0 crayons to his friends while he lost number1 crayons. If he only had number2 crayons leftHow many crayons had been lost or given away?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "52.0 535.0 492.0",
+      "infixEquation": "(number0+number1)",
+      "Answer": "587",
+      "rawEquation": "Answer = (number2-number1).",
+      "infixEquationPre": "(c-b)",
+      "prediction": "-43",
+      "true_false": false
+    },
+    "653": {
+      "Question": "For Gwen's birthday she received some dollars. She spent number0 dollars and has number1 dollars left with her.How much money did Gwen receive for her birthday?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "8.0 6.0",
+      "infixEquation": "(number0+number1)",
+      "Answer": "14",
+      "rawEquation": "Answer = (number1+number0).",
+      "infixEquationPre": "(b+a)",
+      "prediction": "14",
+      "true_false": true
+    },
+    "402": {
+      "Question": "The ring toss game at the carnival made the same amount of money each day. In total in number0 days they earned number1 dollars. Together with game they earned number2 dollars.How much did ring toss game make per day?",
+      "shot_pids": [
+        1855,
+        1472
+      ],
+      "Numbers": "30.0 420.0 22.0",
+      "infixEquation": "(number1/number0)",
+      "Answer": "14",
+      "rawEquation": "Answer = ((number1-number2)/number0).",
+      "infixEquationPre": "((b-c)/a)",
+      "prediction": "13.267",
+      "true_false": false
+    },
+    "822": {
+      "Question": "If you have number0 cookies in total and number1 bags having equal number of cookiesHow many cookies does each bag have?",
+      "shot_pids": [
+        1855,
+        1472
+      ],
+      "Numbers": "14.0 7.0",
+      "infixEquation": "(number0/number1)",
+      "Answer": "2",
+      "rawEquation": "Answer = (number0/number1).",
+      "infixEquationPre": "(a/b)",
+      "prediction": "2",
+      "true_false": true
+    },
+    "740": {
+      "Question": "He had a total of number0 saltwater animals in different aquariums. Each aquarium has number1 animals in it.How many aquariums did he have?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "40.0 2.0",
+      "infixEquation": "(number0/number1)",
+      "Answer": "20",
+      "rawEquation": "Answer = (number0/number1).",
+      "infixEquationPre": "(a/b)",
+      "prediction": "20",
+      "true_false": true
+    },
+    "880": {
+      "Question": "Rachel picked number0 apples from her tree. If the tree had number1 apples initially.How many apples are still there on the tree?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "4.0 7.0",
+      "infixEquation": "(number1-number0)",
+      "Answer": "3",
+      "rawEquation": "Answer = (number1-number0).",
+      "infixEquationPre": "(b-a)",
+      "prediction": "3",
+      "true_false": true
+    },
+    "521": {
+      "Question": "At the stop number0 more people got on the train. Initially there were number1 people on the train.How many people are there on the train now?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "8.0 11.0",
+      "infixEquation": "(number1+number0)",
+      "Answer": "19",
+      "rawEquation": "Answer = (number0+number1).",
+      "infixEquationPre": "(a+b)",
+      "prediction": "19",
+      "true_false": true
+    },
+    "380": {
+      "Question": "Frank was reading through his favorite book. The book had number0 chapters, each with the same number of pages. It has a total of number1 pages. It took Frank number2 days to finish the book.How many pages did he read per day?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "41.0 450.0 30.0",
+      "infixEquation": "(number1/number2)",
+      "Answer": "15",
+      "rawEquation": "Answer = (number1/number2).",
+      "infixEquationPre": "(b/c)",
+      "prediction": "15",
+      "true_false": true
+    },
+    "557": {
+      "Question": "Baker made number0 cakes. He sold some of them. If he still has number1 cakes leftHow many cakes did baker sell?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "54.0 13.0",
+      "infixEquation": "(number0-number1)",
+      "Answer": "41",
+      "rawEquation": "Answer = (number0-number1).",
+      "infixEquationPre": "(a-b)",
+      "prediction": "41",
+      "true_false": true
+    },
+    "958": {
+      "Question": "The grasshopper, the frog and the mouse had a jumping contest. The grasshopper jumped number0 inches. The grasshopper jumped number1 inches farther than the frog and the mouse jumped number2 inches lesser than the frog.How far did the mouse jump?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "39.0 19.0 12.0",
+      "infixEquation": "((number0-number1)-number2)",
+      "Answer": "8",
+      "rawEquation": "Answer = (number0-(number1+number2)).",
+      "infixEquationPre": "(a-(b+c))",
+      "prediction": "8",
+      "true_false": true
+    },
+    "455": {
+      "Question": "number0 birds and number1 storks were sitting on the fence. number2 more birds came to join them.How many birds are sitting on the fence?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "4.0 46.0 6.0",
+      "infixEquation": "(number0+number2)",
+      "Answer": "10",
+      "rawEquation": "Answer = (number0+number2).",
+      "infixEquationPre": "(a+c)",
+      "prediction": "10",
+      "true_false": true
+    },
+    "514": {
+      "Question": "Tiffany was collecting cans for recycling. On monday she had number0 bags of cans. She found number1 bags of cans on the next day and number2 bags of cans the day after that.How many bags did she find after monday?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "8.0 10.0 4.0",
+      "infixEquation": "(number1+number2)",
+      "Answer": "14",
+      "rawEquation": "Answer = (number0+number1+number2).",
+      "infixEquationPre": "(a+b+c)",
+      "prediction": "22",
+      "true_false": false
+    },
+    "274": {
+      "Question": "Brenda's mother made cookies for number0 guests but number1 guests did not come. If she prepared number2 cookies and each guest had the same number of cookiesHow many did each of them have?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "10.0 9.0 18.0",
+      "infixEquation": "(number2/(number0-number1))",
+      "Answer": "18",
+      "rawEquation": "Answer = (number2/(number0-number1)).",
+      "infixEquationPre": "(c/(a-b))",
+      "prediction": "18",
+      "true_false": true
+    },
+    "922": {
+      "Question": "Frank was reading through his favorite book. The book had number0 chapters, each with the same number of pages. It has a total of number1 pages. It took Frank number2 days to finish the book.How many pages are in each chapter?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "3.0 594.0 607.0",
+      "infixEquation": "(number1/number0)",
+      "Answer": "198",
+      "rawEquation": "Answer = (number1/number0).",
+      "infixEquationPre": "(b/a)",
+      "prediction": "198",
+      "true_false": true
+    },
+    "980": {
+      "Question": "number0 red peaches and some more green peaches are in the basket. If there are a total of number1 peaches in the basketHow many green peaches are in the basket?",
+      "shot_pids": [
+        1897,
+        1472
+      ],
+      "Numbers": "10.0 15.0",
+      "infixEquation": "(number1-number0)",
+      "Answer": "5",
+      "rawEquation": "Answer = (number1-number0).",
+      "infixEquationPre": "(b-a)",
+      "prediction": "5",
+      "true_false": true
+    },
+    "891": {
+      "Question": "number0 red peaches, number1 yellow peaches and number2 green peaches are in the basket.How many more green peaches than red peaches are in the basket?",
+      "shot_pids": [
+        1855,
+        1472
+      ],
+      "Numbers": "7.0 71.0 8.0",
+      "infixEquation": "(number2-number0)",
+      "Answer": "1",
+      "rawEquation": "Answer = (number2-number0).",
+      "infixEquationPre": "(c-a)",
+      "prediction": "1",
+      "true_false": true
+    },
+    "28": {
+      "Question": "A grocery store had number0 bottles of regular soda, number1 bottles of diet soda and number2 bottles of lite soda.How many bottles of regular soda and diet soda did they have altogether?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "49.0 40.0 6.0",
+      "infixEquation": "(number1+number0)",
+      "Answer": "89",
+      "rawEquation": "Answer = (number0+number1).",
+      "infixEquationPre": "(a+b)",
+      "prediction": "89",
+      "true_false": true
+    },
+    "372": {
+      "Question": "For Gwen's birthday she received number0 dollars from her mom. Her dad gave her number1 more dollars. If she spent number2 dollars.How much money did she still have?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "2.0 4.0 3.0",
+      "infixEquation": "((number0+number1)-number2)",
+      "Answer": "3",
+      "rawEquation": "Answer = ((number0+number1)-number2).",
+      "infixEquationPre": "((a+b)-c)",
+      "prediction": "3",
+      "true_false": true
+    },
+    "476": {
+      "Question": "Lewis earns $ number0 every week during the harvest. If he earns a total of $ number1How many weeks did the harvest last?",
+      "shot_pids": [
+        1855,
+        1472
+      ],
+      "Numbers": "2.0 178.0",
+      "infixEquation": "(number1/number0)",
+      "Answer": "89",
+      "rawEquation": "Answer = (number0/number1).",
+      "infixEquationPre": "(a/b)",
+      "prediction": "0.011",
+      "true_false": false
+    },
+    "954": {
+      "Question": "Dave had number0 apps on his phone. After adding some he had number1 left.How many apps did he add?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "17.0 18.0",
+      "infixEquation": "(number1-number0)",
+      "Answer": "1",
+      "rawEquation": "Answer = (number1-number0).",
+      "infixEquationPre": "(b-a)",
+      "prediction": "1",
+      "true_false": true
+    },
+    "326": {
+      "Question": "There were number0 roses in the vase. Jessica cut some more roses from her flower garden which had a total of number1 roses. There are now number2 roses in the vase.How many roses did she cut?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "7.0 59.0 20.0",
+      "infixEquation": "(number2-number0)",
+      "Answer": "13",
+      "rawEquation": "Answer = (number2-number0).",
+      "infixEquationPre": "(c-a)",
+      "prediction": "13",
+      "true_false": true
+    },
+    "929": {
+      "Question": "After eating a hearty meal they went to see the Buckingham palace. There, Rachel learned that number0 visitors came to the Buckingham palace that day. If there were number1 visitors the previous day and number2 visitors the day before thatHow many visited the Buckingham palace within the past number3 days?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "512.0 471.0 808.0 89.0",
+      "infixEquation": "((number0+number1)+number2)",
+      "Answer": "1791",
+      "rawEquation": "Answer = (number0+number1+number2).",
+      "infixEquationPre": "(a+b+c)",
+      "prediction": "1791",
+      "true_false": true
+    },
+    "389": {
+      "Question": "Debby bought number0 water bottles and number1 soda bottles when they were on sale. If she drank number2 water bottles and number3 soda bottles a dayHow many days would the soda bottles last?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "200.0 256.0 312.0 4.0",
+      "infixEquation": "(number1/number3)",
+      "Answer": "64",
+      "rawEquation": "Answer = ((number1*number3)/number2).",
+      "infixEquationPre": "((b*d)/c)",
+      "prediction": "3.282",
+      "true_false": false
+    },
+    "433": {
+      "Question": "Bobby ate number0 pieces of candy. Then he ate number1 more. He also ate number2 pieces of chocolate.How many pieces of candy and chocolate did Bobby eat altogether?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "33.0 4.0 14.0",
+      "infixEquation": "((number0+number1)+1number1)",
+      "Answer": "51",
+      "rawEquation": "Answer = (number0+number1+number2).",
+      "infixEquationPre": "(a+b+c)",
+      "prediction": "51",
+      "true_false": true
+    },
+    "913": {
+      "Question": "David did number0 push-ups in gym class today. David did number1 more push-ups than Zachary.How many push-ups did Zachary and David do altogether?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "51.0 49.0",
+      "infixEquation": "((number0+number0)-number1)",
+      "Answer": "53",
+      "rawEquation": "Answer = (number0+number1).",
+      "infixEquationPre": "(a+b)",
+      "prediction": "100",
+      "true_false": false
+    },
+    "905": {
+      "Question": "Jesse's room is number0 feet long and number1 feet wide. If each tile is of size number2 square feetHow many tiles does she need to cover the whole floor?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "2.0 12.0 4.0",
+      "infixEquation": "((number0*1number0)/number2)",
+      "Answer": "6",
+      "rawEquation": "Answer = ((number0*number1)/number2).",
+      "infixEquationPre": "((a*b)/c)",
+      "prediction": "6",
+      "true_false": true
+    },
+    "538": {
+      "Question": "Josh had some marbles in his collection. He lost number0 marbles. If he has number1 marbles nowHow many marbles did he have in his collection?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "21.0 12.0",
+      "infixEquation": "(number0+number1)",
+      "Answer": "33",
+      "rawEquation": "Answer = (number1+number0).",
+      "infixEquationPre": "(b+a)",
+      "prediction": "33",
+      "true_false": true
+    },
+    "168": {
+      "Question": "Danny collects bottle caps. He found number0 bottle caps at the park while he threw away number1 old ones. Now he has number2 bottle caps in his collection.How many bottle caps did danny have at first?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "63.0 51.0 33.0",
+      "infixEquation": "((number2+number1)-number0)",
+      "Answer": "21",
+      "rawEquation": "Answer = (number2-number1).",
+      "infixEquationPre": "(c-b)",
+      "prediction": "-18",
+      "true_false": false
+    },
+    "573": {
+      "Question": "The school is planning a field trip. The school has number0 classrooms. number1 school buses are fully filled with number2 seats on each school bus.How many students are in the school?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "84.0 95.0 118.0",
+      "infixEquation": "(number1*number2)",
+      "Answer": "11210",
+      "rawEquation": "Answer = (number0*number1*number2).",
+      "infixEquationPre": "(a*b*c)",
+      "prediction": "941640",
+      "true_false": false
+    },
+    "181": {
+      "Question": "A grocery store had number0 bottles of diet soda, number1 bottles of regular soda and number2 apples.How many more bottles of regular soda than diet soda did they have?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "54.0 83.0 12.0",
+      "infixEquation": "(number1-number0)",
+      "Answer": "29",
+      "rawEquation": "Answer = (number1-number0).",
+      "infixEquationPre": "(b-a)",
+      "prediction": "29",
+      "true_false": true
+    },
+    "241": {
+      "Question": "A grocery store had number0 bottles of regular soda, number1 bottles of diet soda and number2 bottles of lite soda.How many more bottles of regular soda did they have than diet soda?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "81.0 60.0 60.0",
+      "infixEquation": "(number0-number1)",
+      "Answer": "21",
+      "rawEquation": "Answer = (number0-number1).",
+      "infixEquationPre": "(a-b)",
+      "prediction": "21",
+      "true_false": true
+    },
+    "236": {
+      "Question": "Helen the hippo and her friends are preparing for thanksgiving at Helen's house. Helen baked number0 chocolate chip cookies and number1 raisin cookies yesterday. And she baked number2 raisin cookies and number3 chocolate chip cookies this morning.How many raisin cookies did Helen bake?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "144.0 397.0 85.0 403.0",
+      "infixEquation": "(number1+number2)",
+      "Answer": "482",
+      "rawEquation": "Answer = (number1+number2).",
+      "infixEquationPre": "(b+c)",
+      "prediction": "482",
+      "true_false": true
+    },
+    "24": {
+      "Question": "Jerry had number0 action figures on a shelf in his room. Later he added number1 more action figures to the shelf and removed some of the old ones. If there are number2 action figures on his shelf nowHow many action figures did he remove from the shelf?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "3.0 4.0 6.0",
+      "infixEquation": "((number0+number1)-number2)",
+      "Answer": "1",
+      "rawEquation": "Answer = ((number0+number1)-number2).",
+      "infixEquationPre": "((a+b)-c)",
+      "prediction": "1",
+      "true_false": true
+    },
+    "180": {
+      "Question": "For the walls of the house he would use number0 large planks of wood. If each plank of wood needs number1 pieces of nails to be secured and in addition number2 nails are needed for some smaller planks.How many nails does John need for the house wall?",
+      "shot_pids": [
+        1855,
+        1472
+      ],
+      "Numbers": "13.0 17.0 8.0",
+      "infixEquation": "((number0*number1)+number2)",
+      "Answer": "229",
+      "rawEquation": "Answer = ((number0*number1)+number2).",
+      "infixEquationPre": "((a*b)+c)",
+      "prediction": "229",
+      "true_false": true
+    },
+    "332": {
+      "Question": "Frank was reading through his favorite book. The book had number0 chapters each with number1 pages. It took frank number2 days to finish the book.How many chapters did he read per day?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "2.0 405.0 664.0",
+      "infixEquation": "(number2/number0)",
+      "Answer": "332",
+      "rawEquation": "Answer = (number0/number2).",
+      "infixEquationPre": "(a/c)",
+      "prediction": "0.003",
+      "true_false": false
+    },
+    "177": {
+      "Question": "The Razorback t-shirt shop makes $ number0 dollars off each t-shirt sold. During the Arkansas game and the Texas tech game they sold a total of number1 t-shirts. If they sold number2 t-shirts during the Arkansas gameHow much money did they make from selling the t-shirts during the arkansas game?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "98.0 163.0 89.0",
+      "infixEquation": "(number0*number2)",
+      "Answer": "8722",
+      "rawEquation": "Answer = (number0*number2).",
+      "infixEquationPre": "(a*c)",
+      "prediction": "8722",
+      "true_false": true
+    },
+    "139": {
+      "Question": "Jessica cut some roses from her flower garden to put in her vase. There are now number0 roses in the vase. If there were number1 roses in the vase initiallyHow many roses did she cut?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "19.0 3.0",
+      "infixEquation": "(number0-number1)",
+      "Answer": "16",
+      "rawEquation": "Answer = (number1-number0).",
+      "infixEquationPre": "(b-a)",
+      "prediction": "-16",
+      "true_false": false
+    },
+    "522": {
+      "Question": "Frank had number0 pieces of candy. He lost number1 of them. If he put the remaining pieces into bags with number2 pieces in each bagHow many bags would he have?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "33.0 24.0 9.0",
+      "infixEquation": "((number0-number1)/number2)",
+      "Answer": "1",
+      "rawEquation": "Answer = (number0-number1)/number2",
+      "infixEquationPre": "(a-b)",
+      "prediction": "9",
+      "true_false": false
+    },
+    "939": {
+      "Question": "There were number0 roses and number1 orchids in the vase. Jessica cut some more roses and orchids from her flower garden. There are now numbernumber3 roses and 2 orchids in the vase.How many more roses than orchids are there in the vase now?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "5.0 3.0 12.0 2.0",
+      "infixEquation": "(numbernumber3-number3)",
+      "Answer": "10",
+      "rawEquation": "Answer = (number3-2).",
+      "infixEquationPre": "(d-2)",
+      "prediction": null,
+      "true_false": false
+    },
+    "368": {
+      "Question": "Edward spent $ number0 to buy books and $ number1 to buy pens. Now he has $ number2.How much did Edward spend on books and pens?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "4.0 3.0 12.0",
+      "infixEquation": "(number0+number1)",
+      "Answer": "7",
+      "rawEquation": "Answer = number0+number1.",
+      "infixEquationPre": false,
+      "prediction": null,
+      "true_false": false
+    },
+    "526": {
+      "Question": "They decided to hold the party in their backyard. They have some sets of tables, each having the number0 chairs. If there are a total of number1 chairs in the backyardHow many sets of tables do they have?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "3.0 9.0",
+      "infixEquation": "(number1/number0)",
+      "Answer": "3",
+      "rawEquation": "Answer = (number1/number0).",
+      "infixEquationPre": "(b/a)",
+      "prediction": "3",
+      "true_false": true
+    },
+    "690": {
+      "Question": "Every day Ryan spends number0 hours on learning english and number1 hours on learning chinese. If he learns for number2 daysHow many hours does he spend on learning chinese in all?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "5.0 4.0 6.0",
+      "infixEquation": "(number1*number2)",
+      "Answer": "24",
+      "rawEquation": "Answer = (number2*number1).",
+      "infixEquationPre": "(c*b)",
+      "prediction": "24",
+      "true_false": true
+    },
+    "948": {
+      "Question": "Luke gained number0 points in each round of a game. If he played number1 rounds of a trivia gameHow many points did he score in the game?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "146.0 157.0",
+      "infixEquation": "(number1*number0)",
+      "Answer": "22922",
+      "rawEquation": "Answer = (number0*number1).",
+      "infixEquationPre": "(a*b)",
+      "prediction": "22922",
+      "true_false": true
+    },
+    "186": {
+      "Question": "Matthew had number0 crackers. If Matthew gave equal numbers of crackers to his number1 friends and still had number2 crackers leftHow many crackers did each friend eat?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "15.0 5.0 10.0",
+      "infixEquation": "((number0-number2)/number1)",
+      "Answer": "1",
+      "rawEquation": "Answer = ((number0-(number2))/number1).",
+      "infixEquationPre": "((a-(c))/b)",
+      "prediction": "1",
+      "true_false": true
+    },
+    "915": {
+      "Question": "A school has number0 pupils. There are number1 girls and the rest are boys.How many boys are there in that school?",
+      "shot_pids": [
+        1855,
+        1472
+      ],
+      "Numbers": "485.0 232.0",
+      "infixEquation": "(number0-number1)",
+      "Answer": "253",
+      "rawEquation": "Answer = (number0-number1).",
+      "infixEquationPre": "(a-b)",
+      "prediction": "253",
+      "true_false": true
+    },
+    "456": {
+      "Question": "Paco had number0 cookies. He ate some of them and had number1 cookies left.How many cookies did Paco eat?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "28.0 7.0",
+      "infixEquation": "(number0-number1)",
+      "Answer": "21",
+      "rawEquation": "Answer = (number0-number1).",
+      "infixEquationPre": "(a-b)",
+      "prediction": "21",
+      "true_false": true
+    },
+    "815": {
+      "Question": "At the stop number0 more people got on the bus. Initially there were number1 people on the bus.How many people are there on the bus now?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "13.0 4.0",
+      "infixEquation": "(number1+number0)",
+      "Answer": "17",
+      "rawEquation": "Answer = (number0+number1).",
+      "infixEquationPre": "(a+b)",
+      "prediction": "17",
+      "true_false": true
+    },
+    "424": {
+      "Question": "The Razorback t-shirt shop sells each t-shirt for $ number0 dollars. During the Arkansas and Texas tech game they offered a discount of $ number1 per t-shirt and sold number2 t-shirts.How much money did they make from selling the t-shirts?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "51.0 8.0 130.0",
+      "infixEquation": "((number0-number1)*number2)",
+      "Answer": "5590",
+      "rawEquation": "Answer = ((number0-number1)*number2).",
+      "infixEquationPre": "((a-b)*c)",
+      "prediction": "5590",
+      "true_false": true
+    },
+    "752": {
+      "Question": "Nell collects cards. She had number0 baseball cards and number1 Ace cards. She gave some of her cards to Jeff and now has number2 Ace cards and number3 baseball cards left.How many more Ace cards than baseball cards does Nell have?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "239.0 38.0 376.0 111.0",
+      "infixEquation": "(number2-number3)",
+      "Answer": "265",
+      "rawEquation": "Answer = (number2-number3).",
+      "infixEquationPre": "(c-d)",
+      "prediction": "265",
+      "true_false": true
+    },
+    "537": {
+      "Question": "Steven has number0 peaches. Jake has number1 fewer peaches than Steven and number2 more peaches than Jill.How many peaches does Jake have?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "19.0 12.0 72.0",
+      "infixEquation": "(number0-number1)",
+      "Answer": "7",
+      "rawEquation": "Answer = (number1-number2).",
+      "infixEquationPre": "(b-c)",
+      "prediction": "-60",
+      "true_false": false
+    },
+    "781": {
+      "Question": "The grasshopper, the frog and the mouse had a jumping contest. The grasshopper jumped number0 inches. The frog jumped number1 inches farther than the grasshopper and the mouse jumped number2 inches lesser than the frog.How much farther did the mouse jump than the grasshopper?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "24.0 33.0 5.0",
+      "infixEquation": "(number1-number2)",
+      "Answer": "28",
+      "rawEquation": "Answer = (number1-number2).",
+      "infixEquationPre": "(b-c)",
+      "prediction": "28",
+      "true_false": true
+    },
+    "959": {
+      "Question": "Being his favorite, he saved checking on the grapevines for his last stop. He was told by number0 of the pickers that they fill number1 drums of grapes in number2 days.How many drums of grapes would be filled per day?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "94.0 90.0 6.0",
+      "infixEquation": "(number1/number2)",
+      "Answer": "15",
+      "rawEquation": "Answer = (number1/number2).",
+      "infixEquationPre": "(b/c)",
+      "prediction": "15",
+      "true_false": true
+    },
+    "808": {
+      "Question": "He then went to see the oranges being harvested. He found out that they harvested number0 sacks of oranges.How many sacks did they harvest per day if they harvested for a total of number1 days?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "56.0 14.0",
+      "infixEquation": "(number0/number1)",
+      "Answer": "4",
+      "rawEquation": "Answer = (number0/number1).",
+      "infixEquationPre": "(a/b)",
+      "prediction": "4",
+      "true_false": true
+    },
+    "607": {
+      "Question": "Baker made number0 cakes and number1 pastries. If he sold number2 cakes and number3 pastriesHow many more cakes than pastries did baker make?",
+      "shot_pids": [
+        1897,
+        1472
+      ],
+      "Numbers": "126.0 48.0 115.0 81.0",
+      "infixEquation": "(number0-number1)",
+      "Answer": "78",
+      "rawEquation": "Answer = (number0-number2).",
+      "infixEquationPre": "(a-c)",
+      "prediction": "11",
+      "true_false": false
+    },
+    "362": {
+      "Question": "Mary is baking a cake. The recipe calls for number0 cups of flour number1 cups of sugar and number2 cups of salt. She already put in number3 cups of flour.How many more cups of sugar than cups of salt does she need to add now?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "6.0 8.0 7.0 5.0",
+      "infixEquation": "(number1-number2)",
+      "Answer": "1",
+      "rawEquation": "Answer = ((number1-number3)+(number2-number3)).",
+      "infixEquationPre": "((b-d)+(c-d))",
+      "prediction": "5",
+      "true_false": false
+    },
+    "370": {
+      "Question": "Julia played tag with number0 kids on monday, number1 kids on tuesday and number2 kids on wednesday.How many more kids did she play with on monday than on tuesday?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "9.0 7.0 96.0",
+      "infixEquation": "(number0-number1)",
+      "Answer": "2",
+      "rawEquation": "Answer = (number0-number1).",
+      "infixEquationPre": "(a-b)",
+      "prediction": "2",
+      "true_false": true
+    },
+    "879": {
+      "Question": "Marco and his dad went strawberry picking. Marco's strawberries weighed number0 pounds. If together their strawberries weighed number1 pounds.How much more did his dad's strawberries weigh than his?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "10.0 26.0",
+      "infixEquation": "((number1-number0)-number0)",
+      "Answer": "6",
+      "rawEquation": "Answer = (number1-number0).",
+      "infixEquationPre": "(b-a)",
+      "prediction": "16",
+      "true_false": false
+    },
+    "931": {
+      "Question": "White t - shirts can be purchased in packages of number0. If mom buys number1 packages of white t - shirts and number2 trousersHow many white t - shirts will she have?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "53.0 57.0 34.0",
+      "infixEquation": "(number0*number1)",
+      "Answer": "3021",
+      "rawEquation": "Answer = (number1*number0).\n\nQuestion: Jennie can",
+      "infixEquationPre": "(b*a)",
+      "prediction": "3021",
+      "true_false": true
+    },
+    "165": {
+      "Question": "An industrial machine made number0 shirts yesterday and number1 shirts today. It can make number2 shirts a minute.How many minutes did the machine work in all?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "13.0 3.0 8.0",
+      "infixEquation": "((number0+number1)/number2)",
+      "Answer": "2",
+      "rawEquation": "Answer = ((number0+number1)/number2).",
+      "infixEquationPre": "((a+b)/c)",
+      "prediction": "2",
+      "true_false": true
+    },
+    "772": {
+      "Question": "Jack received number0 emails and number1 letters in the morning. He then received number2 emails and number3 letters in the afternoon.How many more emails did Jack receive in the morning than in the afternoon?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "10.0 12.0 3.0 44.0",
+      "infixEquation": "(number0-number2)",
+      "Answer": "7",
+      "rawEquation": "Answer = (number0-number2).",
+      "infixEquationPre": "(a-c)",
+      "prediction": "7",
+      "true_false": true
+    },
+    "409": {
+      "Question": "Nell collects baseball cards. She gave number0 of her cards to Jeff and now has number1 cards left..How many cards did Nell have initially?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "301.0 154.0",
+      "infixEquation": "(number1+number0)",
+      "Answer": "455",
+      "rawEquation": "Answer = (number1+number0).",
+      "infixEquationPre": "(b+a)",
+      "prediction": "455",
+      "true_false": true
+    },
+    "732": {
+      "Question": "There are number0 students in a school. If the school has number1 students in each grades and each grade has the same number of studentsHow many grades are there in total?",
+      "shot_pids": [
+        1855,
+        1472
+      ],
+      "Numbers": "270.0 5.0",
+      "infixEquation": "(number0/number1)",
+      "Answer": "54",
+      "rawEquation": "Answer = (number0/number1).",
+      "infixEquationPre": "(a/b)",
+      "prediction": "54",
+      "true_false": true
+    },
+    "756": {
+      "Question": "Julia played tag with number0 kids on monday. If she played tag with number1 more kids on monday than on tuesdayHow many kids did she play with on tuesday?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "16.0 12.0",
+      "infixEquation": "(number0-number1)",
+      "Answer": "4",
+      "rawEquation": "Answer = (number0 - number1).",
+      "infixEquationPre": "(a-b)",
+      "prediction": "4",
+      "true_false": true
+    },
+    "472": {
+      "Question": "Rebecca wants to split a collection of eggs into groups of number0. Rebecca has number1 marbles and number2 eggs.How many groups will be created?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "5.0 10.0 15.0",
+      "infixEquation": "(1number0/number0)",
+      "Answer": "3",
+      "rawEquation": "Answer = (number2/number0).",
+      "infixEquationPre": "(c/a)",
+      "prediction": "3",
+      "true_false": true
+    },
+    "670": {
+      "Question": "Julia played tag with number0 kids on monday and number1 kids on tuesday. She played cards wtih number2 kids on wednesday.How many kids did she play tag with altogether?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "7.0 13.0 20.0",
+      "infixEquation": "(number0+number1)",
+      "Answer": "20",
+      "rawEquation": "Answer = (number0+number1).",
+      "infixEquationPre": "(a+b)",
+      "prediction": "20",
+      "true_false": true
+    },
+    "543": {
+      "Question": "A book has number0 chapters. The first chapter is number1 pages long the second chapter is number2 pages long and the third chapter is number3 pages long.How many more pages does the first chapter have than the second chapter?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "3.0 91.0 23.0 25.0",
+      "infixEquation": "(number1-2number0)",
+      "Answer": "68",
+      "rawEquation": "Answer = (number1-number2).",
+      "infixEquationPre": "(b-c)",
+      "prediction": "68",
+      "true_false": true
+    },
+    "255": {
+      "Question": "A waiter had number0 customers. number1 customers left.How many customers does he still have?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "14.0 5.0",
+      "infixEquation": "(number0-number1)",
+      "Answer": "9",
+      "rawEquation": "Answer = (number0-number1).",
+      "infixEquationPre": "(a-b)",
+      "prediction": "9",
+      "true_false": true
+    },
+    "501": {
+      "Question": "Faye had number0 packs of pencils each one having number1 pencils. She was placing her pencils into rows with number2 pencils in each row.How many rows could she make?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "35.0 4.0 2.0",
+      "infixEquation": "(number0*(number1/number2))",
+      "Answer": "70",
+      "rawEquation": "Answer = ((number0*number1)/number2).",
+      "infixEquationPre": "((a*b)/c)",
+      "prediction": "70",
+      "true_false": true
+    },
+    "285": {
+      "Question": "For the walls of the house he would use number0 large planks of wood and number1 small planks. If large planks together need number2 pieces of nails to be secured and small planks together need number3 nails.How many nails does John need for the house wall?",
+      "shot_pids": [
+        1855,
+        1472
+      ],
+      "Numbers": "12.0 10.0 15.0 5.0",
+      "infixEquation": "(number2+number3)",
+      "Answer": "20",
+      "rawEquation": "Answer = ((number0*number2)+(number1*number3)).",
+      "infixEquationPre": "((a*c)+(b*d))",
+      "prediction": "230",
+      "true_false": false
+    },
+    "510": {
+      "Question": "Shirley sold number0 boxes of trefoils.How many boxes are in each case if she needs to deliver number1 cases of boxes?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "10.0 5.0",
+      "infixEquation": "(number0/number1)",
+      "Answer": "2",
+      "rawEquation": "Answer = (number0/number1).",
+      "infixEquationPre": "(a/b)",
+      "prediction": "2",
+      "true_false": true
+    },
+    "512": {
+      "Question": "David did number0 more push-ups than Zachary in gym class today. If David did number1 push-upsHow many push-ups did Zachary and David do altogether?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "56.0 38.0",
+      "infixEquation": "((number1+number1)-number0)",
+      "Answer": "20",
+      "rawEquation": "number1+number0",
+      "infixEquationPre": false,
+      "prediction": null,
+      "true_false": false
+    },
+    "527": {
+      "Question": "Luke played a trivia game and scored number0 points. If he gained the number1 points in each roundHow many rounds did he play?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "154.0 11.0",
+      "infixEquation": "(number0/number1)",
+      "Answer": "14",
+      "rawEquation": "Answer = (number0/number1).",
+      "infixEquationPre": "(a/b)",
+      "prediction": "14",
+      "true_false": true
+    },
+    "851": {
+      "Question": "David did number0 more push-ups than Zachary in gym class today. If David did number1 push-upsHow many push-ups did Zachary do?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "30.0 37.0",
+      "infixEquation": "(number1-number0)",
+      "Answer": "7",
+      "rawEquation": "Answer = (number1-number0).",
+      "infixEquationPre": "(b-a)",
+      "prediction": "7",
+      "true_false": true
+    },
+    "930": {
+      "Question": "He then went to see the oranges being harvested. He found out that they harvest number0 sacks of ripe oranges and number1 sacks of unripe oranges per day.How many more sacks of ripe oranges than unripe oranges are harvested per day?",
+      "shot_pids": [
+        1855,
+        1472
+      ],
+      "Numbers": "44.0 25.0",
+      "infixEquation": "(number0-number1)",
+      "Answer": "19",
+      "rawEquation": "Answer = (number0-number1).",
+      "infixEquationPre": "(a-b)",
+      "prediction": "19",
+      "true_false": true
+    },
+    "963": {
+      "Question": "Adam has number0 apples. Jackie has number1 apples.How many more apples does Jackie have than Adam?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "9.0 10.0",
+      "infixEquation": "(number1-number0)",
+      "Answer": "1",
+      "rawEquation": "Answer = (number1-number0).",
+      "infixEquationPre": "(b-a)",
+      "prediction": "1",
+      "true_false": true
+    },
+    "677": {
+      "Question": "Winter is almost here and most animals are migrating to warmer countries. There are number0 bird families living near the mountain. If number1 bird families flew away to africa and number2 bird families flew away to asiaHow many bird families flew away for the winter?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "18.0 38.0 80.0",
+      "infixEquation": "(number1+number2)",
+      "Answer": "118",
+      "rawEquation": "Answer = (number1+number2).",
+      "infixEquationPre": "(b+c)",
+      "prediction": "118",
+      "true_false": true
+    },
+    "465": {
+      "Question": "number0 campers went rowing on a day. number1 campers went rowing in the morning and some more campers went rowing in the afternoon.How many campers went rowing in the afternoon?",
+      "shot_pids": [
+        1467,
+        1472
+      ],
+      "Numbers": "46.0 43.0",
+      "infixEquation": "(number0-number1)",
+      "Answer": "3",
+      "rawEquation": "Answer = (number0-(number1)).",
+      "infixEquationPre": "(a-(b))",
+      "prediction": "3",
+      "true_false": true
+    }
+  }
+}
