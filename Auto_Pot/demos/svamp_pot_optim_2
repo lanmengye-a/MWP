@@ -1,0 +1,52 @@
+{
+    "demo": [
+        {
+            "question": "Jake has 6 fewer peaches and 8 more apples than Steven. Steven has 17 peaches and 16 apples. How many more peaches than apples does Steven have?",
+            "rationale": "peaches_Jake = 0\npeaches_Steven = 0\napples_Jake = 0\napples_Steven = 0\npeaches_Jake = peaches_Steven - 6\napples_Jake = apples_Steven + 8\npeaches_Steven = 17\napples_Steven = 16\n#ans = peaches_Steven - apples_Steven\nans = peaches_Steven - apples_Steven\nprint(ans)",
+            "pred_ans": 1.0,
+            "gold_ans": 1.0
+        },
+        {
+            "question": "Paul got a box of 589 crayons for his birthday. During the school year he gave 571 crayons to his friends while he lost 161 crayons. How many more crayons did he give to his friends than those he lost?",
+            "rationale": "# Solution\n# Define the variables\ncrayons_given = 571\ncrayons_lost = 161\n# Calculate the result\nans = crayons_given - crayons_lost\n# Print the result\nprint(ans)",
+            "pred_ans": 410.0,
+            "gold_ans": 410.0
+        },
+        {
+            "question": "Baker made 13 cakes. He sold 91 of them and bought 154 new cakes. How many more cakes did baker buy than those he sold?",
+            "rationale": "\nbaked = 13\nsold = 91\nbought = 154\nans = bought - sold\nprint(ans)",
+            "pred_ans": 63.0,
+            "gold_ans": 63.0
+        },
+        {
+            "question": "Rachel had to complete 4 pages of reading homework, 7 pages of math homework and 19 more pages of biology homework. How many more pages of math homework than reading homework did she have?",
+            "rationale": "# Solution\n# Define variables and assign them with every number in Question\nrachel_reading_homework = 4\nrachel_math_homework = 7\nrachel_biology_homework = 19\n# Define the equation\nans = rachel_math_homework - rachel_reading_homework\n# Display the result\nprint(ans)",
+            "pred_ans": 3.0,
+            "gold_ans": 3.0
+        },
+        {
+            "question": "36 children were riding on the bus. At the bus stop 68 children got off the bus while some more got on the bus. Then there were 12 children altogether on the bus. How many more children got off the bus than those that got on?",
+            "rationale": "# define variables\nbus_stop_children_off = 68\nbus_stop_children_on = 12\n# define equations\nans = bus_stop_children_off - bus_stop_children_on\n# print result\nprint(ans)",
+            "pred_ans": 56.0,
+            "gold_ans": 24.0
+        },
+        {
+            "question": "He then went to see the oranges being harvested. He found out that they harvest 66 sacks per day and that each sack containes 25 oranges. How many oranges will they have after 87 days of harvest?",
+            "rationale": "# Define the variables\nsacks_per_day = 66\noranges_per_sack = 25\ndays_of_harvest = 87\n# Solve the problem\nans = sacks_per_day * oranges_per_sack * days_of_harvest\n# Print the result\nprint(ans)",
+            "pred_ans": 143550.0,
+            "gold_ans": 143550.0
+        },
+        {
+            "question": "Last week Fred had 60 dollars and Jason had 19 dollars. Jason washed cars over the weekend and now has 33 dollars. How much money did Jason make washing cars?",
+            "rationale": "\n# define the variables and assign them with every number in Question\na = 60\nb = 19\nc = 33\n# Each equation only uses previously introduced variables instead of the number itself\nans = c - b\n# store the result as a 'ans' variable\nprint(ans)",
+            "pred_ans": 14.0,
+            "gold_ans": 14.0
+        },
+        {
+            "question": "There were 7 roses in the vase. Jessica cut some more roses from her flower garden which had a total of 59 roses. There are now 20 roses in the vase. How many roses did she cut?",
+            "rationale": "# Define the variables\n# Define the variables\nroses_in_vase = 7\nroses_in_garden = 59\nroses_after_cut = 20\n# Define the equation\nans = roses_in_garden - roses_after_cut + roses_in_vase\n# Print the result\nprint(ans)",
+            "pred_ans": 46.0,
+            "gold_ans": 13.0
+        }
+    ]
+}

@@ -1,0 +1,52 @@
+{
+    "demo": [
+        {
+            "question": "Jake has 6 fewer peaches and 8 more apples than Steven. Steven has 17 peaches and 16 apples. How many more peaches than apples does Steven have?",
+            "rationale": "\nimport math\nimport numpy as np\n# Question Jake has 6 fewer peaches and 8 more apples than Steven. Steven has 17 peaches and 16 apples. How many more peaches than apples does Steven have?\n# Answer this question by implementing a solver() function.\ndef solver():\n    # Let's think step by step to derive the answer, and then return the answer\n    # According to the question, we can define the variables\n    # Each equation only uses previously introduced variables\n    # Jake has 6 fewer peaches and 8 more apples than Steven\n    # Steven has 17 peaches and 16 apples\n    # Jake has 11 apples\n    # Jake has 11 apples and 17 peaches\n    # Jake has 28 fruits\n    # Steven has 28 fruits\n    return 1\nans = solver()",
+            "pred_ans": 1.0,
+            "gold_ans": 1.0
+        },
+        {
+            "question": "Paul got a box of 589 crayons for his birthday. During the school year he gave 571 crayons to his friends while he lost 161 crayons. How many more crayons did he give to his friends than those he lost?",
+            "rationale": "\nimport math\nimport numpy as np\n# Question Paul got a box of 589 crayons for his birthday. During the school year he gave 571 crayons to his friends while he lost 161 crayons. How many more crayons did he give to his friends than those he lost?\n# Answer this question by implementing a solver() function.\ndef solver():\n    # Let's think step by step to derive the answer, and then return the answer\n    # According to the question, we can define the variables\n    # Each equation only uses previously introduced variables\n    crayons_given_to_friends = 571\n    crayons_lost = 161\n    crayons_given_to_friends_minus_crayons_lost = crayons_given_to_friends - crayons_lost\n    return crayons_given_to_friends_minus_crayons_lost\nans = solver()",
+            "pred_ans": 410.0,
+            "gold_ans": 410.0
+        },
+        {
+            "question": "Baker made 13 cakes. He sold 91 of them and bought 154 new cakes. How many more cakes did baker buy than those he sold?",
+            "rationale": "\nimport math\nimport numpy as np\n# Question Baker made 13 cakes. He sold 91 of them and bought 154 new cakes. How many more cakes did baker buy than those he sold?\n# Answer this question by implementing a solver() function.\ndef solver():\n    # Let's think step by step to derive the answer, and then return the answer\n    # According to the question, we can define the variables\n    # Each equation only uses previously introduced variables\n    sold = 91\n    bought = 154\n    new_cakes = bought - sold\n    print(new_cakes)\n    return new_cakes\nans = solver()",
+            "pred_ans": 63.0,
+            "gold_ans": 63.0
+        },
+        {
+            "question": "Rachel had to complete 4 pages of reading homework, 7 pages of math homework and 19 more pages of biology homework. How many more pages of math homework than reading homework did she have?",
+            "rationale": "\nimport math\nimport numpy as np\n# Question Rachel had to complete 4 pages of reading homework, 7 pages of math homework and 19 more pages of biology homework. How many more pages of math homework than reading homework did she have?\n# Answer this question by implementing a solver() function.\ndef solver():\n    # Let's think step by step to derive the answer, and then return the answer\n    # According to the question, we can define the variables\n    # Each equation only uses previously introduced variables\n    r = 4\n    m = 7\n    b = 19\n    return m - r\nans = solver()",
+            "pred_ans": 3.0,
+            "gold_ans": 3.0
+        },
+        {
+            "question": "36 children were riding on the bus. At the bus stop 68 children got off the bus while some more got on the bus. Then there were 12 children altogether on the bus. How many more children got off the bus than those that got on?",
+            "rationale": "\nimport math\nimport numpy as np\n# Question 36 children were riding on the bus. At the bus stop 68 children got off the bus while some more got on the bus. Then there were 12 children altogether on the bus. How many more children got off the bus than those that got on?\n# Answer this question by implementing a solver() function.\ndef solver():\n    # Let's think step by step to derive the answer, and then return the answer\n    # According to the question, we can define the variables\n    # Each equation only uses previously introduced variables\n    # We are asked to find the difference between two numbers, so we can define a variable to hold this difference\n    d = 68 - 12\n    return d\nans = solver()",
+            "pred_ans": 56.0,
+            "gold_ans": 24.0
+        },
+        {
+            "question": "He then went to see the oranges being harvested. He found out that they harvest 66 sacks per day and that each sack containes 25 oranges. How many oranges will they have after 87 days of harvest?",
+            "rationale": "\nimport math\nimport numpy as np\n# Question He then went to see the oranges being harvested. He found out that they harvest 66 sacks per day and that each sack containes 25 oranges. How many oranges will they have after 87 days of harvest?\n# Answer this question by implementing a solver() function.\ndef solver():\n    # Let's think step by step to derive the answer, and then return the answer\n    # According to the question, we can define the variables\n    # Each equation only uses previously introduced variables\n    sacks_per_day = 66\n    oranges_per_sack = 25\n    days = 87\n    total_oranges = sacks_per_day * oranges_per_sack * days\n    return total_oranges\nans = solver()",
+            "pred_ans": 143550.0,
+            "gold_ans": 143550.0
+        },
+        {
+            "question": "Last week Fred had 60 dollars and Jason had 19 dollars. Jason washed cars over the weekend and now has 33 dollars. How much money did Jason make washing cars?",
+            "rationale": "\nimport math\nimport numpy as np\n# Question Last week Fred had 60 dollars and Jason had 19 dollars. Jason washed cars over the weekend and now has 33 dollars. How much money did Jason make washing cars?\n# Answer this question by implementing a solver() function.\ndef solver():\n    # Let's think step by step to derive the answer, and then return the answer\n    # According to the question, we can define the variables\n    # Each equation only uses previously introduced variables\n    fred_last_week = 60\n    jason_last_week = 19\n    jason_now = 33\n    jason_made = jason_now - jason_last_week\n    return jason_made\nans = solver()",
+            "pred_ans": 14.0,
+            "gold_ans": 14.0
+        },
+        {
+            "question": "There were 7 roses in the vase. Jessica cut some more roses from her flower garden which had a total of 59 roses. There are now 20 roses in the vase. How many roses did she cut?",
+            "rationale": "\nimport math\nimport numpy as np\n# Question There were 7 roses in the vase. Jessica cut some more roses from her flower garden which had a total of 59 roses. There are now 20 roses in the vase. How many roses did she cut?\n# Answer this question by implementing a solver() function.\ndef solver():\n    # Let's think step by step to derive the answer, and then return the answer\n    # According to the question, we can define the variables\n    # Each equation only uses previously introduced variables\n    # 7 + x = 20\n    x = 20 - 7\n    return x\nans = solver()",
+            "pred_ans": 13.0,
+            "gold_ans": 13.0
+        }
+    ]
+}
