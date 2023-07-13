@@ -15,6 +15,7 @@ def get_rationales(args, question):
     result_dict = collections.defaultdict(list)
     practice = 3
     codes = []
+    ans = None
     while practice!=0:
         try:
             program = call_gpt3("text-davinci-003", question)
@@ -49,20 +50,23 @@ def main():
     print('*****************************')
     print(args)
     print('*****************************')
-    with open('svamp_inspect_follow_up_inspect.jsonl', 'r') as f:
+    with open('test.jsonl', 'r') as f:
         lines = f.readlines()
         lines = [json.loads(line) for line in lines]
 
-    with open("svamp_inspect_follow_up_inspect_inspect.jsonl","a+") as writer:
-        for item in lines:
-            question = item['Question']
+    with open("test_out.jsonl", "a+") as writer:
+        for idx,item in enumerate(lines):
+            if idx==100:
+                break
+            question = item['question']
             program, ans = get_rationales(args, question)
             item['program'] = program
             item['ans'] = ans
             writer.write(json.dumps({
-                "Question":item['Question'],
-                "Program":item['program'],
-                "Ans":item['ans']})+"\n"
+                "question":item['question'],
+                "program":item['program'],
+                "gold_ans": item['gold_ans'],
+                "pred_ans":item['ans']})+"\n"
             )
 
 

@@ -184,10 +184,10 @@ def parse_arguments():
     args = parser.parse_args()
 
     if args.dataset == "aqua":
-        args.dataset_path = "./dataset/AQuA/test.json"
+        args.dataset_path = "./dataset/AQuA/test_raw.jsonl"
         args.direct_answer_trigger = "\nTherefore, among A through E, the answer is"
     elif args.dataset == "gsm8k":
-        args.dataset_path = "./dataset/grade-school-math/test.jsonl"
+        args.dataset_path = "./dataset/grade-school-math/test_raw.jsonl"
         args.direct_answer_trigger = "\nTherefore, the answer (arabic numerals) is"
     elif args.dataset == "commonsensqa":
         args.dataset_path = "./dataset/CommonsenseQA/dev_rand_split.jsonl"
