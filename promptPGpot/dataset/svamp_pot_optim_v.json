@@ -1,0 +1,44 @@
+{
+    "demo": [
+        {
+            "question": "Adam had 48.0 books . If he sold 19.0 of them and used the money he earned to buy 38.0 new books , how many books would Adam have ?",
+            "gold_ans": 67.0,
+            "index": 939
+        },
+        {
+            "question": "For Halloween Katie and her sister combined the candy they received . Katie had 8.0 pieces of candy while her sister had 23.0 . If they ate 8.0 pieces the first night , how many pieces do they have left ?",
+            "gold_ans": 23.0,
+            "index": 141
+        },
+        {
+            "question": "Mary picked 14.0 oranges and Jason picked 41.0 oranges . Keith picked 38.0 apples . How many oranges were picked in all ?",
+            "gold_ans": 55.0,
+            "index": 1169
+        },
+        {
+            "question": "Luke had 48.0 dollars in January . By March he had spent 11.0 dollars . If he got another 21.0 dollars from his mom , how much money would he have ?",
+            "gold_ans": 58.0,
+            "index": 1110
+        },
+        {
+            "question": "There are 65.0 students trying out for the school 's trivia teams . If 17.0 of them did n't get picked for the team and the rest were put into 8.0 groups , how many students would be in each group ?",
+            "gold_ans": 6.0,
+            "index": 578
+        },
+        {
+            "question": "Christopher strolled 5.0 miles at 4.0 miles per hour . How long did Christopher stroll ?",
+            "gold_ans": 1.25,
+            "index": 1304
+        },
+        {
+            "question": "Bianca had 45.0 coloring books . If she gave away 6.0 of them , but then bought 20.0 more , how many would she have total ?",
+            "gold_ans": 59.0,
+            "index": 20
+        },
+        {
+            "question": "a pet shop has a total of 77 animals . 32 of them are kittens and 15 of them hamsters the rest are birds . how many birds are there ?",
+            "gold_ans": 30.0,
+            "index": 2440
+        }
+    ]
+}

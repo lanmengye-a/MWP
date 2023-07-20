@@ -1,0 +1,44 @@
+{
+    "demo": [
+        {
+            "question": "Bianca had number0 coloring books . If she gave away number1 of them , but then bought number2 more ,. how many would she have total ?",
+            "gold_ans": 59.0,
+            "index": 20
+        },
+        {
+            "question": "Christopher strolled number0 miles at number1 miles per hour . How long did Christopher stroll ?",
+            "gold_ans": 1.25,
+            "index": 1304
+        },
+        {
+            "question": "Tom had number0 books . If he sold number1 of them and used the money he earned to buy number2 new books ,. how many books would Tom have ?",
+            "gold_ans": 39.0,
+            "index": 1505
+        },
+        {
+            "question": "there are number0 students trying out for the school 's trivia teams . if number1 of them did n't get picked for the team and the rest were put into number2 groups. how many students would be in each group ?",
+            "gold_ans": 6.0,
+            "index": 3096
+        },
+        {
+            "question": "John had number0 dollars . At the store he spent $ number1 on a new game . If he got another number2 dollars for his allowance ,. how much money does he have now ?",
+            "gold_ans": 29.0,
+            "index": 1893
+        },
+        {
+            "question": "brenda 's mother made cookies for number0 . if she prepared number1 cookies and each of them had the same number of cookies. how many did each of them have ?",
+            "gold_ans": 7.0,
+            "index": 2314
+        },
+        {
+            "question": "a pet shop has a total of number0 animals . number1 of them are kittens and number2 of them hamsters the rest are birds . how many birds are there ?",
+            "gold_ans": 30.0,
+            "index": 2440
+        },
+        {
+            "question": "the school cafeteria had number0 apples . if they used number1 to make lunch for the students and then bought number2 more. how many apples would they have ?",
+            "gold_ans": 38.0,
+            "index": 3047
+        }
+    ]
+}
