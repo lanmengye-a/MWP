@@ -1,10 +1,51 @@
 import re
 import random
-import numpy as np
+from functools import lru_cache
 
+import numpy as np
+import chatgpt0
+import time
 random.seed(123)
 
+def get_gpt3_output(prompt, args, numbs, pidId):
+    algebraicPrompt = "Write a mathematical equation and generate the answer format starting with `Answer =' Attention there is a equation which could include mutiple variates "
+    patience = 3
 
+    while True:
+        try:
+            raw_formula = call_gpt3(prompt, algebraicPrompt, args.engine)
+            if raw_formula == False:
+                raise Exception("there is some error in call_gpt3")
+            formula = normalize_formula(raw_formula)
+            if formula == False:
+                raise Exception("there is some error in normalize_formula")
+            output = extract_prediction(formula, numbs)
+            if output == False:
+                raise Exception("there is some error in extract_prediction")
+            output = normalize_answer(output)
+            # check!!!
+            # return formula,output
+            return raw_formula, formula, output
+        except Exception as e:
+
+            #判断错误类型
+            patience -= 1
+            if patience == 0:
+                # print("there is some error ", pidId, ":", raw_formula,formula)
+                if e == "there is some error in call_gpt3":
+                    return False, False, False
+                elif e == "there is some error in normalize_formula":
+                    return raw_formula, False, False
+                else:
+                    return raw_formula, formula, False
+            else:
+                time.sleep(5)
+
+@lru_cache(maxsize=10000)
+def call_gpt3(prompt, algebraicPrompt, engine):
+    message = algebraicPrompt + "\n\n" + prompt
+    reply = chatgpt0.call_gpt3(engine, message)
+    return reply
 def score_string_similarity(str1, str2):
     if str1 == str2:
         return 2.0

@@ -8,8 +8,16 @@ from sympy import simplify
 import numpy as np
 import cvxpy as cp
 import statistics
-
-
+#  codes from auto_pot_optim
+def parse_api_result(result):
+    to_return = []
+    for idx, g in enumerate(result['choices']):
+        text = g['text']
+        logprob = sum(g['logprobs']['token_logprobs'])
+        to_return.append((text, logprob))
+    to_return = sorted(to_return, key=lambda tup: tup[1], reverse=True)
+    to_return = [r[0] for r in to_return]
+    return to_return
 def get_precision(gt_ans: float) -> int:
     precision = 5
     if '.' in str(gt_ans):
@@ -115,10 +123,11 @@ def parse_api_result(result):
     to_return = []
     for idx, g in enumerate(result['choices']):
         text = g['text']
-        logprob = sum(g['logprobs']['token_logprobs'])
-        to_return.append((text, logprob))
-    to_return = sorted(to_return, key=lambda tup: tup[1], reverse=True)
-    to_return = [r[0] for r in to_return]
+        # logprob = sum(g['logprobs']['token_logprobs'])
+        # to_return.append((text, logprob))
+        to_return.append(text)
+    # to_return = sorted(to_return, key=lambda tup: tup[1], reverse=True)
+    # to_return = [r[0] for r in to_return]
     return to_return
 
 

@@ -38,7 +38,7 @@ def get_solution_text(problem):
     return solution
 
 
-def create_one_example(  question, answer, solution=None, test_example=True):
+def create_one_example( question, answer, solution=None, test_example=True):
 
     # input_format, output_format = format.split("-")  # e.g., "TQ-A"
 
@@ -74,16 +74,16 @@ def build_prompt(problems, shot_pids, test_pid, args):
     lines = json.load(open("dataset/demo8.json"))
     Index2idx = {item["Index"]:idx for idx,item in enumerate(lines)}
     # n-shot training examples
-    for pid in shot_pids:
+    for pid in pids:
         problem = problems[pid]
         # table = get_table_text(problem)
         question = problem["Question"]
         answer = problem["Answer"]
         if pid == test_pid:
-            example = create_one_example(args.prompt_format, question, answer, solution, test_example=True)
+            example = create_one_example(question, answer, solution, test_example=True)
         else:
             solution = lines[Index2idx[pid]]["Thought"]
-            example = create_one_example(args.prompt_format, question, answer, solution, test_example=False)
+            example = create_one_example(question, answer, solution, test_example=False)
         examples.append(example)
 
     # create the prompt input

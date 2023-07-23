@@ -1,0 +1,1260 @@
+{
+  "acc": 80.0,
+  "correct": 80,
+  "count": 100,
+  "cand_pids": [
+    141,
+    553,
+    287,
+    329,
+    990,
+    725,
+    865,
+    327
+  ],
+  "args": {
+    "data_root": "../data/tabmwp",
+    "output_root": "results",
+    "model": "gpt3_rl",
+    "option_inds": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F"
+    ],
+    "label": "exp0_random",
+    "test_split": "test",
+    "test_number": 100,
+    "save_every": 10,
+    "debug": false,
+    "prompt_format": "TQ-A",
+    "shot_number": 2,
+    "seed": 1,
+    "engine": "text-davinci-003",
+    "temperature": 0.0,
+    "max_tokens": 512,
+    "top_p": 1.0,
+    "frequency_penalty": 0.0,
+    "presence_penalty": 0.0,
+    "gpu": "0",
+    "model_config": "bert-base-uncased",
+    "cand_number": 20,
+    "embedding_size": 128,
+    "ckpt_root": "checkpoints",
+    "ckpt": "exp0/ckpt_best_reward.pt"
+  },
+  "results": {
+    "574": {
+      "shot_pids": [
+        141,
+        725
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:A book has 3 chapters. The first chapter is 66 pages long the second chapter is 35 pages long and the third chapter is 24 pages long.How many pages does the book have altogether?\nThought: \nimport math \nimport numpy as np \n# according to the questions, we can define the variables:\nchildren_on_bus_before = 23\nchildren_on_bus_after = 8\nchildren_on_and_off_the_bus = 24\n# Are follow up questions needed here:Yes.\n# Follow up: how many children got off the bus?\nchildren_off_the_bus = children_on_bus_before + children_on_and_off_the_bus - children_on_bus_after\n# Follow up: how many more children got off the bus than those that got on?\nchildren_got_off_the_bus = children_off_the_bus - children_on_and_off_the_bus\nans = children_got_off_the_bus\n\nQuestion:Nell collects baseball cards. She had 242 cards. She gave 136 of her cards to Jeff.How many cards does Nell have left?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nharvest_sacks_per_day = 66\nnumber_oranges_per_sack = 25\ndays_of_harvest = 87\n# Are follow up questions needed here:Yes.\n# Follow up:how many oranges will they harvest per day?\nharvest_oranges_per_day = harvest_sacks_per_day*number_oranges_per_sack\n# Follow up:How many oranges will they have after 87 days of harvest?\nans = days_of_harvest*harvest_oranges_per_day\n\nQuestion:Faye was placing her pencils and crayons into 30 rows with 71 crayons and 24 pencils in each row.How many pencils does she have?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 720,
+      "program": "\nrows = 30\ncrayons_per_row = 71\npencils_per_row = 24\n# Follow up: How many crayons does Faye have?\ncrayons = rows*crayons_per_row\n# Follow up: How many pencils does Faye have?\nans = rows*pencils_per_row",
+      "prediction": 720.0,
+      "true_false": true
+    },
+    "798": {
+      "shot_pids": [
+        725,
+        327
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:Nell collects baseball cards. She had 242 cards. She gave 136 of her cards to Jeff.How many cards does Nell have left?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nharvest_sacks_per_day = 66\nnumber_oranges_per_sack = 25\ndays_of_harvest = 87\n# Are follow up questions needed here:Yes.\n# Follow up:how many oranges will they harvest per day?\nharvest_oranges_per_day = harvest_sacks_per_day*number_oranges_per_sack\n# Follow up:How many oranges will they have after 87 days of harvest?\nans = days_of_harvest*harvest_oranges_per_day\n\nQuestion:Luke played a trivia game and gained 3 points in each round of a game. If he scored 78 points in the trivia gameHow many rounds did he play?\nThought: \nimport math \nimport numpy as np\n# Are follow up questions needed here:No.\n# according to the questions, we can define the variables:\nTotal_roses_in_garden = 59\nroses_before_cut = 7 \nroses_after_cut = 20\n# Are follow up questions needed here:No.\nans = roses_after_cut -roses_before_cut\n\nQuestion:Ed had 6 more marbles than Doug. Doug lost 7 of his marbles at the playground. If Ed had 22 marblesHow many marbles does Doug have now?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 9,
+      "program": "\nEd_marbles = 22\nDoug_marbles_before = Ed_marbles - 6\n# Follow up: How many marbles did Doug have before?\nDoug_marbles_after = Doug_marbles_before - 7\n# Follow up: How many marbles does Doug have after he lost 7 marbles?\nans = Doug_marbles_after",
+      "prediction": 9.0,
+      "true_false": true
+    },
+    "941": {
+      "shot_pids": [
+        865,
+        553
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:Paul sold some books in a garage sale leaving him with 27 books. If he had 136 books initiallyHow many books did he sell?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nDollar_fred_last_week = 60\nDollar_jason_last_week = 19\nDollar_jason_over_week = 33\n# Are follow up questions needed here:No.\nans = Dollar_jason_over_week - Dollar_jason_last_week\n\nQuestion:Danny collects bottle caps and wrappers. He found 22 bottle caps and 8 wrappers at the park. Now he has 28 bottle caps and 63 wrappers in his collection.How many bottle caps did danny have at first?\nThought: \nimport math \nimport numpy as np \n# according to the questions, we can define the variables:\nsteven_peaches = 17\nsteven_apples = 16\n# Are follow up questions needed here:Yes.\n# Follow up: how many peaches Jake have?\njake_peaches = steven_peaches - 6\n# Follow up: how many apples Jake have?\njake_apples = steven_apples +8\n# Follow up: How many more peaches than apples does Steven have?\nans= steven_peaches - steven_apples\n\nQuestion:Dave had some apps on his phone. After deleting 18 of them he had 5 left.How many apps did he have on his phone at the start?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 23,
+      "program": "\napps_before_deletion = 18 + 5\n# Follow up: How many apps did Dave delete?\napps_deleted = 18\nans = apps_before_deletion",
+      "prediction": 23.0,
+      "true_false": true
+    },
+    "918": {
+      "shot_pids": [
+        990,
+        287
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:After resting they decided to go for a swim. The depth of the water is 9 times Dean's height. If Ron is 15 feet tall and Dean is 6 feet shorter than RonHow deep was the water?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nbiology_homework = 19\nreading_homework = 4\nmath_homework = 7\n# Are follow up questions needed here:No.\nAns = math_homework-reading_homework\n\nQuestion:Jack received 9 emails in the morning, 10 emails in the afternoon and 7 emails in the evening.How many more emails did Jack receive in the morning than in the evening?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\ngiven_crayons = 571\nlost_crayons = 161\n# Are follow up questions needed here:No.\nans = given_crayons- lost_crayons\n\nQuestion:The school is planning a field trip. The school has 66 classrooms. There are 102 students in the school and 8 seats on each school bus. If 22 students do n't want to go for the tripHow many buses are needed to take the trip?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 10,
+      "program": "\nnumber_of_classrooms = 66\nnumber_of_students = 102\nseats_on_each_bus = 8\nnumber_of_students_not_going = 22\n\n# Calculate the number of buses needed\nans = math.ceil((number_of_students - number_of_students_not_going) / seats_on_each_bus)",
+      "prediction": 10.0,
+      "true_false": true
+    },
+    "899": {
+      "shot_pids": [
+        287,
+        865
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:Jack received 9 emails in the morning, 10 emails in the afternoon and 7 emails in the evening.How many more emails did Jack receive in the morning than in the evening?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\ngiven_crayons = 571\nlost_crayons = 161\n# Are follow up questions needed here:No.\nans = given_crayons- lost_crayons\n\nQuestion:Paul sold some books in a garage sale leaving him with 27 books. If he had 136 books initiallyHow many books did he sell?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nDollar_fred_last_week = 60\nDollar_jason_last_week = 19\nDollar_jason_over_week = 33\n# Are follow up questions needed here:No.\nans = Dollar_jason_over_week - Dollar_jason_last_week\n\nQuestion:Randy uses 36 blocks to build a tower. If he had 59 blocksHow many blocks are left?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 23,
+      "program": "\ninitial_blocks = 59\nused_blocks = 36\n# Are follow up questions needed here:No.\nans = initial_blocks - used_blocks",
+      "prediction": 23.0,
+      "true_false": true
+    },
+    "537": {
+      "shot_pids": [
+        725,
+        327
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:Nell collects baseball cards. She had 242 cards. She gave 136 of her cards to Jeff.How many cards does Nell have left?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nharvest_sacks_per_day = 66\nnumber_oranges_per_sack = 25\ndays_of_harvest = 87\n# Are follow up questions needed here:Yes.\n# Follow up:how many oranges will they harvest per day?\nharvest_oranges_per_day = harvest_sacks_per_day*number_oranges_per_sack\n# Follow up:How many oranges will they have after 87 days of harvest?\nans = days_of_harvest*harvest_oranges_per_day\n\nQuestion:Luke played a trivia game and gained 3 points in each round of a game. If he scored 78 points in the trivia gameHow many rounds did he play?\nThought: \nimport math \nimport numpy as np\n# Are follow up questions needed here:No.\n# according to the questions, we can define the variables:\nTotal_roses_in_garden = 59\nroses_before_cut = 7 \nroses_after_cut = 20\n# Are follow up questions needed here:No.\nans = roses_after_cut -roses_before_cut\n\nQuestion:Steven has 19 peaches. Jake has 12 fewer peaches than Steven and 72 more peaches than Jill.How many peaches does Jake have?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 7,
+      "program": "\nSteven_peaches = 19\nJill_peaches = 72\n# Follow up:How many peaches does Jake have?\nJake_peaches = Steven_peaches - 12 + Jill_peaches\nans = Jake_peaches",
+      "prediction": 79.0,
+      "true_false": false
+    },
+    "636": {
+      "shot_pids": [
+        329,
+        141
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:He then went to see the oranges being harvested. He found out that they harvest 71 sacks of unripe oranges and 60 sacks of ripe oranges per day.How many more sacks of unripe oranges than ripe oranges are harvested per day?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nsold_cakes = 91\nbought_cakes = 154\n# Are follow up questions needed here:No.\nAns = bought_cakes - sold_cakes\n\nQuestion:A book has 3 chapters. The first chapter is 66 pages long the second chapter is 35 pages long and the third chapter is 24 pages long.How many pages does the book have altogether?\nThought: \nimport math \nimport numpy as np \n# according to the questions, we can define the variables:\nchildren_on_bus_before = 23\nchildren_on_bus_after = 8\nchildren_on_and_off_the_bus = 24\n# Are follow up questions needed here:Yes.\n# Follow up: how many children got off the bus?\nchildren_off_the_bus = children_on_bus_before + children_on_and_off_the_bus - children_on_bus_after\n# Follow up: how many more children got off the bus than those that got on?\nchildren_got_off_the_bus = children_off_the_bus - children_on_and_off_the_bus\nans = children_got_off_the_bus\n\nQuestion:Jake has 84 more apples and 10 fewer peaches than Steven. Steven has 13 peaches and 52 apples.How many peaches does Jake have?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 3,
+      "program": "\napples_steven = 52\npeaches_steven = 13\nmore_apples_jake = 84\nfewer_peaches_jake = 10\n# Follow up: How many apples does Jake have?\napples_jake = apples_steven + more_apples_jake\n# Follow up: How many peaches does Jake have?\npeaches_jake = peaches_steven - fewer_peaches_jake\nans = peaches_jake",
+      "prediction": 3.0,
+      "true_false": true
+    },
+    "566": {
+      "shot_pids": [
+        287,
+        141
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:Jack received 9 emails in the morning, 10 emails in the afternoon and 7 emails in the evening.How many more emails did Jack receive in the morning than in the evening?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\ngiven_crayons = 571\nlost_crayons = 161\n# Are follow up questions needed here:No.\nans = given_crayons- lost_crayons\n\nQuestion:A book has 3 chapters. The first chapter is 66 pages long the second chapter is 35 pages long and the third chapter is 24 pages long.How many pages does the book have altogether?\nThought: \nimport math \nimport numpy as np \n# according to the questions, we can define the variables:\nchildren_on_bus_before = 23\nchildren_on_bus_after = 8\nchildren_on_and_off_the_bus = 24\n# Are follow up questions needed here:Yes.\n# Follow up: how many children got off the bus?\nchildren_off_the_bus = children_on_bus_before + children_on_and_off_the_bus - children_on_bus_after\n# Follow up: how many more children got off the bus than those that got on?\nchildren_got_off_the_bus = children_off_the_bus - children_on_and_off_the_bus\nans = children_got_off_the_bus\n\nQuestion:Jerry had 2 action figures and 10 books on a shelf in his room. Later he added 4 more action figures to the shelf.How many more books than action figures were on his shelf?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 4,
+      "program": "\ninitial_action_figures = 2\ninitial_books = 10\nadded_action_figures = 4\n# Follow up: how many action figures are on the shelf now?\ntotal_action_figures = initial_action_figures + added_action_figures\n# Follow up: how many more books than action figures are on the shelf now?\nans = initial_books - total_action_figures",
+      "prediction": 4.0,
+      "true_false": true
+    },
+    "760": {
+      "shot_pids": [
+        725,
+        865
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:Nell collects baseball cards. She had 242 cards. She gave 136 of her cards to Jeff.How many cards does Nell have left?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nharvest_sacks_per_day = 66\nnumber_oranges_per_sack = 25\ndays_of_harvest = 87\n# Are follow up questions needed here:Yes.\n# Follow up:how many oranges will they harvest per day?\nharvest_oranges_per_day = harvest_sacks_per_day*number_oranges_per_sack\n# Follow up:How many oranges will they have after 87 days of harvest?\nans = days_of_harvest*harvest_oranges_per_day\n\nQuestion:Paul sold some books in a garage sale leaving him with 27 books. If he had 136 books initiallyHow many books did he sell?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nDollar_fred_last_week = 60\nDollar_jason_last_week = 19\nDollar_jason_over_week = 33\n# Are follow up questions needed here:No.\nans = Dollar_jason_over_week - Dollar_jason_last_week\n\nQuestion:Each basket of peaches has 19 red peaches and 4 green peaches. If there are 15 such basketsHow many peaches are in the baskets altogether?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 345,
+      "program": "\nnumber_of_baskets = 15\nnumber_of_red_peaches = 19\nnumber_of_green_peaches = 4\n# Follow up: How many peaches are in the baskets altogether?\nans = number_of_baskets*(number_of_red_peaches + number_of_green_peaches)",
+      "prediction": 345.0,
+      "true_false": true
+    },
+    "897": {
+      "shot_pids": [
+        553,
+        287
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:Danny collects bottle caps and wrappers. He found 22 bottle caps and 8 wrappers at the park. Now he has 28 bottle caps and 63 wrappers in his collection.How many bottle caps did danny have at first?\nThought: \nimport math \nimport numpy as np \n# according to the questions, we can define the variables:\nsteven_peaches = 17\nsteven_apples = 16\n# Are follow up questions needed here:Yes.\n# Follow up: how many peaches Jake have?\njake_peaches = steven_peaches - 6\n# Follow up: how many apples Jake have?\njake_apples = steven_apples +8\n# Follow up: How many more peaches than apples does Steven have?\nans= steven_peaches - steven_apples\n\nQuestion:Jack received 9 emails in the morning, 10 emails in the afternoon and 7 emails in the evening.How many more emails did Jack receive in the morning than in the evening?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\ngiven_crayons = 571\nlost_crayons = 161\n# Are follow up questions needed here:No.\nans = given_crayons- lost_crayons\n\nQuestion:There are 17 different movies and 11 different books in the ' crazy silly school ' series. If you read 13 of the books and watched 63 of the moviesHow many more movies than books are there in the ' crazy silly school ' series?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 6,
+      "program": "\nmovies = 17\nbooks = 11\nread_books = 13\nwatched_movies = 63\n# Follow up: How many more movies than books are there in the 'crazy silly school' series?\nans = movies - books - (read_books - watched_movies)",
+      "prediction": 56.0,
+      "true_false": false
+    },
+    "574": {
+      "shot_pids": [
+        141,
+        725
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:A book has 3 chapters. The first chapter is 66 pages long the second chapter is 35 pages long and the third chapter is 24 pages long.How many pages does the book have altogether?\nThought: \nimport math \nimport numpy as np \n# according to the questions, we can define the variables:\nchildren_on_bus_before = 23\nchildren_on_bus_after = 8\nchildren_on_and_off_the_bus = 24\n# Are follow up questions needed here:Yes.\n# Follow up: how many children got off the bus?\nchildren_off_the_bus = children_on_bus_before + children_on_and_off_the_bus - children_on_bus_after\n# Follow up: how many more children got off the bus than those that got on?\nchildren_got_off_the_bus = children_off_the_bus - children_on_and_off_the_bus\nans = children_got_off_the_bus\n\nQuestion:Nell collects baseball cards. She had 242 cards. She gave 136 of her cards to Jeff.How many cards does Nell have left?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nharvest_sacks_per_day = 66\nnumber_oranges_per_sack = 25\ndays_of_harvest = 87\n# Are follow up questions needed here:Yes.\n# Follow up:how many oranges will they harvest per day?\nharvest_oranges_per_day = harvest_sacks_per_day*number_oranges_per_sack\n# Follow up:How many oranges will they have after 87 days of harvest?\nans = days_of_harvest*harvest_oranges_per_day\n\nQuestion:Faye was placing her pencils and crayons into 30 rows with 71 crayons and 24 pencils in each row.How many pencils does she have?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 720,
+      "program": "\nnumber_rows = 30\nnumber_crayons_per_row = 71\nnumber_pencils_per_row = 24\n# Follow up: How many crayons does she have?\nnumber_crayons = number_rows*number_crayons_per_row\n# Follow up: How many pencils does she have?\nans = number_rows*number_pencils_per_row",
+      "prediction": 720.0,
+      "true_false": true
+    },
+    "798": {
+      "shot_pids": [
+        725,
+        327
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:Nell collects baseball cards. She had 242 cards. She gave 136 of her cards to Jeff.How many cards does Nell have left?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nharvest_sacks_per_day = 66\nnumber_oranges_per_sack = 25\ndays_of_harvest = 87\n# Are follow up questions needed here:Yes.\n# Follow up:how many oranges will they harvest per day?\nharvest_oranges_per_day = harvest_sacks_per_day*number_oranges_per_sack\n# Follow up:How many oranges will they have after 87 days of harvest?\nans = days_of_harvest*harvest_oranges_per_day\n\nQuestion:Luke played a trivia game and gained 3 points in each round of a game. If he scored 78 points in the trivia gameHow many rounds did he play?\nThought: \nimport math \nimport numpy as np\n# Are follow up questions needed here:No.\n# according to the questions, we can define the variables:\nTotal_roses_in_garden = 59\nroses_before_cut = 7 \nroses_after_cut = 20\n# Are follow up questions needed here:No.\nans = roses_after_cut -roses_before_cut\n\nQuestion:Ed had 6 more marbles than Doug. Doug lost 7 of his marbles at the playground. If Ed had 22 marblesHow many marbles does Doug have now?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 9,
+      "program": "\nmarbles_ed_had = 22\nmarbles_doug_had = 6\nmarbles_doug_lost = 7\n# Are follow up questions needed here:No.\nans = marbles_ed_had - marbles_doug_had - marbles_doug_lost",
+      "prediction": 9.0,
+      "true_false": true
+    },
+    "941": {
+      "shot_pids": [
+        865,
+        553
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:Paul sold some books in a garage sale leaving him with 27 books. If he had 136 books initiallyHow many books did he sell?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nDollar_fred_last_week = 60\nDollar_jason_last_week = 19\nDollar_jason_over_week = 33\n# Are follow up questions needed here:No.\nans = Dollar_jason_over_week - Dollar_jason_last_week\n\nQuestion:Danny collects bottle caps and wrappers. He found 22 bottle caps and 8 wrappers at the park. Now he has 28 bottle caps and 63 wrappers in his collection.How many bottle caps did danny have at first?\nThought: \nimport math \nimport numpy as np \n# according to the questions, we can define the variables:\nsteven_peaches = 17\nsteven_apples = 16\n# Are follow up questions needed here:Yes.\n# Follow up: how many peaches Jake have?\njake_peaches = steven_peaches - 6\n# Follow up: how many apples Jake have?\njake_apples = steven_apples +8\n# Follow up: How many more peaches than apples does Steven have?\nans= steven_peaches - steven_apples\n\nQuestion:Dave had some apps on his phone. After deleting 18 of them he had 5 left.How many apps did he have on his phone at the start?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 23,
+      "program": "\napps_start = 18 + 5\n# Follow up: How many apps did Dave delete?\napps_deleted = 18 \nans = apps_start",
+      "prediction": 23.0,
+      "true_false": true
+    },
+    "918": {
+      "shot_pids": [
+        990,
+        287
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:After resting they decided to go for a swim. The depth of the water is 9 times Dean's height. If Ron is 15 feet tall and Dean is 6 feet shorter than RonHow deep was the water?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nbiology_homework = 19\nreading_homework = 4\nmath_homework = 7\n# Are follow up questions needed here:No.\nAns = math_homework-reading_homework\n\nQuestion:Jack received 9 emails in the morning, 10 emails in the afternoon and 7 emails in the evening.How many more emails did Jack receive in the morning than in the evening?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\ngiven_crayons = 571\nlost_crayons = 161\n# Are follow up questions needed here:No.\nans = given_crayons- lost_crayons\n\nQuestion:The school is planning a field trip. The school has 66 classrooms. There are 102 students in the school and 8 seats on each school bus. If 22 students do n't want to go for the tripHow many buses are needed to take the trip?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 10,
+      "program": "\nclassrooms = 66\nstudents = 102\nseats_per_bus = 8\nstudents_not_attending = 22\n# calculate the number of buses needed\nans = math.ceil((students - students_not_attending) / seats_per_bus)",
+      "prediction": 10.0,
+      "true_false": true
+    },
+    "899": {
+      "shot_pids": [
+        287,
+        865
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:Jack received 9 emails in the morning, 10 emails in the afternoon and 7 emails in the evening.How many more emails did Jack receive in the morning than in the evening?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\ngiven_crayons = 571\nlost_crayons = 161\n# Are follow up questions needed here:No.\nans = given_crayons- lost_crayons\n\nQuestion:Paul sold some books in a garage sale leaving him with 27 books. If he had 136 books initiallyHow many books did he sell?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nDollar_fred_last_week = 60\nDollar_jason_last_week = 19\nDollar_jason_over_week = 33\n# Are follow up questions needed here:No.\nans = Dollar_jason_over_week - Dollar_jason_last_week\n\nQuestion:Randy uses 36 blocks to build a tower. If he had 59 blocksHow many blocks are left?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 23,
+      "program": "\ninitial_blocks = 59\nused_blocks = 36\n# Are follow up questions needed here:No.\nans = initial_blocks - used_blocks",
+      "prediction": 23.0,
+      "true_false": true
+    },
+    "537": {
+      "shot_pids": [
+        725,
+        327
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:Nell collects baseball cards. She had 242 cards. She gave 136 of her cards to Jeff.How many cards does Nell have left?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nharvest_sacks_per_day = 66\nnumber_oranges_per_sack = 25\ndays_of_harvest = 87\n# Are follow up questions needed here:Yes.\n# Follow up:how many oranges will they harvest per day?\nharvest_oranges_per_day = harvest_sacks_per_day*number_oranges_per_sack\n# Follow up:How many oranges will they have after 87 days of harvest?\nans = days_of_harvest*harvest_oranges_per_day\n\nQuestion:Luke played a trivia game and gained 3 points in each round of a game. If he scored 78 points in the trivia gameHow many rounds did he play?\nThought: \nimport math \nimport numpy as np\n# Are follow up questions needed here:No.\n# according to the questions, we can define the variables:\nTotal_roses_in_garden = 59\nroses_before_cut = 7 \nroses_after_cut = 20\n# Are follow up questions needed here:No.\nans = roses_after_cut -roses_before_cut\n\nQuestion:Steven has 19 peaches. Jake has 12 fewer peaches than Steven and 72 more peaches than Jill.How many peaches does Jake have?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 7,
+      "program": "\nSteven_peaches = 19\nJill_peaches = 72\n# Follow up:How many peaches does Jake have?\nJake_peaches = Steven_peaches - 12 + 72\nans = Jake_peaches",
+      "prediction": 79.0,
+      "true_false": false
+    },
+    "636": {
+      "shot_pids": [
+        329,
+        141
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:He then went to see the oranges being harvested. He found out that they harvest 71 sacks of unripe oranges and 60 sacks of ripe oranges per day.How many more sacks of unripe oranges than ripe oranges are harvested per day?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nsold_cakes = 91\nbought_cakes = 154\n# Are follow up questions needed here:No.\nAns = bought_cakes - sold_cakes\n\nQuestion:A book has 3 chapters. The first chapter is 66 pages long the second chapter is 35 pages long and the third chapter is 24 pages long.How many pages does the book have altogether?\nThought: \nimport math \nimport numpy as np \n# according to the questions, we can define the variables:\nchildren_on_bus_before = 23\nchildren_on_bus_after = 8\nchildren_on_and_off_the_bus = 24\n# Are follow up questions needed here:Yes.\n# Follow up: how many children got off the bus?\nchildren_off_the_bus = children_on_bus_before + children_on_and_off_the_bus - children_on_bus_after\n# Follow up: how many more children got off the bus than those that got on?\nchildren_got_off_the_bus = children_off_the_bus - children_on_and_off_the_bus\nans = children_got_off_the_bus\n\nQuestion:Jake has 84 more apples and 10 fewer peaches than Steven. Steven has 13 peaches and 52 apples.How many peaches does Jake have?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 3,
+      "program": "\napples_steven = 52\npeaches_steven = 13\ndifference_apples_peaches = 84\n# Follow up: How many apples does Jake have?\napples_jake = apples_steven + difference_apples_peaches\n# Follow up: How many peaches does Jake have?\npeaches_jake = peaches_steven - difference_apples_peaches\nans = peaches_jake",
+      "prediction": -71.0,
+      "true_false": false
+    },
+    "566": {
+      "shot_pids": [
+        287,
+        141
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:Jack received 9 emails in the morning, 10 emails in the afternoon and 7 emails in the evening.How many more emails did Jack receive in the morning than in the evening?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\ngiven_crayons = 571\nlost_crayons = 161\n# Are follow up questions needed here:No.\nans = given_crayons- lost_crayons\n\nQuestion:A book has 3 chapters. The first chapter is 66 pages long the second chapter is 35 pages long and the third chapter is 24 pages long.How many pages does the book have altogether?\nThought: \nimport math \nimport numpy as np \n# according to the questions, we can define the variables:\nchildren_on_bus_before = 23\nchildren_on_bus_after = 8\nchildren_on_and_off_the_bus = 24\n# Are follow up questions needed here:Yes.\n# Follow up: how many children got off the bus?\nchildren_off_the_bus = children_on_bus_before + children_on_and_off_the_bus - children_on_bus_after\n# Follow up: how many more children got off the bus than those that got on?\nchildren_got_off_the_bus = children_off_the_bus - children_on_and_off_the_bus\nans = children_got_off_the_bus\n\nQuestion:Jerry had 2 action figures and 10 books on a shelf in his room. Later he added 4 more action figures to the shelf.How many more books than action figures were on his shelf?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 4,
+      "program": "\ninitial_action_figures = 2\ninitial_books = 10\nadded_action_figures = 4\n# Follow up: how many action figures are there on the shelf now?\ntotal_action_figures = initial_action_figures + added_action_figures\n# Follow up: how many more books than action figures are on the shelf now?\nans = initial_books - total_action_figures",
+      "prediction": 4.0,
+      "true_false": true
+    },
+    "760": {
+      "shot_pids": [
+        725,
+        865
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:Nell collects baseball cards. She had 242 cards. She gave 136 of her cards to Jeff.How many cards does Nell have left?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nharvest_sacks_per_day = 66\nnumber_oranges_per_sack = 25\ndays_of_harvest = 87\n# Are follow up questions needed here:Yes.\n# Follow up:how many oranges will they harvest per day?\nharvest_oranges_per_day = harvest_sacks_per_day*number_oranges_per_sack\n# Follow up:How many oranges will they have after 87 days of harvest?\nans = days_of_harvest*harvest_oranges_per_day\n\nQuestion:Paul sold some books in a garage sale leaving him with 27 books. If he had 136 books initiallyHow many books did he sell?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nDollar_fred_last_week = 60\nDollar_jason_last_week = 19\nDollar_jason_over_week = 33\n# Are follow up questions needed here:No.\nans = Dollar_jason_over_week - Dollar_jason_last_week\n\nQuestion:Each basket of peaches has 19 red peaches and 4 green peaches. If there are 15 such basketsHow many peaches are in the baskets altogether?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 345,
+      "program": "\nnumber_of_baskets = 15\nnumber_of_red_peaches_per_basket = 19\nnumber_of_green_peaches_per_basket = 4\n# Follow up: How many red peaches are in the baskets altogether?\nans = number_of_baskets*number_of_red_peaches_per_basket",
+      "prediction": 285.0,
+      "true_false": false
+    },
+    "897": {
+      "shot_pids": [
+        553,
+        287
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:Danny collects bottle caps and wrappers. He found 22 bottle caps and 8 wrappers at the park. Now he has 28 bottle caps and 63 wrappers in his collection.How many bottle caps did danny have at first?\nThought: \nimport math \nimport numpy as np \n# according to the questions, we can define the variables:\nsteven_peaches = 17\nsteven_apples = 16\n# Are follow up questions needed here:Yes.\n# Follow up: how many peaches Jake have?\njake_peaches = steven_peaches - 6\n# Follow up: how many apples Jake have?\njake_apples = steven_apples +8\n# Follow up: How many more peaches than apples does Steven have?\nans= steven_peaches - steven_apples\n\nQuestion:Jack received 9 emails in the morning, 10 emails in the afternoon and 7 emails in the evening.How many more emails did Jack receive in the morning than in the evening?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\ngiven_crayons = 571\nlost_crayons = 161\n# Are follow up questions needed here:No.\nans = given_crayons- lost_crayons\n\nQuestion:There are 17 different movies and 11 different books in the ' crazy silly school ' series. If you read 13 of the books and watched 63 of the moviesHow many more movies than books are there in the ' crazy silly school ' series?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 6,
+      "program": "\nmovies = 17\nbooks = 11\nread_books = 13\nwatched_movies = 63\n# Follow up: How many more movies than books are there in the ' crazy silly school ' series?\nans = movies - books - (read_books - watched_movies)",
+      "prediction": 56.0,
+      "true_false": false
+    },
+    "737": {
+      "shot_pids": [
+        141,
+        329
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:A book has 3 chapters. The first chapter is 66 pages long the second chapter is 35 pages long and the third chapter is 24 pages long.How many pages does the book have altogether?\nThought: \nimport math \nimport numpy as np \n# according to the questions, we can define the variables:\nchildren_on_bus_before = 23\nchildren_on_bus_after = 8\nchildren_on_and_off_the_bus = 24\n# Are follow up questions needed here:Yes.\n# Follow up: how many children got off the bus?\nchildren_off_the_bus = children_on_bus_before + children_on_and_off_the_bus - children_on_bus_after\n# Follow up: how many more children got off the bus than those that got on?\nchildren_got_off_the_bus = children_off_the_bus - children_on_and_off_the_bus\nans = children_got_off_the_bus\n\nQuestion:He then went to see the oranges being harvested. He found out that they harvest 71 sacks of unripe oranges and 60 sacks of ripe oranges per day.How many more sacks of unripe oranges than ripe oranges are harvested per day?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nsold_cakes = 91\nbought_cakes = 154\n# Are follow up questions needed here:No.\nAns = bought_cakes - sold_cakes\n\nQuestion:Rachel had to complete 5 pages of math homework and yet more pages of reading homework. If she had to complete a total of 7 pages of homeworkHow many pages of reading homework did she have to complete?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 2,
+      "program": "\nmath_homework_pages = 5\ntotal_homework_pages = 7\n# Follow up: how many pages of reading homework did she have to complete?\nreading_homework_pages = total_homework_pages - math_homework_pages\nans = reading_homework_pages",
+      "prediction": 2.0,
+      "true_false": true
+    },
+    "748": {
+      "shot_pids": [
+        990,
+        329
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:After resting they decided to go for a swim. The depth of the water is 9 times Dean's height. If Ron is 15 feet tall and Dean is 6 feet shorter than RonHow deep was the water?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nbiology_homework = 19\nreading_homework = 4\nmath_homework = 7\n# Are follow up questions needed here:No.\nAns = math_homework-reading_homework\n\nQuestion:He then went to see the oranges being harvested. He found out that they harvest 71 sacks of unripe oranges and 60 sacks of ripe oranges per day.How many more sacks of unripe oranges than ripe oranges are harvested per day?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nsold_cakes = 91\nbought_cakes = 154\n# Are follow up questions needed here:No.\nAns = bought_cakes - sold_cakes\n\nQuestion:Dan has $ 7. He bought a candy bar for $ 2 and a chocolate for $ 3.How much money is left?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 2,
+      "program": null,
+      "prediction": null,
+      "true_false": false
+    },
+    "840": {
+      "shot_pids": [
+        327,
+        329
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:Luke played a trivia game and gained 3 points in each round of a game. If he scored 78 points in the trivia gameHow many rounds did he play?\nThought: \nimport math \nimport numpy as np\n# Are follow up questions needed here:No.\n# according to the questions, we can define the variables:\nTotal_roses_in_garden = 59\nroses_before_cut = 7 \nroses_after_cut = 20\n# Are follow up questions needed here:No.\nans = roses_after_cut -roses_before_cut\n\nQuestion:He then went to see the oranges being harvested. He found out that they harvest 71 sacks of unripe oranges and 60 sacks of ripe oranges per day.How many more sacks of unripe oranges than ripe oranges are harvested per day?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nsold_cakes = 91\nbought_cakes = 154\n# Are follow up questions needed here:No.\nAns = bought_cakes - sold_cakes\n\nQuestion:Dan has $ 4. He bought a chocolate for $ 7 and a candy bar for $ 2.How much money did he spend to buy chocolate than he did to buy candy bar?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 5,
+      "program": "\nDan_money = 4\nChocolate_price = 7\nCandy_bar_price = 2\n# Are follow up questions needed here:No.\nans = Chocolate_price - Candy_bar_price",
+      "prediction": 5.0,
+      "true_false": true
+    },
+    "700": {
+      "shot_pids": [
+        865,
+        725
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:Paul sold some books in a garage sale leaving him with 27 books. If he had 136 books initiallyHow many books did he sell?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nDollar_fred_last_week = 60\nDollar_jason_last_week = 19\nDollar_jason_over_week = 33\n# Are follow up questions needed here:No.\nans = Dollar_jason_over_week - Dollar_jason_last_week\n\nQuestion:Nell collects baseball cards. She had 242 cards. She gave 136 of her cards to Jeff.How many cards does Nell have left?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nharvest_sacks_per_day = 66\nnumber_oranges_per_sack = 25\ndays_of_harvest = 87\n# Are follow up questions needed here:Yes.\n# Follow up:how many oranges will they harvest per day?\nharvest_oranges_per_day = harvest_sacks_per_day*number_oranges_per_sack\n# Follow up:How many oranges will they have after 87 days of harvest?\nans = days_of_harvest*harvest_oranges_per_day\n\nQuestion:Every day Ryan spends 6 hours on learning english and 2 hours on learning chinese.How many more hours does he spend on learning english than he does on learning chinese?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 4,
+      "program": "\nhours_english = 6\nhours_chinese = 2\n# Follow up:How many hours does he spend on learning english and chinese?\ntotal_hours = hours_english + hours_chinese\n# Follow up:How many more hours does he spend on learning english than he does on learning chinese?\nans = hours_english - hours_chinese",
+      "prediction": 4.0,
+      "true_false": true
+    },
+    "911": {
+      "shot_pids": [
+        329,
+        725
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:He then went to see the oranges being harvested. He found out that they harvest 71 sacks of unripe oranges and 60 sacks of ripe oranges per day.How many more sacks of unripe oranges than ripe oranges are harvested per day?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nsold_cakes = 91\nbought_cakes = 154\n# Are follow up questions needed here:No.\nAns = bought_cakes - sold_cakes\n\nQuestion:Nell collects baseball cards. She had 242 cards. She gave 136 of her cards to Jeff.How many cards does Nell have left?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nharvest_sacks_per_day = 66\nnumber_oranges_per_sack = 25\ndays_of_harvest = 87\n# Are follow up questions needed here:Yes.\n# Follow up:how many oranges will they harvest per day?\nharvest_oranges_per_day = harvest_sacks_per_day*number_oranges_per_sack\n# Follow up:How many oranges will they have after 87 days of harvest?\nans = days_of_harvest*harvest_oranges_per_day\n\nQuestion:Baker made 157 cakes and 169 pastries. If he sold 158 cakes and 147 pastriesHow many more cakes than pastries did baker sell?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 11,
+      "program": "\nsold_cakes = 158\nbought_cakes = 157\nsold_pastries = 147\nbought_pastries = 169\n# Follow up:How many cakes did he sell?\n\n# Follow up:How many pastries did he sell?\n\nans = sold_cakes - sold_pastries",
+      "prediction": 11.0,
+      "true_false": true
+    },
+    "613": {
+      "shot_pids": [
+        725,
+        990
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:Nell collects baseball cards. She had 242 cards. She gave 136 of her cards to Jeff.How many cards does Nell have left?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nharvest_sacks_per_day = 66\nnumber_oranges_per_sack = 25\ndays_of_harvest = 87\n# Are follow up questions needed here:Yes.\n# Follow up:how many oranges will they harvest per day?\nharvest_oranges_per_day = harvest_sacks_per_day*number_oranges_per_sack\n# Follow up:How many oranges will they have after 87 days of harvest?\nans = days_of_harvest*harvest_oranges_per_day\n\nQuestion:After resting they decided to go for a swim. The depth of the water is 9 times Dean's height. If Ron is 15 feet tall and Dean is 6 feet shorter than RonHow deep was the water?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nbiology_homework = 19\nreading_homework = 4\nmath_homework = 7\n# Are follow up questions needed here:No.\nAns = math_homework-reading_homework\n\nQuestion:He then went to see the oranges being harvested. He found out that they harvest 74 sacks per day and discard 71 of them.How many sacks of oranges will they have after 51 days of harvest?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 153,
+      "program": "\nharvest_sacks_per_day = 74\ndiscard_sacks_per_day = 71\ndays_of_harvest = 51\n# Follow up:How many sacks of oranges will they have after 51 days of harvest?\nans = days_of_harvest*(harvest_sacks_per_day-discard_sacks_per_day)",
+      "prediction": 153.0,
+      "true_false": true
+    },
+    "554": {
+      "shot_pids": [
+        329,
+        141
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:He then went to see the oranges being harvested. He found out that they harvest 71 sacks of unripe oranges and 60 sacks of ripe oranges per day.How many more sacks of unripe oranges than ripe oranges are harvested per day?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nsold_cakes = 91\nbought_cakes = 154\n# Are follow up questions needed here:No.\nAns = bought_cakes - sold_cakes\n\nQuestion:A book has 3 chapters. The first chapter is 66 pages long the second chapter is 35 pages long and the third chapter is 24 pages long.How many pages does the book have altogether?\nThought: \nimport math \nimport numpy as np \n# according to the questions, we can define the variables:\nchildren_on_bus_before = 23\nchildren_on_bus_after = 8\nchildren_on_and_off_the_bus = 24\n# Are follow up questions needed here:Yes.\n# Follow up: how many children got off the bus?\nchildren_off_the_bus = children_on_bus_before + children_on_and_off_the_bus - children_on_bus_after\n# Follow up: how many more children got off the bus than those that got on?\nchildren_got_off_the_bus = children_off_the_bus - children_on_and_off_the_bus\nans = children_got_off_the_bus\n\nQuestion:For the walls of the house he would use 8 large planks of wood. If each plank of wood needs 74 pieces of nails to be securedHow many planks does John need for the house wall?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 8,
+      "program": "\nplanks_needed = 8\nnails_per_plank = 74\n# Follow up: How many nails are needed for the 8 planks?\ntotal_nails_needed = planks_needed * nails_per_plank\nans = total_nails_needed",
+      "prediction": 592.0,
+      "true_false": false
+    },
+    "756": {
+      "shot_pids": [
+        990,
+        287
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:After resting they decided to go for a swim. The depth of the water is 9 times Dean's height. If Ron is 15 feet tall and Dean is 6 feet shorter than RonHow deep was the water?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nbiology_homework = 19\nreading_homework = 4\nmath_homework = 7\n# Are follow up questions needed here:No.\nAns = math_homework-reading_homework\n\nQuestion:Jack received 9 emails in the morning, 10 emails in the afternoon and 7 emails in the evening.How many more emails did Jack receive in the morning than in the evening?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\ngiven_crayons = 571\nlost_crayons = 161\n# Are follow up questions needed here:No.\nans = given_crayons- lost_crayons\n\nQuestion:Julia played tag with 16 kids on monday. If she played tag with 12 more kids on monday than on tuesdayHow many kids did she play with on tuesday?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 4,
+      "program": "\nmonday_kids = 16\ntuesday_kids = monday_kids - 12\n\nans = tuesday_kids",
+      "prediction": 4.0,
+      "true_false": true
+    },
+    "519": {
+      "shot_pids": [
+        327,
+        329
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:Luke played a trivia game and gained 3 points in each round of a game. If he scored 78 points in the trivia gameHow many rounds did he play?\nThought: \nimport math \nimport numpy as np\n# Are follow up questions needed here:No.\n# according to the questions, we can define the variables:\nTotal_roses_in_garden = 59\nroses_before_cut = 7 \nroses_after_cut = 20\n# Are follow up questions needed here:No.\nans = roses_after_cut -roses_before_cut\n\nQuestion:He then went to see the oranges being harvested. He found out that they harvest 71 sacks of unripe oranges and 60 sacks of ripe oranges per day.How many more sacks of unripe oranges than ripe oranges are harvested per day?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nsold_cakes = 91\nbought_cakes = 154\n# Are follow up questions needed here:No.\nAns = bought_cakes - sold_cakes\n\nQuestion:Julia played tag with 14 kids on monday, 2 kids on tuesday and 8 kids on wednesday.How many more kids did she play with on monday than on wednesday?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 6,
+      "program": "\nkids_on_monday = 14\nkids_on_tuesday = 2\nkids_on_wednesday = 8\n# Are follow up questions needed here:No.\nans = kids_on_monday - kids_on_wednesday",
+      "prediction": 6.0,
+      "true_false": true
+    },
+    "965": {
+      "shot_pids": [
+        329,
+        141
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:He then went to see the oranges being harvested. He found out that they harvest 71 sacks of unripe oranges and 60 sacks of ripe oranges per day.How many more sacks of unripe oranges than ripe oranges are harvested per day?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nsold_cakes = 91\nbought_cakes = 154\n# Are follow up questions needed here:No.\nAns = bought_cakes - sold_cakes\n\nQuestion:A book has 3 chapters. The first chapter is 66 pages long the second chapter is 35 pages long and the third chapter is 24 pages long.How many pages does the book have altogether?\nThought: \nimport math \nimport numpy as np \n# according to the questions, we can define the variables:\nchildren_on_bus_before = 23\nchildren_on_bus_after = 8\nchildren_on_and_off_the_bus = 24\n# Are follow up questions needed here:Yes.\n# Follow up: how many children got off the bus?\nchildren_off_the_bus = children_on_bus_before + children_on_and_off_the_bus - children_on_bus_after\n# Follow up: how many more children got off the bus than those that got on?\nchildren_got_off_the_bus = children_off_the_bus - children_on_and_off_the_bus\nans = children_got_off_the_bus\n\nQuestion:A chef had 40 apples and 54 peaches. After making some pies, he had 39 apples left.How many apples did he use?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 1,
+      "program": "\napples_before = 40\npeaches_before = 54\napples_after = 39\n# Follow up: how many peaches are left?\npeaches_after = peaches_before - (apples_before - apples_after)\n# Follow up: how many apples did the chef use?\napples_used = apples_before - apples_after\nans = apples_used",
+      "prediction": 1.0,
+      "true_false": true
+    },
+    "935": {
+      "shot_pids": [
+        990,
+        725
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:After resting they decided to go for a swim. The depth of the water is 9 times Dean's height. If Ron is 15 feet tall and Dean is 6 feet shorter than RonHow deep was the water?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nbiology_homework = 19\nreading_homework = 4\nmath_homework = 7\n# Are follow up questions needed here:No.\nAns = math_homework-reading_homework\n\nQuestion:Nell collects baseball cards. She had 242 cards. She gave 136 of her cards to Jeff.How many cards does Nell have left?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nharvest_sacks_per_day = 66\nnumber_oranges_per_sack = 25\ndays_of_harvest = 87\n# Are follow up questions needed here:Yes.\n# Follow up:how many oranges will they harvest per day?\nharvest_oranges_per_day = harvest_sacks_per_day*number_oranges_per_sack\n# Follow up:How many oranges will they have after 87 days of harvest?\nans = days_of_harvest*harvest_oranges_per_day\n\nQuestion:Paul got a box of 531 crayons and 38 erasers for his birthday. At the end of the school year he only had 391 left while not having lost a single erasers.How many more crayons than erasers did he have left?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 353,
+      "program": "\n\nnumber_crayons = 531\nnumber_erasers = 38\nnumber_left = 391\n# Follow up:How many crayons did Paul use?\ncrayons_used = number_crayons - number_left\n# Follow up:How many erasers did Paul use?\nerasers_used = number_erasers - number_left\n# Follow up:How many more crayons than erasers did he have left?\nans = crayons_used - erasers_used",
+      "prediction": 493.0,
+      "true_false": false
+    },
+    "705": {
+      "shot_pids": [
+        990,
+        329
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:After resting they decided to go for a swim. The depth of the water is 9 times Dean's height. If Ron is 15 feet tall and Dean is 6 feet shorter than RonHow deep was the water?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nbiology_homework = 19\nreading_homework = 4\nmath_homework = 7\n# Are follow up questions needed here:No.\nAns = math_homework-reading_homework\n\nQuestion:He then went to see the oranges being harvested. He found out that they harvest 71 sacks of unripe oranges and 60 sacks of ripe oranges per day.How many more sacks of unripe oranges than ripe oranges are harvested per day?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nsold_cakes = 91\nbought_cakes = 154\n# Are follow up questions needed here:No.\nAns = bought_cakes - sold_cakes\n\nQuestion:Katie had 78 new games and 86 old games. Her friends had 48 new games.How many new games do they have together?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 126,
+      "program": null,
+      "prediction": null,
+      "true_false": false
+    },
+    "728": {
+      "shot_pids": [
+        329,
+        865
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:He then went to see the oranges being harvested. He found out that they harvest 71 sacks of unripe oranges and 60 sacks of ripe oranges per day.How many more sacks of unripe oranges than ripe oranges are harvested per day?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nsold_cakes = 91\nbought_cakes = 154\n# Are follow up questions needed here:No.\nAns = bought_cakes - sold_cakes\n\nQuestion:Paul sold some books in a garage sale leaving him with 27 books. If he had 136 books initiallyHow many books did he sell?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nDollar_fred_last_week = 60\nDollar_jason_last_week = 19\nDollar_jason_over_week = 33\n# Are follow up questions needed here:No.\nans = Dollar_jason_over_week - Dollar_jason_last_week\n\nQuestion:Jerry had some action figures on a shelf in his room. Later he added 2 more action figures to the shelf and removed 7 of the old ones. If there are 10 action figures on his shelf nowHow many action figures did he have initially on the shelf?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 15,
+      "program": "\nnew_action_figures = 2\nremoved_action_figures = 7\ntotal_action_figures = 10\n\nans = total_action_figures + removed_action_figures - new_action_figures",
+      "prediction": 15.0,
+      "true_false": true
+    },
+    "818": {
+      "shot_pids": [
+        329,
+        725
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:He then went to see the oranges being harvested. He found out that they harvest 71 sacks of unripe oranges and 60 sacks of ripe oranges per day.How many more sacks of unripe oranges than ripe oranges are harvested per day?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nsold_cakes = 91\nbought_cakes = 154\n# Are follow up questions needed here:No.\nAns = bought_cakes - sold_cakes\n\nQuestion:Nell collects baseball cards. She had 242 cards. She gave 136 of her cards to Jeff.How many cards does Nell have left?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nharvest_sacks_per_day = 66\nnumber_oranges_per_sack = 25\ndays_of_harvest = 87\n# Are follow up questions needed here:Yes.\n# Follow up:how many oranges will they harvest per day?\nharvest_oranges_per_day = harvest_sacks_per_day*number_oranges_per_sack\n# Follow up:How many oranges will they have after 87 days of harvest?\nans = days_of_harvest*harvest_oranges_per_day\n\nQuestion:Jerry had 5 action figures and 9 books on a shelf in his room. Later he added 7 more action figures to the shelf.How many more action figures than books were on his shelf?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 3,
+      "program": "\naction_figures = 5\nbooks = 9\nadded_action_figures = 7\n# Follow up: How many action figures and books are on the shelf now?\ntotal_action_figures = action_figures + added_action_figures\ntotal_books = books\n# Follow up: How many more action figures than books are on the shelf now?\nans = total_action_figures - total_books",
+      "prediction": 3.0,
+      "true_false": true
+    },
+    "898": {
+      "shot_pids": [
+        141,
+        725
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:A book has 3 chapters. The first chapter is 66 pages long the second chapter is 35 pages long and the third chapter is 24 pages long.How many pages does the book have altogether?\nThought: \nimport math \nimport numpy as np \n# according to the questions, we can define the variables:\nchildren_on_bus_before = 23\nchildren_on_bus_after = 8\nchildren_on_and_off_the_bus = 24\n# Are follow up questions needed here:Yes.\n# Follow up: how many children got off the bus?\nchildren_off_the_bus = children_on_bus_before + children_on_and_off_the_bus - children_on_bus_after\n# Follow up: how many more children got off the bus than those that got on?\nchildren_got_off_the_bus = children_off_the_bus - children_on_and_off_the_bus\nans = children_got_off_the_bus\n\nQuestion:Nell collects baseball cards. She had 242 cards. She gave 136 of her cards to Jeff.How many cards does Nell have left?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nharvest_sacks_per_day = 66\nnumber_oranges_per_sack = 25\ndays_of_harvest = 87\n# Are follow up questions needed here:Yes.\n# Follow up:how many oranges will they harvest per day?\nharvest_oranges_per_day = harvest_sacks_per_day*number_oranges_per_sack\n# Follow up:How many oranges will they have after 87 days of harvest?\nans = days_of_harvest*harvest_oranges_per_day\n\nQuestion:Jack received 5 emails in the morning, 8 emails in the afternoon and 72 emails in the evening.How many emails did Jack receive in the morning and afternoon?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 13,
+      "program": "\nmorning_emails = 5\nafternoon_emails = 8\n# Follow up: How many emails did Jack receive in the morning and afternoon?\nans = morning_emails + afternoon_emails",
+      "prediction": 13.0,
+      "true_false": true
+    },
+    "900": {
+      "shot_pids": [
+        329,
+        725
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:He then went to see the oranges being harvested. He found out that they harvest 71 sacks of unripe oranges and 60 sacks of ripe oranges per day.How many more sacks of unripe oranges than ripe oranges are harvested per day?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nsold_cakes = 91\nbought_cakes = 154\n# Are follow up questions needed here:No.\nAns = bought_cakes - sold_cakes\n\nQuestion:Nell collects baseball cards. She had 242 cards. She gave 136 of her cards to Jeff.How many cards does Nell have left?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nharvest_sacks_per_day = 66\nnumber_oranges_per_sack = 25\ndays_of_harvest = 87\n# Are follow up questions needed here:Yes.\n# Follow up:how many oranges will they harvest per day?\nharvest_oranges_per_day = harvest_sacks_per_day*number_oranges_per_sack\n# Follow up:How many oranges will they have after 87 days of harvest?\nans = days_of_harvest*harvest_oranges_per_day\n\nQuestion:Marco and his dad went strawberry picking. Together their strawberries weighed 20 pounds. His dad's strawberries weighed 17 pounds.How much did marco's strawberries weigh?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 3,
+      "program": "\ntotal_weight = 20\ndad_weight = 17\n# Follow up:How much did Marco's strawberries weigh?\nans = total_weight - dad_weight",
+      "prediction": 3.0,
+      "true_false": true
+    },
+    "506": {
+      "shot_pids": [
+        865,
+        141
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:Paul sold some books in a garage sale leaving him with 27 books. If he had 136 books initiallyHow many books did he sell?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nDollar_fred_last_week = 60\nDollar_jason_last_week = 19\nDollar_jason_over_week = 33\n# Are follow up questions needed here:No.\nans = Dollar_jason_over_week - Dollar_jason_last_week\n\nQuestion:A book has 3 chapters. The first chapter is 66 pages long the second chapter is 35 pages long and the third chapter is 24 pages long.How many pages does the book have altogether?\nThought: \nimport math \nimport numpy as np \n# according to the questions, we can define the variables:\nchildren_on_bus_before = 23\nchildren_on_bus_after = 8\nchildren_on_and_off_the_bus = 24\n# Are follow up questions needed here:Yes.\n# Follow up: how many children got off the bus?\nchildren_off_the_bus = children_on_bus_before + children_on_and_off_the_bus - children_on_bus_after\n# Follow up: how many more children got off the bus than those that got on?\nchildren_got_off_the_bus = children_off_the_bus - children_on_and_off_the_bus\nans = children_got_off_the_bus\n\nQuestion:Paul had 108 books and 55 pens. After selling some books and pens in a garage sale he had 66 books and 59 pens left.How many books did he sell in the garage sale?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 42,
+      "program": "\nbooks_before = 108\npens_before = 55\nbooks_after = 66\npens_after = 59\n# Follow up: how many pens did he sell in the garage sale?\npens_sold = pens_before - pens_after\n# Follow up: how many books did he sell in the garage sale?\nbooks_sold = books_before - books_after\nans = books_sold",
+      "prediction": 42.0,
+      "true_false": true
+    },
+    "863": {
+      "shot_pids": [
+        725,
+        329
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:Nell collects baseball cards. She had 242 cards. She gave 136 of her cards to Jeff.How many cards does Nell have left?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nharvest_sacks_per_day = 66\nnumber_oranges_per_sack = 25\ndays_of_harvest = 87\n# Are follow up questions needed here:Yes.\n# Follow up:how many oranges will they harvest per day?\nharvest_oranges_per_day = harvest_sacks_per_day*number_oranges_per_sack\n# Follow up:How many oranges will they have after 87 days of harvest?\nans = days_of_harvest*harvest_oranges_per_day\n\nQuestion:He then went to see the oranges being harvested. He found out that they harvest 71 sacks of unripe oranges and 60 sacks of ripe oranges per day.How many more sacks of unripe oranges than ripe oranges are harvested per day?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nsold_cakes = 91\nbought_cakes = 154\n# Are follow up questions needed here:No.\nAns = bought_cakes - sold_cakes\n\nQuestion:Debby bought 88 water bottles and 13 soda bottles when they were on sale. If she drank 4 water bottles and 87 soda bottles a dayHow many days would the water bottles last?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 22,
+      "program": "\nwater_bottles = 88\nsoda_bottles = 13\ndrank_water_bottles = 4\ndrank_soda_bottles = 87\n# Follow up: How many days would the water bottles last?\nans = math.ceil(water_bottles/(drank_water_bottles-drank_soda_bottles))",
+      "prediction": -1.0,
+      "true_false": false
+    },
+    "735": {
+      "shot_pids": [
+        990,
+        287
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:After resting they decided to go for a swim. The depth of the water is 9 times Dean's height. If Ron is 15 feet tall and Dean is 6 feet shorter than RonHow deep was the water?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nbiology_homework = 19\nreading_homework = 4\nmath_homework = 7\n# Are follow up questions needed here:No.\nAns = math_homework-reading_homework\n\nQuestion:Jack received 9 emails in the morning, 10 emails in the afternoon and 7 emails in the evening.How many more emails did Jack receive in the morning than in the evening?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\ngiven_crayons = 571\nlost_crayons = 161\n# Are follow up questions needed here:No.\nans = given_crayons- lost_crayons\n\nQuestion:Winter is almost here and most animals are migrating to warmer countries. There are 41 bird families living near the mountain. If 35 bird families flew away to asia and 62 bird families flew away to africaHow many more bird families flew away to africa than those that flew away to asia?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 27,
+      "program": "\nbird_families_asia = 35\nbird_families_africa = 62\n# Are follow up questions needed here:No.\nans = bird_families_africa - bird_families_asia",
+      "prediction": 27.0,
+      "true_false": true
+    },
+    "642": {
+      "shot_pids": [
+        865,
+        287
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:Paul sold some books in a garage sale leaving him with 27 books. If he had 136 books initiallyHow many books did he sell?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nDollar_fred_last_week = 60\nDollar_jason_last_week = 19\nDollar_jason_over_week = 33\n# Are follow up questions needed here:No.\nans = Dollar_jason_over_week - Dollar_jason_last_week\n\nQuestion:Jack received 9 emails in the morning, 10 emails in the afternoon and 7 emails in the evening.How many more emails did Jack receive in the morning than in the evening?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\ngiven_crayons = 571\nlost_crayons = 161\n# Are follow up questions needed here:No.\nans = given_crayons- lost_crayons\n\nQuestion:The school has 304 grades and each grade has 75 studentsHow many students were there in total?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 22800,
+      "program": "\ngrade_num = 304\nstudent_num = 75\n# Are follow up questions needed here:No.\n\nans = grade_num * student_num",
+      "prediction": 22800.0,
+      "true_false": true
+    },
+    "877": {
+      "shot_pids": [
+        865,
+        553
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:Paul sold some books in a garage sale leaving him with 27 books. If he had 136 books initiallyHow many books did he sell?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nDollar_fred_last_week = 60\nDollar_jason_last_week = 19\nDollar_jason_over_week = 33\n# Are follow up questions needed here:No.\nans = Dollar_jason_over_week - Dollar_jason_last_week\n\nQuestion:Danny collects bottle caps and wrappers. He found 22 bottle caps and 8 wrappers at the park. Now he has 28 bottle caps and 63 wrappers in his collection.How many bottle caps did danny have at first?\nThought: \nimport math \nimport numpy as np \n# according to the questions, we can define the variables:\nsteven_peaches = 17\nsteven_apples = 16\n# Are follow up questions needed here:Yes.\n# Follow up: how many peaches Jake have?\njake_peaches = steven_peaches - 6\n# Follow up: how many apples Jake have?\njake_apples = steven_apples +8\n# Follow up: How many more peaches than apples does Steven have?\nans= steven_peaches - steven_apples\n\nQuestion:Matthew had 31 crackers. He has 23 crackers left after he gave equal numbers of crackers to his 5 friends.How many crackers did Matthew give to his friends?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 8,
+      "program": "\nMatthew_crackers = 31\nMatthew_left_crackers = 23\n# Follow up: How many crackers did Matthew give to his friends?\nans = Matthew_crackers - Matthew_left_crackers",
+      "prediction": 8.0,
+      "true_false": true
+    },
+    "997": {
+      "shot_pids": [
+        141,
+        990
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:A book has 3 chapters. The first chapter is 66 pages long the second chapter is 35 pages long and the third chapter is 24 pages long.How many pages does the book have altogether?\nThought: \nimport math \nimport numpy as np \n# according to the questions, we can define the variables:\nchildren_on_bus_before = 23\nchildren_on_bus_after = 8\nchildren_on_and_off_the_bus = 24\n# Are follow up questions needed here:Yes.\n# Follow up: how many children got off the bus?\nchildren_off_the_bus = children_on_bus_before + children_on_and_off_the_bus - children_on_bus_after\n# Follow up: how many more children got off the bus than those that got on?\nchildren_got_off_the_bus = children_off_the_bus - children_on_and_off_the_bus\nans = children_got_off_the_bus\n\nQuestion:After resting they decided to go for a swim. The depth of the water is 9 times Dean's height. If Ron is 15 feet tall and Dean is 6 feet shorter than RonHow deep was the water?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nbiology_homework = 19\nreading_homework = 4\nmath_homework = 7\n# Are follow up questions needed here:No.\nAns = math_homework-reading_homework\n\nQuestion:Paige was helping her mom plant flowers and together they planted 55 seeds. They put 15 seeds in each flower bed and only 60 seeds grew into flowers in each flower bed.How many flowers did they grow?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 220,
+      "program": "\ntotal_seeds = 55\nseeds_per_bed = 15\nflowers_per_bed = 60\n# Follow up: how many flower beds did they plant?\nflower_beds = total_seeds/seeds_per_bed\n# Follow up: how many flowers did they grow in total?\ntotal_flowers = flower_beds*flowers_per_bed\nans = total_flowers",
+      "prediction": 220.0,
+      "true_false": true
+    },
+    "623": {
+      "shot_pids": [
+        141,
+        553
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:A book has 3 chapters. The first chapter is 66 pages long the second chapter is 35 pages long and the third chapter is 24 pages long.How many pages does the book have altogether?\nThought: \nimport math \nimport numpy as np \n# according to the questions, we can define the variables:\nchildren_on_bus_before = 23\nchildren_on_bus_after = 8\nchildren_on_and_off_the_bus = 24\n# Are follow up questions needed here:Yes.\n# Follow up: how many children got off the bus?\nchildren_off_the_bus = children_on_bus_before + children_on_and_off_the_bus - children_on_bus_after\n# Follow up: how many more children got off the bus than those that got on?\nchildren_got_off_the_bus = children_off_the_bus - children_on_and_off_the_bus\nans = children_got_off_the_bus\n\nQuestion:Danny collects bottle caps and wrappers. He found 22 bottle caps and 8 wrappers at the park. Now he has 28 bottle caps and 63 wrappers in his collection.How many bottle caps did danny have at first?\nThought: \nimport math \nimport numpy as np \n# according to the questions, we can define the variables:\nsteven_peaches = 17\nsteven_apples = 16\n# Are follow up questions needed here:Yes.\n# Follow up: how many peaches Jake have?\njake_peaches = steven_peaches - 6\n# Follow up: how many apples Jake have?\njake_apples = steven_apples +8\n# Follow up: How many more peaches than apples does Steven have?\nans= steven_peaches - steven_apples\n\nQuestion:Edward had $ 18. He spent $ 16.How much money does Edward have now?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 2,
+      "program": "\nedward_money_before = 18\nedward_money_spent = 16\n# Follow up: How much money does Edward have left?\nedward_money_left = edward_money_before - edward_money_spent\nans = edward_money_left",
+      "prediction": 2.0,
+      "true_false": true
+    },
+    "809": {
+      "shot_pids": [
+        329,
+        141
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:He then went to see the oranges being harvested. He found out that they harvest 71 sacks of unripe oranges and 60 sacks of ripe oranges per day.How many more sacks of unripe oranges than ripe oranges are harvested per day?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nsold_cakes = 91\nbought_cakes = 154\n# Are follow up questions needed here:No.\nAns = bought_cakes - sold_cakes\n\nQuestion:A book has 3 chapters. The first chapter is 66 pages long the second chapter is 35 pages long and the third chapter is 24 pages long.How many pages does the book have altogether?\nThought: \nimport math \nimport numpy as np \n# according to the questions, we can define the variables:\nchildren_on_bus_before = 23\nchildren_on_bus_after = 8\nchildren_on_and_off_the_bus = 24\n# Are follow up questions needed here:Yes.\n# Follow up: how many children got off the bus?\nchildren_off_the_bus = children_on_bus_before + children_on_and_off_the_bus - children_on_bus_after\n# Follow up: how many more children got off the bus than those that got on?\nchildren_got_off_the_bus = children_off_the_bus - children_on_and_off_the_bus\nans = children_got_off_the_bus\n\nQuestion:Adam has 4 more apples than Jackie. Together Adam and Jackie have 14 apples. Bob has 6 apples more than Adam and Jackie together do.How many apples does Bob have?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 20,
+      "program": "\nAdam_apples = 14 - 4\nJackie_apples = 14 - Adam_apples\nAdam_and_Jackie_together = Adam_apples + Jackie_apples\n# Follow up: how many apples does Adam have?\nBob_apples = Adam_and_Jackie_together + 6\nans = Bob_apples",
+      "prediction": 20.0,
+      "true_false": true
+    },
+    "558": {
+      "shot_pids": [
+        865,
+        141
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:Paul sold some books in a garage sale leaving him with 27 books. If he had 136 books initiallyHow many books did he sell?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nDollar_fred_last_week = 60\nDollar_jason_last_week = 19\nDollar_jason_over_week = 33\n# Are follow up questions needed here:No.\nans = Dollar_jason_over_week - Dollar_jason_last_week\n\nQuestion:A book has 3 chapters. The first chapter is 66 pages long the second chapter is 35 pages long and the third chapter is 24 pages long.How many pages does the book have altogether?\nThought: \nimport math \nimport numpy as np \n# according to the questions, we can define the variables:\nchildren_on_bus_before = 23\nchildren_on_bus_after = 8\nchildren_on_and_off_the_bus = 24\n# Are follow up questions needed here:Yes.\n# Follow up: how many children got off the bus?\nchildren_off_the_bus = children_on_bus_before + children_on_and_off_the_bus - children_on_bus_after\n# Follow up: how many more children got off the bus than those that got on?\nchildren_got_off_the_bus = children_off_the_bus - children_on_and_off_the_bus\nans = children_got_off_the_bus\n\nQuestion:During summer break 819058 kids from Lawrence county go to camp and the other 668278 kids stay home.How many more kids spent their summer break at the camp compared to those who stayed home?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 150780,
+      "program": "\nkids_at_camp = 819058\nkids_at_home = 668278\n# Follow up: how many kids spent their summer break at the camp?\nkids_at_camp = kids_at_camp\n# Follow up: how many kids spent their summer break at home?\nkids_at_home = kids_at_home\n# Follow up: how many more kids spent their summer break at the camp compared to those who stayed home?\nans = kids_at_camp - kids_at_home",
+      "prediction": 150780.0,
+      "true_false": true
+    },
+    "668": {
+      "shot_pids": [
+        553,
+        990
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:Danny collects bottle caps and wrappers. He found 22 bottle caps and 8 wrappers at the park. Now he has 28 bottle caps and 63 wrappers in his collection.How many bottle caps did danny have at first?\nThought: \nimport math \nimport numpy as np \n# according to the questions, we can define the variables:\nsteven_peaches = 17\nsteven_apples = 16\n# Are follow up questions needed here:Yes.\n# Follow up: how many peaches Jake have?\njake_peaches = steven_peaches - 6\n# Follow up: how many apples Jake have?\njake_apples = steven_apples +8\n# Follow up: How many more peaches than apples does Steven have?\nans= steven_peaches - steven_apples\n\nQuestion:After resting they decided to go for a swim. The depth of the water is 9 times Dean's height. If Ron is 15 feet tall and Dean is 6 feet shorter than RonHow deep was the water?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nbiology_homework = 19\nreading_homework = 4\nmath_homework = 7\n# Are follow up questions needed here:No.\nAns = math_homework-reading_homework\n\nQuestion:Baker made 54 cakes and 143 pastries. If he sold 68 cakes and 92 pastriesHow many more pastries than cakes did baker sell?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 24,
+      "program": "\ncakes = 54\npastries = 143\n# Follow up: How many cakes did Baker sell?\ncakes_sold = 68\n# Follow up: How many pastries did Baker sell?\npastries_sold = 92\n# Follow up: How many more pastries than cakes did Baker sell?\nans = pastries_sold - cakes_sold",
+      "prediction": 24.0,
+      "true_false": true
+    },
+    "520": {
+      "shot_pids": [
+        141,
+        990
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:A book has 3 chapters. The first chapter is 66 pages long the second chapter is 35 pages long and the third chapter is 24 pages long.How many pages does the book have altogether?\nThought: \nimport math \nimport numpy as np \n# according to the questions, we can define the variables:\nchildren_on_bus_before = 23\nchildren_on_bus_after = 8\nchildren_on_and_off_the_bus = 24\n# Are follow up questions needed here:Yes.\n# Follow up: how many children got off the bus?\nchildren_off_the_bus = children_on_bus_before + children_on_and_off_the_bus - children_on_bus_after\n# Follow up: how many more children got off the bus than those that got on?\nchildren_got_off_the_bus = children_off_the_bus - children_on_and_off_the_bus\nans = children_got_off_the_bus\n\nQuestion:After resting they decided to go for a swim. The depth of the water is 9 times Dean's height. If Ron is 15 feet tall and Dean is 6 feet shorter than RonHow deep was the water?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nbiology_homework = 19\nreading_homework = 4\nmath_homework = 7\n# Are follow up questions needed here:No.\nAns = math_homework-reading_homework\n\nQuestion:There were 73 parents, 724 pupils and 744 teachers in the program.How many people were present in the program?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 1541,
+      "program": "\nparents = 73\npupils = 724\nteachers = 744\n# Follow up: How many more pupils than parents were present?\npupils_more_than_parents = pupils - parents\n# Follow up: How many people were present in total?\ntotal_people = parents + pupils + teachers\nans = total_people",
+      "prediction": 1541.0,
+      "true_false": true
+    },
+    "516": {
+      "shot_pids": [
+        327,
+        287
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:Luke played a trivia game and gained 3 points in each round of a game. If he scored 78 points in the trivia gameHow many rounds did he play?\nThought: \nimport math \nimport numpy as np\n# Are follow up questions needed here:No.\n# according to the questions, we can define the variables:\nTotal_roses_in_garden = 59\nroses_before_cut = 7 \nroses_after_cut = 20\n# Are follow up questions needed here:No.\nans = roses_after_cut -roses_before_cut\n\nQuestion:Jack received 9 emails in the morning, 10 emails in the afternoon and 7 emails in the evening.How many more emails did Jack receive in the morning than in the evening?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\ngiven_crayons = 571\nlost_crayons = 161\n# Are follow up questions needed here:No.\nans = given_crayons- lost_crayons\n\nQuestion:4 birds and 3 storks were sitting on the fence. 6 more storks came to join them.How many more storks than birds are sitting on the fence?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 5,
+      "program": "\nbirds = 4 \nstorks_before = 3 \nstorks_after = 9 \n# Are follow up questions needed here:No.\nans = storks_after - birds",
+      "prediction": 5.0,
+      "true_false": true
+    },
+    "518": {
+      "shot_pids": [
+        141,
+        990
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:A book has 3 chapters. The first chapter is 66 pages long the second chapter is 35 pages long and the third chapter is 24 pages long.How many pages does the book have altogether?\nThought: \nimport math \nimport numpy as np \n# according to the questions, we can define the variables:\nchildren_on_bus_before = 23\nchildren_on_bus_after = 8\nchildren_on_and_off_the_bus = 24\n# Are follow up questions needed here:Yes.\n# Follow up: how many children got off the bus?\nchildren_off_the_bus = children_on_bus_before + children_on_and_off_the_bus - children_on_bus_after\n# Follow up: how many more children got off the bus than those that got on?\nchildren_got_off_the_bus = children_off_the_bus - children_on_and_off_the_bus\nans = children_got_off_the_bus\n\nQuestion:After resting they decided to go for a swim. The depth of the water is 9 times Dean's height. If Ron is 15 feet tall and Dean is 6 feet shorter than RonHow deep was the water?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nbiology_homework = 19\nreading_homework = 4\nmath_homework = 7\n# Are follow up questions needed here:No.\nAns = math_homework-reading_homework\n\nQuestion:6 packs of dvds can be bought with 120 dollars.How much does each pack cost?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 20,
+      "program": "\npacks_of_dvds = 6\ntotal_cost = 120\n# Follow up: How much does each pack cost?\ncost_per_pack = total_cost/packs_of_dvds\nans = cost_per_pack",
+      "prediction": 20.0,
+      "true_false": true
+    },
+    "839": {
+      "shot_pids": [
+        553,
+        287
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:Danny collects bottle caps and wrappers. He found 22 bottle caps and 8 wrappers at the park. Now he has 28 bottle caps and 63 wrappers in his collection.How many bottle caps did danny have at first?\nThought: \nimport math \nimport numpy as np \n# according to the questions, we can define the variables:\nsteven_peaches = 17\nsteven_apples = 16\n# Are follow up questions needed here:Yes.\n# Follow up: how many peaches Jake have?\njake_peaches = steven_peaches - 6\n# Follow up: how many apples Jake have?\njake_apples = steven_apples +8\n# Follow up: How many more peaches than apples does Steven have?\nans= steven_peaches - steven_apples\n\nQuestion:Jack received 9 emails in the morning, 10 emails in the afternoon and 7 emails in the evening.How many more emails did Jack receive in the morning than in the evening?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\ngiven_crayons = 571\nlost_crayons = 161\n# Are follow up questions needed here:No.\nans = given_crayons- lost_crayons\n\nQuestion:In a school there are 902 girls and 811 boys. 44 more girls joined the school.How many girls are there in the school now?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 946,
+      "program": "\ngirls = 902\nboys = 811\n# Follow up: How many more girls than boys are there in the school?\ndifference = girls - boys\n# Follow up: How many girls are there in the school now?\nans = girls + 44",
+      "prediction": 946.0,
+      "true_false": true
+    },
+    "784": {
+      "shot_pids": [
+        327,
+        990
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:Luke played a trivia game and gained 3 points in each round of a game. If he scored 78 points in the trivia gameHow many rounds did he play?\nThought: \nimport math \nimport numpy as np\n# Are follow up questions needed here:No.\n# according to the questions, we can define the variables:\nTotal_roses_in_garden = 59\nroses_before_cut = 7 \nroses_after_cut = 20\n# Are follow up questions needed here:No.\nans = roses_after_cut -roses_before_cut\n\nQuestion:After resting they decided to go for a swim. The depth of the water is 9 times Dean's height. If Ron is 15 feet tall and Dean is 6 feet shorter than RonHow deep was the water?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nbiology_homework = 19\nreading_homework = 4\nmath_homework = 7\n# Are follow up questions needed here:No.\nAns = math_homework-reading_homework\n\nQuestion:Ed had 24 more marbles than Doug. Doug lost 27 of his marbles at the playground while Ed found 9 more marbles.How many more marbles did Ed have than Doug then?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 60,
+      "program": "\nMarbles_of_Ed = 24\nMarbles_of_Doug = 27\nMarbles_found_by_Ed = 9\n# Are follow up questions needed here:No.\nans = Marbles_of_Ed + Marbles_found_by_Ed - Marbles_of_Doug",
+      "prediction": 6.0,
+      "true_false": false
+    },
+    "509": {
+      "shot_pids": [
+        725,
+        287
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:Nell collects baseball cards. She had 242 cards. She gave 136 of her cards to Jeff.How many cards does Nell have left?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nharvest_sacks_per_day = 66\nnumber_oranges_per_sack = 25\ndays_of_harvest = 87\n# Are follow up questions needed here:Yes.\n# Follow up:how many oranges will they harvest per day?\nharvest_oranges_per_day = harvest_sacks_per_day*number_oranges_per_sack\n# Follow up:How many oranges will they have after 87 days of harvest?\nans = days_of_harvest*harvest_oranges_per_day\n\nQuestion:Jack received 9 emails in the morning, 10 emails in the afternoon and 7 emails in the evening.How many more emails did Jack receive in the morning than in the evening?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\ngiven_crayons = 571\nlost_crayons = 161\n# Are follow up questions needed here:No.\nans = given_crayons- lost_crayons\n\nQuestion:Marco and his dad went strawberry picking. Marco's strawberries weighed 15 pounds. If together their strawberries weighed 37 pounds.How much did his dad's strawberries weigh?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 22,
+      "program": "\nmarco_strawberries_weight = 15\ntotal_strawberries_weight = 37\n# Follow up:How much did his dad's strawberries weigh?\nans = total_strawberries_weight - marco_strawberries_weight",
+      "prediction": 22.0,
+      "true_false": true
+    },
+    "701": {
+      "shot_pids": [
+        725,
+        990
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:Nell collects baseball cards. She had 242 cards. She gave 136 of her cards to Jeff.How many cards does Nell have left?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nharvest_sacks_per_day = 66\nnumber_oranges_per_sack = 25\ndays_of_harvest = 87\n# Are follow up questions needed here:Yes.\n# Follow up:how many oranges will they harvest per day?\nharvest_oranges_per_day = harvest_sacks_per_day*number_oranges_per_sack\n# Follow up:How many oranges will they have after 87 days of harvest?\nans = days_of_harvest*harvest_oranges_per_day\n\nQuestion:After resting they decided to go for a swim. The depth of the water is 9 times Dean's height. If Ron is 15 feet tall and Dean is 6 feet shorter than RonHow deep was the water?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nbiology_homework = 19\nreading_homework = 4\nmath_homework = 7\n# Are follow up questions needed here:No.\nAns = math_homework-reading_homework\n\nQuestion:David did 40 more push-ups but 17 less crunches than Zachary in gym class today. If Zachary did 34 push-ups and 62 crunchesHow many crunches did David do?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 45,
+      "program": "\npush_ups_zachary = 34\ncrunches_zachary = 62\n\n# Follow up: How many push-ups did David do?\npush_ups_david = push_ups_zachary + 40\n\n# Follow up: How many crunches did David do?\ncrunches_david = crunches_zachary - 17\n\nans = crunches_david",
+      "prediction": 45.0,
+      "true_false": true
+    },
+    "858": {
+      "shot_pids": [
+        329,
+        990
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:He then went to see the oranges being harvested. He found out that they harvest 71 sacks of unripe oranges and 60 sacks of ripe oranges per day.How many more sacks of unripe oranges than ripe oranges are harvested per day?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nsold_cakes = 91\nbought_cakes = 154\n# Are follow up questions needed here:No.\nAns = bought_cakes - sold_cakes\n\nQuestion:After resting they decided to go for a swim. The depth of the water is 9 times Dean's height. If Ron is 15 feet tall and Dean is 6 feet shorter than RonHow deep was the water?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nbiology_homework = 19\nreading_homework = 4\nmath_homework = 7\n# Are follow up questions needed here:No.\nAns = math_homework-reading_homework\n\nQuestion:Bryan took a look at his books and magazines. If he has 23 books and 61 magazines in each of his 29 bookshelvesHow many books and magazines does he have in total?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 2436,
+      "program": null,
+      "prediction": null,
+      "true_false": false
+    },
+    "616": {
+      "shot_pids": [
+        329,
+        725
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:He then went to see the oranges being harvested. He found out that they harvest 71 sacks of unripe oranges and 60 sacks of ripe oranges per day.How many more sacks of unripe oranges than ripe oranges are harvested per day?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nsold_cakes = 91\nbought_cakes = 154\n# Are follow up questions needed here:No.\nAns = bought_cakes - sold_cakes\n\nQuestion:Nell collects baseball cards. She had 242 cards. She gave 136 of her cards to Jeff.How many cards does Nell have left?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nharvest_sacks_per_day = 66\nnumber_oranges_per_sack = 25\ndays_of_harvest = 87\n# Are follow up questions needed here:Yes.\n# Follow up:how many oranges will they harvest per day?\nharvest_oranges_per_day = harvest_sacks_per_day*number_oranges_per_sack\n# Follow up:How many oranges will they have after 87 days of harvest?\nans = days_of_harvest*harvest_oranges_per_day\n\nQuestion:Matthew gave 6 crackers to each his friends. If he had 36 crackersHow many friends did he give crackers to?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 6,
+      "program": "\ncrackers = 36\ncrackers_per_friend = 6\n# Follow up:How many friends did he give crackers to?\nans = crackers/crackers_per_friend",
+      "prediction": 6.0,
+      "true_false": true
+    },
+    "722": {
+      "shot_pids": [
+        141,
+        327
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:A book has 3 chapters. The first chapter is 66 pages long the second chapter is 35 pages long and the third chapter is 24 pages long.How many pages does the book have altogether?\nThought: \nimport math \nimport numpy as np \n# according to the questions, we can define the variables:\nchildren_on_bus_before = 23\nchildren_on_bus_after = 8\nchildren_on_and_off_the_bus = 24\n# Are follow up questions needed here:Yes.\n# Follow up: how many children got off the bus?\nchildren_off_the_bus = children_on_bus_before + children_on_and_off_the_bus - children_on_bus_after\n# Follow up: how many more children got off the bus than those that got on?\nchildren_got_off_the_bus = children_off_the_bus - children_on_and_off_the_bus\nans = children_got_off_the_bus\n\nQuestion:Luke played a trivia game and gained 3 points in each round of a game. If he scored 78 points in the trivia gameHow many rounds did he play?\nThought: \nimport math \nimport numpy as np\n# Are follow up questions needed here:No.\n# according to the questions, we can define the variables:\nTotal_roses_in_garden = 59\nroses_before_cut = 7 \nroses_after_cut = 20\n# Are follow up questions needed here:No.\nans = roses_after_cut -roses_before_cut\n\nQuestion:Dave had 17 apps and 21 files on his phone. After deleting some apps and files he had 3 apps and 7 files left.How many files did he delete?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 14,
+      "program": "\napps_before = 17\nfiles_before = 21\napps_after = 3\nfiles_after = 7\n# Follow up: how many apps did Dave delete?\napps_deleted = apps_before - apps_after\n# Follow up: how many files did Dave delete?\nfiles_deleted = files_before - files_after\nans = files_deleted",
+      "prediction": 14.0,
+      "true_false": true
+    },
+    "879": {
+      "shot_pids": [
+        287,
+        141
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:Jack received 9 emails in the morning, 10 emails in the afternoon and 7 emails in the evening.How many more emails did Jack receive in the morning than in the evening?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\ngiven_crayons = 571\nlost_crayons = 161\n# Are follow up questions needed here:No.\nans = given_crayons- lost_crayons\n\nQuestion:A book has 3 chapters. The first chapter is 66 pages long the second chapter is 35 pages long and the third chapter is 24 pages long.How many pages does the book have altogether?\nThought: \nimport math \nimport numpy as np \n# according to the questions, we can define the variables:\nchildren_on_bus_before = 23\nchildren_on_bus_after = 8\nchildren_on_and_off_the_bus = 24\n# Are follow up questions needed here:Yes.\n# Follow up: how many children got off the bus?\nchildren_off_the_bus = children_on_bus_before + children_on_and_off_the_bus - children_on_bus_after\n# Follow up: how many more children got off the bus than those that got on?\nchildren_got_off_the_bus = children_off_the_bus - children_on_and_off_the_bus\nans = children_got_off_the_bus\n\nQuestion:Marco and his dad went strawberry picking. Marco's strawberries weighed 10 pounds. If together their strawberries weighed 26 pounds.How much more did his dad's strawberries weigh than his?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 6,
+      "program": "\nmarcos_strawberries = 10\ntotal_strawberries = 26\n# Follow up: how much did his dad's strawberries weigh?\ndads_strawberries = total_strawberries - marcos_strawberries\n# Follow up: how much more did his dad's strawberries weigh than his?\nans = dads_strawberries - marcos_strawberries",
+      "prediction": 6.0,
+      "true_false": true
+    },
+    "981": {
+      "shot_pids": [
+        287,
+        865
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:Jack received 9 emails in the morning, 10 emails in the afternoon and 7 emails in the evening.How many more emails did Jack receive in the morning than in the evening?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\ngiven_crayons = 571\nlost_crayons = 161\n# Are follow up questions needed here:No.\nans = given_crayons- lost_crayons\n\nQuestion:Paul sold some books in a garage sale leaving him with 27 books. If he had 136 books initiallyHow many books did he sell?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nDollar_fred_last_week = 60\nDollar_jason_last_week = 19\nDollar_jason_over_week = 33\n# Are follow up questions needed here:No.\nans = Dollar_jason_over_week - Dollar_jason_last_week\n\nQuestion:62 campers went rowing in the morning. 39 campers went rowing in the afternoon.How many more campers went rowing in the morning than in the afternoon?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 23,
+      "program": "\ncampers_morning = 62\ncampers_afternoon = 39\n# Are follow up questions needed here:No.\nans = campers_morning - campers_afternoon",
+      "prediction": 23.0,
+      "true_false": true
+    },
+    "777": {
+      "shot_pids": [
+        327,
+        865
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:Luke played a trivia game and gained 3 points in each round of a game. If he scored 78 points in the trivia gameHow many rounds did he play?\nThought: \nimport math \nimport numpy as np\n# Are follow up questions needed here:No.\n# according to the questions, we can define the variables:\nTotal_roses_in_garden = 59\nroses_before_cut = 7 \nroses_after_cut = 20\n# Are follow up questions needed here:No.\nans = roses_after_cut -roses_before_cut\n\nQuestion:Paul sold some books in a garage sale leaving him with 27 books. If he had 136 books initiallyHow many books did he sell?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nDollar_fred_last_week = 60\nDollar_jason_last_week = 19\nDollar_jason_over_week = 33\n# Are follow up questions needed here:No.\nans = Dollar_jason_over_week - Dollar_jason_last_week\n\nQuestion:There are 384 oranges and 192 bananas in Philip's collection. If the bananas are organized into 345 groups and oranges are organized into 16 groupsHow big is each group of oranges?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 24,
+      "program": "\noranges = 384\nbananas = 192\ngroups_of_bananas = 345\ngroups_of_oranges = 16\n# Are follow up questions needed here:No.\nans = oranges/groups_of_oranges",
+      "prediction": 24.0,
+      "true_false": true
+    },
+    "619": {
+      "shot_pids": [
+        287,
+        329
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:Jack received 9 emails in the morning, 10 emails in the afternoon and 7 emails in the evening.How many more emails did Jack receive in the morning than in the evening?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\ngiven_crayons = 571\nlost_crayons = 161\n# Are follow up questions needed here:No.\nans = given_crayons- lost_crayons\n\nQuestion:He then went to see the oranges being harvested. He found out that they harvest 71 sacks of unripe oranges and 60 sacks of ripe oranges per day.How many more sacks of unripe oranges than ripe oranges are harvested per day?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nsold_cakes = 91\nbought_cakes = 154\n# Are follow up questions needed here:No.\nAns = bought_cakes - sold_cakes\n\nQuestion:Josh had 21 marbles in his collection. He found 7 marbles.How many marbles does he have now?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 28,
+      "program": "\ngiven_marbles = 21\nfound_marbles = 7\n\nans = given_marbles + found_marbles",
+      "prediction": 28.0,
+      "true_false": true
+    },
+    "996": {
+      "shot_pids": [
+        287,
+        553
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:Jack received 9 emails in the morning, 10 emails in the afternoon and 7 emails in the evening.How many more emails did Jack receive in the morning than in the evening?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\ngiven_crayons = 571\nlost_crayons = 161\n# Are follow up questions needed here:No.\nans = given_crayons- lost_crayons\n\nQuestion:Danny collects bottle caps and wrappers. He found 22 bottle caps and 8 wrappers at the park. Now he has 28 bottle caps and 63 wrappers in his collection.How many bottle caps did danny have at first?\nThought: \nimport math \nimport numpy as np \n# according to the questions, we can define the variables:\nsteven_peaches = 17\nsteven_apples = 16\n# Are follow up questions needed here:Yes.\n# Follow up: how many peaches Jake have?\njake_peaches = steven_peaches - 6\n# Follow up: how many apples Jake have?\njake_apples = steven_apples +8\n# Follow up: How many more peaches than apples does Steven have?\nans= steven_peaches - steven_apples\n\nQuestion:At the zoo, a cage had 3 snakes and 75 alligators. If 82 snakes and 19 alligators were hidingHow many alligators were not hiding?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 56,
+      "program": "\ngiven_snakes = 3\ngiven_alligators = 75\nhidden_snakes = 82\nhidden_alligators = 19\n\n# Follow up: How many snakes were not hiding?\nnot_hidden_snakes = given_snakes - hidden_snakes\n\n# Follow up: How many alligators were not hiding?\nnot_hidden_alligators = given_alligators - hidden_alligators\n\nans = not_hidden_alligators",
+      "prediction": 56.0,
+      "true_false": true
+    },
+    "731": {
+      "shot_pids": [
+        990,
+        329
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:After resting they decided to go for a swim. The depth of the water is 9 times Dean's height. If Ron is 15 feet tall and Dean is 6 feet shorter than RonHow deep was the water?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nbiology_homework = 19\nreading_homework = 4\nmath_homework = 7\n# Are follow up questions needed here:No.\nAns = math_homework-reading_homework\n\nQuestion:He then went to see the oranges being harvested. He found out that they harvest 71 sacks of unripe oranges and 60 sacks of ripe oranges per day.How many more sacks of unripe oranges than ripe oranges are harvested per day?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nsold_cakes = 91\nbought_cakes = 154\n# Are follow up questions needed here:No.\nAns = bought_cakes - sold_cakes\n\nQuestion:Allan and Jake brought 3 balloons to the park. If Allan brought 2 balloonsHow many balloons did Jake bring to the park?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 1,
+      "program": null,
+      "prediction": null,
+      "true_false": false
+    },
+    "992": {
+      "shot_pids": [
+        327,
+        865
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:Luke played a trivia game and gained 3 points in each round of a game. If he scored 78 points in the trivia gameHow many rounds did he play?\nThought: \nimport math \nimport numpy as np\n# Are follow up questions needed here:No.\n# according to the questions, we can define the variables:\nTotal_roses_in_garden = 59\nroses_before_cut = 7 \nroses_after_cut = 20\n# Are follow up questions needed here:No.\nans = roses_after_cut -roses_before_cut\n\nQuestion:Paul sold some books in a garage sale leaving him with 27 books. If he had 136 books initiallyHow many books did he sell?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nDollar_fred_last_week = 60\nDollar_jason_last_week = 19\nDollar_jason_over_week = 33\n# Are follow up questions needed here:No.\nans = Dollar_jason_over_week - Dollar_jason_last_week\n\nQuestion:Friends of Katie had 57 games and she had 63 ds games.How many more games does Katie have than her friends?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 6,
+      "program": "\nFriends_games = 57\nKatie_games = 63\n# Are follow up questions needed here:No.\nans = Katie_games - Friends_games",
+      "prediction": 6.0,
+      "true_false": true
+    },
+    "790": {
+      "shot_pids": [
+        553,
+        141
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:Danny collects bottle caps and wrappers. He found 22 bottle caps and 8 wrappers at the park. Now he has 28 bottle caps and 63 wrappers in his collection.How many bottle caps did danny have at first?\nThought: \nimport math \nimport numpy as np \n# according to the questions, we can define the variables:\nsteven_peaches = 17\nsteven_apples = 16\n# Are follow up questions needed here:Yes.\n# Follow up: how many peaches Jake have?\njake_peaches = steven_peaches - 6\n# Follow up: how many apples Jake have?\njake_apples = steven_apples +8\n# Follow up: How many more peaches than apples does Steven have?\nans= steven_peaches - steven_apples\n\nQuestion:A book has 3 chapters. The first chapter is 66 pages long the second chapter is 35 pages long and the third chapter is 24 pages long.How many pages does the book have altogether?\nThought: \nimport math \nimport numpy as np \n# according to the questions, we can define the variables:\nchildren_on_bus_before = 23\nchildren_on_bus_after = 8\nchildren_on_and_off_the_bus = 24\n# Are follow up questions needed here:Yes.\n# Follow up: how many children got off the bus?\nchildren_off_the_bus = children_on_bus_before + children_on_and_off_the_bus - children_on_bus_after\n# Follow up: how many more children got off the bus than those that got on?\nchildren_got_off_the_bus = children_off_the_bus - children_on_and_off_the_bus\nans = children_got_off_the_bus\n\nQuestion:Zachary did 46 push-ups and 58 crunches in gym class today. David did 38 more push-ups but 62 less crunches than zachary.How many more crunches than push-ups did Zachary do?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 12,
+      "program": "\nzachary_push_ups = 46\nzachary_crunches = 58\ndavid_push_ups = zachary_push_ups + 38\ndavid_crunches = zachary_crunches - 62\n# Follow up: how many push-ups did David do?\n# Follow up: how many crunches did David do?\n# Follow up: How many more crunches than push-ups did Zachary do?\nans = zachary_crunches - zachary_push_ups",
+      "prediction": 12.0,
+      "true_false": true
+    },
+    "625": {
+      "shot_pids": [
+        329,
+        141
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:He then went to see the oranges being harvested. He found out that they harvest 71 sacks of unripe oranges and 60 sacks of ripe oranges per day.How many more sacks of unripe oranges than ripe oranges are harvested per day?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nsold_cakes = 91\nbought_cakes = 154\n# Are follow up questions needed here:No.\nAns = bought_cakes - sold_cakes\n\nQuestion:A book has 3 chapters. The first chapter is 66 pages long the second chapter is 35 pages long and the third chapter is 24 pages long.How many pages does the book have altogether?\nThought: \nimport math \nimport numpy as np \n# according to the questions, we can define the variables:\nchildren_on_bus_before = 23\nchildren_on_bus_after = 8\nchildren_on_and_off_the_bus = 24\n# Are follow up questions needed here:Yes.\n# Follow up: how many children got off the bus?\nchildren_off_the_bus = children_on_bus_before + children_on_and_off_the_bus - children_on_bus_after\n# Follow up: how many more children got off the bus than those that got on?\nchildren_got_off_the_bus = children_off_the_bus - children_on_and_off_the_bus\nans = children_got_off_the_bus\n\nQuestion:Robin's hair was 14 inches long. It grew by 8 inches. Then he cut off 20 inches.How long is his hair now?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 2,
+      "program": "\ninitial_length = 14\ngrowth = 8\ncut_off = 20\n# Follow up: How much did his hair grow?\ngrowth_length = initial_length + growth\n# Follow up: How much did his hair shrink?\nshrink_length = growth_length - cut_off\nans = shrink_length",
+      "prediction": 2.0,
+      "true_false": true
+    },
+    "682": {
+      "shot_pids": [
+        141,
+        287
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:A book has 3 chapters. The first chapter is 66 pages long the second chapter is 35 pages long and the third chapter is 24 pages long.How many pages does the book have altogether?\nThought: \nimport math \nimport numpy as np \n# according to the questions, we can define the variables:\nchildren_on_bus_before = 23\nchildren_on_bus_after = 8\nchildren_on_and_off_the_bus = 24\n# Are follow up questions needed here:Yes.\n# Follow up: how many children got off the bus?\nchildren_off_the_bus = children_on_bus_before + children_on_and_off_the_bus - children_on_bus_after\n# Follow up: how many more children got off the bus than those that got on?\nchildren_got_off_the_bus = children_off_the_bus - children_on_and_off_the_bus\nans = children_got_off_the_bus\n\nQuestion:Jack received 9 emails in the morning, 10 emails in the afternoon and 7 emails in the evening.How many more emails did Jack receive in the morning than in the evening?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\ngiven_crayons = 571\nlost_crayons = 161\n# Are follow up questions needed here:No.\nans = given_crayons- lost_crayons\n\nQuestion:Melissa scored a total of 91 points in 13 games scoring the same for each game.How many points did she score in each game?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 7,
+      "program": "\ntotal_points = 91\ntotal_games = 13\n# Follow up: how many points did Melissa score in each game?\npoints_per_game = total_points / total_games\nans = points_per_game",
+      "prediction": 7.0,
+      "true_false": true
+    },
+    "624": {
+      "shot_pids": [
+        329,
+        287
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:He then went to see the oranges being harvested. He found out that they harvest 71 sacks of unripe oranges and 60 sacks of ripe oranges per day.How many more sacks of unripe oranges than ripe oranges are harvested per day?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nsold_cakes = 91\nbought_cakes = 154\n# Are follow up questions needed here:No.\nAns = bought_cakes - sold_cakes\n\nQuestion:Jack received 9 emails in the morning, 10 emails in the afternoon and 7 emails in the evening.How many more emails did Jack receive in the morning than in the evening?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\ngiven_crayons = 571\nlost_crayons = 161\n# Are follow up questions needed here:No.\nans = given_crayons- lost_crayons\n\nQuestion:For Gwen's birthday she received 5 dollars from her dad. Her mom gave her 2 more dollars. If she spent 6 dollars.How much more money did she receive from her dad than she did from her mom?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 3,
+      "program": "\ndad_gift = 5\nmom_gift = 2\nspent = 6\n# Are follow up questions needed here:No.\nans = dad_gift - (mom_gift + spent)",
+      "prediction": -3.0,
+      "true_false": false
+    },
+    "853": {
+      "shot_pids": [
+        990,
+        865
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:After resting they decided to go for a swim. The depth of the water is 9 times Dean's height. If Ron is 15 feet tall and Dean is 6 feet shorter than RonHow deep was the water?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nbiology_homework = 19\nreading_homework = 4\nmath_homework = 7\n# Are follow up questions needed here:No.\nAns = math_homework-reading_homework\n\nQuestion:Paul sold some books in a garage sale leaving him with 27 books. If he had 136 books initiallyHow many books did he sell?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nDollar_fred_last_week = 60\nDollar_jason_last_week = 19\nDollar_jason_over_week = 33\n# Are follow up questions needed here:No.\nans = Dollar_jason_over_week - Dollar_jason_last_week\n\nQuestion:Faye was placing her pencils and crayons into 16 rows with 6 crayons and 21 pencils in each row.How many crayons does she have?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 96,
+      "program": "\nrows = 16\npencils_in_each_row = 21\n# Are follow up questions needed here:No.\nans = rows*6",
+      "prediction": 96.0,
+      "true_false": true
+    },
+    "618": {
+      "shot_pids": [
+        725,
+        329
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:Nell collects baseball cards. She had 242 cards. She gave 136 of her cards to Jeff.How many cards does Nell have left?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nharvest_sacks_per_day = 66\nnumber_oranges_per_sack = 25\ndays_of_harvest = 87\n# Are follow up questions needed here:Yes.\n# Follow up:how many oranges will they harvest per day?\nharvest_oranges_per_day = harvest_sacks_per_day*number_oranges_per_sack\n# Follow up:How many oranges will they have after 87 days of harvest?\nans = days_of_harvest*harvest_oranges_per_day\n\nQuestion:He then went to see the oranges being harvested. He found out that they harvest 71 sacks of unripe oranges and 60 sacks of ripe oranges per day.How many more sacks of unripe oranges than ripe oranges are harvested per day?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nsold_cakes = 91\nbought_cakes = 154\n# Are follow up questions needed here:No.\nAns = bought_cakes - sold_cakes\n\nQuestion:26 children were riding on the bus. At the bus stop 38 more children got on the bus.How many children are on the bus now?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 64,
+      "program": "\nchildren_on_bus_initially = 26\nchildren_who_got_on = 38\n# Follow up:How many children are on the bus now?\nans = children_on_bus_initially + children_who_got_on",
+      "prediction": 64.0,
+      "true_false": true
+    },
+    "991": {
+      "shot_pids": [
+        553,
+        327
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:Danny collects bottle caps and wrappers. He found 22 bottle caps and 8 wrappers at the park. Now he has 28 bottle caps and 63 wrappers in his collection.How many bottle caps did danny have at first?\nThought: \nimport math \nimport numpy as np \n# according to the questions, we can define the variables:\nsteven_peaches = 17\nsteven_apples = 16\n# Are follow up questions needed here:Yes.\n# Follow up: how many peaches Jake have?\njake_peaches = steven_peaches - 6\n# Follow up: how many apples Jake have?\njake_apples = steven_apples +8\n# Follow up: How many more peaches than apples does Steven have?\nans= steven_peaches - steven_apples\n\nQuestion:Luke played a trivia game and gained 3 points in each round of a game. If he scored 78 points in the trivia gameHow many rounds did he play?\nThought: \nimport math \nimport numpy as np\n# Are follow up questions needed here:No.\n# according to the questions, we can define the variables:\nTotal_roses_in_garden = 59\nroses_before_cut = 7 \nroses_after_cut = 20\n# Are follow up questions needed here:No.\nans = roses_after_cut -roses_before_cut\n\nQuestion:In a school there are 308 girls and 318 boys. There are also 36 teachersHow many pupils are there in that school?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 626,
+      "program": "\ngirls = 308\nboys = 318\nteachers = 36\n# Follow up: How many pupils are there in the school?\nans = girls + boys - teachers",
+      "prediction": 590.0,
+      "true_false": false
+    },
+    "742": {
+      "shot_pids": [
+        329,
+        141
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:He then went to see the oranges being harvested. He found out that they harvest 71 sacks of unripe oranges and 60 sacks of ripe oranges per day.How many more sacks of unripe oranges than ripe oranges are harvested per day?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nsold_cakes = 91\nbought_cakes = 154\n# Are follow up questions needed here:No.\nAns = bought_cakes - sold_cakes\n\nQuestion:A book has 3 chapters. The first chapter is 66 pages long the second chapter is 35 pages long and the third chapter is 24 pages long.How many pages does the book have altogether?\nThought: \nimport math \nimport numpy as np \n# according to the questions, we can define the variables:\nchildren_on_bus_before = 23\nchildren_on_bus_after = 8\nchildren_on_and_off_the_bus = 24\n# Are follow up questions needed here:Yes.\n# Follow up: how many children got off the bus?\nchildren_off_the_bus = children_on_bus_before + children_on_and_off_the_bus - children_on_bus_after\n# Follow up: how many more children got off the bus than those that got on?\nchildren_got_off_the_bus = children_off_the_bus - children_on_and_off_the_bus\nans = children_got_off_the_bus\n\nQuestion:Rachel picked 7 apples from her tree. Thereafter 2 new apples grew on the tree. Now the tree has 6 apples still on it.How many apples did the tree have to begin with?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 11,
+      "program": "\napples_picked = 7\napples_grown = 2\napples_on_tree = 6\n# Follow up: how many apples did the tree have to begin with?\napples_on_tree_before = apples_picked + apples_on_tree + apples_grown\nans = apples_on_tree_before",
+      "prediction": 15.0,
+      "true_false": false
+    },
+    "654": {
+      "shot_pids": [
+        327,
+        725
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:Luke played a trivia game and gained 3 points in each round of a game. If he scored 78 points in the trivia gameHow many rounds did he play?\nThought: \nimport math \nimport numpy as np\n# Are follow up questions needed here:No.\n# according to the questions, we can define the variables:\nTotal_roses_in_garden = 59\nroses_before_cut = 7 \nroses_after_cut = 20\n# Are follow up questions needed here:No.\nans = roses_after_cut -roses_before_cut\n\nQuestion:Nell collects baseball cards. She had 242 cards. She gave 136 of her cards to Jeff.How many cards does Nell have left?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nharvest_sacks_per_day = 66\nnumber_oranges_per_sack = 25\ndays_of_harvest = 87\n# Are follow up questions needed here:Yes.\n# Follow up:how many oranges will they harvest per day?\nharvest_oranges_per_day = harvest_sacks_per_day*number_oranges_per_sack\n# Follow up:How many oranges will they have after 87 days of harvest?\nans = days_of_harvest*harvest_oranges_per_day\n\nQuestion:Danny collects bottle caps. He lost 66 bottle caps at the park. Now he has 25 bottle caps in his collection.How many bottle caps did danny have at first?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 91,
+      "program": "\nlost_bottle_caps = 66\nremaining_bottle_caps = 25\n# Follow up:How many bottle caps did Danny have at first?\nans = lost_bottle_caps + remaining_bottle_caps",
+      "prediction": 91.0,
+      "true_false": true
+    },
+    "962": {
+      "shot_pids": [
+        141,
+        865
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:A book has 3 chapters. The first chapter is 66 pages long the second chapter is 35 pages long and the third chapter is 24 pages long.How many pages does the book have altogether?\nThought: \nimport math \nimport numpy as np \n# according to the questions, we can define the variables:\nchildren_on_bus_before = 23\nchildren_on_bus_after = 8\nchildren_on_and_off_the_bus = 24\n# Are follow up questions needed here:Yes.\n# Follow up: how many children got off the bus?\nchildren_off_the_bus = children_on_bus_before + children_on_and_off_the_bus - children_on_bus_after\n# Follow up: how many more children got off the bus than those that got on?\nchildren_got_off_the_bus = children_off_the_bus - children_on_and_off_the_bus\nans = children_got_off_the_bus\n\nQuestion:Paul sold some books in a garage sale leaving him with 27 books. If he had 136 books initiallyHow many books did he sell?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nDollar_fred_last_week = 60\nDollar_jason_last_week = 19\nDollar_jason_over_week = 33\n# Are follow up questions needed here:No.\nans = Dollar_jason_over_week - Dollar_jason_last_week\n\nQuestion:After eating a hearty meal they went to see the Buckingham palace. There, Rachel learned that 45 visitors came to the Buckingham palace on the previous day. If 829 people visited the Buckingham palace within the past 85 daysHow many visitors visited the Buckingham palace on that day?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 784,
+      "program": "\ntotal_visitors = 829\ntotal_days = 85\nvisitors_per_day = total_visitors / total_days\n# Follow up: How many visitors visited the Buckingham palace on the previous day?\nvisitors_on_previous_day = visitors_per_day * 1\nans = visitors_on_previous_day",
+      "prediction": 9.75294117647059,
+      "true_false": false
+    },
+    "719": {
+      "shot_pids": [
+        553,
+        990
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:Danny collects bottle caps and wrappers. He found 22 bottle caps and 8 wrappers at the park. Now he has 28 bottle caps and 63 wrappers in his collection.How many bottle caps did danny have at first?\nThought: \nimport math \nimport numpy as np \n# according to the questions, we can define the variables:\nsteven_peaches = 17\nsteven_apples = 16\n# Are follow up questions needed here:Yes.\n# Follow up: how many peaches Jake have?\njake_peaches = steven_peaches - 6\n# Follow up: how many apples Jake have?\njake_apples = steven_apples +8\n# Follow up: How many more peaches than apples does Steven have?\nans= steven_peaches - steven_apples\n\nQuestion:After resting they decided to go for a swim. The depth of the water is 9 times Dean's height. If Ron is 15 feet tall and Dean is 6 feet shorter than RonHow deep was the water?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nbiology_homework = 19\nreading_homework = 4\nmath_homework = 7\n# Are follow up questions needed here:No.\nAns = math_homework-reading_homework\n\nQuestion:Baker made 52 pastries and 84 cakes. If he sold 102 cakes and 94 pastriesHow many more cakes than pastries did baker make?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 32,
+      "program": "\ncakes_made = 84\npastries_made = 52\ncakes_sold = 102\npastries_sold = 94\n# Follow up: How many cakes did Baker sell?\ncakes_sold = cakes_made - pastries_made\n# Follow up: How many pastries did Baker sell?\npastries_sold = pastries_made - cakes_made\n# Follow up: How many more cakes than pastries did Baker make?\nans = cakes_made - pastries_made",
+      "prediction": 32.0,
+      "true_false": true
+    },
+    "791": {
+      "shot_pids": [
+        141,
+        329
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:A book has 3 chapters. The first chapter is 66 pages long the second chapter is 35 pages long and the third chapter is 24 pages long.How many pages does the book have altogether?\nThought: \nimport math \nimport numpy as np \n# according to the questions, we can define the variables:\nchildren_on_bus_before = 23\nchildren_on_bus_after = 8\nchildren_on_and_off_the_bus = 24\n# Are follow up questions needed here:Yes.\n# Follow up: how many children got off the bus?\nchildren_off_the_bus = children_on_bus_before + children_on_and_off_the_bus - children_on_bus_after\n# Follow up: how many more children got off the bus than those that got on?\nchildren_got_off_the_bus = children_off_the_bus - children_on_and_off_the_bus\nans = children_got_off_the_bus\n\nQuestion:He then went to see the oranges being harvested. He found out that they harvest 71 sacks of unripe oranges and 60 sacks of ripe oranges per day.How many more sacks of unripe oranges than ripe oranges are harvested per day?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nsold_cakes = 91\nbought_cakes = 154\n# Are follow up questions needed here:No.\nAns = bought_cakes - sold_cakes\n\nQuestion:The Ferris wheel in paradise park has 4 seats. If 20 people can ride the wheel at the same timeHow many people can each seat hold?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 5,
+      "program": "\nnumber_of_seats = 4\nnumber_of_people = 20\n# Follow up: how many people can each seat hold?\npeople_per_seat = number_of_people / number_of_seats\nans = people_per_seat",
+      "prediction": 5.0,
+      "true_false": true
+    },
+    "835": {
+      "shot_pids": [
+        141,
+        990
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:A book has 3 chapters. The first chapter is 66 pages long the second chapter is 35 pages long and the third chapter is 24 pages long.How many pages does the book have altogether?\nThought: \nimport math \nimport numpy as np \n# according to the questions, we can define the variables:\nchildren_on_bus_before = 23\nchildren_on_bus_after = 8\nchildren_on_and_off_the_bus = 24\n# Are follow up questions needed here:Yes.\n# Follow up: how many children got off the bus?\nchildren_off_the_bus = children_on_bus_before + children_on_and_off_the_bus - children_on_bus_after\n# Follow up: how many more children got off the bus than those that got on?\nchildren_got_off_the_bus = children_off_the_bus - children_on_and_off_the_bus\nans = children_got_off_the_bus\n\nQuestion:After resting they decided to go for a swim. The depth of the water is 9 times Dean's height. If Ron is 15 feet tall and Dean is 6 feet shorter than RonHow deep was the water?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nbiology_homework = 19\nreading_homework = 4\nmath_homework = 7\n# Are follow up questions needed here:No.\nAns = math_homework-reading_homework\n\nQuestion:A grocery store had 57 bottles of regular soda, 26 bottles of diet soda and 27 bottles of lite soda.How many bottles did they have total?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 110,
+      "program": "\nregular_soda = 57\ndiet_soda = 26\nlite_soda = 27\n# Follow up: how many more bottles of regular soda than lite soda?\nans = regular_soda + diet_soda + lite_soda",
+      "prediction": 110.0,
+      "true_false": true
+    },
+    "557": {
+      "shot_pids": [
+        287,
+        553
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:Jack received 9 emails in the morning, 10 emails in the afternoon and 7 emails in the evening.How many more emails did Jack receive in the morning than in the evening?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\ngiven_crayons = 571\nlost_crayons = 161\n# Are follow up questions needed here:No.\nans = given_crayons- lost_crayons\n\nQuestion:Danny collects bottle caps and wrappers. He found 22 bottle caps and 8 wrappers at the park. Now he has 28 bottle caps and 63 wrappers in his collection.How many bottle caps did danny have at first?\nThought: \nimport math \nimport numpy as np \n# according to the questions, we can define the variables:\nsteven_peaches = 17\nsteven_apples = 16\n# Are follow up questions needed here:Yes.\n# Follow up: how many peaches Jake have?\njake_peaches = steven_peaches - 6\n# Follow up: how many apples Jake have?\njake_apples = steven_apples +8\n# Follow up: How many more peaches than apples does Steven have?\nans= steven_peaches - steven_apples\n\nQuestion:Baker made 54 cakes. He sold some of them. If he still has 13 cakes leftHow many cakes did baker sell?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 41,
+      "program": "\ncakes_made = 54\ncakes_left = 13\n# Follow up: How many cakes did baker sell?\nans = cakes_made - cakes_left",
+      "prediction": 41.0,
+      "true_false": true
+    },
+    "601": {
+      "shot_pids": [
+        725,
+        990
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:Nell collects baseball cards. She had 242 cards. She gave 136 of her cards to Jeff.How many cards does Nell have left?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nharvest_sacks_per_day = 66\nnumber_oranges_per_sack = 25\ndays_of_harvest = 87\n# Are follow up questions needed here:Yes.\n# Follow up:how many oranges will they harvest per day?\nharvest_oranges_per_day = harvest_sacks_per_day*number_oranges_per_sack\n# Follow up:How many oranges will they have after 87 days of harvest?\nans = days_of_harvest*harvest_oranges_per_day\n\nQuestion:After resting they decided to go for a swim. The depth of the water is 9 times Dean's height. If Ron is 15 feet tall and Dean is 6 feet shorter than RonHow deep was the water?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nbiology_homework = 19\nreading_homework = 4\nmath_homework = 7\n# Are follow up questions needed here:No.\nAns = math_homework-reading_homework\n\nQuestion:Bobby ate 28 pieces of candy. Then he ate 42 more. He also ate 63 pieces of chocolate.How many pieces of candy did Bobby eat?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 70,
+      "program": "\npieces_of_candy = 28\npieces_of_candy_more = 42\npieces_of_chocolate = 63\n# Follow up:How many pieces of candy did Bobby eat in total?\nans = pieces_of_candy + pieces_of_candy_more + pieces_of_chocolate",
+      "prediction": 133.0,
+      "true_false": false
+    },
+    "829": {
+      "shot_pids": [
+        329,
+        287
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:He then went to see the oranges being harvested. He found out that they harvest 71 sacks of unripe oranges and 60 sacks of ripe oranges per day.How many more sacks of unripe oranges than ripe oranges are harvested per day?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nsold_cakes = 91\nbought_cakes = 154\n# Are follow up questions needed here:No.\nAns = bought_cakes - sold_cakes\n\nQuestion:Jack received 9 emails in the morning, 10 emails in the afternoon and 7 emails in the evening.How many more emails did Jack receive in the morning than in the evening?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\ngiven_crayons = 571\nlost_crayons = 161\n# Are follow up questions needed here:No.\nans = given_crayons- lost_crayons\n\nQuestion:17 red peaches and 16 green peaches are in the basket.How many more red peaches than green peaches are in the basket?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 1,
+      "program": "\nred_peaches = 17\ngreen_peaches = 16\n\nans = red_peaches - green_peaches",
+      "prediction": 1.0,
+      "true_false": true
+    },
+    "878": {
+      "shot_pids": [
+        553,
+        990
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:Danny collects bottle caps and wrappers. He found 22 bottle caps and 8 wrappers at the park. Now he has 28 bottle caps and 63 wrappers in his collection.How many bottle caps did danny have at first?\nThought: \nimport math \nimport numpy as np \n# according to the questions, we can define the variables:\nsteven_peaches = 17\nsteven_apples = 16\n# Are follow up questions needed here:Yes.\n# Follow up: how many peaches Jake have?\njake_peaches = steven_peaches - 6\n# Follow up: how many apples Jake have?\njake_apples = steven_apples +8\n# Follow up: How many more peaches than apples does Steven have?\nans= steven_peaches - steven_apples\n\nQuestion:After resting they decided to go for a swim. The depth of the water is 9 times Dean's height. If Ron is 15 feet tall and Dean is 6 feet shorter than RonHow deep was the water?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nbiology_homework = 19\nreading_homework = 4\nmath_homework = 7\n# Are follow up questions needed here:No.\nAns = math_homework-reading_homework\n\nQuestion:An industrial machine can make 6 shirts a minute. It worked for 5 minutes yesterday and for 12 minutes today.How many shirts did machine make today?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 72,
+      "program": "\nshirts_yesterday = 6 * 5\nshirts_today = 6 * 12\n# Follow up: How many shirts did the machine make in total?\nans = shirts_yesterday + shirts_today",
+      "prediction": 102.0,
+      "true_false": false
+    },
+    "657": {
+      "shot_pids": [
+        990,
+        141
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:After resting they decided to go for a swim. The depth of the water is 9 times Dean's height. If Ron is 15 feet tall and Dean is 6 feet shorter than RonHow deep was the water?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nbiology_homework = 19\nreading_homework = 4\nmath_homework = 7\n# Are follow up questions needed here:No.\nAns = math_homework-reading_homework\n\nQuestion:A book has 3 chapters. The first chapter is 66 pages long the second chapter is 35 pages long and the third chapter is 24 pages long.How many pages does the book have altogether?\nThought: \nimport math \nimport numpy as np \n# according to the questions, we can define the variables:\nchildren_on_bus_before = 23\nchildren_on_bus_after = 8\nchildren_on_and_off_the_bus = 24\n# Are follow up questions needed here:Yes.\n# Follow up: how many children got off the bus?\nchildren_off_the_bus = children_on_bus_before + children_on_and_off_the_bus - children_on_bus_after\n# Follow up: how many more children got off the bus than those that got on?\nchildren_got_off_the_bus = children_off_the_bus - children_on_and_off_the_bus\nans = children_got_off_the_bus\n\nQuestion:Jerry had 8 action figures and 9 books on a shelf in his room. Later he added 10 more books to the shelf.How many books were on his shelf in all?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 19,
+      "program": "\naction_figures = 8\nbooks_before = 9\nbooks_added = 10\n# Follow up: how many books were on the shelf after Jerry added the 10 books?\nbooks_after = books_before + books_added\nans = books_after",
+      "prediction": 19.0,
+      "true_false": true
+    },
+    "567": {
+      "shot_pids": [
+        990,
+        141
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:After resting they decided to go for a swim. The depth of the water is 9 times Dean's height. If Ron is 15 feet tall and Dean is 6 feet shorter than RonHow deep was the water?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nbiology_homework = 19\nreading_homework = 4\nmath_homework = 7\n# Are follow up questions needed here:No.\nAns = math_homework-reading_homework\n\nQuestion:A book has 3 chapters. The first chapter is 66 pages long the second chapter is 35 pages long and the third chapter is 24 pages long.How many pages does the book have altogether?\nThought: \nimport math \nimport numpy as np \n# according to the questions, we can define the variables:\nchildren_on_bus_before = 23\nchildren_on_bus_after = 8\nchildren_on_and_off_the_bus = 24\n# Are follow up questions needed here:Yes.\n# Follow up: how many children got off the bus?\nchildren_off_the_bus = children_on_bus_before + children_on_and_off_the_bus - children_on_bus_after\n# Follow up: how many more children got off the bus than those that got on?\nchildren_got_off_the_bus = children_off_the_bus - children_on_and_off_the_bus\nans = children_got_off_the_bus\n\nQuestion:Mary is baking a cake. The recipe calls for 5 cups of sugar and 13 cups of flour. She already put in some cups of flour. If she still needs 12 more cups of flourHow many cups of flour did she put in?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 1,
+      "program": "\ntotal_cups_of_sugar = 5\ntotal_cups_of_flour = 13\nneeded_cups_of_flour = 12\n# Follow up: how many cups of flour did Mary put in?\ncups_of_flour_put_in = total_cups_of_flour - needed_cups_of_flour\n\nans = cups_of_flour_put_in",
+      "prediction": 1.0,
+      "true_false": true
+    },
+    "888": {
+      "shot_pids": [
+        990,
+        329
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:After resting they decided to go for a swim. The depth of the water is 9 times Dean's height. If Ron is 15 feet tall and Dean is 6 feet shorter than RonHow deep was the water?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nbiology_homework = 19\nreading_homework = 4\nmath_homework = 7\n# Are follow up questions needed here:No.\nAns = math_homework-reading_homework\n\nQuestion:He then went to see the oranges being harvested. He found out that they harvest 71 sacks of unripe oranges and 60 sacks of ripe oranges per day.How many more sacks of unripe oranges than ripe oranges are harvested per day?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nsold_cakes = 91\nbought_cakes = 154\n# Are follow up questions needed here:No.\nAns = bought_cakes - sold_cakes\n\nQuestion:They decided to hold the party in their backyard. If they have 5 sets of tables and each set has 10 chairsHow many more chairs than tables do they have?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 45,
+      "program": null,
+      "prediction": null,
+      "true_false": false
+    },
+    "676": {
+      "shot_pids": [
+        553,
+        327
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:Danny collects bottle caps and wrappers. He found 22 bottle caps and 8 wrappers at the park. Now he has 28 bottle caps and 63 wrappers in his collection.How many bottle caps did danny have at first?\nThought: \nimport math \nimport numpy as np \n# according to the questions, we can define the variables:\nsteven_peaches = 17\nsteven_apples = 16\n# Are follow up questions needed here:Yes.\n# Follow up: how many peaches Jake have?\njake_peaches = steven_peaches - 6\n# Follow up: how many apples Jake have?\njake_apples = steven_apples +8\n# Follow up: How many more peaches than apples does Steven have?\nans= steven_peaches - steven_apples\n\nQuestion:Luke played a trivia game and gained 3 points in each round of a game. If he scored 78 points in the trivia gameHow many rounds did he play?\nThought: \nimport math \nimport numpy as np\n# Are follow up questions needed here:No.\n# according to the questions, we can define the variables:\nTotal_roses_in_garden = 59\nroses_before_cut = 7 \nroses_after_cut = 20\n# Are follow up questions needed here:No.\nans = roses_after_cut -roses_before_cut\n\nQuestion:The grasshopper, the frog and the mouse had a jumping contest. The grasshopper jumped 19 inches. The grasshopper jumped 4 inches farther than the frog and the mouse jumped 44 inches lesser than the frog.How far did the frog jump?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 15,
+      "program": "\ngrasshopper_jump = 19\nmouse_jump = 44 \n# Follow up: How far did the frog jump?\nfrog_jump = grasshopper_jump - 4\nans = frog_jump",
+      "prediction": 15.0,
+      "true_false": true
+    },
+    "969": {
+      "shot_pids": [
+        329,
+        141
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:He then went to see the oranges being harvested. He found out that they harvest 71 sacks of unripe oranges and 60 sacks of ripe oranges per day.How many more sacks of unripe oranges than ripe oranges are harvested per day?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nsold_cakes = 91\nbought_cakes = 154\n# Are follow up questions needed here:No.\nAns = bought_cakes - sold_cakes\n\nQuestion:A book has 3 chapters. The first chapter is 66 pages long the second chapter is 35 pages long and the third chapter is 24 pages long.How many pages does the book have altogether?\nThought: \nimport math \nimport numpy as np \n# according to the questions, we can define the variables:\nchildren_on_bus_before = 23\nchildren_on_bus_after = 8\nchildren_on_and_off_the_bus = 24\n# Are follow up questions needed here:Yes.\n# Follow up: how many children got off the bus?\nchildren_off_the_bus = children_on_bus_before + children_on_and_off_the_bus - children_on_bus_after\n# Follow up: how many more children got off the bus than those that got on?\nchildren_got_off_the_bus = children_off_the_bus - children_on_and_off_the_bus\nans = children_got_off_the_bus\n\nQuestion:Jesse needs a carpet of size 10 square feet to cover her room. If her room is 5 feet longWhat is the width of her room?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 2,
+      "program": "\nroom_length = 5\nroom_size = 10\n# Follow up: what is the width of the room?\nroom_width = room_size/room_length\nans = room_width",
+      "prediction": 2.0,
+      "true_false": true
+    },
+    "872": {
+      "shot_pids": [
+        287,
+        329
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:Jack received 9 emails in the morning, 10 emails in the afternoon and 7 emails in the evening.How many more emails did Jack receive in the morning than in the evening?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\ngiven_crayons = 571\nlost_crayons = 161\n# Are follow up questions needed here:No.\nans = given_crayons- lost_crayons\n\nQuestion:He then went to see the oranges being harvested. He found out that they harvest 71 sacks of unripe oranges and 60 sacks of ripe oranges per day.How many more sacks of unripe oranges than ripe oranges are harvested per day?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nsold_cakes = 91\nbought_cakes = 154\n# Are follow up questions needed here:No.\nAns = bought_cakes - sold_cakes\n\nQuestion:Ed had 30 more marbles than Doug. Ed lost 21 of his marbles at the playground. If Ed had 91 marblesHow many more marbles did Ed have than Doug then?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 9,
+      "program": " \ned_marbles = 91\ndoug_marbles = ed_marbles - 30\nlost_marbles = 21\n\nans = ed_marbles - lost_marbles - doug_marbles",
+      "prediction": 9.0,
+      "true_false": true
+    },
+    "763": {
+      "shot_pids": [
+        327,
+        553
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:Luke played a trivia game and gained 3 points in each round of a game. If he scored 78 points in the trivia gameHow many rounds did he play?\nThought: \nimport math \nimport numpy as np\n# Are follow up questions needed here:No.\n# according to the questions, we can define the variables:\nTotal_roses_in_garden = 59\nroses_before_cut = 7 \nroses_after_cut = 20\n# Are follow up questions needed here:No.\nans = roses_after_cut -roses_before_cut\n\nQuestion:Danny collects bottle caps and wrappers. He found 22 bottle caps and 8 wrappers at the park. Now he has 28 bottle caps and 63 wrappers in his collection.How many bottle caps did danny have at first?\nThought: \nimport math \nimport numpy as np \n# according to the questions, we can define the variables:\nsteven_peaches = 17\nsteven_apples = 16\n# Are follow up questions needed here:Yes.\n# Follow up: how many peaches Jake have?\njake_peaches = steven_peaches - 6\n# Follow up: how many apples Jake have?\njake_apples = steven_apples +8\n# Follow up: How many more peaches than apples does Steven have?\nans= steven_peaches - steven_apples\n\nQuestion:Paul got a box of 267 crayons for his birthday. During the school year he lost 231 crayons while he gave away 308 crayons to his friends.How many more crayons did he give to his friends than those he lost?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 77,
+      "program": "\ninitial_crayons = 267\nlost_crayons = 231\ngiven_crayons = 308\n# Follow up: How many crayons did Paul have left?\nans = given_crayons - lost_crayons",
+      "prediction": 77.0,
+      "true_false": true
+    },
+    "954": {
+      "shot_pids": [
+        990,
+        865
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:After resting they decided to go for a swim. The depth of the water is 9 times Dean's height. If Ron is 15 feet tall and Dean is 6 feet shorter than RonHow deep was the water?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nbiology_homework = 19\nreading_homework = 4\nmath_homework = 7\n# Are follow up questions needed here:No.\nAns = math_homework-reading_homework\n\nQuestion:Paul sold some books in a garage sale leaving him with 27 books. If he had 136 books initiallyHow many books did he sell?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nDollar_fred_last_week = 60\nDollar_jason_last_week = 19\nDollar_jason_over_week = 33\n# Are follow up questions needed here:No.\nans = Dollar_jason_over_week - Dollar_jason_last_week\n\nQuestion:Dave had 17 apps on his phone. After adding some he had 18 left.How many apps did he add?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 1,
+      "program": "\ninitial_apps = 17\nfinal_apps = 18\n# Are follow up questions needed here:No.\nans = final_apps - initial_apps",
+      "prediction": 1.0,
+      "true_false": true
+    },
+    "766": {
+      "shot_pids": [
+        327,
+        329
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:Luke played a trivia game and gained 3 points in each round of a game. If he scored 78 points in the trivia gameHow many rounds did he play?\nThought: \nimport math \nimport numpy as np\n# Are follow up questions needed here:No.\n# according to the questions, we can define the variables:\nTotal_roses_in_garden = 59\nroses_before_cut = 7 \nroses_after_cut = 20\n# Are follow up questions needed here:No.\nans = roses_after_cut -roses_before_cut\n\nQuestion:He then went to see the oranges being harvested. He found out that they harvest 71 sacks of unripe oranges and 60 sacks of ripe oranges per day.How many more sacks of unripe oranges than ripe oranges are harvested per day?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nsold_cakes = 91\nbought_cakes = 154\n# Are follow up questions needed here:No.\nAns = bought_cakes - sold_cakes\n\nQuestion:Rebecca wants to split a collection of eggs into groups of 5. Rebecca has 20 eggs and 6 marbles.How many more eggs does Rebecca have than marbles?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 14,
+      "program": "\neggs = 20\nmarbles = 6\n# Are follow up questions needed here:No.\nans = eggs - marbles",
+      "prediction": 14.0,
+      "true_false": true
+    },
+    "850": {
+      "shot_pids": [
+        725,
+        553
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:Nell collects baseball cards. She had 242 cards. She gave 136 of her cards to Jeff.How many cards does Nell have left?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nharvest_sacks_per_day = 66\nnumber_oranges_per_sack = 25\ndays_of_harvest = 87\n# Are follow up questions needed here:Yes.\n# Follow up:how many oranges will they harvest per day?\nharvest_oranges_per_day = harvest_sacks_per_day*number_oranges_per_sack\n# Follow up:How many oranges will they have after 87 days of harvest?\nans = days_of_harvest*harvest_oranges_per_day\n\nQuestion:Danny collects bottle caps and wrappers. He found 22 bottle caps and 8 wrappers at the park. Now he has 28 bottle caps and 63 wrappers in his collection.How many bottle caps did danny have at first?\nThought: \nimport math \nimport numpy as np \n# according to the questions, we can define the variables:\nsteven_peaches = 17\nsteven_apples = 16\n# Are follow up questions needed here:Yes.\n# Follow up: how many peaches Jake have?\njake_peaches = steven_peaches - 6\n# Follow up: how many apples Jake have?\njake_apples = steven_apples +8\n# Follow up: How many more peaches than apples does Steven have?\nans= steven_peaches - steven_apples\n\nQuestion:The Razorback shop makes $ 62 dollars off each t-shirt and $ 99 off each jersey. During the Arkansas and Texas tech game they sold 183 t-shirts and 31 jerseys.How much money did they make from selling the t-shirts?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 11346,
+      "program": "\nprice_tshirt = 62\nprice_jersey = 99\nnumber_tshirt = 183\nnumber_jersey = 31\n# Follow up: How much money did they make from selling the t-shirts?\nans = price_tshirt*number_tshirt",
+      "prediction": 11346.0,
+      "true_false": true
+    },
+    "603": {
+      "shot_pids": [
+        287,
+        865
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:Jack received 9 emails in the morning, 10 emails in the afternoon and 7 emails in the evening.How many more emails did Jack receive in the morning than in the evening?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\ngiven_crayons = 571\nlost_crayons = 161\n# Are follow up questions needed here:No.\nans = given_crayons- lost_crayons\n\nQuestion:Paul sold some books in a garage sale leaving him with 27 books. If he had 136 books initiallyHow many books did he sell?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nDollar_fred_last_week = 60\nDollar_jason_last_week = 19\nDollar_jason_over_week = 33\n# Are follow up questions needed here:No.\nans = Dollar_jason_over_week - Dollar_jason_last_week\n\nQuestion:Bobby had 22 pieces of candy. He ate some pieces of candy. Then he ate 5 more. If he still has 8 pieces of candy leftHow many pieces of candy had he eaten at the start?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 9,
+      "program": "\nInitial_pieces_of_candy = 22\nFinal_pieces_of_candy = 8\nCandy_eaten = 5\n# Are follow up questions needed here:No.\nans = Initial_pieces_of_candy - Final_pieces_of_candy - Candy_eaten",
+      "prediction": 9.0,
+      "true_false": true
+    },
+    "661": {
+      "shot_pids": [
+        141,
+        327
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:A book has 3 chapters. The first chapter is 66 pages long the second chapter is 35 pages long and the third chapter is 24 pages long.How many pages does the book have altogether?\nThought: \nimport math \nimport numpy as np \n# according to the questions, we can define the variables:\nchildren_on_bus_before = 23\nchildren_on_bus_after = 8\nchildren_on_and_off_the_bus = 24\n# Are follow up questions needed here:Yes.\n# Follow up: how many children got off the bus?\nchildren_off_the_bus = children_on_bus_before + children_on_and_off_the_bus - children_on_bus_after\n# Follow up: how many more children got off the bus than those that got on?\nchildren_got_off_the_bus = children_off_the_bus - children_on_and_off_the_bus\nans = children_got_off_the_bus\n\nQuestion:Luke played a trivia game and gained 3 points in each round of a game. If he scored 78 points in the trivia gameHow many rounds did he play?\nThought: \nimport math \nimport numpy as np\n# Are follow up questions needed here:No.\n# according to the questions, we can define the variables:\nTotal_roses_in_garden = 59\nroses_before_cut = 7 \nroses_after_cut = 20\n# Are follow up questions needed here:No.\nans = roses_after_cut -roses_before_cut\n\nQuestion:The Razorback t-shirt shop sells each t-shirt for $ 201 dollars. During the Arkansas and Texas tech game they increased the prices by $ 217 per t-shirt and sold 14 t-shirts.How much money did they make from selling the t-shirts?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 5852,
+      "program": "\nprice_per_tshirt = 201\nprice_increase = 217\ntshirts_sold = 14\n# Follow up: how much was the new price per t-shirt?\nnew_price_per_tshirt = price_per_tshirt + price_increase\n# Follow up: how much money did they make from selling the t-shirts?\ntotal_revenue = new_price_per_tshirt * tshirts_sold\nans = total_revenue",
+      "prediction": 5852.0,
+      "true_false": true
+    },
+    "651": {
+      "shot_pids": [
+        990,
+        725
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:After resting they decided to go for a swim. The depth of the water is 9 times Dean's height. If Ron is 15 feet tall and Dean is 6 feet shorter than RonHow deep was the water?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nbiology_homework = 19\nreading_homework = 4\nmath_homework = 7\n# Are follow up questions needed here:No.\nAns = math_homework-reading_homework\n\nQuestion:Nell collects baseball cards. She had 242 cards. She gave 136 of her cards to Jeff.How many cards does Nell have left?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nharvest_sacks_per_day = 66\nnumber_oranges_per_sack = 25\ndays_of_harvest = 87\n# Are follow up questions needed here:Yes.\n# Follow up:how many oranges will they harvest per day?\nharvest_oranges_per_day = harvest_sacks_per_day*number_oranges_per_sack\n# Follow up:How many oranges will they have after 87 days of harvest?\nans = days_of_harvest*harvest_oranges_per_day\n\nQuestion:Mary is baking a cake. The recipe calls for 9 cups of flour and 11 cups of sugar. She already put in 4 cups of flour.How many more cups of sugar than cups of flour does she need to add now?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 6,
+      "program": "\ncup_of_flour = 9\ncup_of_sugar = 11\ncup_of_flour_added = 4\n# Follow up:How many more cups of sugar than cups of flour does she need to add now?\nans = cup_of_sugar - (cup_of_flour - cup_of_flour_added)",
+      "prediction": 6.0,
+      "true_false": true
+    },
+    "807": {
+      "shot_pids": [
+        287,
+        865
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:Jack received 9 emails in the morning, 10 emails in the afternoon and 7 emails in the evening.How many more emails did Jack receive in the morning than in the evening?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\ngiven_crayons = 571\nlost_crayons = 161\n# Are follow up questions needed here:No.\nans = given_crayons- lost_crayons\n\nQuestion:Paul sold some books in a garage sale leaving him with 27 books. If he had 136 books initiallyHow many books did he sell?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nDollar_fred_last_week = 60\nDollar_jason_last_week = 19\nDollar_jason_over_week = 33\n# Are follow up questions needed here:No.\nans = Dollar_jason_over_week - Dollar_jason_last_week\n\nQuestion:Matthew gave equal numbers of crackers and cakes to his 4 friends. If he had 32 crackers and 98 cakes initiallyHow many crackers did each person eat?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 8,
+      "program": "\ntotal_crackers = 32\ntotal_cakes = 98\ntotal_friends = 4\n# Are follow up questions needed here:No.\nans = total_crackers/total_friends",
+      "prediction": 8.0,
+      "true_false": true
+    },
+    "762": {
+      "shot_pids": [
+        553,
+        141
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:Danny collects bottle caps and wrappers. He found 22 bottle caps and 8 wrappers at the park. Now he has 28 bottle caps and 63 wrappers in his collection.How many bottle caps did danny have at first?\nThought: \nimport math \nimport numpy as np \n# according to the questions, we can define the variables:\nsteven_peaches = 17\nsteven_apples = 16\n# Are follow up questions needed here:Yes.\n# Follow up: how many peaches Jake have?\njake_peaches = steven_peaches - 6\n# Follow up: how many apples Jake have?\njake_apples = steven_apples +8\n# Follow up: How many more peaches than apples does Steven have?\nans= steven_peaches - steven_apples\n\nQuestion:A book has 3 chapters. The first chapter is 66 pages long the second chapter is 35 pages long and the third chapter is 24 pages long.How many pages does the book have altogether?\nThought: \nimport math \nimport numpy as np \n# according to the questions, we can define the variables:\nchildren_on_bus_before = 23\nchildren_on_bus_after = 8\nchildren_on_and_off_the_bus = 24\n# Are follow up questions needed here:Yes.\n# Follow up: how many children got off the bus?\nchildren_off_the_bus = children_on_bus_before + children_on_and_off_the_bus - children_on_bus_after\n# Follow up: how many more children got off the bus than those that got on?\nchildren_got_off_the_bus = children_off_the_bus - children_on_and_off_the_bus\nans = children_got_off_the_bus\n\nQuestion:Jake has 11 fewer peaches than Steven. If Jake has 17 peaches.How many peaches does Steven have?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 28,
+      "program": "\nsteven_peaches = 17\njake_peaches = 11\n# Follow up: how many peaches does Steven have?\nsteven_peaches = jake_peaches + 11\nans = steven_peaches",
+      "prediction": 22.0,
+      "true_false": false
+    },
+    "765": {
+      "shot_pids": [
+        865,
+        329
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:Paul sold some books in a garage sale leaving him with 27 books. If he had 136 books initiallyHow many books did he sell?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nDollar_fred_last_week = 60\nDollar_jason_last_week = 19\nDollar_jason_over_week = 33\n# Are follow up questions needed here:No.\nans = Dollar_jason_over_week - Dollar_jason_last_week\n\nQuestion:He then went to see the oranges being harvested. He found out that they harvest 71 sacks of unripe oranges and 60 sacks of ripe oranges per day.How many more sacks of unripe oranges than ripe oranges are harvested per day?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nsold_cakes = 91\nbought_cakes = 154\n# Are follow up questions needed here:No.\nAns = bought_cakes - sold_cakes\n\nQuestion:There are 203 bananas and 63 oranges in Philip's collection. If the bananas are organized into 7 groups and oranges are organized into 95 groupsHow big is each group of bananas?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 29,
+      "program": "\nbananas = 203\noranges = 63\ngroups_bananas = 7\ngroups_oranges = 95\n\n# Calculate the size of each group of bananas\nans = bananas / groups_bananas",
+      "prediction": 29.0,
+      "true_false": true
+    },
+    "707": {
+      "shot_pids": [
+        865,
+        725
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:Paul sold some books in a garage sale leaving him with 27 books. If he had 136 books initiallyHow many books did he sell?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nDollar_fred_last_week = 60\nDollar_jason_last_week = 19\nDollar_jason_over_week = 33\n# Are follow up questions needed here:No.\nans = Dollar_jason_over_week - Dollar_jason_last_week\n\nQuestion:Nell collects baseball cards. She had 242 cards. She gave 136 of her cards to Jeff.How many cards does Nell have left?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nharvest_sacks_per_day = 66\nnumber_oranges_per_sack = 25\ndays_of_harvest = 87\n# Are follow up questions needed here:Yes.\n# Follow up:how many oranges will they harvest per day?\nharvest_oranges_per_day = harvest_sacks_per_day*number_oranges_per_sack\n# Follow up:How many oranges will they have after 87 days of harvest?\nans = days_of_harvest*harvest_oranges_per_day\n\nQuestion:Jerry had 4 action figures on a shelf in his room. Later he added some more action figures to the shelf. If there are a total of 8 action figures on his shelf nowHow many action figures did he add to the shelf?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 4,
+      "program": "\ninitial_action_figures = 4\nfinal_action_figures = 8\n# Follow up:How many action figures did he add to the shelf?\nans = final_action_figures - initial_action_figures",
+      "prediction": 4.0,
+      "true_false": true
+    },
+    "808": {
+      "shot_pids": [
+        327,
+        287
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:Luke played a trivia game and gained 3 points in each round of a game. If he scored 78 points in the trivia gameHow many rounds did he play?\nThought: \nimport math \nimport numpy as np\n# Are follow up questions needed here:No.\n# according to the questions, we can define the variables:\nTotal_roses_in_garden = 59\nroses_before_cut = 7 \nroses_after_cut = 20\n# Are follow up questions needed here:No.\nans = roses_after_cut -roses_before_cut\n\nQuestion:Jack received 9 emails in the morning, 10 emails in the afternoon and 7 emails in the evening.How many more emails did Jack receive in the morning than in the evening?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\ngiven_crayons = 571\nlost_crayons = 161\n# Are follow up questions needed here:No.\nans = given_crayons- lost_crayons\n\nQuestion:He then went to see the oranges being harvested. He found out that they harvested 56 sacks of oranges.How many sacks did they harvest per day if they harvested for a total of 14 days?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 4,
+      "program": "\ntotal_sacks_harvested = 56\ntotal_days_harvested = 14\n# Are follow up questions needed here:No.\nans = total_sacks_harvested/ total_days_harvested",
+      "prediction": 4.0,
+      "true_false": true
+    },
+    "522": {
+      "shot_pids": [
+        553,
+        865
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:Danny collects bottle caps and wrappers. He found 22 bottle caps and 8 wrappers at the park. Now he has 28 bottle caps and 63 wrappers in his collection.How many bottle caps did danny have at first?\nThought: \nimport math \nimport numpy as np \n# according to the questions, we can define the variables:\nsteven_peaches = 17\nsteven_apples = 16\n# Are follow up questions needed here:Yes.\n# Follow up: how many peaches Jake have?\njake_peaches = steven_peaches - 6\n# Follow up: how many apples Jake have?\njake_apples = steven_apples +8\n# Follow up: How many more peaches than apples does Steven have?\nans= steven_peaches - steven_apples\n\nQuestion:Paul sold some books in a garage sale leaving him with 27 books. If he had 136 books initiallyHow many books did he sell?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nDollar_fred_last_week = 60\nDollar_jason_last_week = 19\nDollar_jason_over_week = 33\n# Are follow up questions needed here:No.\nans = Dollar_jason_over_week - Dollar_jason_last_week\n\nQuestion:Frank had 33 pieces of candy. He lost 24 of them. If he put the remaining pieces into bags with 9 pieces in each bagHow many bags would he have?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 1,
+      "program": "\ncandy_pieces_frank = 33\nlost_pieces_frank = 24\n# Follow up: How many pieces did Frank have left?\nremaining_pieces = candy_pieces_frank - lost_pieces_frank\n# Follow up: How many bags would Frank have?\nans = math.ceil(remaining_pieces/9)",
+      "prediction": 1.0,
+      "true_false": true
+    },
+    "752": {
+      "shot_pids": [
+        725,
+        990
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:Nell collects baseball cards. She had 242 cards. She gave 136 of her cards to Jeff.How many cards does Nell have left?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nharvest_sacks_per_day = 66\nnumber_oranges_per_sack = 25\ndays_of_harvest = 87\n# Are follow up questions needed here:Yes.\n# Follow up:how many oranges will they harvest per day?\nharvest_oranges_per_day = harvest_sacks_per_day*number_oranges_per_sack\n# Follow up:How many oranges will they have after 87 days of harvest?\nans = days_of_harvest*harvest_oranges_per_day\n\nQuestion:After resting they decided to go for a swim. The depth of the water is 9 times Dean's height. If Ron is 15 feet tall and Dean is 6 feet shorter than RonHow deep was the water?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nbiology_homework = 19\nreading_homework = 4\nmath_homework = 7\n# Are follow up questions needed here:No.\nAns = math_homework-reading_homework\n\nQuestion:Nell collects cards. She had 239 baseball cards and 38 Ace cards. She gave some of her cards to Jeff and now has 376 Ace cards and 111 baseball cards left.How many more Ace cards than baseball cards does Nell have?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 265,
+      "program": "\nbaseball_cards = 239\nace_cards = 38\n# Follow up: How many cards did Nell give to Jeff?\ncards_given_to_Jeff = (baseball_cards + ace_cards) - (111 + 376)\n# Follow up: How many more Ace cards than baseball cards does Nell have?\nans = 376 - 111",
+      "prediction": 265.0,
+      "true_false": true
+    },
+    "630": {
+      "shot_pids": [
+        865,
+        553
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:Paul sold some books in a garage sale leaving him with 27 books. If he had 136 books initiallyHow many books did he sell?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nDollar_fred_last_week = 60\nDollar_jason_last_week = 19\nDollar_jason_over_week = 33\n# Are follow up questions needed here:No.\nans = Dollar_jason_over_week - Dollar_jason_last_week\n\nQuestion:Danny collects bottle caps and wrappers. He found 22 bottle caps and 8 wrappers at the park. Now he has 28 bottle caps and 63 wrappers in his collection.How many bottle caps did danny have at first?\nThought: \nimport math \nimport numpy as np \n# according to the questions, we can define the variables:\nsteven_peaches = 17\nsteven_apples = 16\n# Are follow up questions needed here:Yes.\n# Follow up: how many peaches Jake have?\njake_peaches = steven_peaches - 6\n# Follow up: how many apples Jake have?\njake_apples = steven_apples +8\n# Follow up: How many more peaches than apples does Steven have?\nans= steven_peaches - steven_apples\n\nQuestion:Paco had 8 sweet cookies and 6 salty cookies. He ate 20 sweet cookies and 34 salty cookies.How many more salty cookies than sweet cookies did he eat?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 14,
+      "program": "\nsweet_cookies_initially = 8\nsalty_cookies_initially = 6\nsweet_cookies_ate = 20\nsalty_cookies_ate = 34\n# Follow up: How many sweet cookies did Paco have initially?\nsweet_cookies_left = sweet_cookies_initially - sweet_cookies_ate\n# Follow up: How many salty cookies did Paco have initially?\nsalty_cookies_left = salty_cookies_initially - salty_cookies_ate\n# Follow up: How many more salty cookies than sweet cookies did he eat?\nans = salty_cookies_ate - sweet_cookies_ate",
+      "prediction": 14.0,
+      "true_false": true
+    },
+    "927": {
+      "shot_pids": [
+        990,
+        865
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:After resting they decided to go for a swim. The depth of the water is 9 times Dean's height. If Ron is 15 feet tall and Dean is 6 feet shorter than RonHow deep was the water?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nbiology_homework = 19\nreading_homework = 4\nmath_homework = 7\n# Are follow up questions needed here:No.\nAns = math_homework-reading_homework\n\nQuestion:Paul sold some books in a garage sale leaving him with 27 books. If he had 136 books initiallyHow many books did he sell?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nDollar_fred_last_week = 60\nDollar_jason_last_week = 19\nDollar_jason_over_week = 33\n# Are follow up questions needed here:No.\nans = Dollar_jason_over_week - Dollar_jason_last_week\n\nQuestion:The grasshopper, the frog and the mouse had a jumping contest. The grasshopper jumped 21 inches. The grasshopper jumped 25 inches farther than the frog and the mouse jumped 16 inches lesser than the frog.How much farther did the grasshopper jump than the mouse?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 41,
+      "program": "\ngrasshopper_jump = 21\nfrog_jump = grasshopper_jump - 25\nmouse_jump = frog_jump - 16\n# Are follow up questions needed here:No.\nans = grasshopper_jump - mouse_jump",
+      "prediction": 41.0,
+      "true_false": true
+    },
+    "712": {
+      "shot_pids": [
+        865,
+        725
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:Paul sold some books in a garage sale leaving him with 27 books. If he had 136 books initiallyHow many books did he sell?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nDollar_fred_last_week = 60\nDollar_jason_last_week = 19\nDollar_jason_over_week = 33\n# Are follow up questions needed here:No.\nans = Dollar_jason_over_week - Dollar_jason_last_week\n\nQuestion:Nell collects baseball cards. She had 242 cards. She gave 136 of her cards to Jeff.How many cards does Nell have left?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nharvest_sacks_per_day = 66\nnumber_oranges_per_sack = 25\ndays_of_harvest = 87\n# Are follow up questions needed here:Yes.\n# Follow up:how many oranges will they harvest per day?\nharvest_oranges_per_day = harvest_sacks_per_day*number_oranges_per_sack\n# Follow up:How many oranges will they have after 87 days of harvest?\nans = days_of_harvest*harvest_oranges_per_day\n\nQuestion:A book has 3 chapters. The first chapter is 35 pages long the second chapter is 18 pages long and the third chapter is 3 pages long.How many more pages does the second chapter have than the third chapter?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 15,
+      "program": "\nchapter_1_pages = 35\nchapter_2_pages = 18\nchapter_3_pages = 3\n# Follow up:How many pages are in the book?\ntotal_pages = chapter_1_pages + chapter_2_pages + chapter_3_pages\n# Follow up:How many more pages does the second chapter have than the third chapter?\nans = chapter_2_pages - chapter_3_pages",
+      "prediction": 15.0,
+      "true_false": true
+    },
+    "718": {
+      "shot_pids": [
+        865,
+        327
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:Paul sold some books in a garage sale leaving him with 27 books. If he had 136 books initiallyHow many books did he sell?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nDollar_fred_last_week = 60\nDollar_jason_last_week = 19\nDollar_jason_over_week = 33\n# Are follow up questions needed here:No.\nans = Dollar_jason_over_week - Dollar_jason_last_week\n\nQuestion:Luke played a trivia game and gained 3 points in each round of a game. If he scored 78 points in the trivia gameHow many rounds did he play?\nThought: \nimport math \nimport numpy as np\n# Are follow up questions needed here:No.\n# according to the questions, we can define the variables:\nTotal_roses_in_garden = 59\nroses_before_cut = 7 \nroses_after_cut = 20\n# Are follow up questions needed here:No.\nans = roses_after_cut -roses_before_cut\n\nQuestion:White t - shirts can be purchased in packages. If mom buys 28 packages which contain 56 white t - shirts in totalHow many white t - shirts does each package have?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 2,
+      "program": "\nTotal_packages = 28\nTotal_shirts = 56\n# Are follow up questions needed here:No.\nans = Total_shirts/Total_packages",
+      "prediction": 2.0,
+      "true_false": true
+    },
+    "847": {
+      "shot_pids": [
+        141,
+        329
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:A book has 3 chapters. The first chapter is 66 pages long the second chapter is 35 pages long and the third chapter is 24 pages long.How many pages does the book have altogether?\nThought: \nimport math \nimport numpy as np \n# according to the questions, we can define the variables:\nchildren_on_bus_before = 23\nchildren_on_bus_after = 8\nchildren_on_and_off_the_bus = 24\n# Are follow up questions needed here:Yes.\n# Follow up: how many children got off the bus?\nchildren_off_the_bus = children_on_bus_before + children_on_and_off_the_bus - children_on_bus_after\n# Follow up: how many more children got off the bus than those that got on?\nchildren_got_off_the_bus = children_off_the_bus - children_on_and_off_the_bus\nans = children_got_off_the_bus\n\nQuestion:He then went to see the oranges being harvested. He found out that they harvest 71 sacks of unripe oranges and 60 sacks of ripe oranges per day.How many more sacks of unripe oranges than ripe oranges are harvested per day?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nsold_cakes = 91\nbought_cakes = 154\n# Are follow up questions needed here:No.\nAns = bought_cakes - sold_cakes\n\nQuestion:Together Adam and Jackie have 6 apples. He has 4 apples more than adam and jackie together do.How many apples does he have?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 10,
+      "program": "\napples_Adam_and_Jackie = 6\napples_he = apples_Adam_and_Jackie + 4\n# Follow up: How many apples do Adam and Jackie have together?\napples_Adam_and_Jackie = apples_he - 4\n\nans = apples_he",
+      "prediction": 10.0,
+      "true_false": true
+    },
+    "594": {
+      "shot_pids": [
+        327,
+        141
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:Luke played a trivia game and gained 3 points in each round of a game. If he scored 78 points in the trivia gameHow many rounds did he play?\nThought: \nimport math \nimport numpy as np\n# Are follow up questions needed here:No.\n# according to the questions, we can define the variables:\nTotal_roses_in_garden = 59\nroses_before_cut = 7 \nroses_after_cut = 20\n# Are follow up questions needed here:No.\nans = roses_after_cut -roses_before_cut\n\nQuestion:A book has 3 chapters. The first chapter is 66 pages long the second chapter is 35 pages long and the third chapter is 24 pages long.How many pages does the book have altogether?\nThought: \nimport math \nimport numpy as np \n# according to the questions, we can define the variables:\nchildren_on_bus_before = 23\nchildren_on_bus_after = 8\nchildren_on_and_off_the_bus = 24\n# Are follow up questions needed here:Yes.\n# Follow up: how many children got off the bus?\nchildren_off_the_bus = children_on_bus_before + children_on_and_off_the_bus - children_on_bus_after\n# Follow up: how many more children got off the bus than those that got on?\nchildren_got_off_the_bus = children_off_the_bus - children_on_and_off_the_bus\nans = children_got_off_the_bus\n\nQuestion:The grasshopper, the frog and the mouse had a jumping contest. The grasshopper jumped 25 inches. The frog jumped 32 inches farther than the grasshopper and the mouse jumped 26 inches lesser than the frog.How far did the mouse jump?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 31,
+      "program": "\ngrasshopper_jump = 25\nfrog_jump = 32\n# Follow up: How far did the frog jump?\nfrog_jump_total = grasshopper_jump + frog_jump\n# Follow up: How far did the mouse jump?\nmouse_jump = frog_jump_total - 26\nans = mouse_jump",
+      "prediction": 31.0,
+      "true_false": true
+    },
+    "693": {
+      "shot_pids": [
+        553,
+        287
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:Danny collects bottle caps and wrappers. He found 22 bottle caps and 8 wrappers at the park. Now he has 28 bottle caps and 63 wrappers in his collection.How many bottle caps did danny have at first?\nThought: \nimport math \nimport numpy as np \n# according to the questions, we can define the variables:\nsteven_peaches = 17\nsteven_apples = 16\n# Are follow up questions needed here:Yes.\n# Follow up: how many peaches Jake have?\njake_peaches = steven_peaches - 6\n# Follow up: how many apples Jake have?\njake_apples = steven_apples +8\n# Follow up: How many more peaches than apples does Steven have?\nans= steven_peaches - steven_apples\n\nQuestion:Jack received 9 emails in the morning, 10 emails in the afternoon and 7 emails in the evening.How many more emails did Jack receive in the morning than in the evening?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\ngiven_crayons = 571\nlost_crayons = 161\n# Are follow up questions needed here:No.\nans = given_crayons- lost_crayons\n\nQuestion:Haley grew 14 trees in her backyard. After a typhoon 9 died.How many more trees died in the typhoon than those that survived?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 4,
+      "program": "\ntotal_trees = 14\ntrees_died = 9\n# Follow up: how many trees survived the typhoon?\ntrees_survived = total_trees - trees_died\n# Follow up: How many more trees died in the typhoon than those that survived?\nans = trees_died - trees_survived",
+      "prediction": 4.0,
+      "true_false": true
+    },
+    "787": {
+      "shot_pids": [
+        990,
+        287
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:After resting they decided to go for a swim. The depth of the water is 9 times Dean's height. If Ron is 15 feet tall and Dean is 6 feet shorter than RonHow deep was the water?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nbiology_homework = 19\nreading_homework = 4\nmath_homework = 7\n# Are follow up questions needed here:No.\nAns = math_homework-reading_homework\n\nQuestion:Jack received 9 emails in the morning, 10 emails in the afternoon and 7 emails in the evening.How many more emails did Jack receive in the morning than in the evening?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\ngiven_crayons = 571\nlost_crayons = 161\n# Are follow up questions needed here:No.\nans = given_crayons- lost_crayons\n\nQuestion:Danny has 12 bottle caps in his collection. He found 53 bottle caps at the park.How many bottle caps does he have now?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 65,
+      "program": "\nbottle_caps_collection = 12\nbottle_caps_found = 53\n\nans = bottle_caps_collection + bottle_caps_found",
+      "prediction": 65.0,
+      "true_false": true
+    },
+    "867": {
+      "shot_pids": [
+        287,
+        329
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:Jack received 9 emails in the morning, 10 emails in the afternoon and 7 emails in the evening.How many more emails did Jack receive in the morning than in the evening?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\ngiven_crayons = 571\nlost_crayons = 161\n# Are follow up questions needed here:No.\nans = given_crayons- lost_crayons\n\nQuestion:He then went to see the oranges being harvested. He found out that they harvest 71 sacks of unripe oranges and 60 sacks of ripe oranges per day.How many more sacks of unripe oranges than ripe oranges are harvested per day?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nsold_cakes = 91\nbought_cakes = 154\n# Are follow up questions needed here:No.\nAns = bought_cakes - sold_cakes\n\nQuestion:The bananas in Philip's collection are organized into 196 groups. If there are a total of 392 bananas in Philip's banana collectionHow big is each group?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 2,
+      "program": "\n\ntotal_bananas = 392\ntotal_groups = 196\n\n# calculate the size of each group\nans = total_bananas/total_groups",
+      "prediction": 2.0,
+      "true_false": true
+    },
+    "852": {
+      "shot_pids": [
+        990,
+        725
+      ],
+      "prompt": "Write a mathematical equation and generate the answer format starting with `ans =' \n\nQuestion:After resting they decided to go for a swim. The depth of the water is 9 times Dean's height. If Ron is 15 feet tall and Dean is 6 feet shorter than RonHow deep was the water?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nbiology_homework = 19\nreading_homework = 4\nmath_homework = 7\n# Are follow up questions needed here:No.\nAns = math_homework-reading_homework\n\nQuestion:Nell collects baseball cards. She had 242 cards. She gave 136 of her cards to Jeff.How many cards does Nell have left?\nThought: \nimport math \nimport numpy as np\n# according to the questions, we can define the variables:\nharvest_sacks_per_day = 66\nnumber_oranges_per_sack = 25\ndays_of_harvest = 87\n# Are follow up questions needed here:Yes.\n# Follow up:how many oranges will they harvest per day?\nharvest_oranges_per_day = harvest_sacks_per_day*number_oranges_per_sack\n# Follow up:How many oranges will they have after 87 days of harvest?\nans = days_of_harvest*harvest_oranges_per_day\n\nQuestion:Marco and his dad went strawberry picking. Marco's strawberries weighed 30 pounds. If together their strawberries weighed 47 pounds.How much more did his strawberries weigh than his dad's?\nThought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:",
+      "answer": 13,
+      "program": "\nmarco_strawberries_weight = 30\ntotal_strawberries_weight = 47\n# Follow up: How much did his dad's strawberries weigh?\ndad_strawberries_weight = total_strawberries_weight - marco_strawberries_weight\n# Follow up:How much more did his strawberries weigh than his dad's?\nans = marco_strawberries_weight - dad_strawberries_weight",
+      "prediction": 13.0,
+      "true_false": true
+    }
+  }
+}

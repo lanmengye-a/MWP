@@ -15,11 +15,12 @@ from functools import lru_cache
 from run_gpt3_rl_pot.tools import utils
 from base_prompt import *
 from model import *
-from utilities import extract_prediction, normalize_answer
+from utilities1 import extract_prediction, normalize_answer
 from tool import safe_execute,floatify_ans
+from utilities1 import get_gpt3_output
 
 sys.path.append("../")
-openai.api_key = "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"
+openai.api_key = "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"
 
 ##
 def load_data(args):
@@ -33,45 +34,13 @@ def load_data(args):
     return problems, cand_pids, train_pids
 
 
-def get_gpt3_output(prompt, args):
-    return call_gpt3(args.engine, prompt, args.temperature, args.max_tokens, args.top_p, args.frequency_penalty,
-                     args.presence_penalty)
 
 
-@lru_cache(maxsize=10000)
-def call_gpt3(engine, prompt, temperature, max_tokens, top_p, frequency_penalty, presence_penalty):
-    patience = 2
-    while True:
-        try:
-            messages = [{"role": "user", "content": prompt}]
-            # response = openai.ChatCompletion.create(
-            #     model="gpt-3.5-turbo", messages=messages
-            # )
-            # output = response.choices[0].message.content
-            response = openai.Completion.create(engine=engine,
-                                                prompt=prompt,
-                                                temperature=temperature,
-                                                max_tokens=max_tokens,
-                                                top_p=top_p,
-                                                frequency_penalty=frequency_penalty,
-                                                presence_penalty=presence_penalty,
-                                                stop=["\n"])
-            output = response["choices"][0]["text"].strip()
-            break
-        except Exception as e:
-            patience -= 1
-            if not patience:
-                print("!!! running out of patience waiting for OpenAI")
-            else:
-                time.sleep(0.1)
-    return output
-
-
-def get_batch_reward_loss(scores, cand_pids, pid_batch, option_batch, unit_batch, label_batch, args):
+def get_batch_reward_loss(scores, cand_pids, pid_batch, label_batch, args):
 
     batch_loss = 0
     batch_reward = 0
-
+    program,prediction = None,None
     ## loop over the training examples
     for i in range(len(scores)):
 
@@ -96,20 +65,26 @@ def get_batch_reward_loss(scores, cand_pids, pid_batch, option_batch, unit_batch
         prompt = build_prompt(problems, shot_pids, pid_batch[i], args)
 
         # get the output from GPT-3
-        output = get_gpt3_output(prompt, args)
 
-        ans = safe_execute(output)
-        prediction = floatify_ans(ans)
+        unpredicted = get_gpt3_output(prompt, args)
+        if unpredicted is isinstance(unpredicted, str):
+            program, prediction = None, None
+        else:
+            try:
+                program, prediction = unpredicted
+            except Exception as e:
+                print(e)
 
-        # normalize the number in the text
-        prediction_norm = normalize_answer(prediction, unit_batch[i])
+        # ans = safe_execute(output)
+        # prediction = output
+
 
         log_prob = 0
         for cid in cids:
             log_prob += torch.log(scores[i, cid])
         # print(f"log_prob: {log_prob}")
 
-        if prediction_norm.lower() == label_batch[i].lower():
+        if prediction == label_batch[i]:
             _reward = 1
         else:
             _reward = -1
@@ -119,9 +94,20 @@ def get_batch_reward_loss(scores, cand_pids, pid_batch, option_batch, unit_batch
         batch_loss -= _reward * log_prob
 
     return cids, batch_reward, batch_loss
+import matplotlib.pyplot as plt
+def plot_dynamic():
 
+    plt.ion()  # 开启交互模式
+    plt.figure()  # 创建新的图形窗口
+    plt.xlim(0, 100)  # 设置X轴范围
+    plt.ylim(0, 10)  # 设置Y轴范围
+    plt.xlabel('Batchs')
+    plt.ylabel('Loss')
+def close_dynamic():
+    plt.ioff()  # 关闭交互模式
+    plt.show()
 
-def policy_gradient_train(policy_model, problems, train_pids, cand_pids, cand_examples, args):
+def policy_gradient_train( policy_model, problems, train_pids, cand_pids, cand_examples, args):
     # REINFORCE
     # if os.path.exists(args.ckpt_path):
     #     print("!!! Model dir already exists. Consider load it instead of training again.")
@@ -145,10 +131,9 @@ def policy_gradient_train(policy_model, problems, train_pids, cand_pids, cand_ex
     total_loss_history = []  # epoch based
 
     STOP_FLAG = False
-
+    losses = []
     for epoch in range(args.epochs):
         logger.write(f"Epoch: {epoch}")
-
         total_train_reward = 0
         total_train_loss = 0
 
@@ -171,6 +156,17 @@ def policy_gradient_train(policy_model, problems, train_pids, cand_pids, cand_ex
 
             cids, reward, loss = get_batch_reward_loss(scores, cand_pids, pid_batch,
                                                        label_batch, args)
+
+            losses.append(loss.item())
+
+            # 绘制曲线
+            try:
+                plt.plot(losses, 'b')
+                plt.draw()
+                plt.pause(0.1)
+            except Exception as e:
+                print("there is error happening when drawing",e)
+                print(f"batch{batch_i},loss{loss}", e)
 
             logger.write(f"cids for sample[-1] in batch: {cids}")
             logger.write(f"Cand prob for sample[-1] in batch: {[round(x,5) for x in scores[-1, :].tolist()]}")
@@ -196,6 +192,8 @@ def policy_gradient_train(policy_model, problems, train_pids, cand_pids, cand_ex
                 STOP_FLAG = True
                 break
 
+
+
         # for each epoch
         total_reward_history.append(total_train_reward)
         total_loss_history.append(total_train_loss)
@@ -211,7 +209,9 @@ def policy_gradient_train(policy_model, problems, train_pids, cand_pids, cand_ex
         logger.write(f"### Total reward: {total_train_reward}, " + f"Total loss: {round(total_train_loss,5)}, " +
                      f"Best reward: {best_reward} at epoch {best_reward_epoch}, " +
                      f"Best loss: {round(best_loss, 5)} at epoch {best_loss_epoch}\n")
-
+        if epoch-best_reward_epoch > 10   or epoch-best_loss_epoch > 2:
+            STOP_FLAG = True
+            break
         # save every epoch
         ckpt_file = os.path.join(args.ckpt_path, f"ckpt_{epoch}.pt")
         torch.save(policy_model.linear.state_dict(), ckpt_file)
@@ -240,12 +240,13 @@ def policy_gradient_train(policy_model, problems, train_pids, cand_pids, cand_ex
             json.dump(history, f, indent=2, separators=(',', ': '))
 
         # print cache info
-        logger.write(call_gpt3.cache_info())
+
         logger.write("============================================\n")
 
         if STOP_FLAG:
             break
-
+    plt.savefig('results/fig/loss.png')
+    close_dynamic()
     # save in the end
     ckpt_file = os.path.join(args.ckpt_path, "ckpt_final.pt")
     torch.save(policy_model.linear.state_dict(), ckpt_file)
@@ -254,7 +255,7 @@ def policy_gradient_train(policy_model, problems, train_pids, cand_pids, cand_ex
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('--data_root', type=str, default='../data/svamp')
-    parser.add_argument('--model', type=str, default='gpt3_rl')
+    parser.add_argument('--model', type=str, default='gpt3_rlpot')
     parser.add_argument('--option_inds', type=list, default=["A", "B", "C", "D", "E", "F"])
 
     # User options
@@ -270,7 +271,7 @@ def parse_args():
     parser.add_argument('--seed', type=int, default=1, help='random seed')
 
     # GPT-3 settings
-    parser.add_argument('--engine', type=str, default='text-davinci-002', choices=['text-davinci-002', 'ada'])
+    parser.add_argument('--engine', type=str, default='text-davinci-003', choices=['text-davinci-002', 'ada'])
     parser.add_argument('--temperature', type=float, default=0.0)
     parser.add_argument('--max_tokens',
                         type=int,
@@ -289,13 +290,13 @@ def parse_args():
     parser.add_argument('--train_number', type=int, default=20, help='Number of training samples.')
     parser.add_argument('--cand_number', type=int, default=10, help='Number of candidate prompts.')
     parser.add_argument('--lr', type=float, default=0.001, help='Learning rate of policy network.')
-    parser.add_argument('--epochs', type=int, default=20, help='Number of training epochs.')
+    parser.add_argument('--epochs', type=int, default=5, help='Number of training epochs.')
     parser.add_argument('--embedding_size', type=int, default=128, help='Policy network final layer hidden state size.')
     parser.add_argument('--batch_size',
                         type=int,
                         default=2,
                         help='Policy network training batch size. Set to train_number by default.')
-    parser.add_argument('--ckpt_root', type=str, default='../checkpoints')
+    parser.add_argument('--ckpt_root', type=str, default='checkpoints')
 
     args = parser.parse_args()
 

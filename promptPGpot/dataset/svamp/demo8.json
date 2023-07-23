@@ -1,43 +1,43 @@
 [
   {"Question":"23 children were riding on the bus. At the bus stop 24 children got on the bus while some got off the bus. Then there were 8 children altogether on the bus. How many more children got off the bus than those that got on?",
 "Thought":"import math \nimport numpy as np \n# according to the questions, we can define the variables:\nchildren_on_bus_before = 23\nchildren_on_bus_after = 8\nchildren_on_and_off_the_bus = 24\n# Are follow up questions needed here:Yes.\n# Follow up: how many children got off the bus?\nchildren_off_the_bus = children_on_bus_before + children_on_and_off_the_bus - children_on_bus_after\n# Follow up: how many more children got off the bus than those that got on?\nchildren_got_off_the_bus = children_off_the_bus - children_on_and_off_the_bus\nans = children_got_off_the_bus",
-  "Index": 141},
+  "Index": 140},
 
   {"Question": "Jake has 6 fewer peaches and 8 more apples than Steven. Steven has 17 peaches and 16 apples. How many more peaches than apples does Steven have?",
 "Thought":
 "import math \nimport numpy as np \n# according to the questions, we can define the variables:\nsteven_peaches = 17\nsteven_apples = 16\n# Are follow up questions needed here:Yes.\n# Follow up: how many peaches Jake have?\njake_peaches = steven_peaches - 6\n# Follow up: how many apples Jake have?\njake_apples = steven_apples +8\n# Follow up: How many more peaches than apples does Steven have?\nans= steven_peaches - steven_apples"
 ,
-  "Index": 553},
+  "Index": 552},
 {
 "Question": "Paul got a box of 589 crayons for his birthday. During the school year he gave 571 crayons to his friends while he lost 161 crayons. How many more crayons did he give to his friends than those he lost?",
 "Thought":
 "import math \nimport numpy as np\n# according to the questions, we can define the variables:\ngiven_crayons = 571\nlost_crayons = 161\n# Are follow up questions needed here:No.\nans = given_crayons- lost_crayons"
 ,
-"Index": 287},
+"Index": 286},
 {
 "Question": "Baker made 13 cakes. He sold 91 of them and bought 154 new cakes. How many more cakes did baker buy than those he sold?",
 "Thought":
 "import math \nimport numpy as np\n# according to the questions, we can define the variables:\nsold_cakes = 91\nbought_cakes = 154\n# Are follow up questions needed here:No.\nAns = bought_cakes - sold_cakes"
 ,
-  "Index": 329},
+  "Index": 328},
 {
 "Question": "Rachel had to complete 4 pages of reading homework, 7 pages of math homework and 19 more pages of biology homework. How many more pages of math homework than reading homework did she have?",
 "Thought":
 "import math \nimport numpy as np\n# according to the questions, we can define the variables:\nbiology_homework = 19\nreading_homework = 4\nmath_homework = 7\n# Are follow up questions needed here:No.\nAns = math_homework-reading_homework"
-,"Index": 990
+,"Index": 989
 },
 {
 "Question": "He then went to see the oranges being harvested. He found out that they harvest 66 sacks per day and that each sack containes 25 oranges. How many oranges will they have after 87 days of harvest?",
 "Thought":
 "import math \nimport numpy as np\n# according to the questions, we can define the variables:\nharvest_sacks_per_day = 66\nnumber_oranges_per_sack = 25\ndays_of_harvest = 87\n# Are follow up questions needed here:Yes.\n# Follow up:how many oranges will they harvest per day?\nharvest_oranges_per_day = harvest_sacks_per_day*number_oranges_per_sack\n# Follow up:How many oranges will they have after 87 days of harvest?\nans = days_of_harvest*harvest_oranges_per_day "
-,"Index": 725},
+,"Index": 724},
 {
 "Question": "Last week Fred had 60 dollars and Jason had 19 dollars. Jason washed cars over the weekend and now has 33 dollars. How much money did Jason make washing cars?",
 "Thought":
 "import math \nimport numpy as np\n# according to the questions, we can define the variables:\nDollar_fred_last_week = 60\nDollar_jason_last_week = 19\nDollar_jason_over_week  = 33\n# Are follow up questions needed here:No.\nans = Dollar_jason_over_week - Dollar_jason_last_week "
-,"Index": 865},
+,"Index": 864},
 {
 "Question": "There were 7 roses in the vase. Jessica cut some more roses from her flower garden which had a total of 59 roses. There are now 20 roses in the vase. How many roses did she cut?",
 "Thought":"import math \nimport numpy as np\n# Are follow up questions needed here:No.\n# according to the questions, we can define the variables:\nTotal_roses_in_garden = 59\nroses_before_cut = 7 \nroses_after_cut = 20\n# Are follow up questions needed here:No.\nans = roses_after_cut -roses_before_cut",
-"Index": 327}
+"Index": 326}
 ]
