@@ -1,6 +1,6 @@
 # train_data
 import json
-with open("dataset/svamp_train_pot.jsonl") as reader:
+with open("dataset/svamp_train.jsonl") as reader:
     lines = reader.readlines()
 lines = [json.loads(line) for line in lines]
 

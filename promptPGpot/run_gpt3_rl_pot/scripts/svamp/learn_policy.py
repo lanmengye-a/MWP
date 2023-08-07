@@ -20,15 +20,14 @@ from tool import safe_execute,floatify_ans
 from utilities1 import get_gpt3_output
 
 sys.path.append("../")
-openai.api_key = "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"
+# openai.api_key = "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"
 
 ##
 def load_data(args):
 
-    problems = [json.loads(line) for line in open("dataset/svamp_test_pot.jsonl","r")]
-    cand_pids = [item["Index"] for item in json.load(open("dataset/demo8.json"))]
-    pids = [item["Index"] for item in problems if item["Index"] not in cand_pids]
-    pids = pids[:500]
+    problems = [json.loads(line) for line in open("dataset/svamp/svamp_train.jsonl","r")]
+    cand_pids = [item["index"] for item in json.load(open("dataset/demos/svamp/demo8_train_annotated.json"))]
+    pids = [item["index"] for item in problems if item not in cand_pids]
     samples = random.sample(pids, args.train_number )  # random sample
     train_pids = samples[:args.train_number]
     return problems, cand_pids, train_pids
@@ -159,14 +158,6 @@ def policy_gradient_train( policy_model, problems, train_pids, cand_pids, cand_e
 
             losses.append(loss.item())
 
-            # 绘制曲线
-            try:
-                plt.plot(losses, 'b')
-                plt.draw()
-                plt.pause(0.1)
-            except Exception as e:
-                print("there is error happening when drawing",e)
-                print(f"batch{batch_i},loss{loss}", e)
 
             logger.write(f"cids for sample[-1] in batch: {cids}")
             logger.write(f"Cand prob for sample[-1] in batch: {[round(x,5) for x in scores[-1, :].tolist()]}")
@@ -197,6 +188,15 @@ def policy_gradient_train( policy_model, problems, train_pids, cand_pids, cand_e
         # for each epoch
         total_reward_history.append(total_train_reward)
         total_loss_history.append(total_train_loss)
+        # 绘制曲线
+        try:
+
+            plt.plot(total_loss_history, 'b')
+            plt.draw()
+            plt.pause(0.1)
+        except Exception as e:
+            print("there is error happening when drawing", e)
+        # save in the endclose_dynamic()
 
         best_reward = max(total_reward_history)
         best_loss = min(total_loss_history)
@@ -259,7 +259,7 @@ def parse_args():
     parser.add_argument('--option_inds', type=list, default=["A", "B", "C", "D", "E", "F"])
 
     # User options
-    parser.add_argument('--label', type=str, default='exp0')
+    parser.add_argument('--label', type=str, default='exp0_autopot')
     parser.add_argument('--debug', action='store_true')
     parser.add_argument(
         '--prompt_format',

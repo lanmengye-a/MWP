@@ -26,7 +26,7 @@ def sim_deberta(text1,text2):
 def analysis_file_sim(file_name):
     with open(file_name) as reader:
         text = json.load(reader)
-    with open("dataset/svamp_test_pot.jsonl", "r") as reader:
+    with open("dataset/svamp_test.jsonl", "r") as reader:
         lines = reader.readlines()
         problems = [json.loads(line) for line in lines]
     sim = []

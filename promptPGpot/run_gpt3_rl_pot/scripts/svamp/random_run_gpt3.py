@@ -14,20 +14,20 @@ import torch.nn.functional as F
 import openai
 from utilities1 import get_gpt3_output
 
-openai.api_key = "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"
+# openai.api_key = "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"
 
 
 def load_data(args):
-    problems = [json.loads(line) for line in open("dataset/svamp_test_pot.jsonl", "r")]
-    cand_pids = [item["Index"] for item in json.load(open("dataset/demo8.json"))]
-    pids = [item["Index"] for item in problems if item["Index"] not in cand_pids]
-    pids = pids[500:]
+    test_problems = [json.loads(line) for line in open("dataset/svamp/svamp_test.jsonl", "r")]
+    cand_problems = json.load(open("dataset/demos/svamp/demo8_train_annotated_5.json"))
+    cand_pids = [item["index"] for item in cand_problems]
+    # pids = [item["Index"] for item in problems if item["Index"] not in cand_pids]
+    # pids = pids[500:]
+    pids = [item["Index"] - 1 for item in test_problems]
+    pids = pids
     samples = random.sample(pids, args.test_number)  # random sample
     test_pids = samples[:args.test_number]
-    return problems, test_pids,cand_pids
-
-
-
+    return test_problems, test_pids, cand_pids, cand_problems
 
 
 def get_result_file(args):
@@ -73,7 +73,7 @@ def parse_args():
         choices=['T-A', 'Q-A', 'Q-AS', 'Q-SA', 'TQ-A', 'TQ-AS', 'TQ-SA', 'QT-A', 'QT-AS', 'QT-SA', 'QTS-A', 'TQS-A'],
         help='prompt format template')
     parser.add_argument('--shot_number', type=int, default=2, help='Number of n-shot training examples.')
-    parser.add_argument('--seed', type=int, default=1, help='random seed')
+    parser.add_argument('--seed', type=int, default=9, help='random seed')
 
     # GPT-3 settings
     parser.add_argument('--engine', type=str, default='text-davinci-003', choices=['text-davinci-002', 'ada'])
@@ -95,7 +95,7 @@ def parse_args():
     parser.add_argument('--cand_number', type=int, default=20, help='Number of candidate prompts.')
     parser.add_argument('--embedding_size', type=int, default=128, help='Policy network final layer hidden state size.')
     parser.add_argument('--ckpt_root', type=str, default='checkpoints')
-    parser.add_argument('--ckpt', type=str, default="exp0/ckpt_best_reward.pt")
+    parser.add_argument('--ckpt', type=str, default="exp0_autopot/ckpt_best_loss.pt")
 
     args = parser.parse_args()
     return args
@@ -115,7 +115,7 @@ if __name__ == '__main__':
     torch.backends.cudnn.benchmark = True
 
     # problems, test question ids, candidate prompt pids, RL training pids
-    problems, pids, cand_pids = load_data(args)
+    problems, pids, cand_pids,cand_problems = load_data(args)
 
     result_file = get_result_file(args)
 
@@ -144,7 +144,8 @@ if __name__ == '__main__':
     # print("===========")
     cand_examples = []
     for pid in cand_pids:
-        example = create_example_from_pid(pid, problems, args, test=True)  # CHECK !!!
+        # cand_pids 都是False 这样可以从标注数据里构建"Program"标注
+        example = create_example_from_pid(pid, cand_problems, args, test=False)  # CHECK !!!
         # print(example)
         # print("===========")
         cand_examples.append(example)

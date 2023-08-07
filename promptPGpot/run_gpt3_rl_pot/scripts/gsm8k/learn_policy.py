@@ -20,14 +20,15 @@ from tool import safe_execute,floatify_ans
 from utilities1 import get_gpt3_output
 
 sys.path.append("../")
-openai.api_key = "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"
+# openai.api_key = "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"
 
 ##
 def load_data(args):
 
-    problems = [json.loads(line) for line in open("dataset/svamp_test_pot.jsonl","r")]
-    cand_pids = [item["Index"] for item in json.load(open("dataset/demo8.json"))]
-    pids = [item["Index"] for item in problems if item["Index"] not in cand_pids]
+    problems = [json.loads(line) for line in open("dataset/gsm8k/gsm8k.jsonl","r")]
+    demo8 = json.load(open("dataset/gsm8k/demo8_test1.json"))
+    cand_pids = [item["Index"] for idx,item in enumerate(demo8) ]
+    pids = [idx for idx,item in enumerate(problems) if idx not in cand_pids]
     pids = pids[:500]
     samples = random.sample(pids, args.train_number )  # random sample
     train_pids = samples[:args.train_number]
@@ -72,9 +73,11 @@ def get_batch_reward_loss(scores, cand_pids, pid_batch, label_batch, args):
         else:
             try:
                 program, prediction = unpredicted
+
             except Exception as e:
                 print(e)
-
+        # print("generated prompt: ", prompt)
+        # print("generated program: ", program, prediction)
         # ans = safe_execute(output)
         # prediction = output
 
@@ -84,7 +87,7 @@ def get_batch_reward_loss(scores, cand_pids, pid_batch, label_batch, args):
             log_prob += torch.log(scores[i, cid])
         # print(f"log_prob: {log_prob}")
 
-        if prediction == label_batch[i]:
+        if prediction == eval(label_batch[i]):
             _reward = 1
         else:
             _reward = -1
@@ -159,14 +162,7 @@ def policy_gradient_train( policy_model, problems, train_pids, cand_pids, cand_e
 
             losses.append(loss.item())
 
-            # 绘制曲线
-            try:
-                plt.plot(losses, 'b')
-                plt.draw()
-                plt.pause(0.1)
-            except Exception as e:
-                print("there is error happening when drawing",e)
-                print(f"batch{batch_i},loss{loss}", e)
+
 
             logger.write(f"cids for sample[-1] in batch: {cids}")
             logger.write(f"Cand prob for sample[-1] in batch: {[round(x,5) for x in scores[-1, :].tolist()]}")
@@ -192,8 +188,9 @@ def policy_gradient_train( policy_model, problems, train_pids, cand_pids, cand_e
                 STOP_FLAG = True
                 break
 
-
-
+        # 打印输出
+        print(f"epoch:{epoch},loss:{total_train_loss}")
+        print(f"epoch:{epoch},reward:{total_train_reward}")
         # for each epoch
         total_reward_history.append(total_train_reward)
         total_loss_history.append(total_train_loss)
@@ -209,9 +206,9 @@ def policy_gradient_train( policy_model, problems, train_pids, cand_pids, cand_e
         logger.write(f"### Total reward: {total_train_reward}, " + f"Total loss: {round(total_train_loss,5)}, " +
                      f"Best reward: {best_reward} at epoch {best_reward_epoch}, " +
                      f"Best loss: {round(best_loss, 5)} at epoch {best_loss_epoch}\n")
-        if epoch-best_reward_epoch > 10   or epoch-best_loss_epoch > 2:
-            STOP_FLAG = True
-            break
+        # if epoch-best_reward_epoch > 10   or epoch-best_loss_epoch > 2:
+        #     STOP_FLAG = True
+        #     break
         # save every epoch
         ckpt_file = os.path.join(args.ckpt_path, f"ckpt_{epoch}.pt")
         torch.save(policy_model.linear.state_dict(), ckpt_file)
@@ -227,6 +224,7 @@ def policy_gradient_train( policy_model, problems, train_pids, cand_pids, cand_e
             ckpt_file = os.path.join(args.ckpt_path, "ckpt_best_loss.pt")
             torch.save(policy_model.linear.state_dict(), ckpt_file)
             logger.write(f"saved the best loss ckpt to {ckpt_file}")
+
 
         # save reward and loss history
         history = {
@@ -245,9 +243,17 @@ def policy_gradient_train( policy_model, problems, train_pids, cand_pids, cand_e
 
         if STOP_FLAG:
             break
-    plt.savefig('results/fig/loss.png')
+
+    # 绘制曲线
+        try:
+
+            plt.plot(total_loss_history, 'b')
+            plt.draw()
+            plt.pause(0.1)
+        except Exception as e:
+            print("there is error happening when drawing", e)
+    # save in the endclose_dynamic()
     close_dynamic()
-    # save in the end
     ckpt_file = os.path.join(args.ckpt_path, "ckpt_final.pt")
     torch.save(policy_model.linear.state_dict(), ckpt_file)
 
@@ -259,7 +265,7 @@ def parse_args():
     parser.add_argument('--option_inds', type=list, default=["A", "B", "C", "D", "E", "F"])
 
     # User options
-    parser.add_argument('--label', type=str, default='exp0')
+    parser.add_argument('--label', type=str, default='exp1')
     parser.add_argument('--debug', action='store_true')
     parser.add_argument(
         '--prompt_format',
@@ -290,7 +296,7 @@ def parse_args():
     parser.add_argument('--train_number', type=int, default=20, help='Number of training samples.')
     parser.add_argument('--cand_number', type=int, default=10, help='Number of candidate prompts.')
     parser.add_argument('--lr', type=float, default=0.001, help='Learning rate of policy network.')
-    parser.add_argument('--epochs', type=int, default=5, help='Number of training epochs.')
+    parser.add_argument('--epochs', type=int, default=30, help='Number of training epochs.')
     parser.add_argument('--embedding_size', type=int, default=128, help='Policy network final layer hidden state size.')
     parser.add_argument('--batch_size',
                         type=int,

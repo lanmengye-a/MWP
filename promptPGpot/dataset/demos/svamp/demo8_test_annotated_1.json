@@ -1,0 +1,59 @@
+[
+    {
+        "Question": "23 children were riding on the bus. At the bus stop 24 children got on the bus while some got off the bus. Then there were 8 children altogether on the bus.How many more children got off the bus than those that got on?",
+        "Thought": "\nimport math\nimport numpy as np\n# Question 23 children were riding on the bus. At the bus stop 24 children got on the bus while some got off the bus. Then there were 8 children altogether on the bus.How many more children got off the bus than those that got on?\n# Let's think step by step to derive the answer, store the result as a 'ans' variable:\n# According to the question, we can define the variables:\n\ninitial_children = 23 # children on the bus before the bus stop\nchildren_on = 24 # children on the bus after the bus stop\nchildren_total = 8 # total children on the bus after the bus stop\n\n# Calculate the difference between the children on and the total children on the bus:\nchildren_off = children_on - children_total\n\n# Calculate the difference between the initial children and the total children on the bus:\nans = initial_children - children_total\n\n# Print the result:\nprint(ans, 'children got off the bus than those that got on.')",
+        "Prediction": 15.0,
+        "Answer": 15,
+        "index": 140
+    },
+    {
+        "Question": "2 children were riding on the bus. At the bus stop some more children got on the bus. Then there were 10 children altogether on the bus.How many more children are on the bus now than there were before the bus stop?",
+
+        "Thought":null,
+        "Prediction": 0.0,
+        "Answer": 8,
+        "index": 552
+    },
+    {
+        "Question": "Paul got a box of 589 crayons for his birthday. During the school year he gave 571 crayons to his friends while he lost 161 crayons.How many more crayons did he give to his friends than those he lost?",
+        "Thought": "\nimport math\nimport numpy as np\n# Question Paul got a box of 589 crayons for his birthday. During the school year he gave 571 crayons to his friends while he lost 161 crayons.How many more crayons did he give to his friends than those he lost?\n# Let's think step by step to derive the answer, store the result as a 'ans' variable:\n# According to the question, we can define the variables:\n\ncrayons_given_to_friends = 571\ncrayons_lost = 161\n\n# To get the answer, we need to subtract crayons_lost from crayons_given_to_friends:\n\nans = crayons_given_to_friends - crayons_lost\n\n# The answer is 410. Paul gave 410 more crayons to his friends than those he lost.",
+        "Prediction": 410.0,
+        "Answer": 410,
+        "index": 286
+    },
+    {
+        "Question": "Baker made 13 cakes. He sold 91 of them and bought 154 new cakes.How many more cakes did baker buy than those he sold?",
+        "Thought": "\nimport math\nimport numpy as np\n# Question Baker made 13 cakes. He sold 91 of them and bought 154 new cakes.How many more cakes did baker buy than those he sold?\n# Let's think step by step to derive the answer, store the result as a 'ans' variable:\n# According to the question, we can define the variables:\n# Baker sold = 91\n# Baker bought = 154\n#\n# So, we can calculate the difference between the cakes bought and sold as follows:\n\nans = 154 - 91\n\n# The answer is 63. Baker bought 63 more cakes than those he sold.",
+        "Prediction": 63.0,
+        "Answer": 63,
+        "index": 328
+    },
+    {
+        "Question": "Rachel had to complete 4 pages of reading homework, 7 pages of math homework and 19 more pages of biology homework.How many more pages of math homework than reading homework did she have?",
+        "Thought": "\nimport math\nimport numpy as np\n# Question Rachel had to complete 4 pages of reading homework, 7 pages of math homework and 19 more pages of biology homework.How many more pages of math homework than reading homework did she have?\n# Let's think step by step to derive the answer, store the result as a 'ans' variable:\n# According to the question, we can define the variables:\nreading_homework = 4\nmath_homework = 7\nbiology_homework = 19\n\n# Then we can calculate the difference between math homework and reading homework:\nans = math_homework - reading_homework\n\n# Finally, we can print the answer:\nprint(ans)\n\n# The answer is 3, which means Rachel had 3 more pages of math homework than reading homework.",
+        "Prediction": 3.0,
+        "Answer": 3,
+        "index": 989
+    },
+    {
+        "Question": "He then went to see the oranges being harvested. He found out that they harvest 66 sacks per day and that each sack containes 25 oranges.How many oranges will they have after 87 days of harvest?",
+        "Thought": "\nimport math\nimport numpy as np\n# Question He then went to see the oranges being harvested. He found out that they harvest 66 sacks per day and that each sack containes 25 oranges.How many oranges will they have after 87 days of harvest?\n# Let's think step by step to derive the answer, store the result as a 'ans' variable:\n# According to the question, we can define the variables:\n# number of sacks per day = 66\n# number of oranges per sack = 25\n# number of days = 87\n\n# Calculate the total number of sacks after 87 days\ntotal_sacks = 66 * 87\n\n# Calculate the total number of oranges after 87 days\nans = total_sacks * 25\n\n# Print the answer\nprint(ans)",
+        "Prediction": 143550.0,
+        "Answer": 143550,
+        "index": 724
+    },
+    {
+        "Question": "Last week Fred had 60 dollars and Jason had 19 dollars. Jason washed cars over the weekend and now has 33 dollars.How much money did Jason make washing cars?",
+        "Thought": "\nimport math\nimport numpy as np\n# Question Last week Fred had 60 dollars and Jason had 19 dollars. Jason washed cars over the weekend and now has 33 dollars.How much money did Jason make washing cars?\n# Let's think step by step to derive the answer, store the result as a 'ans' variable:\n# According to the question, we can define the variables:\n\nfred_dollars = 60\njason_dollars = 19\n\n# Jason made money over the weekend, so we can define the new amount of money he has:\n\njason_dollars_after = 33\n\n# We can calculate the amount of money Jason made by subtracting the amount of money he had before from the amount of money he has now:\n\nans = jason_dollars_after - jason_dollars\n\n# The answer is 14 dollars.\nprint(ans)",
+        "Prediction": 14.0,
+        "Answer": 14,
+        "index": 864
+    },
+    {
+        "Question": "There were 7 roses in the vase. Jessica cut some more roses from her flower garden which had a total of 59 roses. There are now 20 roses in the vase.How many roses did she cut?",
+        "Thought":null,
+        "Prediction": 46.0,
+        "Answer": 13,
+        "index": 326
+    }
+]

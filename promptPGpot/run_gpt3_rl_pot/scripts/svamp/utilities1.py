@@ -6,7 +6,6 @@ from functools import lru_cache
 
 import numpy as np
 import sympy
-
 import chatgpt0
 from tool import safe_execute,floatify_ans
 random.seed(123)
@@ -23,8 +22,9 @@ def replace_variate(expression):
     # expression = expression.replace("number0", "a")
 
 from tool import parse_api_result
+
 def get_gpt3_output(prompt, args):
-    patience = 3
+    patience = 1
     program,prediction = None,None
     start = time.time()
     while True:

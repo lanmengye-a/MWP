@@ -2,7 +2,7 @@ import argparse
 import time
 
 import openai
-openai.api_key = "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"
+openai.api_key = "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"
 train_sample =[
     {
         "infixEquation":"Answer=number1+number2",

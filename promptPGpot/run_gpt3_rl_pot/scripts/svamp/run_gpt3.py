@@ -14,17 +14,20 @@ import torch.nn.functional as F
 import openai
 from utilities1 import get_gpt3_output
 
-openai.api_key = "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"
+# openai.api_key = "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"
 
 
 def load_data(args):
-    problems = [json.loads(line) for line in open("dataset/svamp_test_pot.jsonl", "r")]
-    cand_pids = [item["Index"] for item in json.load(open("dataset/demo8.json"))]
-    pids = [item["Index"] for item in problems if item["Index"] not in cand_pids]
-    pids = pids[500:]
+    test_problems = [json.loads(line) for line in open("dataset/svamp/svamp_test.jsonl", "r")]
+    cand_problems = json.load(open("dataset/demos/svamp/demo8_train_annotated_5.json"))
+    cand_pids = [item["index"] for item in cand_problems]
+    # pids = [item["Index"] for item in problems if item["Index"] not in cand_pids]
+    # pids = pids[500:]
+    pids = [item["Index"]-1 for item in test_problems ]
+    pids = pids
     samples = random.sample(pids, args.test_number)  # random sample
     test_pids = samples[:args.test_number]
-    return problems, test_pids,cand_pids
+    return test_problems, test_pids,cand_pids,cand_problems
 
 
 
@@ -61,7 +64,7 @@ def parse_args():
     parser.add_argument('--option_inds', type=list, default=["A", "B", "C", "D", "E", "F"])
 
     # user options
-    parser.add_argument('--label', type=str, default='exp0')
+    parser.add_argument('--label', type=str, default='exp0_autopot')
     parser.add_argument('--test_split', type=str, default='test', choices=['dev', 'dev1k', 'test', 'test1k'])
     parser.add_argument('--test_number', type=int, default=100, help='GPT-3 is expensive. -1 for the whole test set')
     parser.add_argument('--save_every', type=int, default=10, help='Save the result with every n examples.')
@@ -73,7 +76,7 @@ def parse_args():
         choices=['T-A', 'Q-A', 'Q-AS', 'Q-SA', 'TQ-A', 'TQ-AS', 'TQ-SA', 'QT-A', 'QT-AS', 'QT-SA', 'QTS-A', 'TQS-A'],
         help='prompt format template')
     parser.add_argument('--shot_number', type=int, default=2, help='Number of n-shot training examples.')
-    parser.add_argument('--seed', type=int, default=1, help='random seed')
+    parser.add_argument('--seed', type=int, default=9, help='random seed')
 
     # GPT-3 settings
     parser.add_argument('--engine', type=str, default='text-davinci-003', choices=['text-davinci-002', 'ada'])
@@ -95,7 +98,7 @@ def parse_args():
     parser.add_argument('--cand_number', type=int, default=20, help='Number of candidate prompts.')
     parser.add_argument('--embedding_size', type=int, default=128, help='Policy network final layer hidden state size.')
     parser.add_argument('--ckpt_root', type=str, default='checkpoints')
-    parser.add_argument('--ckpt', type=str, default="exp0/ckpt_best_reward.pt")
+    parser.add_argument('--ckpt', type=str, default="exp0_autopot/ckpt_best_loss.pt")
 
     args = parser.parse_args()
     return args
@@ -115,7 +118,7 @@ if __name__ == '__main__':
     torch.backends.cudnn.benchmark = True
 
     # problems, test question ids, candidate prompt pids, RL training pids
-    problems, pids, cand_pids = load_data(args)
+    problems, pids, cand_pids,cand_problems = load_data(args)
 
     result_file = get_result_file(args)
 
@@ -144,7 +147,7 @@ if __name__ == '__main__':
     # print("===========")
     cand_examples = []
     for pid in cand_pids:
-        example = create_example_from_pid(pid, problems, args, test=True)  # CHECK !!!
+        example = create_example_from_pid(pid, cand_problems, args, test=False)  # CHECK !!!
         # print(example)
         # print("===========")
         cand_examples.append(example)
@@ -188,6 +191,7 @@ if __name__ == '__main__':
             cand_ids = sorted(range(len(scores)), key=lambda i: scores[i], reverse=True)[:args.shot_number]
             shot_pids = [cand_pids[cid] for cid in cand_ids[::-1]]
             prompt = build_prompt(problems, shot_pids, pid, args)  # generate the prompt input
+            program,prediction = None,None
             if pid in results:
                 program, prediction = results[pid]["program"], results[pid]["prediction"]
             else:
@@ -195,14 +199,15 @@ if __name__ == '__main__':
             if unpredicted is isinstance(unpredicted, str):
 
                 error = unpredicted
+                results[pid]["error"] = error
                 program, prediction = None, None
             else:
-                program, prediction = unpredicted
+                try:
+                    program, prediction = unpredicted
+                except Exception as e:
+                    print(e)
 
             results[pid] = {}
-            if program is None and program is None:
-                results[pid]["error"] = error
-
             results[pid]["shot_pids"] = shot_pids
             results[pid]["prompt"] = prompt
             results[pid]["answer"] = answer
@@ -224,7 +229,7 @@ if __name__ == '__main__':
                 print(prompt, "\n")
 
                 print("[Acc]:\t", results[pid]["true_false"])
-                print("")
+
                 print("[A] labeled answer:\t", answer)
                 print("[P] predicted answer:\t", prediction)
                 print("[P] generated program:\t", program)

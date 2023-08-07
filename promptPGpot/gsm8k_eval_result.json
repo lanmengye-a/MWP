@@ -1,0 +1,2469 @@
+[
+    {
+        "ID": "chal-3",
+        "Body": "Paco had 26 salty cookies and 17 sweet cookies. He ate 14 sweet cookies and 9 salty cookies.",
+        "Question": "Paco had 26 salty cookies and 17 sweet cookies. He ate 14 sweet cookies and 9 salty cookies.How many salty cookies did Paco have left?",
+        "Equation": "( 26.0 - 9.0 )",
+        "Answer": 17,
+        "Type": "Subtraction",
+        "unit": null,
+        "option": null,
+        "Index": 3,
+        "Prediction": "",
+        "score": 0,
+        "Program": ""
+    },
+    {
+        "ID": "chal-10",
+        "Body": "A waiter had some customers. After 9 customers left he still had 12 customers.",
+        "Question": "A waiter had some customers. After 9 customers left he still had 12 customers.How many customers did he have at the start?",
+        "Equation": "( 9.0 + 12.0 )",
+        "Answer": 21,
+        "Type": "Addition",
+        "unit": null,
+        "option": null,
+        "Index": 10,
+        "Prediction": 21.0,
+        "score": 1,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"A waiter had some customers. After 9 customers left he still had 12 customers.How many customers did he have at the start?\"\"\"",
+                "    customers_after = 12",
+                "    customers_left = 9",
+                "    customers_initial = customers_after + customers_left",
+                "    result = customers_initial",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-23",
+        "Body": "The bananas in Philip's collection are organized into groups of size 18. If there are a total of 180 bananas in Philip's banana collection",
+        "Question": "The bananas in Philip's collection are organized into groups of size 18. If there are a total of 180 bananas in Philip's banana collectionHow many groups are there?",
+        "Equation": "( 180.0 / 18.0 )",
+        "Answer": 10,
+        "Type": "Common-Division",
+        "unit": null,
+        "option": null,
+        "Index": 23,
+        "Prediction": 10.0,
+        "score": 1,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"The bananas in Philip's collection are organized into groups of size 18. If there are a total of 180 bananas in Philip's banana collectionHow many groups are there?\"\"\"",
+                "    total_bananas = 180",
+                "    group_size = 18",
+                "    num_groups = total_bananas // group_size",
+                "    result = num_groups",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-27",
+        "Body": "Because of the decision Sofia asked the students to suggest specific types of food from a total of 66 choices. If 450 students suggested adding mashed potatoes 38 suggested adding bacon to the menu and the rest did not participate",
+        "Question": "Because of the decision Sofia asked the students to suggest specific types of food from a total of 66 choices. If 450 students suggested adding mashed potatoes 38 suggested adding bacon to the menu and the rest did not participateHow many students participated in the suggestion of new food items?",
+        "Equation": "( 450.0 + 38.0 )",
+        "Answer": 488,
+        "Type": "Addition",
+        "unit": null,
+        "option": null,
+        "Index": 27,
+        "Prediction": -422.0,
+        "score": 0,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"Because of the decision Sofia asked the students to suggest specific types of food from a total of 66 choices. If 450 students suggested adding mashed potatoes 38 suggested adding bacon to the menu and the rest did not participateHow many students participated in the suggestion of new food items?\"\"\"",
+                "    total_choices = 66",
+                "    mashed_potatoes_suggestions = 450",
+                "    bacon_suggestions = 38",
+                "    total_suggestions = mashed_potatoes_suggestions + bacon_suggestions",
+                "    students_participating = total_choices - total_suggestions",
+                "    result = students_participating",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-30",
+        "Body": "Dan has $ 3. He bought 2 candy bar for $ 4, each one costing the same amount of money.",
+        "Question": "Dan has $ 3. He bought 2 candy bar for $ 4, each one costing the same amount of money.How much did each candy bar cost?",
+        "Equation": "( 4.0 / 2.0 )",
+        "Answer": 2,
+        "Type": "Common-Division",
+        "unit": null,
+        "option": null,
+        "Index": 30,
+        "Prediction": 2.0,
+        "score": 1,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"Dan has $ 3. He bought 2 candy bar for $ 4, each one costing the same amount of money.How much did each candy bar cost?\"\"\"",
+                "    money_initial = 3",
+                "    candy_bars = 2",
+                "    money_spent = 4",
+                "    candy_bar_cost = money_spent / candy_bars",
+                "    result = candy_bar_cost",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-32",
+        "Body": "There were 15 roses and 62 orchids in the vase. Jessica cut some more roses and orchids from her flower garden. There are now 17 roses and 96 orchids in the vase.",
+        "Question": "There were 15 roses and 62 orchids in the vase. Jessica cut some more roses and orchids from her flower garden. There are now 17 roses and 96 orchids in the vase.How many roses did she cut?",
+        "Equation": "( 17.0 - 15.0 )",
+        "Answer": 2,
+        "Type": "Subtraction",
+        "unit": null,
+        "option": null,
+        "Index": 32,
+        "Prediction": -32.0,
+        "score": 0,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"There were 15 roses and 62 orchids in the vase. Jessica cut some more roses and orchids from her flower garden. There are now 17 roses and 96 orchids in the vase.How many roses did she cut?\"\"\"",
+                "    roses_initial = 15",
+                "    orchids_initial = 62",
+                "    roses_after = 17",
+                "    orchids_after = 96",
+                "    roses_added = roses_after - roses_initial",
+                "    orchids_added = orchids_after - orchids_initial",
+                "    roses_cut = roses_added - orchids_added",
+                "    result = roses_cut",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-36",
+        "Body": "Dan has $ 4. He bought a candy bar for $ 8. Then his friend have him $ 5",
+        "Question": "Dan has $ 4. He bought a candy bar for $ 8. Then his friend have him $ 5How much money is left?",
+        "Equation": "( ( 4.0 - 8.0 ) + 5.0 )",
+        "Answer": 1,
+        "Type": "Addition",
+        "unit": null,
+        "option": null,
+        "Index": 36,
+        "Prediction": 1.0,
+        "score": 1,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"Dan has $ 4. He bought a candy bar for $ 8. Then his friend have him $ 5How much money is left?\"\"\"",
+                "    money_initial = 4",
+                "    candy_bar_cost = 8",
+                "    money_received = 5",
+                "    money_spent = candy_bar_cost",
+                "    money_left = money_initial + money_received - money_spent",
+                "    result = money_left",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-65",
+        "Body": "Baker made 149 cakes and 91 pastries. If he sold 10 cakes and 90 pastries",
+        "Question": "Baker made 149 cakes and 91 pastries. If he sold 10 cakes and 90 pastriesHow many cakes would baker still have?",
+        "Equation": "( 149.0 - 10.0 )",
+        "Answer": 139,
+        "Type": "Subtraction",
+        "unit": null,
+        "option": null,
+        "Index": 65,
+        "Prediction": 139.0,
+        "score": 1,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"Baker made 149 cakes and 91 pastries. If he sold 10 cakes and 90 pastriesHow many cakes would baker still have?\"\"\"",
+                "    cakes_initial = 149",
+                "    pastries_initial = 91",
+                "    cakes_sold = 10",
+                "    pastries_sold = 90",
+                "    cakes_left = cakes_initial - cakes_sold",
+                "    result = cakes_left",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-97",
+        "Body": "Ed had 29 more marbles than Doug. Ed lost 17 of his marbles at the playground.",
+        "Question": "Ed had 29 more marbles than Doug. Ed lost 17 of his marbles at the playground.How many more marbles did Ed have than Doug then?",
+        "Equation": "( 29.0 - 17.0 )",
+        "Answer": 12,
+        "Type": "Subtraction",
+        "unit": null,
+        "option": null,
+        "Index": 97,
+        "Prediction": 12.0,
+        "score": 1,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"Ed had 29 more marbles than Doug. Ed lost 17 of his marbles at the playground.How many more marbles did Ed have than Doug then?\"\"\"",
+                "    ed_marbles_initial = 29",
+                "    ed_marbles_lost = 17",
+                "    ed_marbles_after = ed_marbles_initial - ed_marbles_lost",
+                "    result = ed_marbles_after",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-103",
+        "Body": "Allan brought 6 balloons and Jake brought 3 balloons to the park. Jake then bought 4 more balloons at the park.",
+        "Question": "Allan brought 6 balloons and Jake brought 3 balloons to the park. Jake then bought 4 more balloons at the park.How many more balloons did Jake have than Allan in the park?",
+        "Equation": "( ( 3.0 + 4.0 ) - 6.0 )",
+        "Answer": 1,
+        "Type": "Subtraction",
+        "unit": null,
+        "option": null,
+        "Index": 103,
+        "Prediction": 1.0,
+        "score": 1,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"Allan brought 6 balloons and Jake brought 3 balloons to the park. Jake then bought 4 more balloons at the park.How many more balloons did Jake have than Allan in the park?\"\"\"",
+                "    allan_balloons = 6",
+                "    jake_balloons_initial = 3",
+                "    jake_balloons_added = 4",
+                "    jake_balloons_total = jake_balloons_initial + jake_balloons_added",
+                "    balloons_difference = jake_balloons_total - allan_balloons",
+                "    result = balloons_difference",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-105",
+        "Body": "A grocery store had 22 bottles of regular soda and 61 bottles of diet soda.",
+        "Question": "A grocery store had 22 bottles of regular soda and 61 bottles of diet soda.How many more bottles of diet soda than regular soda did they have?",
+        "Equation": "( 61.0 - 22.0 )",
+        "Answer": 39,
+        "Type": "Subtraction",
+        "unit": null,
+        "option": null,
+        "Index": 105,
+        "Prediction": 39.0,
+        "score": 1,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"A grocery store had 22 bottles of regular soda and 61 bottles of diet soda.How many more bottles of diet soda than regular soda did they have?\"\"\"",
+                "    regular_soda = 22",
+                "    diet_soda = 61",
+                "    difference = diet_soda - regular_soda",
+                "    result = difference",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-121",
+        "Body": "Rachel had to complete 7 pages of math homework. If she had to complete 4 more pages of math homework than reading homework",
+        "Question": "Rachel had to complete 7 pages of math homework. If she had to complete 4 more pages of math homework than reading homeworkHow many pages of reading homework did she have to complete?",
+        "Equation": "( 7.0 - 4.0 )",
+        "Answer": 3,
+        "Type": "Subtraction",
+        "unit": null,
+        "option": null,
+        "Index": 121,
+        "Prediction": 3.0,
+        "score": 1,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"Rachel had to complete 7 pages of math homework. If she had to complete 4 more pages of math homework than reading homeworkHow many pages of reading homework did she have to complete?\"\"\"",
+                "    math_homework = 7",
+                "    math_homework_difference = 4",
+                "    reading_homework = math_homework - math_homework_difference",
+                "    result = reading_homework",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-124",
+        "Body": "Danny collects bottle caps. He found 30 bottle caps at the park while he threw away 63 old ones. Now he has 42 bottle caps in his collection.",
+        "Question": "Danny collects bottle caps. He found 30 bottle caps at the park while he threw away 63 old ones. Now he has 42 bottle caps in his collection.How many more bottle caps did danny throw away than those he found at the park?",
+        "Equation": "( 63.0 - 30.0 )",
+        "Answer": 33,
+        "Type": "Subtraction",
+        "unit": null,
+        "option": null,
+        "Index": 124,
+        "Prediction": 51.0,
+        "score": 0,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"Danny collects bottle caps. He found 30 bottle caps at the park while he threw away 63 old ones. Now he has 42 bottle caps in his collection.How many more bottle caps did danny throw away than those he found at the park?\"\"\"",
+                "    bottle_caps_found = 30",
+                "    bottle_caps_thrown = 63",
+                "    bottle_caps_total = 42",
+                "    bottle_caps_kept = bottle_caps_total - bottle_caps_found",
+                "    bottle_caps_difference = bottle_caps_thrown - bottle_caps_kept",
+                "    result = bottle_caps_difference",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-138",
+        "Body": "A mailman has to give 9 pieces of junk mail to each house in each block. If there are 20 houses on a block",
+        "Question": "A mailman has to give 9 pieces of junk mail to each house in each block. If there are 20 houses on a blockHow many pieces of junk mail should he give in each block?",
+        "Equation": "( 9.0 * 20.0 )",
+        "Answer": 180,
+        "Type": "Multiplication",
+        "unit": null,
+        "option": null,
+        "Index": 138,
+        "Prediction": 180.0,
+        "score": 1,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"A mailman has to give 9 pieces of junk mail to each house in each block. If there are 20 houses on a blockHow many pieces of junk mail should he give in each block?\"\"\"",
+                "    pieces_per_house = 9",
+                "    num_houses = 20",
+                "    total_pieces = pieces_per_house * num_houses",
+                "    result = total_pieces",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-191",
+        "Body": "Baker made 43 cakes and 114 pastries. If he sold 154 pastries and 78 cakes",
+        "Question": "Baker made 43 cakes and 114 pastries. If he sold 154 pastries and 78 cakesHow many more pastries than cakes did baker sell?",
+        "Equation": "( 154.0 - 78.0 )",
+        "Answer": 76,
+        "Type": "Subtraction",
+        "unit": null,
+        "option": null,
+        "Index": 191,
+        "Prediction": 41.0,
+        "score": 0,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"Baker made 43 cakes and 114 pastries. If he sold 154 pastries and 78 cakesHow many more pastries than cakes did baker sell?\"\"\"",
+                "    cakes_made = 43",
+                "    pastries_made = 114",
+                "    pastries_sold = 154",
+                "    cakes_sold = 78",
+                "    pastries_difference = pastries_sold - cakes_sold",
+                "    cakes_difference = cakes_sold - cakes_made",
+                "    pastries_more_than_cakes = pastries_difference - cakes_difference",
+                "    result = pastries_more_than_cakes",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-195",
+        "Body": "Paco had 25 cookies. He ate 5 of them. Then he bought 3 more cookies",
+        "Question": "Paco had 25 cookies. He ate 5 of them. Then he bought 3 more cookiesHow many more cookies did he eat than those he bought?",
+        "Equation": "( 5.0 - 3.0 )",
+        "Answer": 2,
+        "Type": "Subtraction",
+        "unit": null,
+        "option": null,
+        "Index": 195,
+        "Prediction": 2.0,
+        "score": 1,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"Paco had 25 cookies. He ate 5 of them. Then he bought 3 more cookiesHow many more cookies did he eat than those he bought?\"\"\"",
+                "    cookies_initial = 25",
+                "    cookies_eaten = 5",
+                "    cookies_bought = 3",
+                "    cookies_eaten_more = cookies_eaten - cookies_bought",
+                "    result = cookies_eaten_more",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-215",
+        "Body": "White t - shirts can be purchased in packages. If mom buys 66 white t - shirts where each package has 3 white t - shirts.",
+        "Question": "White t - shirts can be purchased in packages. If mom buys 66 white t - shirts where each package has 3 white t - shirts.How many packages will she have?",
+        "Equation": "( 66.0 / 3.0 )",
+        "Answer": 22,
+        "Type": "Common-Division",
+        "unit": null,
+        "option": null,
+        "Index": 215,
+        "Prediction": 22.0,
+        "score": 1,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"White t-shirts can be purchased in packages. If mom buys 66 white t-shirts where each package has 3 white t-shirts.How many packages will she have?\"\"\"",
+                "    t_shirts_bought = 66",
+                "    t_shirts_per_package = 3",
+                "    packages = t_shirts_bought // t_shirts_per_package",
+                "    result = packages",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-222",
+        "Body": "The Razorback t-shirt shop makes $ 78 dollars off each t-shirt sold. During the Arkansas game and the Texas tech game they sold a total of 186 t-shirts. If they sold 172 t-shirts during the Arkansas game",
+        "Question": "The Razorback t-shirt shop makes $ 78 dollars off each t-shirt sold. During the Arkansas game and the Texas tech game they sold a total of 186 t-shirts. If they sold 172 t-shirts during the Arkansas gameHow much money did they make from selling the t-shirts during the Texas tech game?",
+        "Equation": "( 78.0 * ( 186.0 - 172.0 ) )",
+        "Answer": 1092,
+        "Type": "Multiplication",
+        "unit": null,
+        "option": null,
+        "Index": 222,
+        "Prediction": 1092.0,
+        "score": 1,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"The Razorback t-shirt shop makes $ 78 dollars off each t-shirt sold. During the Arkansas game and the Texas tech game they sold a total of 186 t-shirts. If they sold 172 t-shirts during the Arkansas gameHow much money did they make from selling the t-shirts during the Texas tech game?\"\"\"",
+                "    t_shirts_total = 186",
+                "    t_shirts_arkansas = 172",
+                "    t_shirts_texas_tech = t_shirts_total - t_shirts_arkansas",
+                "    t_shirt_cost = 78",
+                "    money_made_texas_tech = t_shirts_texas_tech * t_shirt_cost",
+                "    result = money_made_texas_tech",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-225",
+        "Body": "Rebecca wants to split a collection of eggs into groups of 3. Rebecca has 99 bananas 9 eggs and 27 marbles.",
+        "Question": "Rebecca wants to split a collection of eggs into groups of 3. Rebecca has 99 bananas 9 eggs and 27 marbles.How many groups will be created?",
+        "Equation": "( 9.0 / 3.0 )",
+        "Answer": 3,
+        "Type": "Common-Division",
+        "unit": null,
+        "option": null,
+        "Index": 225,
+        "Prediction": 3.0,
+        "score": 1,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"Rebecca wants to split a collection of eggs into groups of 3. Rebecca has 99 bananas 9 eggs and 27 marbles.How many groups will be created?\"\"\"",
+                "    eggs = 9",
+                "    groups = eggs // 3",
+                "    result = groups",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-228",
+        "Body": "Matthew had 14 crackers and 21 cakes. If Matthew gave equal numbers of crackers and cakes to his 7 friends",
+        "Question": "Matthew had 14 crackers and 21 cakes. If Matthew gave equal numbers of crackers and cakes to his 7 friendsHow many crackers and cakes did each person eat?",
+        "Equation": "( ( 14.0 + 21.0 ) / 7.0 )",
+        "Answer": 5,
+        "Type": "Common-Division",
+        "unit": null,
+        "option": null,
+        "Index": 228,
+        "Prediction": "",
+        "score": 0,
+        "Program": ""
+    },
+    {
+        "ID": "chal-235",
+        "Body": "Dan has $ 4. He had $ 3 left with him after he bought a candy bar.",
+        "Question": "Dan has $ 4. He had $ 3 left with him after he bought a candy bar.How much did the candy bar cost?",
+        "Equation": "( 4.0 - 3.0 )",
+        "Answer": 1,
+        "Type": "Subtraction",
+        "unit": null,
+        "option": null,
+        "Index": 235,
+        "Prediction": 1.0,
+        "score": 1,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"Dan has $ 4. He had $ 3 left with him after he bought a candy bar.How much did the candy bar cost?\"\"\"",
+                "    money_initial = 4",
+                "    money_left = 3",
+                "    candy_bar_cost = money_initial - money_left",
+                "    result = candy_bar_cost",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-237",
+        "Body": "Helen the hippo and her friends are preparing for thanksgiving at Helen's house. Helen baked 144 chocolate chip cookies and 397 raisin cookies yesterday. And she baked 85 raisin cookies and 403 chocolate chip cookies this morning.",
+        "Question": "Helen the hippo and her friends are preparing for thanksgiving at Helen's house. Helen baked 144 chocolate chip cookies and 397 raisin cookies yesterday. And she baked 85 raisin cookies and 403 chocolate chip cookies this morning.How many raisin cookies did Helen bake?",
+        "Equation": "( 397.0 + 85.0 )",
+        "Answer": 482,
+        "Type": "Addition",
+        "unit": null,
+        "option": null,
+        "Index": 237,
+        "Prediction": 482.0,
+        "score": 1,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"Helen the hippo and her friends are preparing for thanksgiving at Helen's house. Helen baked 144 chocolate chip cookies and 397 raisin cookies yesterday. And she baked 85 raisin cookies and 403 chocolate chip cookies this morning.How many raisin cookies did Helen bake?\"\"\"",
+                "    raisin_cookies_yesterday = 397",
+                "    raisin_cookies_today = 85",
+                "    total_raisin_cookies = raisin_cookies_yesterday + raisin_cookies_today",
+                "    result = total_raisin_cookies",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-239",
+        "Body": "An industrial machine made 9 shirts yesterday and 44 shirts today. It can make 3 shirts a minute.",
+        "Question": "An industrial machine made 9 shirts yesterday and 44 shirts today. It can make 3 shirts a minute.How many minutes did the machine work yesterday?",
+        "Equation": "( 9.0 / 3.0 )",
+        "Answer": 3,
+        "Type": "Common-Division",
+        "unit": null,
+        "option": null,
+        "Index": 239,
+        "Prediction": 3.0,
+        "score": 1,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"An industrial machine made 9 shirts yesterday and 44 shirts today. It can make 3 shirts a minute.How many minutes did the machine work yesterday?\"\"\"",
+                "    shirts_yesterday = 9",
+                "    shirts_per_minute = 3",
+                "    minutes_yesterday = shirts_yesterday / shirts_per_minute",
+                "    result = minutes_yesterday",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-249",
+        "Body": "A grocery store had 72 bottles of regular soda, 32 bottles of diet soda and 78 apples.",
+        "Question": "A grocery store had 72 bottles of regular soda, 32 bottles of diet soda and 78 apples.How many more bottles than apple did they have?",
+        "Equation": "( ( 72.0 + 32.0 ) - 78.0 )",
+        "Answer": 26,
+        "Type": "Subtraction",
+        "unit": null,
+        "option": null,
+        "Index": 249,
+        "Prediction": 26.0,
+        "score": 1,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"A grocery store had 72 bottles of regular soda, 32 bottles of diet soda and 78 apples.How many more bottles than apple did they have?\"\"\"",
+                "    bottles_regular = 72",
+                "    bottles_diet = 32",
+                "    apples = 78",
+                "    total_bottles = bottles_regular + bottles_diet",
+                "    difference = total_bottles - apples",
+                "    result = difference",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-262",
+        "Body": "The Razorback t-shirt shop makes $ 23 dollars off each t-shirt sold. During the Arkansas and Texas tech game they made $ 230 by selling t-shirts.",
+        "Question": "The Razorback t-shirt shop makes $ 23 dollars off each t-shirt sold. During the Arkansas and Texas tech game they made $ 230 by selling t-shirts.How many t-shirts did they sell?",
+        "Equation": "( 230.0 / 23.0 )",
+        "Answer": 10,
+        "Type": "Common-Division",
+        "unit": null,
+        "option": null,
+        "Index": 262,
+        "Prediction": 10.0,
+        "score": 1,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"The Razorback t-shirt shop makes $ 23 dollars off each t-shirt sold. During the Arkansas and Texas tech game they made $ 230 by selling t-shirts.How many t-shirts did they sell?\"\"\"",
+                "    revenue = 230",
+                "    cost_per_shirt = 23",
+                "    shirts_sold = revenue / cost_per_shirt",
+                "    result = shirts_sold",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-273",
+        "Body": "A mailman has to give 4 pieces of junk mail to each house in each of the 81 blocks. If there are 12 houses in each block",
+        "Question": "A mailman has to give 4 pieces of junk mail to each house in each of the 81 blocks. If there are 12 houses in each blockHow many pieces of junk mail should he give in each block?",
+        "Equation": "( 4.0 * 12.0 )",
+        "Answer": 48,
+        "Type": "Multiplication",
+        "unit": null,
+        "option": null,
+        "Index": 273,
+        "Prediction": 48.0,
+        "score": 1,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"A mailman has to give 4 pieces of junk mail to each house in each of the 81 blocks. If there are 12 houses in each blockHow many pieces of junk mail should he give in each block?\"\"\"",
+                "    pieces_per_house = 4",
+                "    houses_per_block = 12",
+                "    total_pieces_per_block = pieces_per_house * houses_per_block",
+                "    result = total_pieces_per_block",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-291",
+        "Body": "Helen the hippo and her friends are preparing for thanksgiving at Helen's house. Helen baked 197 chocolate chip cookies and 46 raisin cookies yesterday. And she baked 75 raisin cookies and 66 chocolate chip cookies this morning.",
+        "Question": "Helen the hippo and her friends are preparing for thanksgiving at Helen's house. Helen baked 197 chocolate chip cookies and 46 raisin cookies yesterday. And she baked 75 raisin cookies and 66 chocolate chip cookies this morning.How many more chocolate chip cookies did Helen bake yesterday compared to today?",
+        "Equation": "( 197.0 - 66.0 )",
+        "Answer": 131,
+        "Type": "Subtraction",
+        "unit": null,
+        "option": null,
+        "Index": 291,
+        "Prediction": 131.0,
+        "score": 1,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"Helen the hippo and her friends are preparing for thanksgiving at Helen's house. Helen baked 197 chocolate chip cookies and 46 raisin cookies yesterday. And she baked 75 raisin cookies and 66 chocolate chip cookies this morning.How many more chocolate chip cookies did Helen bake yesterday compared to today?\"\"\"",
+                "    yesterday_chocolate_chip_cookies = 197",
+                "    today_chocolate_chip_cookies = 66",
+                "    difference = yesterday_chocolate_chip_cookies - today_chocolate_chip_cookies",
+                "    result = difference",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-297",
+        "Body": "Debby drinks 6 bottles a day. If she bought a total of 12 water bottles",
+        "Question": "Debby drinks 6 bottles a day. If she bought a total of 12 water bottlesHow many days would they last her?",
+        "Equation": "( 12.0 / 6.0 )",
+        "Answer": 2,
+        "Type": "Common-Division",
+        "unit": null,
+        "option": null,
+        "Index": 297,
+        "Prediction": 2.0,
+        "score": 1,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"Debby drinks 6 bottles a day. If she bought a total of 12 water bottlesHow many days would they last her?\"\"\"",
+                "    bottles_per_day = 6",
+                "    total_bottles = 12",
+                "    days = total_bottles // bottles_per_day",
+                "    result = days",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-304",
+        "Body": "Jake has 12 fewer peaches than Steven who has 11 more peaches than Jill. Steven has 4 peaches.",
+        "Question": "Jake has 12 fewer peaches than Steven who has 11 more peaches than Jill. Steven has 4 peaches.How many more peaches does Jill have than Jake?",
+        "Equation": "( 12.0 - 11.0 )",
+        "Answer": 1,
+        "Type": "Subtraction",
+        "unit": null,
+        "option": null,
+        "Index": 304,
+        "Prediction": 12.0,
+        "score": 0,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"Jake has 12 fewer peaches than Steven who has 11 more peaches than Jill. Steven has 4 peaches.How many more peaches does Jill have than Jake?\"\"\"",
+                "    steven_peaches = 4",
+                "    jill_peaches = steven_peaches + 11",
+                "    jake_peaches = jill_peaches - 12",
+                "    difference = jill_peaches - jake_peaches",
+                "    result = difference",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-311",
+        "Body": "The grasshopper and the frog had a jumping contest. The grasshopper jumped 31 inches and the frog jumped 35 inches.",
+        "Question": "The grasshopper and the frog had a jumping contest. The grasshopper jumped 31 inches and the frog jumped 35 inches.How much did they jump altogether?",
+        "Equation": "( 31.0 + 35.0 )",
+        "Answer": 66,
+        "Type": "Addition",
+        "unit": null,
+        "option": null,
+        "Index": 311,
+        "Prediction": 66.0,
+        "score": 1,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"The grasshopper and the frog had a jumping contest. The grasshopper jumped 31 inches and the frog jumped 35 inches.How much did they jump altogether?\"\"\"",
+                "    grasshopper_jump = 31",
+                "    frog_jump = 35",
+                "    total_jump = grasshopper_jump + frog_jump",
+                "    result = total_jump",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-326",
+        "Body": "Bryan took a look at his books as well. Each bookshelf contains 2 books. If he has a total of 38 books",
+        "Question": "Bryan took a look at his books as well. Each bookshelf contains 2 books. If he has a total of 38 booksHow many bookshelves does he have?",
+        "Equation": "( 38.0 / 2.0 )",
+        "Answer": 19,
+        "Type": "Common-Division",
+        "unit": null,
+        "option": null,
+        "Index": 326,
+        "Prediction": 19.0,
+        "score": 1,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"Bryan took a look at his books as well. Each bookshelf contains 2 books. If he has a total of 38 booksHow many bookshelves does he have?\"\"\"",
+                "    books_total = 38",
+                "    books_per_shelf = 2",
+                "    num_shelves = books_total // books_per_shelf",
+                "    result = num_shelves",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-341",
+        "Body": "Jack received 3 emails in the afternoon, 5 emails in the morning and 16 emails in the evening.",
+        "Question": "Jack received 3 emails in the afternoon, 5 emails in the morning and 16 emails in the evening.How many more emails did Jack receive in the morning than in the afternoon?",
+        "Equation": "( 5.0 - 3.0 )",
+        "Answer": 2,
+        "Type": "Subtraction",
+        "unit": null,
+        "option": null,
+        "Index": 341,
+        "Prediction": 2.0,
+        "score": 1,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"Jack received 3 emails in the afternoon, 5 emails in the morning and 16 emails in the evening.How many more emails did Jack receive in the morning than in the afternoon?\"\"\"",
+                "    emails_afternoon = 3",
+                "    emails_morning = 5",
+                "    emails_difference = emails_morning - emails_afternoon",
+                "    result = emails_difference",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-354",
+        "Body": "He then went to see the oranges being harvested. He found out that they harvest 66 sacks per day.",
+        "Question": "He then went to see the oranges being harvested. He found out that they harvest 66 sacks per day.How many oranges do they harvest per day if each sack contains 28 oranges?",
+        "Equation": "( 66.0 * 28.0 )",
+        "Answer": 1848,
+        "Type": "Multiplication",
+        "unit": null,
+        "option": null,
+        "Index": 354,
+        "Prediction": 1848.0,
+        "score": 1,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"He then went to see the oranges being harvested. He found out that they harvest 66 sacks per day.How many oranges do they harvest per day if each sack contains 28 oranges?\"\"\"",
+                "    sacks_per_day = 66",
+                "    oranges_per_sack = 28",
+                "    total_oranges = sacks_per_day * oranges_per_sack",
+                "    result = total_oranges",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-389",
+        "Body": "Adam has 10 apples. Jackie has 2 apples.",
+        "Question": "Adam has 10 apples. Jackie has 2 apples.How many more apples does Adam have than Jackie?",
+        "Equation": "( 10.0 - 2.0 )",
+        "Answer": 8,
+        "Type": "Subtraction",
+        "unit": null,
+        "option": null,
+        "Index": 389,
+        "Prediction": 8.0,
+        "score": 1,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"Adam has 10 apples. Jackie has 2 apples.How many more apples does Adam have than Jackie?\"\"\"",
+                "    adam_apples = 10",
+                "    jackie_apples = 2",
+                "    apples_difference = adam_apples - jackie_apples",
+                "    result = apples_difference",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-391",
+        "Body": "Jerry had 5 action figures and 2 books on a shelf in his room. Later he added 9 more books to the shelf.",
+        "Question": "Jerry had 5 action figures and 2 books on a shelf in his room. Later he added 9 more books to the shelf.How many more books than action figures were on his shelf?",
+        "Equation": "( ( 2.0 + 9.0 ) - 5.0 )",
+        "Answer": 6,
+        "Type": "Subtraction",
+        "unit": null,
+        "option": null,
+        "Index": 391,
+        "Prediction": 6.0,
+        "score": 1,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"Jerry had 5 action figures and 2 books on a shelf in his room. Later he added 9 more books to the shelf.How many more books than action figures were on his shelf?\"\"\"",
+                "    action_figures = 5",
+                "    books_initial = 2",
+                "    books_added = 9",
+                "    total_books = books_initial + books_added",
+                "    difference = total_books - action_figures",
+                "    result = difference",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-400",
+        "Body": "An industrial machine can make 3 shirts a minute. It made 4 shirts yesterday and 8 shirts today.",
+        "Question": "An industrial machine can make 3 shirts a minute. It made 4 shirts yesterday and 8 shirts today.How many minutes did the machine work in all?",
+        "Equation": "( ( 4.0 + 8.0 ) / 3.0 )",
+        "Answer": 4,
+        "Type": "Common-Division",
+        "unit": null,
+        "option": null,
+        "Index": 400,
+        "Prediction": 4.0,
+        "score": 1,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"An industrial machine can make 3 shirts a minute. It made 4 shirts yesterday and 8 shirts today.How many minutes did the machine work in all?\"\"\"",
+                "    shirts_yesterday = 4",
+                "    shirts_today = 8",
+                "    shirts_per_minute = 3",
+                "    minutes_yesterday = shirts_yesterday / shirts_per_minute",
+                "    minutes_today = shirts_today / shirts_per_minute",
+                "    total_minutes = minutes_yesterday + minutes_today",
+                "    result = total_minutes",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-403",
+        "Body": "The ring toss game at the carnival made the same amount of money each day. In total in 30 days they earned 420 dollars. Together with game they earned 22 dollars.",
+        "Question": "The ring toss game at the carnival made the same amount of money each day. In total in 30 days they earned 420 dollars. Together with game they earned 22 dollars.How much did ring toss game make per day?",
+        "Equation": "( 420.0 / 30.0 )",
+        "Answer": 14,
+        "Type": "Common-Division",
+        "unit": null,
+        "option": null,
+        "Index": 403,
+        "Prediction": 13.266666666666667,
+        "score": 0,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"The ring toss game at the carnival made the same amount of money each day. In total in 30 days they earned 420 dollars. Together with game they earned 22 dollars.How much did ring toss game make per day?\"\"\"",
+                "    total_earned = 420",
+                "    other_game_earned = 22",
+                "    ring_toss_earned = total_earned - other_game_earned",
+                "    num_days = 30",
+                "    ring_toss_per_day = ring_toss_earned / num_days",
+                "    result = ring_toss_per_day",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-427",
+        "Body": "Matthew had 29 crackers and 30 cakes. If Matthew gave equal numbers of crackers and cakes to his 2 friends",
+        "Question": "Matthew had 29 crackers and 30 cakes. If Matthew gave equal numbers of crackers and cakes to his 2 friendsHow many cakes did each person eat?",
+        "Equation": "( 30.0 / 2.0 )",
+        "Answer": 15,
+        "Type": "Common-Division",
+        "unit": null,
+        "option": null,
+        "Index": 427,
+        "Prediction": 15.0,
+        "score": 1,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"Matthew had 29 crackers and 30 cakes. If Matthew gave equal numbers of crackers and cakes to his 2 friendsHow many cakes did each person eat?\"\"\"",
+                "    crackers_initial = 29",
+                "    cakes_initial = 30",
+                "    crackers_per_person = crackers_initial // 2",
+                "    cakes_per_person = cakes_initial // 2",
+                "    result = cakes_per_person",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-433",
+        "Body": "There are 8 different books and 10 different movies in the ' crazy silly school ' series. If you read 19 of the books and watched 61 of the movies",
+        "Question": "There are 8 different books and 10 different movies in the ' crazy silly school ' series. If you read 19 of the books and watched 61 of the moviesHow many more movies than books are there in the ' crazy silly school ' series?",
+        "Equation": "( 10.0 - 8.0 )",
+        "Answer": 2,
+        "Type": "Subtraction",
+        "unit": null,
+        "option": null,
+        "Index": 433,
+        "Prediction": -40.0,
+        "score": 0,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"There are 8 different books and 10 different movies in the 'crazy silly school' series. If you read 19 of the books and watched 61 of the moviesHow many more movies than books are there in the 'crazy silly school' series?\"\"\"",
+                "    books_total = 8",
+                "    movies_total = 10",
+                "    books_read = 19",
+                "    movies_watched = 61",
+                "    books_left = books_total - books_read",
+                "    movies_left = movies_total - movies_watched",
+                "    movies_more_than_books = movies_left - books_left",
+                "    result = movies_more_than_books",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-444",
+        "Body": "Jake has 7 fewer peaches than Steven and 8 more peaches than Jill. Steven has 17 peaches.",
+        "Question": "Jake has 7 fewer peaches than Steven and 8 more peaches than Jill. Steven has 17 peaches.How many peaches does Jill have?",
+        "Equation": "( ( 17.0 - 7.0 ) - 8.0 )",
+        "Answer": 2,
+        "Type": "Subtraction",
+        "unit": null,
+        "option": null,
+        "Index": 444,
+        "Prediction": 18.0,
+        "score": 0,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"Jake has 7 fewer peaches than Steven and 8 more peaches than Jill. Steven has 17 peaches.How many peaches does Jill have?\"\"\"",
+                "    steven_peaches = 17",
+                "    jake_peaches_difference = 7",
+                "    jill_peaches_difference = 8",
+                "    jill_peaches = steven_peaches - jake_peaches_difference + jill_peaches_difference",
+                "    result = jill_peaches",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-449",
+        "Body": "Being his favorite, he saved checking on the grapevines for his last stop. He was told by 235 of the pickers that they fill 100 drums of raspberries per day and 221 drums of grapes per day.",
+        "Question": "Being his favorite, he saved checking on the grapevines for his last stop. He was told by 235 of the pickers that they fill 100 drums of raspberries per day and 221 drums of grapes per day.How many drums of grapes would be filled in 77 days?",
+        "Equation": "( 221.0 * 77.0 )",
+        "Answer": 17017,
+        "Type": "Multiplication",
+        "unit": null,
+        "option": null,
+        "Index": 449,
+        "Prediction": 17017.0,
+        "score": 1,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"Being his favorite, he saved checking on the grapevines for his last stop. He was told by 235 of the pickers that they fill 100 drums of raspberries per day and 221 drums of grapes per day.How many drums of grapes would be filled in 77 days?\"\"\"",
+                "    drums_per_day = 221",
+                "    num_days = 77",
+                "    total_drums = drums_per_day * num_days",
+                "    result = total_drums",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-457",
+        "Body": "Paco had 28 cookies. He ate some of them and had 7 cookies left.",
+        "Question": "Paco had 28 cookies. He ate some of them and had 7 cookies left.How many cookies did Paco eat?",
+        "Equation": "( 28.0 - 7.0 )",
+        "Answer": 21,
+        "Type": "Subtraction",
+        "unit": null,
+        "option": null,
+        "Index": 457,
+        "Prediction": 21.0,
+        "score": 1,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"Paco had 28 cookies. He ate some of them and had 7 cookies left.How many cookies did Paco eat?\"\"\"",
+                "    cookies_initial = 28",
+                "    cookies_left = 7",
+                "    cookies_eaten = cookies_initial - cookies_left",
+                "    result = cookies_eaten",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-461",
+        "Body": "Zachary did 19 push-ups in gym class today. David did 39 more push-ups than Zachary. John did 13 push-ups less than david.",
+        "Question": "Zachary did 19 push-ups in gym class today. David did 39 more push-ups than Zachary. John did 13 push-ups less than david.How many push-ups did David do?",
+        "Equation": "( 19.0 + 39.0 )",
+        "Answer": 58,
+        "Type": "Addition",
+        "unit": null,
+        "option": null,
+        "Index": 461,
+        "Prediction": 71.0,
+        "score": 0,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"Zachary did 19 push-ups in gym class today. David did 39 more push-ups than Zachary. John did 13 push-ups less than david.How many push-ups did David do?\"\"\"",
+                "    zachary_pushups = 19",
+                "    david_pushups_more = 39",
+                "    john_pushups_less = 13",
+                "    david_pushups = zachary_pushups + david_pushups_more + john_pushups_less",
+                "    result = david_pushups",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-471",
+        "Body": "Ed had 2 more marbles than Doug. Doug lost some of his marbles at the playground. Now Ed has 19 more marbles than doug.",
+        "Question": "Ed had 2 more marbles than Doug. Doug lost some of his marbles at the playground. Now Ed has 19 more marbles than doug.How many marbles did Doug lose?",
+        "Equation": "( 19.0 - 2.0 )",
+        "Answer": 17,
+        "Type": "Subtraction",
+        "unit": null,
+        "option": null,
+        "Index": 471,
+        "Prediction": 17.0,
+        "score": 1,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"Ed had 2 more marbles than Doug. Doug lost some of his marbles at the playground. Now Ed has 19 more marbles than doug.How many marbles did Doug lose?\"\"\"",
+                "    ed_marbles_initial = 2",
+                "    ed_marbles_after = 19",
+                "    marbles_lost = ed_marbles_after - ed_marbles_initial",
+                "    result = marbles_lost",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-484",
+        "Body": "Paul got a box of 110 crayons for his birthday. During the school year he gave 90 crayons to his friends while he lost 412 crayons.",
+        "Question": "Paul got a box of 110 crayons for his birthday. During the school year he gave 90 crayons to his friends while he lost 412 crayons.How many more crayons did he lose than those he gave to his friends?",
+        "Equation": "( 412.0 - 90.0 )",
+        "Answer": 322,
+        "Type": "Subtraction",
+        "unit": null,
+        "option": null,
+        "Index": 484,
+        "Prediction": 322.0,
+        "score": 1,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"Paul got a box of 110 crayons for his birthday. During the school year he gave 90 crayons to his friends while he lost 412 crayons.How many more crayons did he lose than those he gave to his friends?\"\"\"",
+                "    crayons_initial = 110",
+                "    crayons_given = 90",
+                "    crayons_lost = 412",
+                "    crayons_left = crayons_initial - crayons_given - crayons_lost",
+                "    crayons_difference = crayons_lost - crayons_given",
+                "    result = crayons_difference",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-492",
+        "Body": "Jake has 7 fewer peaches than Steven who has 14 more peaches than Jill. Steven has 15 peaches.",
+        "Question": "Jake has 7 fewer peaches than Steven who has 14 more peaches than Jill. Steven has 15 peaches.How many peaches does Jake have?",
+        "Equation": "( 15.0 - 7.0 )",
+        "Answer": 8,
+        "Type": "Subtraction",
+        "unit": null,
+        "option": null,
+        "Index": 492,
+        "Prediction": -6.0,
+        "score": 0,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"Jake has 7 fewer peaches than Steven who has 14 more peaches than Jill. Steven has 15 peaches.How many peaches does Jake have?\"\"\"",
+                "    steven_peaches = 15",
+                "    jill_peaches = steven_peaches - 14",
+                "    jake_peaches = jill_peaches - 7",
+                "    result = jake_peaches",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-500",
+        "Body": "Debby bought 95 soda bottles and 180 water bottles when they were on sale. If she drank 15 water bottles and 54 soda bottles a day",
+        "Question": "Debby bought 95 soda bottles and 180 water bottles when they were on sale. If she drank 15 water bottles and 54 soda bottles a dayHow many days would the water bottles last?",
+        "Equation": "( 180.0 / 15.0 )",
+        "Answer": 12,
+        "Type": "Common-Division",
+        "unit": null,
+        "option": null,
+        "Index": 500,
+        "Prediction": 0.0,
+        "score": 0,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"Debby bought 95 soda bottles and 180 water bottles when they were on sale. If she drank 15 water bottles and 54 soda bottles a dayHow many days would the water bottles last?\"\"\"",
+                "    soda_bottles_initial = 95",
+                "    water_bottles_initial = 180",
+                "    soda_bottles_per_day = 54",
+                "    water_bottles_per_day = 15",
+                "    soda_bottles_left = soda_bottles_initial - soda_bottles_per_day",
+                "    water_bottles_left = water_bottles_initial - water_bottles_per_day",
+                "    days_soda_bottles = soda_bottles_left // soda_bottles_per_day",
+                "    days_water_bottles = water_bottles_left // water_bottles_per_day",
+                "    result = min(days_soda_bottles, days_water_bottles)",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-508",
+        "Body": "Marco and his dad went strawberry picking. Marco's dad's strawberries weighed 11 pounds. If together their strawberries weighed 30 pounds.",
+        "Question": "Marco and his dad went strawberry picking. Marco's dad's strawberries weighed 11 pounds. If together their strawberries weighed 30 pounds.How much did Marco's strawberries weigh?",
+        "Equation": "( 30.0 - 11.0 )",
+        "Answer": 19,
+        "Type": "Subtraction",
+        "unit": null,
+        "option": null,
+        "Index": 508,
+        "Prediction": 19.0,
+        "score": 1,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"Marco and his dad went strawberry picking. Marco's dad's strawberries weighed 11 pounds. If together their strawberries weighed 30 pounds.How much did Marco's strawberries weigh?\"\"\"",
+                "    dad_strawberries = 11",
+                "    total_strawberries = 30",
+                "    marco_strawberries = total_strawberries - dad_strawberries",
+                "    result = marco_strawberries",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-512",
+        "Body": "Paul got a box of 521 crayons and 66 erasers for his birthday. At the end of the school year he only had 154 left while not having lost a single erasers.",
+        "Question": "Paul got a box of 521 crayons and 66 erasers for his birthday. At the end of the school year he only had 154 left while not having lost a single erasers.How many crayons had been lost or given away?",
+        "Equation": "( 521.0 - 154.0 )",
+        "Answer": 367,
+        "Type": "Subtraction",
+        "unit": null,
+        "option": null,
+        "Index": 512,
+        "Prediction": 367.0,
+        "score": 1,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"Paul got a box of 521 crayons and 66 erasers for his birthday. At the end of the school year he only had 154 left while not having lost a single erasers.How many crayons had been lost or given away?\"\"\"",
+                "    crayons_initial = 521",
+                "    erasers_initial = 66",
+                "    crayons_after = 154",
+                "    erasers_after = erasers_initial",
+                "    crayons_lost = crayons_initial - crayons_after",
+                "    result = crayons_lost",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-513",
+        "Body": "David did 56 more push-ups than Zachary in gym class today. If David did 38 push-ups",
+        "Question": "David did 56 more push-ups than Zachary in gym class today. If David did 38 push-upsHow many push-ups did Zachary and David do altogether?",
+        "Equation": "( ( 38.0 + 38.0 ) - 56.0 )",
+        "Answer": 20,
+        "Type": "Subtraction",
+        "unit": null,
+        "option": null,
+        "Index": 513,
+        "Prediction": 20.0,
+        "score": 1,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"David did 56 more push-ups than Zachary in gym class today. If David did 38 push-upsHow many push-ups did Zachary and David do altogether?\"\"\"",
+                "    david_pushups = 38",
+                "    zachary_pushups_difference = 56",
+                "    zachary_pushups = david_pushups - zachary_pushups_difference",
+                "    total_pushups = david_pushups + zachary_pushups",
+                "    result = total_pushups",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-518",
+        "Body": "Jessie weighed 114 kilograms. After she started to go jogging everyday she lost 50 kilograms in the first week and 60 kilograms in the second week.",
+        "Question": "Jessie weighed 114 kilograms. After she started to go jogging everyday she lost 50 kilograms in the first week and 60 kilograms in the second week.How much does she weigh now?",
+        "Equation": "( ( 114.0 - 50.0 ) - 60.0 )",
+        "Answer": 4,
+        "Type": "Subtraction",
+        "unit": null,
+        "option": null,
+        "Index": 518,
+        "Prediction": 4.0,
+        "score": 1,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"Jessie weighed 114 kilograms. After she started to go jogging everyday she lost 50 kilograms in the first week and 60 kilograms in the second week.How much does she weigh now?\"\"\"",
+                "    weight_initial = 114",
+                "    weight_lost_week1 = 50",
+                "    weight_lost_week2 = 60",
+                "    total_weight_lost = weight_lost_week1 + weight_lost_week2",
+                "    weight_now = weight_initial - total_weight_lost",
+                "    result = weight_now",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-520",
+        "Body": "Julia played tag with 14 kids on monday, 2 kids on tuesday and 8 kids on wednesday.",
+        "Question": "Julia played tag with 14 kids on monday, 2 kids on tuesday and 8 kids on wednesday.How many more kids did she play with on monday than on wednesday?",
+        "Equation": "( 14.0 - 8.0 )",
+        "Answer": 6,
+        "Type": "Subtraction",
+        "unit": null,
+        "option": null,
+        "Index": 520,
+        "Prediction": 6.0,
+        "score": 1,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"Julia played tag with 14 kids on monday, 2 kids on tuesday and 8 kids on wednesday.How many more kids did she play with on monday than on wednesday?\"\"\"",
+                "    monday_kids = 14",
+                "    wednesday_kids = 8",
+                "    difference = monday_kids - wednesday_kids",
+                "    result = difference",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-541",
+        "Body": "Jessie currently weighs 27 kilograms. After she started to go jogging everyday she lost 101 kilograms.",
+        "Question": "Jessie currently weighs 27 kilograms. After she started to go jogging everyday she lost 101 kilograms.How much did she weigh before starting to jog?",
+        "Equation": "( 27.0 + 101.0 )",
+        "Answer": 128,
+        "Type": "Addition",
+        "unit": null,
+        "option": null,
+        "Index": 541,
+        "Prediction": 128.0,
+        "score": 1,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"Jessie currently weighs 27 kilograms. After she started to go jogging everyday she lost 101 kilograms.How much did she weigh before starting to jog?\"\"\"",
+                "    weight_now = 27",
+                "    weight_lost = 101",
+                "    weight_before = weight_now + weight_lost",
+                "    result = weight_before",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-555",
+        "Body": "For the walls of the house he would use 8 large planks of wood. If each plank of wood needs 74 pieces of nails to be secured",
+        "Question": "For the walls of the house he would use 8 large planks of wood. If each plank of wood needs 74 pieces of nails to be securedHow many planks does John need for the house wall?",
+        "Equation": "8.0",
+        "Answer": 8,
+        "Type": "Common-Division",
+        "unit": null,
+        "option": null,
+        "Index": 555,
+        "Prediction": 592.0,
+        "score": 0,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"For the walls of the house he would use 8 large planks of wood. If each plank of wood needs 74 pieces of nails to be securedHow many planks does John need for the house wall?\"\"\"",
+                "    planks_needed = 8",
+                "    nails_per_plank = 74",
+                "    total_nails = planks_needed * nails_per_plank",
+                "    result = total_nails",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-567",
+        "Body": "Jerry had 2 action figures and 10 books on a shelf in his room. Later he added 4 more action figures to the shelf.",
+        "Question": "Jerry had 2 action figures and 10 books on a shelf in his room. Later he added 4 more action figures to the shelf.How many more books than action figures were on his shelf?",
+        "Equation": "( 10.0 - ( 2.0 + 4.0 ) )",
+        "Answer": 4,
+        "Type": "Subtraction",
+        "unit": null,
+        "option": null,
+        "Index": 567,
+        "Prediction": 4.0,
+        "score": 1,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"Jerry had 2 action figures and 10 books on a shelf in his room. Later he added 4 more action figures to the shelf.How many more books than action figures were on his shelf?\"\"\"",
+                "    action_figures_initial = 2",
+                "    books_initial = 10",
+                "    action_figures_added = 4",
+                "    action_figures_total = action_figures_initial + action_figures_added",
+                "    books_total = books_initial",
+                "    difference = books_total - action_figures_total",
+                "    result = difference",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-570",
+        "Body": "Paige was helping her mom plant flowers in 8 flowerbeds. They planted 32 seeds altogether. If they put same number of seeds in each flower bed",
+        "Question": "Paige was helping her mom plant flowers in 8 flowerbeds. They planted 32 seeds altogether. If they put same number of seeds in each flower bedHow many seeds did they plant in each flowerbed?",
+        "Equation": "( 32.0 / 8.0 )",
+        "Answer": 4,
+        "Type": "Common-Division",
+        "unit": null,
+        "option": null,
+        "Index": 570,
+        "Prediction": 4.0,
+        "score": 1,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"Paige was helping her mom plant flowers in 8 flowerbeds. They planted 32 seeds altogether. If they put same number of seeds in each flower bedHow many seeds did they plant in each flowerbed?\"\"\"",
+                "    flowerbeds = 8",
+                "    seeds_total = 32",
+                "    seeds_per_flowerbed = seeds_total / flowerbeds",
+                "    result = seeds_per_flowerbed",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-583",
+        "Body": "Rachel had to complete 8 pages of math homework. If she had to complete 3 more pages of math homework than reading homework",
+        "Question": "Rachel had to complete 8 pages of math homework. If she had to complete 3 more pages of math homework than reading homeworkHow many pages did she have to complete in all?",
+        "Equation": "( ( 8.0 + 8.0 ) - 3.0 )",
+        "Answer": 13,
+        "Type": "Subtraction",
+        "unit": null,
+        "option": null,
+        "Index": 583,
+        "Prediction": 11.0,
+        "score": 0,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"Rachel had to complete 8 pages of math homework. If she had to complete 3 more pages of math homework than reading homeworkHow many pages did she have to complete in all?\"\"\"",
+                "    math_homework = 8",
+                "    extra_math_homework = 3",
+                "    total_homework = math_homework + extra_math_homework",
+                "    result = total_homework",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-602",
+        "Body": "Bobby ate 28 pieces of candy. Then he ate 42 more. He also ate 63 pieces of chocolate.",
+        "Question": "Bobby ate 28 pieces of candy. Then he ate 42 more. He also ate 63 pieces of chocolate.How many pieces of candy did Bobby eat?",
+        "Equation": "( 28.0 + 42.0 )",
+        "Answer": 70,
+        "Type": "Addition",
+        "unit": null,
+        "option": null,
+        "Index": 602,
+        "Prediction": 70.0,
+        "score": 1,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"Bobby ate 28 pieces of candy. Then he ate 42 more. He also ate 63 pieces of chocolate.How many pieces of candy did Bobby eat?\"\"\"",
+                "    candy_initial = 28",
+                "    candy_more = 42",
+                "    chocolate = 63",
+                "    candy_total = candy_initial + candy_more",
+                "    result = candy_total",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-604",
+        "Body": "Bobby had 22 pieces of candy. He ate some pieces of candy. Then he ate 5 more. If he still has 8 pieces of candy left",
+        "Question": "Bobby had 22 pieces of candy. He ate some pieces of candy. Then he ate 5 more. If he still has 8 pieces of candy leftHow many pieces of candy had he eaten at the start?",
+        "Equation": "( ( 22.0 - 5.0 ) - 8.0 )",
+        "Answer": 9,
+        "Type": "Subtraction",
+        "unit": null,
+        "option": null,
+        "Index": 604,
+        "Prediction": 14.0,
+        "score": 0,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"Bobby had 22 pieces of candy. He ate some pieces of candy. Then he ate 5 more. If he still has 8 pieces of candy leftHow many pieces of candy had he eaten at the start?\"\"\"",
+                "    candy_initial = 22",
+                "    candy_left = 8",
+                "    candy_eaten = candy_initial - candy_left",
+                "    result = candy_eaten",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-606",
+        "Body": "There were 61 parents in the program and 177 pupils too. The program could seat 44 people",
+        "Question": "There were 61 parents in the program and 177 pupils too. The program could seat 44 peopleHow many people were present in the program?",
+        "Equation": "( 61.0 + 177.0 )",
+        "Answer": 238,
+        "Type": "Addition",
+        "unit": null,
+        "option": null,
+        "Index": 606,
+        "Prediction": 238.0,
+        "score": 1,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"There were 61 parents in the program and 177 pupils too. The program could seat 44 peopleHow many people were present in the program?\"\"\"",
+                "    parents = 61",
+                "    pupils = 177",
+                "    total_people = parents + pupils",
+                "    result = total_people",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-623",
+        "Body": "During summer break 610769 kids from Lawrence county go to camp and the other 590796 kids stay home. An additional 22 kids from outside the county attended the camp.",
+        "Question": "During summer break 610769 kids from Lawrence county go to camp and the other 590796 kids stay home. An additional 22 kids from outside the county attended the camp.About how many kids are in Lawrence county?",
+        "Equation": "( 610769.0 + 590796.0 )",
+        "Answer": 1201565,
+        "Type": "Addition",
+        "unit": null,
+        "option": null,
+        "Index": 623,
+        "Prediction": 1201587.0,
+        "score": 0,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"During summer break 610769 kids from Lawrence county go to camp and the other 590796 kids stay home. An additional 22 kids from outside the county attended the camp.About how many kids are in Lawrence county?\"\"\"",
+                "    kids_lawrence_county = 610769",
+                "    kids_outside_county = 590796 + 22",
+                "    total_kids = kids_lawrence_county + kids_outside_county",
+                "    result = total_kids",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-645",
+        "Body": "Bobby had 32 pieces of candy. He ate some pieces of candy. If he has 20 pieces of candy left",
+        "Question": "Bobby had 32 pieces of candy. He ate some pieces of candy. If he has 20 pieces of candy leftHow many pieces of candy did Bobby eat?",
+        "Equation": "( 32.0 - 20.0 )",
+        "Answer": 12,
+        "Type": "Subtraction",
+        "unit": null,
+        "option": null,
+        "Index": 645,
+        "Prediction": 12.0,
+        "score": 1,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"Bobby had 32 pieces of candy. He ate some pieces of candy. If he has 20 pieces of candy leftHow many pieces of candy did Bobby eat?\"\"\"",
+                "    candy_initial = 32",
+                "    candy_left = 20",
+                "    candy_eaten = candy_initial - candy_left",
+                "    result = candy_eaten",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-658",
+        "Body": "Jerry had 8 action figures and 9 books on a shelf in his room. Later he added 10 more books to the shelf.",
+        "Question": "Jerry had 8 action figures and 9 books on a shelf in his room. Later he added 10 more books to the shelf.How many books were on his shelf in all?",
+        "Equation": "( 9.0 + 10.0 )",
+        "Answer": 19,
+        "Type": "Addition",
+        "unit": null,
+        "option": null,
+        "Index": 658,
+        "Prediction": 19.0,
+        "score": 1,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"Jerry had 8 action figures and 9 books on a shelf in his room. Later he added 10 more books to the shelf.How many books were on his shelf in all?\"\"\"",
+                "    books_initial = 9",
+                "    books_added = 10",
+                "    total_books = books_initial + books_added",
+                "    result = total_books",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-666",
+        "Body": "Dan has $ 4. He bought a candy bar for $ 7 and a chocolate for $ 6.",
+        "Question": "Dan has $ 4. He bought a candy bar for $ 7 and a chocolate for $ 6.How much money did he spend buying the candy bar and chocolate?",
+        "Equation": "( 7.0 + 6.0 )",
+        "Answer": 13,
+        "Type": "Addition",
+        "unit": null,
+        "option": null,
+        "Index": 666,
+        "Prediction": 13.0,
+        "score": 1,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"Dan has $ 4. He bought a candy bar for $ 7 and a chocolate for $ 6.How much money did he spend buying the candy bar and chocolate?\"\"\"",
+                "    money_initial = 4",
+                "    candy_bar_cost = 7",
+                "    chocolate_cost = 6",
+                "    money_spent = candy_bar_cost + chocolate_cost",
+                "    result = money_spent",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-668",
+        "Body": "Mary is baking a cake. The recipe calls for 11 cups of sugar and some more cups of flour. She already put in 3 cups of flour. If she still needs to add 6 more cups of flour",
+        "Question": "Mary is baking a cake. The recipe calls for 11 cups of sugar and some more cups of flour. She already put in 3 cups of flour. If she still needs to add 6 more cups of flourHow many cups of flour did the recipe require?",
+        "Equation": "( 3.0 + 6.0 )",
+        "Answer": 9,
+        "Type": "Addition",
+        "unit": null,
+        "option": null,
+        "Index": 668,
+        "Prediction": 9.0,
+        "score": 1,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"Mary is baking a cake. The recipe calls for 11 cups of sugar and some more cups of flour. She already put in 3 cups of flour. If she still needs to add 6 more cups of flourHow many cups of flour did the recipe require?\"\"\"",
+                "    flour_added = 3",
+                "    flour_needed = 6",
+                "    flour_total = flour_added + flour_needed",
+                "    result = flour_total",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-687",
+        "Body": "The Razorback t-shirt shop makes $ 87 dollars off each t-shirt sold. During the Arkansas game and the Texas tech game they sold a total of 95 t-shirts. If they sold 47 t-shirts during the Arkansas game",
+        "Question": "The Razorback t-shirt shop makes $ 87 dollars off each t-shirt sold. During the Arkansas game and the Texas tech game they sold a total of 95 t-shirts. If they sold 47 t-shirts during the Arkansas gameHow much money did they make from selling the t-shirts?",
+        "Equation": "( 87.0 * 95.0 )",
+        "Answer": 8265,
+        "Type": "Multiplication",
+        "unit": null,
+        "option": null,
+        "Index": 687,
+        "Prediction": 8265.0,
+        "score": 1,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"The Razorback t-shirt shop makes $ 87 dollars off each t-shirt sold. During the Arkansas game and the Texas tech game they sold a total of 95 t-shirts. If they sold 47 t-shirts during the Arkansas gameHow much money did they make from selling the t-shirts?\"\"\"",
+                "    t_shirt_price = 87",
+                "    total_t_shirts = 95",
+                "    t_shirts_arkansas = 47",
+                "    t_shirts_texas_tech = total_t_shirts - t_shirts_arkansas",
+                "    total_revenue = (t_shirts_arkansas + t_shirts_texas_tech) * t_shirt_price",
+                "    result = total_revenue",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-694",
+        "Body": "Haley grew 14 trees in her backyard. After a typhoon 9 died.",
+        "Question": "Haley grew 14 trees in her backyard. After a typhoon 9 died.How many more trees died in the typhoon than those that survived?",
+        "Equation": "( 9.0 - ( 14.0 - 9.0 ) )",
+        "Answer": 4,
+        "Type": "Subtraction",
+        "unit": null,
+        "option": null,
+        "Index": 694,
+        "Prediction": 4.0,
+        "score": 1,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"Haley grew 14 trees in her backyard. After a typhoon 9 died.How many more trees died in the typhoon than those that survived?\"\"\"",
+                "    trees_initial = 14",
+                "    trees_died = 9",
+                "    trees_survived = trees_initial - trees_died",
+                "    trees_difference = trees_died - trees_survived",
+                "    result = trees_difference",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-703",
+        "Body": "The grasshopper and the frog had a jumping contest. The frog jumped 39 inches and the grasshopper jumped 17 inches.",
+        "Question": "The grasshopper and the frog had a jumping contest. The frog jumped 39 inches and the grasshopper jumped 17 inches.How much farther did the frog jump than the grasshopper?",
+        "Equation": "( 39.0 - 17.0 )",
+        "Answer": 22,
+        "Type": "Subtraction",
+        "unit": null,
+        "option": null,
+        "Index": 703,
+        "Prediction": 22.0,
+        "score": 1,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"The grasshopper and the frog had a jumping contest. The frog jumped 39 inches and the grasshopper jumped 17 inches.How much farther did the frog jump than the grasshopper?\"\"\"",
+                "    frog_jump = 39",
+                "    grasshopper_jump = 17",
+                "    difference = frog_jump - grasshopper_jump",
+                "    result = difference",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-713",
+        "Body": "A book has 3 chapters. The first chapter is 35 pages long the second chapter is 18 pages long and the third chapter is 3 pages long.",
+        "Question": "A book has 3 chapters. The first chapter is 35 pages long the second chapter is 18 pages long and the third chapter is 3 pages long.How many more pages does the second chapter have than the third chapter?",
+        "Equation": "( 18.0 - 3.0 )",
+        "Answer": 15,
+        "Type": "Subtraction",
+        "unit": null,
+        "option": null,
+        "Index": 713,
+        "Prediction": 15.0,
+        "score": 1,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"A book has 3 chapters. The first chapter is 35 pages long the second chapter is 18 pages long and the third chapter is 3 pages long.How many more pages does the second chapter have than the third chapter?\"\"\"",
+                "    chapter_1_pages = 35",
+                "    chapter_2_pages = 18",
+                "    chapter_3_pages = 3",
+                "    pages_difference = chapter_2_pages - chapter_3_pages",
+                "    result = pages_difference",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-729",
+        "Body": "Jerry had some action figures on a shelf in his room. Later he added 2 more action figures to the shelf and removed 7 of the old ones. If there are 10 action figures on his shelf now",
+        "Question": "Jerry had some action figures on a shelf in his room. Later he added 2 more action figures to the shelf and removed 7 of the old ones. If there are 10 action figures on his shelf nowHow many action figures did he have initially on the shelf?",
+        "Equation": "( ( 10.0 + 7.0 ) - 2.0 )",
+        "Answer": 15,
+        "Type": "Subtraction",
+        "unit": null,
+        "option": null,
+        "Index": 729,
+        "Prediction": 15.0,
+        "score": 1,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"Jerry had some action figures on a shelf in his room. Later he added 2 more action figures to the shelf and removed 7 of the old ones. If there are 10 action figures on his shelf nowHow many action figures did he have initially on the shelf?\"\"\"",
+                "    action_figures_after = 10",
+                "    action_figures_added = 2",
+                "    action_figures_removed = 7",
+                "    action_figures_initial = action_figures_after + action_figures_removed - action_figures_added",
+                "    result = action_figures_initial",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-739",
+        "Body": "Brenda's mother made cookies for 5. She prepared 22 cookies but had to throw away 17 cookies. If each of them had the same number of cookies",
+        "Question": "Brenda's mother made cookies for 5. She prepared 22 cookies but had to throw away 17 cookies. If each of them had the same number of cookiesHow many did each of them have?",
+        "Equation": "( ( 22.0 - 17.0 ) / 5.0 )",
+        "Answer": 1,
+        "Type": "Common-Division",
+        "unit": null,
+        "option": null,
+        "Index": 739,
+        "Prediction": 1.0,
+        "score": 1,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"Brenda's mother made cookies for 5. She prepared 22 cookies but had to throw away 17 cookies. If each of them had the same number of cookiesHow many did each of them have?\"\"\"",
+                "    people = 5",
+                "    cookies_prepared = 22",
+                "    cookies_thrown_away = 17",
+                "    cookies_left = cookies_prepared - cookies_thrown_away",
+                "    cookies_per_person = cookies_left // people",
+                "    result = cookies_per_person",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-742",
+        "Body": "Every day Ryan spends 6 hours on learning english and 7 hours on learning chinese. If he learns for 5 days",
+        "Question": "Every day Ryan spends 6 hours on learning english and 7 hours on learning chinese. If he learns for 5 daysHow many hours does he spend on learning english and chinese in all?",
+        "Equation": "( ( 6.0 + 7.0 ) * 5.0 )",
+        "Answer": 65,
+        "Type": "Multiplication",
+        "unit": null,
+        "option": null,
+        "Index": 742,
+        "Prediction": 65.0,
+        "score": 1,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"Every day Ryan spends 6 hours on learning english and 7 hours on learning chinese. If he learns for 5 daysHow many hours does he spend on learning english and chinese in all?\"\"\"",
+                "    english_hours_per_day = 6",
+                "    chinese_hours_per_day = 7",
+                "    num_days = 5",
+                "    total_english_hours = english_hours_per_day * num_days",
+                "    total_chinese_hours = chinese_hours_per_day * num_days",
+                "    total_hours = total_english_hours + total_chinese_hours",
+                "    result = total_hours",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-744",
+        "Body": "There were 8 people on the bus. At the next stop 12 more people got on the bus and 3 people got off.",
+        "Question": "There were 8 people on the bus. At the next stop 12 more people got on the bus and 3 people got off.How many people are there on the bus now?",
+        "Equation": "( ( 8.0 + 12.0 ) - 3.0 )",
+        "Answer": 17,
+        "Type": "Subtraction",
+        "unit": null,
+        "option": null,
+        "Index": 744,
+        "Prediction": 17.0,
+        "score": 1,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"There were 8 people on the bus. At the next stop 12 more people got on the bus and 3 people got off.How many people are there on the bus now?\"\"\"",
+                "    people_initial = 8",
+                "    people_on = 12",
+                "    people_off = 3",
+                "    people_total = people_initial + people_on - people_off",
+                "    result = people_total",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-761",
+        "Body": "Each basket of peaches has 19 red peaches and 4 green peaches. If there are 15 such baskets",
+        "Question": "Each basket of peaches has 19 red peaches and 4 green peaches. If there are 15 such basketsHow many peaches are in the baskets altogether?",
+        "Equation": "( ( 19.0 + 4.0 ) * 15.0 )",
+        "Answer": 345,
+        "Type": "Multiplication",
+        "unit": null,
+        "option": null,
+        "Index": 761,
+        "Prediction": 345.0,
+        "score": 1,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"Each basket of peaches has 19 red peaches and 4 green peaches. If there are 15 such basketsHow many peaches are in the baskets altogether?\"\"\"",
+                "    red_peaches_per_basket = 19",
+                "    green_peaches_per_basket = 4",
+                "    num_baskets = 15",
+                "    total_peaches = (red_peaches_per_basket + green_peaches_per_basket) * num_baskets",
+                "    result = total_peaches",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-780",
+        "Body": "He also had 74 aquariums for freshwater animals and 22 aquariums for saltwater animals. Each aquarium has 46 animals in it.",
+        "Question": "He also had 74 aquariums for freshwater animals and 22 aquariums for saltwater animals. Each aquarium has 46 animals in it.How many saltwater animals does Tyler have?",
+        "Equation": "( 22.0 * 46.0 )",
+        "Answer": 1012,
+        "Type": "Multiplication",
+        "unit": null,
+        "option": null,
+        "Index": 780,
+        "Prediction": 1012.0,
+        "score": 1,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"He also had 74 aquariums for freshwater animals and 22 aquariums for saltwater animals. Each aquarium has 46 animals in it.How many saltwater animals does Tyler have?\"\"\"",
+                "    aquariums_freshwater = 74",
+                "    aquariums_saltwater = 22",
+                "    animals_per_aquarium = 46",
+                "    total_saltwater_animals = aquariums_saltwater * animals_per_aquarium",
+                "    result = total_saltwater_animals",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-781",
+        "Body": "There were 106 dollars in Olivia's wallet. After she visited a supermarket and a showroom there were 26 dollars left. If she spent 49 dollars at the showroom",
+        "Question": "There were 106 dollars in Olivia's wallet. After she visited a supermarket and a showroom there were 26 dollars left. If she spent 49 dollars at the showroomHow much did she spend at the supermarket?",
+        "Equation": "( ( 106.0 - 26.0 ) - 49.0 )",
+        "Answer": 31,
+        "Type": "Subtraction",
+        "unit": null,
+        "option": null,
+        "Index": 781,
+        "Prediction": 31.0,
+        "score": 1,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"There were 106 dollars in Olivia's wallet. After she visited a supermarket and a showroom there were 26 dollars left. If she spent 49 dollars at the showroomHow much did she spend at the supermarket?\"\"\"",
+                "    money_initial = 106",
+                "    money_after = 26",
+                "    showroom_spent = 49",
+                "    supermarket_spent = money_initial - money_after - showroom_spent",
+                "    result = supermarket_spent",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-783",
+        "Body": "Rachel picked 6 ripe apples from her tree. Now the tree has 2 ripe apples and 4 unripe apples.",
+        "Question": "Rachel picked 6 ripe apples from her tree. Now the tree has 2 ripe apples and 4 unripe apples.How many apples did the tree have to begin with?",
+        "Equation": "( ( 6.0 + 2.0 ) + 4.0 )",
+        "Answer": 12,
+        "Type": "Addition",
+        "unit": null,
+        "option": null,
+        "Index": 783,
+        "Prediction": 12.0,
+        "score": 1,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"Rachel picked 6 ripe apples from her tree. Now the tree has 2 ripe apples and 4 unripe apples.How many apples did the tree have to begin with?\"\"\"",
+                "    apples_picked = 6",
+                "    apples_ripe_now = 2",
+                "    apples_unripe_now = 4",
+                "    apples_initial = apples_picked + apples_ripe_now + apples_unripe_now",
+                "    result = apples_initial",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-786",
+        "Body": "Faye was placing her pencils into rows with 5 pencils in each row. If she had 35 pencils and 7 crayons",
+        "Question": "Faye was placing her pencils into rows with 5 pencils in each row. If she had 35 pencils and 7 crayonsHow many rows could she make?",
+        "Equation": "( 35.0 / 5.0 )",
+        "Answer": 7,
+        "Type": "Common-Division",
+        "unit": null,
+        "option": null,
+        "Index": 786,
+        "Prediction": 8.0,
+        "score": 0,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"Faye was placing her pencils into rows with 5 pencils in each row. If she had 35 pencils and 7 crayonsHow many rows could she make?\"\"\"",
+                "    pencils = 35",
+                "    crayons = 7",
+                "    pencils_per_row = 5",
+                "    total_items = pencils + crayons",
+                "    rows = total_items // pencils_per_row",
+                "    result = rows",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-808",
+        "Body": "Matthew gave equal numbers of crackers and cakes to his 4 friends. If he had 32 crackers and 98 cakes initially",
+        "Question": "Matthew gave equal numbers of crackers and cakes to his 4 friends. If he had 32 crackers and 98 cakes initiallyHow many crackers did each person eat?",
+        "Equation": "( 32.0 / 4.0 )",
+        "Answer": 8,
+        "Type": "Common-Division",
+        "unit": null,
+        "option": null,
+        "Index": 808,
+        "Prediction": 8.0,
+        "score": 1,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"Matthew gave equal numbers of crackers and cakes to his 4 friends. If he had 32 crackers and 98 cakes initiallyHow many crackers did each person eat?\"\"\"",
+                "    crackers_initial = 32",
+                "    cakes_initial = 98",
+                "    num_friends = 4",
+                "    crackers_per_person = crackers_initial // num_friends",
+                "    result = crackers_per_person",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-822",
+        "Body": "Last week Fred had 33 dollars and Jason had 95 dollars. Over the weekend Fred delivered newspapers earning 16 dollars and washed cars earning 74 dollars.",
+        "Question": "Last week Fred had 33 dollars and Jason had 95 dollars. Over the weekend Fred delivered newspapers earning 16 dollars and washed cars earning 74 dollars.How much money did Fred earn over the weekend?",
+        "Equation": "( 16.0 + 74.0 )",
+        "Answer": 90,
+        "Type": "Addition",
+        "unit": null,
+        "option": null,
+        "Index": 822,
+        "Prediction": 90.0,
+        "score": 1,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"Last week Fred had 33 dollars and Jason had 95 dollars. Over the weekend Fred delivered newspapers earning 16 dollars and washed cars earning 74 dollars.How much money did Fred earn over the weekend?\"\"\"",
+                "    fred_initial = 33",
+                "    newspaper_earnings = 16",
+                "    car_earnings = 74",
+                "    fred_earnings = newspaper_earnings + car_earnings",
+                "    result = fred_earnings",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-850",
+        "Body": "Allan brought 5 balloons and Jake brought 6 balloons to the park. Jake then bought 3 more balloons at the park.",
+        "Question": "Allan brought 5 balloons and Jake brought 6 balloons to the park. Jake then bought 3 more balloons at the park.How many balloons did Jake bring to the park?",
+        "Equation": "( 6.0 + 3.0 )",
+        "Answer": 9,
+        "Type": "Addition",
+        "unit": null,
+        "option": null,
+        "Index": 850,
+        "Prediction": 9.0,
+        "score": 1,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"Allan brought 5 balloons and Jake brought 6 balloons to the park. Jake then bought 3 more balloons at the park.How many balloons did Jake bring to the park?\"\"\"",
+                "    jake_balloons_initial = 6",
+                "    balloons_bought = 3",
+                "    jake_balloons_total = jake_balloons_initial + balloons_bought",
+                "    result = jake_balloons_total",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-856",
+        "Body": "Jesse's room is 7 feet long. If she needs a carpet of size 14 square feet",
+        "Question": "Jesse's room is 7 feet long. If she needs a carpet of size 14 square feetWhat is the width of her room?",
+        "Equation": "( 14.0 / 7.0 )",
+        "Answer": 2,
+        "Type": "Common-Division",
+        "unit": null,
+        "option": null,
+        "Index": 856,
+        "Prediction": 2.0,
+        "score": 1,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"Jesse's room is 7 feet long. If she needs a carpet of size 14 square feetWhat is the width of her room?\"\"\"",
+                "    length = 7",
+                "    area = 14",
+                "    width = area / length",
+                "    result = width",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-858",
+        "Body": "33 campers went rowing in the morning 34 campers went rowing in the afternoon and 10 campers went rowing in the evening.",
+        "Question": "33 campers went rowing in the morning 34 campers went rowing in the afternoon and 10 campers went rowing in the evening.How many more campers went rowing in the afternoon than in the evening?",
+        "Equation": "( 34.0 - 10.0 )",
+        "Answer": 24,
+        "Type": "Subtraction",
+        "unit": null,
+        "option": null,
+        "Index": 858,
+        "Prediction": 24.0,
+        "score": 1,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"33 campers went rowing in the morning 34 campers went rowing in the afternoon and 10 campers went rowing in the evening.How many more campers went rowing in the afternoon than in the evening?\"\"\"",
+                "    campers_morning = 33",
+                "    campers_afternoon = 34",
+                "    campers_evening = 10",
+                "    campers_difference = campers_afternoon - campers_evening",
+                "    result = campers_difference",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-867",
+        "Body": "Next on his checklist is wax to stick the feathers together. If the feathers require 166 g of wax and right now he has 20 g",
+        "Question": "Next on his checklist is wax to stick the feathers together. If the feathers require 166 g of wax and right now he has 20 gHow many more grams of wax does he need?",
+        "Equation": "( 166.0 - 20.0 )",
+        "Answer": 146,
+        "Type": "Subtraction",
+        "unit": null,
+        "option": null,
+        "Index": 867,
+        "Prediction": 146.0,
+        "score": 1,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"Next on his checklist is wax to stick the feathers together. If the feathers require 166 g of wax and right now he has 20 gHow many more grams of wax does he need?\"\"\"",
+                "    wax_required = 166",
+                "    wax_available = 20",
+                "    wax_needed = wax_required - wax_available",
+                "    result = wax_needed",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-868",
+        "Body": "The bananas in Philip's collection are organized into 196 groups. If there are a total of 392 bananas in Philip's banana collection",
+        "Question": "The bananas in Philip's collection are organized into 196 groups. If there are a total of 392 bananas in Philip's banana collectionHow big is each group?",
+        "Equation": "( 392.0 / 196.0 )",
+        "Answer": 2,
+        "Type": "Common-Division",
+        "unit": null,
+        "option": null,
+        "Index": 868,
+        "Prediction": 2.0,
+        "score": 1,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"The bananas in Philip's collection are organized into 196 groups. If there are a total of 392 bananas in Philip's banana collectionHow big is each group?\"\"\"",
+                "    num_groups = 196",
+                "    total_bananas = 392",
+                "    bananas_per_group = total_bananas / num_groups",
+                "    result = bananas_per_group",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-874",
+        "Body": "A farmer had 105 green tomatoes and 71 red tomatoes in his garden. If he picked 137 tomatoes",
+        "Question": "A farmer had 105 green tomatoes and 71 red tomatoes in his garden. If he picked 137 tomatoesHow many tomatoes are left?",
+        "Equation": "( ( 105.0 + 71.0 ) - 137.0 )",
+        "Answer": 39,
+        "Type": "Subtraction",
+        "unit": null,
+        "option": null,
+        "Index": 874,
+        "Prediction": 39.0,
+        "score": 1,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"A farmer had 105 green tomatoes and 71 red tomatoes in his garden. If he picked 137 tomatoesHow many tomatoes are left?\"\"\"",
+                "    green_tomatoes = 105",
+                "    red_tomatoes = 71",
+                "    total_tomatoes = green_tomatoes + red_tomatoes",
+                "    tomatoes_picked = 137",
+                "    tomatoes_left = total_tomatoes - tomatoes_picked",
+                "    result = tomatoes_left",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-881",
+        "Body": "Rachel picked 4 apples from her tree. If the tree had 7 apples initially.",
+        "Question": "Rachel picked 4 apples from her tree. If the tree had 7 apples initially.How many apples are still there on the tree?",
+        "Equation": "( 7.0 - 4.0 )",
+        "Answer": 3,
+        "Type": "Subtraction",
+        "unit": null,
+        "option": null,
+        "Index": 881,
+        "Prediction": 3.0,
+        "score": 1,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"Rachel picked 4 apples from her tree. If the tree had 7 apples initially.How many apples are still there on the tree?\"\"\"",
+                "    apples_initial = 7",
+                "    apples_picked = 4",
+                "    apples_left = apples_initial - apples_picked",
+                "    result = apples_left",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-903",
+        "Body": "Stray cats loved eating goldfish in the pond leaving 6 goldfish. Paige had raised 8 goldfish in the pond initially.",
+        "Question": "Stray cats loved eating goldfish in the pond leaving 6 goldfish. Paige had raised 8 goldfish in the pond initially.How many goldfish disappeared?",
+        "Equation": "( 8.0 - 6.0 )",
+        "Answer": 2,
+        "Type": "Subtraction",
+        "unit": null,
+        "option": null,
+        "Index": 903,
+        "Prediction": 2.0,
+        "score": 1,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"Stray cats loved eating goldfish in the pond leaving 6 goldfish. Paige had raised 8 goldfish in the pond initially.How many goldfish disappeared?\"\"\"",
+                "    goldfish_initial = 8",
+                "    goldfish_after = 6",
+                "    goldfish_disappeared = goldfish_initial - goldfish_after",
+                "    result = goldfish_disappeared",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-904",
+        "Body": "Danny collects bottle caps and wrappers. He found 58 bottle caps and 25 wrappers at the park. Now he has 11 wrappers and 12 bottle caps in his collection.",
+        "Question": "Danny collects bottle caps and wrappers. He found 58 bottle caps and 25 wrappers at the park. Now he has 11 wrappers and 12 bottle caps in his collection.How many more bottle caps than wrappers does danny have now?",
+        "Equation": "( 12.0 - 11.0 )",
+        "Answer": 1,
+        "Type": "Subtraction",
+        "unit": null,
+        "option": null,
+        "Index": 904,
+        "Prediction": 1.0,
+        "score": 1,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"Danny collects bottle caps and wrappers. He found 58 bottle caps and 25 wrappers at the park. Now he has 11 wrappers and 12 bottle caps in his collection.How many more bottle caps than wrappers does danny have now?\"\"\"",
+                "    bottle_caps_found = 58",
+                "    wrappers_found = 25",
+                "    bottle_caps_now = 12",
+                "    wrappers_now = 11",
+                "    bottle_caps_difference = bottle_caps_now - wrappers_now",
+                "    result = bottle_caps_difference",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-915",
+        "Body": "Winter is almost here and most animals are migrating to warmer countries. There were 87 bird families living near the mountain. If 7 bird families flew away for winter",
+        "Question": "Winter is almost here and most animals are migrating to warmer countries. There were 87 bird families living near the mountain. If 7 bird families flew away for winterHow many more bird families stayed behind than those that flew away for the winter?",
+        "Equation": "( ( 87.0 - 7.0 ) - 7.0 )",
+        "Answer": 73,
+        "Type": "Subtraction",
+        "unit": null,
+        "option": null,
+        "Index": 915,
+        "Prediction": 80.0,
+        "score": 0,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"Winter is almost here and most animals are migrating to warmer countries. There were 87 bird families living near the mountain. If 7 bird families flew away for winterHow many more bird families stayed behind than those that flew away for the winter?\"\"\"",
+                "    bird_families_initial = 87",
+                "    bird_families_migrated = 7",
+                "    bird_families_remaining = bird_families_initial - bird_families_migrated",
+                "    result = bird_families_remaining",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-918",
+        "Body": "Nell collects baseball cards. She had 528 cards while Jeff had 11 cards. She gave some of her cards to jeff and now has 252 cards left.",
+        "Question": "Nell collects baseball cards. She had 528 cards while Jeff had 11 cards. She gave some of her cards to jeff and now has 252 cards left.How many cards did Nell give to Jeff?",
+        "Equation": "( 528.0 - 252.0 )",
+        "Answer": 276,
+        "Type": "Subtraction",
+        "unit": null,
+        "option": null,
+        "Index": 918,
+        "Prediction": 276.0,
+        "score": 1,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"Nell collects baseball cards. She had 528 cards while Jeff had 11 cards. She gave some of her cards to jeff and now has 252 cards left.How many cards did Nell give to Jeff?\"\"\"",
+                "    nell_cards_initial = 528",
+                "    jeff_cards_initial = 11",
+                "    nell_cards_after = 252",
+                "    nell_cards_given = nell_cards_initial - nell_cards_after",
+                "    result = nell_cards_given",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-924",
+        "Body": "Jesse has 18 square feet of carpet. If her room is 4 feet long and 20 feet wide",
+        "Question": "Jesse has 18 square feet of carpet. If her room is 4 feet long and 20 feet wideHow much more carpet does she need to cover the whole floor?",
+        "Equation": "( ( 4.0 * 20.0 ) - 18.0 )",
+        "Answer": 62,
+        "Type": "Subtraction",
+        "unit": null,
+        "option": null,
+        "Index": 924,
+        "Prediction": 62.0,
+        "score": 1,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"Jesse has 18 square feet of carpet. If her room is 4 feet long and 20 feet wideHow much more carpet does she need to cover the whole floor?\"\"\"",
+                "    carpet_initial = 18",
+                "    room_length = 4",
+                "    room_width = 20",
+                "    room_area = room_length * room_width",
+                "    carpet_needed = room_area - carpet_initial",
+                "    result = carpet_needed",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-953",
+        "Body": "After eating a hearty meal they went to see the Buckingham palace. There, Rachel learned that 132 visitors came to the Buckingham palace that day. If 406 people visited the Buckingham palace within the past 327 days",
+        "Question": "After eating a hearty meal they went to see the Buckingham palace. There, Rachel learned that 132 visitors came to the Buckingham palace that day. If 406 people visited the Buckingham palace within the past 327 daysHow many visitors visited the Buckingham palace on the previous day?",
+        "Equation": "( 406.0 - 132.0 )",
+        "Answer": 274,
+        "Type": "Subtraction",
+        "unit": null,
+        "option": null,
+        "Index": 953,
+        "Prediction": 130.7584097859327,
+        "score": 0,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"After eating a hearty meal they went to see the Buckingham palace. There, Rachel learned that 132 visitors came to the Buckingham palace that day. If 406 people visited the Buckingham palace within the past 327 daysHow many visitors visited the Buckingham palace on the previous day?\"\"\"",
+                "    visitors_today = 132",
+                "    visitors_total = 406",
+                "    days_total = 327",
+                "    visitors_per_day = visitors_total / days_total",
+                "    visitors_yesterday = visitors_today - visitors_per_day",
+                "    result = visitors_yesterday",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-962",
+        "Body": "Being his favorite, he saved checking on the grapevines after 57 stops. He was told by 252 of the pickers that they fill 108 drums of grapes per day.",
+        "Question": "Being his favorite, he saved checking on the grapevines after 57 stops. He was told by 252 of the pickers that they fill 108 drums of grapes per day.How many drums of grapes would be filled in 58 days?",
+        "Equation": "( 108.0 * 58.0 )",
+        "Answer": 6264,
+        "Type": "Multiplication",
+        "unit": null,
+        "option": null,
+        "Index": 962,
+        "Prediction": 1578528.0,
+        "score": 0,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"Being his favorite, he saved checking on the grapevines after 57 stops. He was told by 252 of the pickers that they fill 108 drums of grapes per day.How many drums of grapes would be filled in 58 days?\"\"\"",
+                "    pickers = 252",
+                "    drums_per_day = 108",
+                "    num_days = 58",
+                "    total_drums = pickers * drums_per_day * num_days",
+                "    result = total_drums",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-970",
+        "Body": "Jesse needs a carpet of size 10 square feet to cover her room. If her room is 5 feet long",
+        "Question": "Jesse needs a carpet of size 10 square feet to cover her room. If her room is 5 feet longWhat is the width of her room?",
+        "Equation": "( 10.0 / 5.0 )",
+        "Answer": 2,
+        "Type": "Common-Division",
+        "unit": null,
+        "option": null,
+        "Index": 970,
+        "Prediction": 2.0,
+        "score": 1,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"Jesse needs a carpet of size 10 square feet to cover her room. If her room is 5 feet longWhat is the width of her room?\"\"\"",
+                "    carpet_size = 10",
+                "    room_length = 5",
+                "    room_width = carpet_size / room_length",
+                "    result = room_width",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-982",
+        "Body": "62 campers went rowing in the morning. 39 campers went rowing in the afternoon.",
+        "Question": "62 campers went rowing in the morning. 39 campers went rowing in the afternoon.How many more campers went rowing in the morning than in the afternoon?",
+        "Equation": "( 62.0 - 39.0 )",
+        "Answer": 23,
+        "Type": "Subtraction",
+        "unit": null,
+        "option": null,
+        "Index": 982,
+        "Prediction": 23.0,
+        "score": 1,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"62 campers went rowing in the morning. 39 campers went rowing in the afternoon.How many more campers went rowing in the morning than in the afternoon?\"\"\"",
+                "    morning_campers = 62",
+                "    afternoon_campers = 39",
+                "    difference = morning_campers - afternoon_campers",
+                "    result = difference",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-991",
+        "Body": "After resting they decided to go for a swim. The depth of the water is 9 times Dean's height. If Ron is 15 feet tall and Dean is 6 feet shorter than Ron",
+        "Question": "After resting they decided to go for a swim. The depth of the water is 9 times Dean's height. If Ron is 15 feet tall and Dean is 6 feet shorter than RonHow deep was the water?",
+        "Equation": "( ( 15.0 - 6.0 ) * 9.0 )",
+        "Answer": 81,
+        "Type": "Multiplication",
+        "unit": null,
+        "option": null,
+        "Index": 991,
+        "Prediction": 81.0,
+        "score": 1,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"After resting they decided to go for a swim. The depth of the water is 9 times Dean's height. If Ron is 15 feet tall and Dean is 6 feet shorter than RonHow deep was the water?\"\"\"",
+                "    ron_height = 15",
+                "    dean_height = ron_height - 6",
+                "    water_depth = dean_height * 9",
+                "    result = water_depth",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-992",
+        "Body": "In a school there are 308 girls and 318 boys. There are also 36 teachers",
+        "Question": "In a school there are 308 girls and 318 boys. There are also 36 teachersHow many pupils are there in that school?",
+        "Equation": "( 308.0 + 318.0 )",
+        "Answer": 626,
+        "Type": "Addition",
+        "unit": null,
+        "option": null,
+        "Index": 992,
+        "Prediction": 590.0,
+        "score": 0,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"In a school there are 308 girls and 318 boys. There are also 36 teachers. How many pupils are there in that school?\"\"\"",
+                "    girls = 308",
+                "    boys = 318",
+                "    teachers = 36",
+                "    pupils = girls + boys - teachers",
+                "    result = pupils",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-996",
+        "Body": "Paige was helping her mom plant flowers and together they planted 36 seeds. They put 12 seeds in each flower bed and only 58 seeds grew into flowers in each flower bed.",
+        "Question": "Paige was helping her mom plant flowers and together they planted 36 seeds. They put 12 seeds in each flower bed and only 58 seeds grew into flowers in each flower bed.How many flower beds did they have?",
+        "Equation": "( 36.0 / 12.0 )",
+        "Answer": 3,
+        "Type": "Common-Division",
+        "unit": null,
+        "option": null,
+        "Index": 996,
+        "Prediction": 3.0,
+        "score": 1,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"Paige was helping her mom plant flowers and together they planted 36 seeds. They put 12 seeds in each flower bed and only 58 seeds grew into flowers in each flower bed.How many flower beds did they have?\"\"\"",
+                "    seeds_planted = 36",
+                "    seeds_per_bed = 12",
+                "    flowers_per_bed = 58",
+                "    num_beds = seeds_planted / seeds_per_bed",
+                "    result = num_beds",
+                "    return result"
+            ]
+        ]
+    },
+    {
+        "ID": "chal-997",
+        "Body": "At the zoo, a cage had 3 snakes and 75 alligators. If 82 snakes and 19 alligators were hiding",
+        "Question": "At the zoo, a cage had 3 snakes and 75 alligators. If 82 snakes and 19 alligators were hidingHow many alligators were not hiding?",
+        "Equation": "( 75.0 - 19.0 )",
+        "Answer": 56,
+        "Type": "Subtraction",
+        "unit": null,
+        "option": null,
+        "Index": 997,
+        "Prediction": 56.0,
+        "score": 1,
+        "Program": [
+            [
+                "def solution():",
+                "    \"\"\"At the zoo, a cage had 3 snakes and 75 alligators. If 82 snakes and 19 alligators were hidingHow many alligators were not hiding?\"\"\"",
+                "    alligators_initial = 75",
+                "    alligators_hiding = 19",
+                "    alligators_not_hiding = alligators_initial - alligators_hiding",
+                "    result = alligators_not_hiding",
+                "    return result"
+            ]
+        ]
+    }
+]

@@ -5,6 +5,7 @@ import time
 from functools import lru_cache
 
 import numpy as np
+import openai
 import sympy
 
 import chatgpt0
@@ -54,7 +55,9 @@ def get_gpt3_output(prompt, args):
 
             # check!!!
             # return formula,output
-
+        except openai.error.RateLimitError as e:
+            print("there is a error:",e)
+            time.sleep(min((5-patience)**2, 60))
         except Exception as e:
             print("there is a error:",e)
             #判断错误类型

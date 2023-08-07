@@ -1,0 +1,345 @@
+Epoch: 0
+Batch: 0
+cids for sample[-1] in batch: [2 0]
+Cand prob for sample[-1] in batch: [0.07323, 0.09284, 0.25574, 0.05009, 0.26606, 0.06687, 0.12956, 0.06561]
+### reward for the batch: 2
+### loss for the batch: 8.045477867126465
+
+Batch: 1
+cids for sample[-1] in batch: [2 1]
+Cand prob for sample[-1] in batch: [0.13154, 0.10791, 0.44973, 0.02672, 0.01629, 0.21744, 0.02674, 0.02363]
+### reward for the batch: 2
+### loss for the batch: 7.487455368041992
+
+Batch: 2
+cids for sample[-1] in batch: [2 1]
+Cand prob for sample[-1] in batch: [0.39162, 0.29332, 0.18455, 0.00792, 0.00291, 0.10157, 0.00935, 0.00875]
+### reward for the batch: 2
+### loss for the batch: 5.013401985168457
+
+Batch: 3
+cids for sample[-1] in batch: [1 0]
+Cand prob for sample[-1] in batch: [0.53728, 0.3755, 0.07195, 0.00079, 0.00036, 0.01171, 0.0012, 0.0012]
+### reward for the batch: 2
+### loss for the batch: 3.1991591453552246
+
+Batch: 4
+cids for sample[-1] in batch: [1 0]
+Cand prob for sample[-1] in batch: [0.52869, 0.46487, 0.00535, 4e-05, 1e-05, 0.00088, 9e-05, 7e-05]
+### reward for the batch: 2
+### loss for the batch: 2.8074493408203125
+
+Batch: 5
+cids for sample[-1] in batch: [0 1]
+Cand prob for sample[-1] in batch: [0.45754, 0.54153, 0.00074, 1e-05, 0.0, 0.00014, 2e-05, 1e-05]
+### reward for the batch: 2
+### loss for the batch: 2.7896103858947754
+
+Batch: 6
+cids for sample[-1] in batch: [0 1]
+Cand prob for sample[-1] in batch: [0.43534, 0.56451, 0.00012, 0.0, 0.0, 3e-05, 0.0, 0.0]
+### reward for the batch: 2
+### loss for the batch: 2.8043529987335205
+
+Batch: 7
+cids for sample[-1] in batch: [0 1]
+Cand prob for sample[-1] in batch: [0.47173, 0.52826, 1e-05, 0.0, 0.0, 0.0, 0.0, 0.0]
+### reward for the batch: 2
+### loss for the batch: 2.7832653522491455
+
+Batch: 8
+cids for sample[-1] in batch: [0 1]
+Cand prob for sample[-1] in batch: [0.53041, 0.46957, 1e-05, 0.0, 0.0, 0.0, 0.0, 0.0]
+### reward for the batch: 0
+### loss for the batch: 0.0011410713195800781
+
+Batch: 9
+cids for sample[-1] in batch: [1 0]
+Cand prob for sample[-1] in batch: [0.55646, 0.44354, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+### reward for the batch: 0
+### loss for the batch: 0.00035762786865234375
+
+============================================
+### Epoch: 0 / 5
+### Total reward: 16, Total loss: 34.93167, Best reward: 16 at epoch 0, Best loss: 34.93167 at epoch 0
+
+saved the ckpt to checkpoints/exp0_correct/ckpt_0.pt
+saved the best reward ckpt to checkpoints/exp0_correct/ckpt_best_reward.pt
+saved the best loss ckpt to checkpoints/exp0_correct/ckpt_best_loss.pt
+============================================
+
+Epoch: 1
+Batch: 0
+cids for sample[-1] in batch: [1 0]
+Cand prob for sample[-1] in batch: [0.58085, 0.41915, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+### reward for the batch: 2
+### loss for the batch: 2.814931869506836
+
+Batch: 1
+cids for sample[-1] in batch: [1 0]
+Cand prob for sample[-1] in batch: [0.56315, 0.43685, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+### reward for the batch: 2
+### loss for the batch: 2.80615234375
+
+Batch: 2
+cids for sample[-1] in batch: [0 1]
+Cand prob for sample[-1] in batch: [0.46298, 0.53702, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+### reward for the batch: 2
+### loss for the batch: 2.778085470199585
+
+Batch: 3
+cids for sample[-1] in batch: [1 0]
+Cand prob for sample[-1] in batch: [0.44709, 0.55291, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+### reward for the batch: 2
+### loss for the batch: 2.8038668632507324
+
+Batch: 4
+cids for sample[-1] in batch: [0 1]
+Cand prob for sample[-1] in batch: [0.42364, 0.57636, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+### reward for the batch: 2
+### loss for the batch: 2.8292689323425293
+
+Batch: 5
+cids for sample[-1] in batch: [1 0]
+Cand prob for sample[-1] in batch: [0.47819, 0.52181, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+### reward for the batch: 2
+### loss for the batch: 2.7751424312591553
+
+Batch: 6
+cids for sample[-1] in batch: [0 1]
+Cand prob for sample[-1] in batch: [0.56734, 0.43266, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+### reward for the batch: 2
+### loss for the batch: 2.813279628753662
+
+Batch: 7
+cids for sample[-1] in batch: [1 0]
+Cand prob for sample[-1] in batch: [0.59684, 0.40316, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+### reward for the batch: 2
+### loss for the batch: 2.8362271785736084
+
+Batch: 8
+cids for sample[-1] in batch: [0 1]
+Cand prob for sample[-1] in batch: [0.53905, 0.46095, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+### reward for the batch: 0
+### loss for the batch: -0.0017524957656860352
+
+Batch: 9
+cids for sample[-1] in batch: [0 1]
+Cand prob for sample[-1] in batch: [0.48016, 0.51984, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+### reward for the batch: 2
+### loss for the batch: 2.777601957321167
+
+============================================
+### Epoch: 1 / 5
+### Total reward: 18, Total loss: 25.2328, Best reward: 18 at epoch 1, Best loss: 25.2328 at epoch 1
+
+saved the ckpt to checkpoints/exp0_correct/ckpt_1.pt
+saved the best reward ckpt to checkpoints/exp0_correct/ckpt_best_reward.pt
+saved the best loss ckpt to checkpoints/exp0_correct/ckpt_best_loss.pt
+============================================
+
+Epoch: 2
+Batch: 0
+cids for sample[-1] in batch: [0 1]
+Cand prob for sample[-1] in batch: [0.43408, 0.56592, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+### reward for the batch: 2
+### loss for the batch: 2.8231360912323
+
+Batch: 1
+cids for sample[-1] in batch: [0 1]
+Cand prob for sample[-1] in batch: [0.46688, 0.53312, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+### reward for the batch: 2
+### loss for the batch: 2.7822461128234863
+
+Batch: 2
+cids for sample[-1] in batch: [0 1]
+Cand prob for sample[-1] in batch: [0.51975, 0.48025, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+### reward for the batch: 2
+### loss for the batch: 2.789127826690674
+
+Batch: 3
+cids for sample[-1] in batch: [0 1]
+Cand prob for sample[-1] in batch: [0.58939, 0.41061, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+### reward for the batch: 2
+### loss for the batch: 2.825042486190796
+
+Batch: 4
+cids for sample[-1] in batch: [0 1]
+Cand prob for sample[-1] in batch: [0.52439, 0.47561, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+### reward for the batch: 2
+### loss for the batch: 2.775373697280884
+
+Batch: 5
+cids for sample[-1] in batch: [1 0]
+Cand prob for sample[-1] in batch: [0.45079, 0.54921, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+### reward for the batch: 2
+### loss for the batch: 2.790099620819092
+
+Batch: 6
+cids for sample[-1] in batch: [1 0]
+Cand prob for sample[-1] in batch: [0.44385, 0.55615, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+### reward for the batch: 2
+### loss for the batch: 2.794806480407715
+
+Batch: 7
+cids for sample[-1] in batch: [0 1]
+Cand prob for sample[-1] in batch: [0.49139, 0.50861, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+### reward for the batch: 2
+### loss for the batch: 2.773315668106079
+
+Batch: 8
+cids for sample[-1] in batch: [0 1]
+Cand prob for sample[-1] in batch: [0.5509, 0.4491, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+### reward for the batch: 0
+### loss for the batch: -0.008252143859863281
+
+Batch: 9
+cids for sample[-1] in batch: [1 0]
+Cand prob for sample[-1] in batch: [0.60864, 0.39136, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+### reward for the batch: 0
+### loss for the batch: -0.0025911331176757812
+
+============================================
+### Epoch: 2 / 5
+### Total reward: 16, Total loss: 22.3423, Best reward: 18 at epoch 1, Best loss: 22.3423 at epoch 2
+
+saved the ckpt to checkpoints/exp0_correct/ckpt_2.pt
+saved the best loss ckpt to checkpoints/exp0_correct/ckpt_best_loss.pt
+============================================
+
+Epoch: 3
+Batch: 0
+cids for sample[-1] in batch: [1 0]
+Cand prob for sample[-1] in batch: [0.65147, 0.34853, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+### reward for the batch: 2
+### loss for the batch: 2.935852527618408
+
+Batch: 1
+cids for sample[-1] in batch: [0 1]
+Cand prob for sample[-1] in batch: [0.56606, 0.43394, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+### reward for the batch: 2
+### loss for the batch: 2.8094184398651123
+
+Batch: 2
+cids for sample[-1] in batch: [1 0]
+Cand prob for sample[-1] in batch: [0.39897, 0.60103, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+### reward for the batch: 2
+### loss for the batch: 2.8377912044525146
+
+Batch: 3
+cids for sample[-1] in batch: [1 0]
+Cand prob for sample[-1] in batch: [0.38764, 0.61236, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+### reward for the batch: 2
+### loss for the batch: 2.8942346572875977
+
+Batch: 4
+cids for sample[-1] in batch: [0 1]
+Cand prob for sample[-1] in batch: [0.41933, 0.58067, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+### reward for the batch: 2
+### loss for the batch: 2.828751564025879
+
+Batch: 5
+cids for sample[-1] in batch: [0 1]
+Cand prob for sample[-1] in batch: [0.54665, 0.45335, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+### reward for the batch: 2
+### loss for the batch: 2.7934377193450928
+
+Batch: 6
+cids for sample[-1] in batch: [1 0]
+Cand prob for sample[-1] in batch: [0.61073, 0.38927, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+### reward for the batch: 2
+### loss for the batch: 2.87870454788208
+
+Batch: 7
+cids for sample[-1] in batch: [1 0]
+Cand prob for sample[-1] in batch: [0.58632, 0.41368, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+### reward for the batch: 2
+### loss for the batch: 2.826673984527588
+
+Batch: 8
+cids for sample[-1] in batch: [1 0]
+Cand prob for sample[-1] in batch: [0.48953, 0.51047, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+### reward for the batch: 0
+### loss for the batch: -7.915496826171875e-05
+
+Batch: 9
+cids for sample[-1] in batch: [1 0]
+Cand prob for sample[-1] in batch: [0.42516, 0.57484, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+### reward for the batch: 0
+### loss for the batch: 0.01857912540435791
+
+============================================
+### Epoch: 3 / 5
+### Total reward: 16, Total loss: 22.82336, Best reward: 18 at epoch 1, Best loss: 22.3423 at epoch 2
+
+saved the ckpt to checkpoints/exp0_correct/ckpt_3.pt
+============================================
+
+Epoch: 4
+Batch: 0
+cids for sample[-1] in batch: [0 1]
+Cand prob for sample[-1] in batch: [0.35008, 0.64992, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+### reward for the batch: 2
+### loss for the batch: 2.983466148376465
+
+Batch: 1
+cids for sample[-1] in batch: [0 1]
+Cand prob for sample[-1] in batch: [0.39611, 0.60389, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+### reward for the batch: 2
+### loss for the batch: 2.8707568645477295
+
+Batch: 2
+cids for sample[-1] in batch: [1 0]
+Cand prob for sample[-1] in batch: [0.55489, 0.44511, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+### reward for the batch: 2
+### loss for the batch: 2.8081605434417725
+
+Batch: 3
+cids for sample[-1] in batch: [0 1]
+Cand prob for sample[-1] in batch: [0.66607, 0.33393, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+### reward for the batch: 2
+### loss for the batch: 2.9854230880737305
+
+Batch: 4
+cids for sample[-1] in batch: [0 1]
+Cand prob for sample[-1] in batch: [0.61862, 0.38138, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+### reward for the batch: 2
+### loss for the batch: 2.875793933868408
+
+Batch: 5
+cids for sample[-1] in batch: [0 1]
+Cand prob for sample[-1] in batch: [0.49264, 0.50736, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+### reward for the batch: 2
+### loss for the batch: 2.773043155670166
+
+Batch: 6
+cids for sample[-1] in batch: [0 1]
+Cand prob for sample[-1] in batch: [0.3844, 0.6156, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+### reward for the batch: 2
+### loss for the batch: 2.879762649536133
+
+Batch: 7
+cids for sample[-1] in batch: [1 0]
+Cand prob for sample[-1] in batch: [0.37022, 0.62978, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+### reward for the batch: 2
+### loss for the batch: 2.8960392475128174
+
+Batch: 8
+cids for sample[-1] in batch: [0 1]
+Cand prob for sample[-1] in batch: [0.46988, 0.53012, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+### reward for the batch: 0
+### loss for the batch: 0.0032074451446533203
+
+Batch: 9
+cids for sample[-1] in batch: [0 1]
+Cand prob for sample[-1] in batch: [0.55255, 0.44745, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+### reward for the batch: 2
+### loss for the batch: 2.790919780731201
+
+============================================
+### Epoch: 4 / 5
+### Total reward: 18, Total loss: 25.86657, Best reward: 18 at epoch 1, Best loss: 22.3423 at epoch 2
+
+saved the ckpt to checkpoints/exp0_correct/ckpt_4.pt
+============================================
+

@@ -71,7 +71,7 @@ def create_one_example( question, answer, solution=None, test_example=True):
 def build_prompt(problems, shot_pids, test_pid, args):
     examples = []
     pids = shot_pids + [test_pid]
-    lines = json.load(open("dataset/demo8.json"))
+    lines = json.load(open("dataset/gsm8k/demo8_test1.json"))
     Index2idx = {item["Index"]:idx for idx,item in enumerate(lines)}
     # n-shot training examples
     for pid in pids:
@@ -94,7 +94,7 @@ def build_prompt(problems, shot_pids, test_pid, args):
 
 
 def create_example_from_pid(pid, problems, args, test=False):
-    lines = json.load(open("dataset/demo8.json"))
+    lines = json.load(open("dataset/gsm8k/demo8_test1.json"))
     Index2idx = {item["Index"]: idx for idx, item in enumerate(lines)}
     problem = problems[pid]
     question = problem["Question"]

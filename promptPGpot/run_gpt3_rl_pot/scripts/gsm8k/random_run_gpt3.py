@@ -6,7 +6,7 @@ import time
 
 from base_prompt import *
 from model import *
-from utilities import extract_prediction, normalize_answer
+from utilities1 import extract_prediction, normalize_answer
 
 import numpy as np
 import torch
@@ -14,20 +14,18 @@ import torch.nn.functional as F
 import openai
 from utilities1 import get_gpt3_output
 
-openai.api_key = "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"
+# openai.api_key = "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"
 
 
 def load_data(args):
-    problems = [json.loads(line) for line in open("dataset/svamp_test_pot.jsonl", "r")]
-    cand_pids = [item["Index"] for item in json.load(open("dataset/demo8.json"))]
-    pids = [item["Index"] for item in problems if item["Index"] not in cand_pids]
-    pids = pids[500:]
+    problems = [json.loads(line) for line in open("dataset/gsm8k/gsm8k.jsonl", "r")]
+    demo8 = json.load(open("dataset/gsm8k/demo8_test1.json"))
+    cand_pids = [item["Index"] for idx, item in enumerate(demo8)]
+    pids = [idx for idx, item in enumerate(problems) if idx not in cand_pids]
+    pids = pids[:500]
     samples = random.sample(pids, args.test_number)  # random sample
     test_pids = samples[:args.test_number]
-    return problems, test_pids,cand_pids
-
-
-
+    return problems, cand_pids, test_pids
 
 
 def get_result_file(args):
@@ -61,7 +59,7 @@ def parse_args():
     parser.add_argument('--option_inds', type=list, default=["A", "B", "C", "D", "E", "F"])
 
     # user options
-    parser.add_argument('--label', type=str, default='exp0_random')
+    parser.add_argument('--label', type=str, default='exp1_random')
     parser.add_argument('--test_split', type=str, default='test', choices=['dev', 'dev1k', 'test', 'test1k'])
     parser.add_argument('--test_number', type=int, default=100, help='GPT-3 is expensive. -1 for the whole test set')
     parser.add_argument('--save_every', type=int, default=10, help='Save the result with every n examples.')
@@ -95,7 +93,7 @@ def parse_args():
     parser.add_argument('--cand_number', type=int, default=20, help='Number of candidate prompts.')
     parser.add_argument('--embedding_size', type=int, default=128, help='Policy network final layer hidden state size.')
     parser.add_argument('--ckpt_root', type=str, default='checkpoints')
-    parser.add_argument('--ckpt', type=str, default="exp0/ckpt_best_reward.pt")
+    parser.add_argument('--ckpt', type=str, default="exp1/ckpt_best_reward.pt")
 
     args = parser.parse_args()
     return args
@@ -115,7 +113,7 @@ if __name__ == '__main__':
     torch.backends.cudnn.benchmark = True
 
     # problems, test question ids, candidate prompt pids, RL training pids
-    problems, pids, cand_pids = load_data(args)
+    problems, cand_pids, pids = load_data(args)
 
     result_file = get_result_file(args)
 
@@ -181,15 +179,18 @@ if __name__ == '__main__':
                 program, prediction = results[pid]["program"],results[pid]["prediction"]
             else:
                 unpredicted  = get_gpt3_output(prompt, args) # generate the output by GPT-3
+            program, prediction = None, None
             if unpredicted is isinstance(unpredicted, str):
                 error = unpredicted
-                program,prediction = None,None
+                results[pid]["error"] = error
             else:
-                program, prediction = unpredicted
+                try:
+                    program, prediction = unpredicted
+                except Exception as e:
+                    print(e)
 
             results[pid] = {}
-            if program is None and program is None:
-                results[pid]["error"] = error
+
 
             results[pid]["shot_pids"] = shot_pids
             results[pid]["prompt"] = prompt
@@ -200,7 +201,7 @@ if __name__ == '__main__':
 
 
             # correct or not
-            if answer == prediction:
+            if eval(answer) == prediction:
                 correct += 1
                 results[pid]["true_false"] = True
             else:

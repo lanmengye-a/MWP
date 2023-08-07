@@ -1,0 +1,58 @@
+[
+    {
+        "Question": "Adam had 48.0 books . If he sold 19.0 of them and used the money he earned to buy 38.0 new books , how many books would Adam have ?",
+        "Thought": "\nimport math\nimport numpy as np\n# Question Adam had 48.0 books . If he sold 19.0 of them and used the money he earned to buy 38.0 new books , how many books would Adam have ?\n# Let's think step by step to derive the answer, store the result as a 'ans' variable:\n# According to the question, we can define the variables:\n# initial_books = 48.0\n# sold_books = 19.0\n# new_books = 38.0\n\ninitial_books = 48.0\nsold_books = 19.0\nnew_books = 38.0\n\n# Adam had 48.0 books and then sold 19.0 books\n# So, the number of books he had after selling 19.0 books is 48.0 - 19.0 = 29.0\n\nans = initial_books - sold_books\n\n# Now, he used the money he earned to buy 38.0 new books. \n# So, the number of books he had after buying 38.0 new books is 29.0 + 38.0 = 67.0\n\nans = ans + new_books\n\n# Therefore, Adam would have 67.0 books.\n\nprint(ans)",
+        "Prediction": 67.0,
+        "Answer": 67.0,
+        "index": 938
+    },
+    {
+        "Question": "For Halloween Katie and her sister combined the candy they received . Katie had 8.0 pieces of candy while her sister had 23.0 . If they ate 8.0 pieces the first night , how many pieces do they have left ?",
+        "Thought": "\nimport math\nimport numpy as np\n# Question For Halloween Katie and her sister combined the candy they received . Katie had 8.0 pieces of candy while her sister had 23.0 . If they ate 8.0 pieces the first night , how many pieces do they have left ?\n# Let's think step by step to derive the answer, store the result as a 'ans' variable:\n# According to the question, we can define the variables:\n\nkatie_candy = 8.0\nsister_candy = 23.0\neat_candy = 8.0\n\n# Calculate the total candy they have:\ntotal_candy = katie_candy + sister_candy\n\n# Calculate the left candy after eating 8.0 pieces:\nleft_candy = total_candy - eat_candy\n\n# Store the result in a 'ans' variable:\nans = left_candy\n\n# Print the result:\nprint(ans)\n\n# The answer is 31.0 pieces of candy left.",
+        "Prediction": 23.0,
+        "Answer": 23.0,
+        "index": 140
+    },
+    {
+        "Question": "Mary picked 14.0 oranges and Jason picked 41.0 oranges . Keith picked 38.0 apples . How many oranges were picked in all ?",
+        "Thought": "\nimport math\nimport numpy as np\n# Question Mary picked 14.0 oranges and Jason picked 41.0 oranges . Keith picked 38.0 apples . How many oranges were picked in all ?\n# Let's think step by step to derive the answer, store the result as a 'ans' variable:\n# According to the question, we can define the variables:\nmary_oranges = 14.0\njason_oranges = 41.0\nkeith_apples = 38.0\n\n# Now, we need to calculate the total number of oranges picked in all.\n# Since Keith picked apples, we only need to add Mary and Jason's oranges.\nans = mary_oranges + jason_oranges\n\n# Let's check the answer:\nprint(ans)\n\n# Output: 55.0",
+        "Prediction": 55.0,
+        "Answer": 55.0,
+        "index": 1168
+    },
+    {
+        "Question": "Luke had 48.0 dollars in January . By March he had spent 11.0 dollars . If he got another 21.0 dollars from his mom , how much money would he have ?",
+        "Thought": "\nimport math\nimport numpy as np\n# Question Luke had 48.0 dollars in January . By March he had spent 11.0 dollars . If he got another 21.0 dollars from his mom , how much money would he have ?\n# Let's think step by step to derive the answer, store the result as a 'ans' variable:\n# According to the question, we can define the variables:\n\njanuary_amount = 48.0\namount_spent = 11.0\namount_from_mom = 21.0\n\n# To get the answer, we need to calculate the sum of january_amount, amount_from_mom and subtract amount_spent:\n\nans = january_amount + amount_from_mom - amount_spent\n\n# We can now print the answer:\n\nprint(ans)\n\n# The answer is 58.0",
+        "Prediction": 58.0,
+        "Answer": 58.0,
+        "index": 1109
+    },
+    {
+        "Question": "There are 65.0 students trying out for the school 's trivia teams . If 17.0 of them did n't get picked for the team and the rest were put into 8.0 groups , how many students would be in each group ?",
+        "Thought": "\nimport math\nimport numpy as np\n# Question There are 65.0 students trying out for the school 's trivia teams . If 17.0 of them did n't get picked for the team and the rest were put into 8.0 groups , how many students would be in each group ?\n# Let's think step by step to derive the answer, store the result as a 'ans' variable:\n# According to the question, we can define the variables:\n# Total number of students = 65.0\n# Number of students not picked = 17.0\n# Number of groups = 8.0\n# Number of students in each group = ?\n\n# Now we can calculate the number of students in each group:\n\nans = (65.0 - 17.0) / 8.0\n\n# The answer is 8.625 students in each group.",
+        "Prediction": 6.0,
+        "Answer": 6.0,
+        "index": 577
+    },
+    {
+        "Question": "Christopher strolled 5.0 miles at 4.0 miles per hour . How long did Christopher stroll ?",
+        "Thought": "\nimport math\nimport numpy as np\n# Question Christopher strolled 5.0 miles at 4.0 miles per hour . How long did Christopher stroll ?\n# Let's think step by step to derive the answer, store the result as a 'ans' variable:\n# According to the question, we can define the variables:\n\ndistance = 5.0\nspeed = 4.0\n\n# Now, we need to calculate the time taken for the stroll.\n# We know that speed = distance/time\n# Therefore, time = distance/speed\n\ntime = distance/speed\n\n# The time taken for the stroll is 4.0 hours\nans = time\nprint(ans)",
+        "Prediction": 1.25,
+        "Answer": 1.25,
+        "index": 1303
+    },
+    {
+        "Question": "Bianca had 45.0 coloring books . If she gave away 6.0 of them , but then bought 20.0 more , how many would she have total ?",
+        "Thought": "\nimport math\nimport numpy as np\n# Question Bianca had 45.0 coloring books . If she gave away 6.0 of them , but then bought 20.0 more , how many would she have total ?\n# Let's think step by step to derive the answer, store the result as a 'ans' variable:\n# According to the question, we can define the variables:\n\ncoloring_books_original = 45.0\ncoloring_books_given_away = 6.0\ncoloring_books_bought = 20.0\n\n# Then we can calculate the total number of coloring books Bianca has:\n\nans = coloring_books_original - coloring_books_given_away + coloring_books_bought\n\n# Finally, we can print out the answer:\n\nprint(ans)\n\n# The answer is 59.0 coloring books.",
+        "Prediction": 59.0,
+        "Answer": 59.0,
+        "index": 19
+    },
+    {
+        "Question": "a pet shop has a total of 77 animals . 32 of them are kittens and 15 of them hamsters the rest are birds . how many birds are there ?",
+        "Thought": "\nimport math\nimport numpy as np\n# Question a pet shop has a total of 77 animals . 32 of them are kittens and 15 of them hamsters the rest are birds . how many birds are there ?\n# Let's think step by step to derive the answer, store the result as a 'ans' variable:\n# According to the question, we can define the variables:\n\ntotal_animals = 77\nkittens = 32\nhamsters = 15\n\n# We are looking for the number of birds, so let's calculate it:\n\nans = total_animals - kittens - hamsters\n\n# The answer is 30 birds.",
+        "Prediction": 30.0,
+        "Answer": 30.0,
+        "index": 2439
+    }
+]

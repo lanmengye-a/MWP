@@ -57,7 +57,7 @@ def create_one_example( question, answer, solution=None, test_example=True):
     input = "Question:"+question
     # Output
     if test_example:
-        output = "Thought:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:"
+        output = "Program:\n# Are follow up questions needed here:Yes.# according to the questions, we can define the variables:"
     else:
         output = elements["T"]
 
@@ -71,17 +71,22 @@ def create_one_example( question, answer, solution=None, test_example=True):
 def build_prompt(problems, shot_pids, test_pid, args):
     examples = []
     pids = shot_pids + [test_pid]
-    lines = json.load(open("dataset/demo8.json"))
-    Index2idx = {item["Index"]:idx for idx,item in enumerate(lines)}
+    lines = json.load(open("dataset/demos/svamp/demo8_train_annotated_5.json"))
+    Index2idx = {item["index"]:idx for idx,item in enumerate(lines)}
     # n-shot training examples
     for pid in pids:
-        problem = problems[pid]
-        # table = get_table_text(problem)
-        question = problem["Question"]
-        answer = problem["Answer"]
+
         if pid == test_pid:
+            problem = problems[pid]
+            # table = get_table_text(problem)
+            question = problem["Question"]
+            answer = problem["Answer"]
             example = create_one_example(question, answer, solution, test_example=True)
         else:
+            problem = lines[Index2idx[pid]]
+            # table = get_table_text(problem)
+            question = problem["Question"]
+            answer = problem["Answer"]
             solution = lines[Index2idx[pid]]["Thought"]
             example = create_one_example(question, answer, solution, test_example=False)
         examples.append(example)
@@ -94,9 +99,12 @@ def build_prompt(problems, shot_pids, test_pid, args):
 
 
 def create_example_from_pid(pid, problems, args, test=False):
-    lines = json.load(open("dataset/demo8.json"))
-    Index2idx = {item["Index"]: idx for idx, item in enumerate(lines)}
-    problem = problems[pid]
+    lines = json.load(open("dataset/demos/svamp/demo8_train_annotated.json"))
+    Index2idx = {item["index"]: idx for idx, item in enumerate(lines)}
+    if test==True:
+        problem = problems[pid]
+    else:
+        problem = problems[Index2idx[pid]]
     question = problem["Question"]
     answer = problem["Answer"]
 
