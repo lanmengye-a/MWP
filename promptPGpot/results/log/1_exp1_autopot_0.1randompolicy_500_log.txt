@@ -1,0 +1,10 @@
+10/100, correct: 9, acc: 90.0%, saved to results/gpt3_rl/exp1_autopot_0.1randompolicy_500_test_TQ-A_2_seed_1.json
+20/100, correct: 18, acc: 90.0%, saved to results/gpt3_rl/exp1_autopot_0.1randompolicy_500_test_TQ-A_2_seed_1.json
+30/100, correct: 27, acc: 90.0%, saved to results/gpt3_rl/exp1_autopot_0.1randompolicy_500_test_TQ-A_2_seed_1.json
+40/100, correct: 35, acc: 87.5%, saved to results/gpt3_rl/exp1_autopot_0.1randompolicy_500_test_TQ-A_2_seed_1.json
+50/100, correct: 45, acc: 90.0%, saved to results/gpt3_rl/exp1_autopot_0.1randompolicy_500_test_TQ-A_2_seed_1.json
+60/100, correct: 54, acc: 90.0%, saved to results/gpt3_rl/exp1_autopot_0.1randompolicy_500_test_TQ-A_2_seed_1.json
+70/100, correct: 64, acc: 91.43%, saved to results/gpt3_rl/exp1_autopot_0.1randompolicy_500_test_TQ-A_2_seed_1.json
+80/100, correct: 72, acc: 90.0%, saved to results/gpt3_rl/exp1_autopot_0.1randompolicy_500_test_TQ-A_2_seed_1.json
+90/100, correct: 81, acc: 90.0%, saved to results/gpt3_rl/exp1_autopot_0.1randompolicy_500_test_TQ-A_2_seed_1.json
+100/100, correct: 90, acc: 90.0%, saved to results/gpt3_rl/exp1_autopot_0.1randompolicy_500_test_TQ-A_2_seed_1.json

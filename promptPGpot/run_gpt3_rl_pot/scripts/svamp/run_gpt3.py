@@ -64,7 +64,7 @@ def parse_args():
     parser.add_argument('--option_inds', type=list, default=["A", "B", "C", "D", "E", "F"])
 
     # user options
-    parser.add_argument('--label', type=str, default='exp0_autopot')
+    parser.add_argument('--label', type=str, default='exp1_autopot')
     parser.add_argument('--test_split', type=str, default='test', choices=['dev', 'dev1k', 'test', 'test1k'])
     parser.add_argument('--test_number', type=int, default=100, help='GPT-3 is expensive. -1 for the whole test set')
     parser.add_argument('--save_every', type=int, default=10, help='Save the result with every n examples.')

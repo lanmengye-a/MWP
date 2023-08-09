@@ -2,7 +2,7 @@ import argparse
 import time
 
 import openai
-openai.api_key = "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"
+openai.api_key = "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"
 train_sample =[
     {
         "infixEquation":"Answer=number1+number2",
@@ -27,9 +27,10 @@ algebraicPrompt = "Write a mathematical equation and generate the answer format 
 def call_gpt3( prompt,engine="text-davinci-003"):
     response = openai.Completion.create(engine=engine,
                                         prompt=prompt,
-                                        temperature=0.5,
+                                        temperature=0.4,
                                         max_tokens=400,
                                         n=10,
+                                        logprobs=1
                                         # frequency_penalty=frequency_penalty,
                                         # presence_penalty=presence_penalty,
                                         # stop=["\n"])
@@ -116,6 +117,6 @@ if __name__=="__main__":
     message = algebraicPrompt+ "\n\n" +"\n\n".join(
         [ f"Question: {sample['Question']}\ninfixEquation: {sample['infixEquation']}" for sample in
          train_sample]) + "\n\n" + f"Question: {que}\ninfixEquation: "
-    reply = call_gpt3( "text-davinci-002",message)
+    #reply = call_gpt3( message)
     # reply=chatgpt("hello what is your name")
-    print(reply)
+    # print(reply)

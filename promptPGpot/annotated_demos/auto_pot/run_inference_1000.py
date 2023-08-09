@@ -6,50 +6,23 @@ import argparse
 from run_svamp_fewshot_wstepbystep import get_rationales
 from utils_stepbystep import *
 from run_svamp_simple import create_reader_request
+from run_gpt3_rl_pot.tools import utils
 
-def main():
-    args = parse_arguments()
-    print('*****************************')
-    print(args)
-    print('*****************************')
-
-    fix_seed(args.random_seed)
-
-    # Initialize decoder class (load model and tokenizer) ...
-    decoder = Decoder()
-
-    print("setup data loader ...")
-    dataloader = setup_data_loader(args)
-    print_now()
-
-    if args.method == "few_shot":
-        demo = create_demo_text(args, cot_flag=False)
-    elif args.method == "few_shot_cot" or args.method == "auto_cot":
-        demo = create_demo_text(args, cot_flag=True)
-    else:
-        pass
-
+def run_epoch(args,dataloader,demo,start,end):
+    cnt = 0
     total = 0
     correct_list = []
-    # os.make(args.output_dir, exist_ok=True)
-    length = len(dataloader)
-    lis = [i for i in range(length)]
-    cand = random.sample(lis,100)
-    args.output_dir = args.output_dir + "seed"+str(args.random_seed) +'_addprefix'+ '.jsonl'
-    with open(args.output_dir, "a") as wp:
-        cnt = 0
+    logger = utils.Logger(args.logger_file)
+    with open(args.output_file, "a") as wp:
         for i, data in enumerate(dataloader):
+            if i<start or i>=end:
+                continue
 
-            if i not in cand:
-                continue
-            if i < args.resume_id - 1:
-                # if i < 297:
-                continue
             output_line = {}
-
-            print('*************************')
+            logger.write('*************************')
             cnt += 1
-            print("{}st data".format(cnt ))
+
+            logger.write("{}st data".format(cnt ))
 
             # Prepare question template ...
             x, y = data
@@ -84,9 +57,9 @@ def main():
             wp.write(output_json + '\n')
 
             # Choose the most frequent answer from the list ...
-            print("pred : {}".format(pred))
-            print("GT : " + str(y))
-            print('*************************')
+            logger.write("pred : {}".format(pred))
+            logger.write("GT : " + str(y))
+            logger.write('*************************')
 
             # Checking answer ...
             correct = (np.array([pred]) == np.array([y])).sum().item()
@@ -99,13 +72,50 @@ def main():
 
     # Calculate accuracy ...
     accuracy = (sum(correct_list) * 1.0 / total) * 100
-    print("accuracy : {}".format(accuracy))
+    logger.write("accuracy : {}".format(accuracy))
 
+def main():
+    args = parse_arguments()
+    print('*****************************')
+    print(args)
+    print('*****************************')
+
+    fix_seed(args.random_seed)
+
+    # Initialize decoder class (load model and tokenizer) ...
+    decoder = Decoder()
+
+    print("setup data loader ...")
+    dataloader = setup_data_loader(args)
+    print_now()
+
+    if args.method == "few_shot":
+        demo = create_demo_text(args, cot_flag=False)
+    elif args.method == "few_shot_cot" or args.method == "auto_cot":
+        demo = create_demo_text(args, cot_flag=True)
+    else:
+        pass
+
+
+    # os.make(args.output_dir, exist_ok=True)
+    length = len(dataloader)
+    # svamp test集的长度是1000
+    lis = zip(list(range(0, 1000, 100)), list(range(100, 1100, 100)))
+    lis = list(lis)
+    # lis=[(0,10)]
+    for start, end in lis[7:]:
+        args.test_pharse = [start, end]
+        os.makedirs(args.output_dir, exist_ok=True)
+        os.makedirs(args.logger_dir, exist_ok=True)
+        args.output_file = os.path.join(args.output_dir, "cs40" + f'_{end}.jsonl')
+        args.logger_file = os.path.join(args.logger_dir ,"cs40" + f'_{end}log.txt')
+        run_epoch(args,dataloader,demo,start,end)
+        print("finish {} to {},outputfile:{},logger_file:{}".format(start,end,args.output_file,args.logger_file))
 
 def parse_arguments():
     parser = argparse.ArgumentParser(description="Zero-shot-CoT")
 
-    parser.add_argument("--random_seed", type=int, default=100, help="random seed")
+    parser.add_argument("--random_seed", type=int, default=1, help="random seed")
     parser.add_argument(
         "--dataset", type=str, default="svamp",
         choices=["aqua", "gsm8k", "commonsensqa", "addsub", "multiarith", "strategyqa", "svamp", "singleeq",
@@ -140,7 +150,10 @@ def parse_arguments():
         choices=["zero_shot", "zero_shot_cot", "few_shot", "few_shot_cot", "auto_cot"], help="method"
     )
     parser.add_argument(
-        "--output_dir", type=str, default="dataset/eval_results/svamp/output/autopot", help="output directory"
+        "--output_dir", type=str, default="dataset/eval_results/svamp/output", help="output directory"
+    )
+    parser.add_argument(
+        "--logger_dir", type=str, default="dataset/eval_results/svamp/logs", help="output directory"
     )
     parser.add_argument(
         "--max_length_cot", type=int, default=256,

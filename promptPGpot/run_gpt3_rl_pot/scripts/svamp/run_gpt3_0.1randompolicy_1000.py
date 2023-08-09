@@ -13,7 +13,7 @@ import torch
 import torch.nn.functional as F
 import openai
 from utilities1 import get_gpt3_output
-
+from run_gpt3_rl_pot.tools import utils
 # openai.api_key = "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"
 
 
@@ -37,10 +37,16 @@ def get_result_file(args):
     result_path = f"{args.output_root}/{args.model}"
     os.makedirs(result_path, exist_ok=True)
 
-    result_file = "{}/{}_{}_{}_{}_seed_{}.json".format(result_path, args.label, args.test_split, args.prompt_format,
+    result_file = "{}/{}_{}_{}_{}_{}_seed_{}.json".format(result_path, args.label, args.test_pharse[1],args.test_split, args.prompt_format,
                                                        args.shot_number, args.seed)
 
     return result_file
+
+def get_logger_file(args):
+    dir = "results/log"
+    os.makedirs(dir, exist_ok=True)
+    fileName = f"{args.seed}_{args.label}_{args.test_pharse[1]}_log.txt"
+    return os.path.join(dir, fileName)
 
 
 def save_results(result_file, acc, correct, count, cand_pids, args, results):
@@ -56,15 +62,17 @@ def save_results(result_file, acc, correct, count, cand_pids, args, results):
         json.dump(data, f, indent=2, separators=(',', ': '))
 
 
+
 def parse_args():
     parser = argparse.ArgumentParser()
+    parser.add_argument('--test_pharse', type=list, default=[0,100])
     parser.add_argument('--data_root', type=str, default='../data/tabmwp')
     parser.add_argument('--output_root', type=str, default='results')
     parser.add_argument('--model', type=str, default='gpt3_rl')
     parser.add_argument('--option_inds', type=list, default=["A", "B", "C", "D", "E", "F"])
 
     # user options
-    parser.add_argument('--label', type=str, default='exp0_autopot_0.1randompolicy')
+    parser.add_argument('--label', type=str, default='exp1_autopot_0.1randompolicy')
     parser.add_argument('--test_split', type=str, default='test', choices=['dev', 'dev1k', 'test', 'test1k'])
     parser.add_argument('--test_number', type=int, default=100, help='GPT-3 is expensive. -1 for the whole test set')
     parser.add_argument('--save_every', type=int, default=10, help='Save the result with every n examples.')
@@ -103,24 +111,13 @@ def parse_args():
     args = parser.parse_args()
     return args
 
-
-if __name__ == '__main__':
-
-    args = parse_args()
-    print('====Input Arguments====')
-    print(json.dumps(vars(args), indent=2, sort_keys=False))
-
-    # https://pytorch.org/docs/stable/notes/randomness.html
-    random.seed(args.seed)
-    np.random.seed(args.seed)
-    torch.manual_seed(args.seed)  # CPU random seed
-    torch.cuda.manual_seed(args.seed)  # GPU random seed
-    torch.backends.cudnn.benchmark = True
-
+def run_epoch(args):
     # problems, test question ids, candidate prompt pids, RL training pids
-    problems, pids, cand_pids,cand_problems = load_data(args)
+    problems, pids, cand_pids, cand_problems = load_data(args)
 
     result_file = get_result_file(args)
+    logger_file  = get_logger_file(args)
+    logger = utils.Logger(logger_file)
 
     # load the check point
     if os.path.exists(result_file):
@@ -178,7 +175,6 @@ if __name__ == '__main__':
             problem = problems[pid]
             answer = problem['Answer']
 
-
             example = create_example_from_pid(pid, problems, args, test=True)
 
             ctxt_embedding = policy_model([example])
@@ -191,7 +187,7 @@ if __name__ == '__main__':
             cand_ids = sorted(range(len(scores)), key=lambda i: scores[i], reverse=True)[:args.shot_number]
             shot_pids = [cand_pids[cid] for cid in cand_ids[::-1]]
             prompt = build_prompt(problems, shot_pids, pid, args)  # generate the prompt input
-            program,prediction = None,None
+            program, prediction = None, None
             if pid in results:
                 program, prediction = results[pid]["program"], results[pid]["prediction"]
             else:
@@ -214,7 +210,6 @@ if __name__ == '__main__':
             results[pid]["program"] = program
             results[pid]["prediction"] = prediction
 
-
             # correct or not
             if answer == prediction:
                 correct += 1
@@ -224,27 +219,57 @@ if __name__ == '__main__':
 
             acc = correct / (i + 1) * 100
 
-            if args.debug :
-                print("\n##################################")
-                print(prompt, "\n")
-
-                print("[Acc]:\t", results[pid]["true_false"])
-
-                print("[A] labeled answer:\t", answer)
-                print("[P] predicted answer:\t", prediction)
-                print("[P] generated program:\t", program)
+            if args.debug:
+                logger.write("\n##################################")
+                logger.write(prompt, "\n")
+                logger.write("[Acc]:\t", results[pid]["true_false"])
+                logger.write("[A] labeled answer:\t", answer)
+                logger.write("[P] predicted answer:\t", prediction)
+                logger.write("[P] generated program:\t", program)
+                # print("\n##################################")
+                # print(prompt, "\n")
+                # print("[Acc]:\t", results[pid]["true_false"])
+                # print("[A] labeled answer:\t", answer)
+                # print("[P] predicted answer:\t", prediction)
+                # print("[P] generated program:\t", program)
             if count % args.save_every == 0 or count == total or count % 10 == 0:
                 if count >= check_count:
                     # have new outputs
                     # file = result_file.split(".")
                     # result_file = file[0] + f"_{count / 10}." + file[1]
-                    print(f"{count}/{total}, correct: {correct}, acc: {round(acc, 2)}%, saved to {result_file}")
+                    logger.write(f"{count}/{total}, correct: {correct}, acc: {round(acc, 2)}%, saved to {result_file}")
+                    # print(f"{count}/{total}, correct: {correct}, acc: {round(acc, 2)}%, saved to {result_file}")
                     save_results(result_file, acc, correct, count, cand_pids, args, results)
                 else:
                     # no new outputs, just print the accuracy
 
                     # file = result_file.split(".")
                     # result_file = file[0] + f"_{count / 10}." + file[1]
-                    print(f"{count}/{total}, correct: {correct}, acc: {round(acc, 2)}%, saved to {result_file}")
+                    logger.write(f"{count}/{total}, correct: {correct}, acc: {round(acc, 2)}%, saved to {result_file}")
+                    # print(f"{count}/{total}, correct: {correct}, acc: {round(acc, 2)}%, saved to {result_file}")
                     # save_results(result_file, acc, correct, count, cand_pids, args, results)
                     # print(f"{count}/{total}, correct: {correct}, acc: {round(acc, 2)}%")
+
+
+if __name__ == '__main__':
+
+    args = parse_args()
+    print('====Input Arguments====')
+    print(json.dumps(vars(args), indent=2, sort_keys=False))
+
+    # https://pytorch.org/docs/stable/notes/randomness.html
+    random.seed(args.seed)
+    np.random.seed(args.seed)
+    torch.manual_seed(args.seed)  # CPU random seed
+    torch.cuda.manual_seed(args.seed)  # GPU random seed
+    torch.backends.cudnn.benchmark = True
+    lis = zip(list(range(0,1000,args.test_number)),list(range(100,1100,args.test_number)))
+    lis = list(lis)
+
+    for start,end in lis[2:]:
+        args.test_pharse = [start,end]
+        run_epoch(args)
+
+
+
+

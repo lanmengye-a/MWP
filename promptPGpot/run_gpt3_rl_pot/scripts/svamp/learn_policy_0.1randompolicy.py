@@ -26,7 +26,7 @@ sys.path.append("../")
 def load_data(args):
 
     problems = [json.loads(line) for line in open("dataset/svamp/svamp_train.jsonl","r")]
-    cand_pids = [item["index"] for item in json.load(open("dataset/demos/svamp/demo8_train_annotated.json"))]
+    cand_pids = [item["index"] for item in json.load(open("dataset/demos/svamp/demo8_train_annotated_5.json"))]
     pids = [item["index"] for item in problems if item not in cand_pids]
     samples = random.sample(pids, args.train_number )  # random sample
     train_pids = samples[:args.train_number]
