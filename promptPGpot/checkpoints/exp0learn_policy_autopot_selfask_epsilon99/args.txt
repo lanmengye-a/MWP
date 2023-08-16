@@ -1,0 +1,33 @@
+{
+  "data_root": "../data/svamp",
+  "model": "gpt3_rlpot",
+  "option_inds": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F"
+  ],
+  "label": "exp0learn_policy_autopot_selfask_epsilon99",
+  "debug": false,
+  "prompt_format": "TQ-A",
+  "shot_number": 2,
+  "seed": 1,
+  "engine": "text-davinci-002",
+  "temperature": 0.0,
+  "max_tokens": 512,
+  "top_p": 1.0,
+  "frequency_penalty": 0.0,
+  "presence_penalty": 0.0,
+  "gpu": "0",
+  "model_config": "bert-base-uncased",
+  "train_number": 100,
+  "cand_number": 10,
+  "lr": 0.001,
+  "epochs": 10,
+  "embedding_size": 128,
+  "batch_size": 2,
+  "ckpt_root": "checkpoints",
+  "ckpt_path": "checkpoints/exp0learn_policy_autopot_selfask_epsilon99"
+}

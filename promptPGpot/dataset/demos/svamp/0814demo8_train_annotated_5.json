@@ -1,0 +1,58 @@
+[
+    {
+        "Question": "Adam had 48.0 books . If he sold 19.0 of them and used the money he earned to buy 38.0 new books , how many books would Adam have ?",
+        "Thought": null,
+        "Prediction": null,
+        "Answer": 67.0,
+        "index": 938
+    },
+    {
+        "Question": "For Halloween Katie and her sister combined the candy they received . Katie had 8.0 pieces of candy while her sister had 23.0 . If they ate 8.0 pieces the first night , how many pieces do they have left ?",
+        "Thought": null,
+        "Prediction": null,
+        "Answer": 23.0,
+        "index": 140
+    },
+    {
+        "Question": "Mary picked 14.0 oranges and Jason picked 41.0 oranges . Keith picked 38.0 apples . How many oranges were picked in all ?",
+        "Thought": null,
+        "Prediction": null,
+        "Answer": 55.0,
+        "index": 1168
+    },
+    {
+        "Question": "Luke had 48.0 dollars in January . By March he had spent 11.0 dollars . If he got another 21.0 dollars from his mom , how much money would he have ?",
+        "Thought": "\n# Passage: 0 dollars from his mom , how much money would he have ?\n# Question:Luke had 48.0 dollars in January . By March he had spent 11.0 dollars . If he got another 21\n# Thought:\n# Let's think step by step to derive the answer, store the result as a 'ans' variable:\n# According to the question, we can define the variables:\n# 48.0 dollars in January --> 48.0\n# 11.0 dollars spent in March --> 11.0\n# 21 dollars from his mom --> 21.0\n# money in January --> 48.0\n# money in March --> 37.0\n\n# So the answer is 37.0 dollars.\n#\n# We can use the 'ans' variable to store the answer:\nans = 37.0\n#\n# Let's check the answer:\nprint('The answer is', ans, 'dollars')",
+        "Prediction": 37.0,
+        "Answer": 58.0,
+        "index": 1109
+    },
+    {
+        "Question": "There are 65.0 students trying out for the school 's trivia teams . If 17.0 of them did n't get picked for the team and the rest were put into 8.0 groups , how many students would be in each group ?",
+        "Thought": null,
+        "Prediction": null,
+        "Answer": 6.0,
+        "index": 577
+    },
+    {
+        "Question": "Christopher strolled 5.0 miles at 4.0 miles per hour . How long did Christopher stroll ?",
+        "Thought": null,
+        "Prediction": null,
+        "Answer": 1.25,
+        "index": 1303
+    },
+    {
+        "Question": "Bianca had 45.0 coloring books . If she gave away 6.0 of them , but then bought 20.0 more , how many would she have total ?",
+        "Thought": "\n# Passage: 0 more , how many would she have total ?\n# Question:Bianca had 45.0 coloring books . If she gave away 6.0 of them , but then bought 20\n# Thought:\n# Let's think step by step to derive the answer, store the result as a 'ans' variable:\n# According to the question, we can define the variables:\n# Initialize the variable:\nans = 0",
+        "Prediction": 0.0,
+        "Answer": 59.0,
+        "index": 19
+    },
+    {
+        "Question": "a pet shop has a total of 77 animals . 32 of them are kittens and 15 of them hamsters the rest are birds . how many birds are there ?",
+        "Thought": null,
+        "Prediction": null,
+        "Answer": 30.0,
+        "index": 2439
+    }
+]

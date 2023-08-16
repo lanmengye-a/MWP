@@ -1,0 +1,84 @@
+{
+    "demo": [
+        {
+            "question": "Nancy starts with 91.0 bottle caps . She finds another 88.0 . How many bottle caps does Nancy end with ?",
+            "gold_ans": 179.0,
+            "index": 1668
+        },
+        {
+            "question": "Mary picked 14.0 oranges and Jason picked 41.0 oranges . Keith picked 38.0 apples . How many oranges were picked in all ?",
+            "gold_ans": 55.0,
+            "index": 1168
+        },
+        {
+            "question": "Megan was organizing her book case making sure each of the shelves had exactly 7.0 books on it . If she had 8.0 shelves of mystery books and 2.0 shelves of picture books , how many books did she have total ?",
+            "gold_ans": 70.0,
+            "index": 106
+        },
+        {
+            "question": "John was trying to expand his game collection . He bought 21.0 games from a friend and bought 8.0 more at a garage sale . If 23.0 of the games did n't work , how many good games did he end up with ?",
+            "gold_ans": 6.0,
+            "index": 977
+        },
+        {
+            "question": "There are 34.0 dogwood trees currently in the park . Park workers will plant 49.0 more dogwood trees today . How many dogwood trees will the park have when the workers are finished ?",
+            "gold_ans": 83.0,
+            "index": 1067
+        },
+        {
+            "question": "A trivia team had 7.0 members total , but during a game 2.0 members did n't show up . If each member that did show up scored 4.0 points , how many points were scored total ?",
+            "gold_ans": 20.0,
+            "index": 1733
+        },
+        {
+            "question": "Christopher strolled 5.0 miles at 4.0 miles per hour . How long did Christopher stroll ?",
+            "gold_ans": 1.25,
+            "index": 1303
+        },
+        {
+            "question": "For Halloween Katie and her sister combined the candy they received . Katie had 8.0 pieces of candy while her sister had 23.0 . If they ate 8.0 pieces the first night , how many pieces do they have left ?",
+            "gold_ans": 23.0,
+            "index": 140
+        },
+        {
+            "question": "Tim found 679.0 seashells and 110.0 starfish on the beach . He gave 172.0 of the seashells to Sara . How many seashells does Tim now have ?",
+            "gold_ans": 507.0,
+            "index": 725
+        },
+        {
+            "question": "a pet store had 64 birds that talked and 13 that did n't . how many birds did the pet store have total ?",
+            "gold_ans": 77.0,
+            "index": 3015
+        },
+        {
+            "question": "Joan has 9.0 blue balloons , Sally has 5.0 blue balloons , and Jessica has 2.0 blue balloons . How many blue balloons do they have in total ?",
+            "gold_ans": 16.0,
+            "index": 879
+        },
+        {
+            "question": "carol had 81 pieces of paper in her folder . after a week she had 38 left . how many pieces did she use in the week ?",
+            "gold_ans": 43.0,
+            "index": 2930
+        },
+        {
+            "question": "There are 33.0 pencils and 44.0 crayons in the drawer . Joan placed 27.0 pencils in the drawer . How many pencils are now there in total ?",
+            "gold_ans": 60.0,
+            "index": 666
+        },
+        {
+            "question": "Luke had 48.0 dollars in January . By March he had spent 11.0 dollars . If he got another 21.0 dollars from his mom , how much money would he have ?",
+            "gold_ans": 58.0,
+            "index": 1109
+        },
+        {
+            "question": "Third - grade students went to a concert in 8.0 buses . Each bus took 45.0 students . How many students went to the concert ?",
+            "gold_ans": 360.0,
+            "index": 1920
+        },
+        {
+            "question": "Dan has 64.0 violet marbles , he gave Mary 14.0 of the marbles . How many violet marbles does he now have ?",
+            "gold_ans": 50.0,
+            "index": 811
+        }
+    ]
+}

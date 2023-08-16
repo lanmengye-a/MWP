@@ -1,0 +1,2 @@
+# The result file exists! We will load the learned check point!!!
+10/100, correct: 10, acc: 100.0%, saved to results/gpt3_rl/exp0learn_policy_autopot_selfask_epsilon99_test_TQ-A_2_best_seed_1.json

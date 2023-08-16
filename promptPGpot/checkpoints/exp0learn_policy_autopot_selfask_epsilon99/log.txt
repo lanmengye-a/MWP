@@ -1,0 +1,119 @@
+Epoch: 0
+this epoch select 'Yes' 55/100,correct accuracy86/100
+Cand prob for sample[-1] in epoch: [0.52643, 0.47357]
+### reward for the epoch: 72
+### loss for the epoch: 1396.4857177734375
+
+============================================
+### Epoch: 0 / 10
+### Total reward: 0, Total loss: 0, Best reward: 72 at epoch 0, Best loss: 1396.48572 at epoch 0
+
+saved the ckpt to checkpoints/exp0learn_policy_autopot_selfask_epsilon99/ckpt_0.pt
+saved the best reward ckpt to checkpoints/exp0learn_policy_autopot_selfask_epsilon99/ckpt_best_reward.pt
+saved the best loss ckpt to checkpoints/exp0learn_policy_autopot_selfask_epsilon99/ckpt_best_loss.pt
+Epoch: 1
+this epoch select 'Yes' 86/100,correct accuracy88/100
+Cand prob for sample[-1] in epoch: [0.8858, 0.1142]
+### reward for the epoch: 76
+### loss for the epoch: 711.7694091796875
+
+============================================
+### Epoch: 1 / 10
+### Total reward: 0, Total loss: 0, Best reward: 76 at epoch 1, Best loss: 711.76941 at epoch 1
+
+saved the ckpt to checkpoints/exp0learn_policy_autopot_selfask_epsilon99/ckpt_1.pt
+saved the best reward ckpt to checkpoints/exp0learn_policy_autopot_selfask_epsilon99/ckpt_best_reward.pt
+saved the best loss ckpt to checkpoints/exp0learn_policy_autopot_selfask_epsilon99/ckpt_best_loss.pt
+Epoch: 2
+this epoch select 'Yes' 94/100,correct accuracy88/100
+Cand prob for sample[-1] in epoch: [0.99164, 0.00836]
+### reward for the epoch: 76
+### loss for the epoch: 718.0462646484375
+
+============================================
+### Epoch: 2 / 10
+### Total reward: 0, Total loss: 0, Best reward: 76 at epoch 1, Best loss: 711.76941 at epoch 1
+
+saved the ckpt to checkpoints/exp0learn_policy_autopot_selfask_epsilon99/ckpt_2.pt
+Epoch: 3
+this epoch select 'Yes' 94/100,correct accuracy88/100
+Cand prob for sample[-1] in epoch: [0.97127, 0.02873]
+### reward for the epoch: 76
+### loss for the epoch: 491.3831481933594
+
+============================================
+### Epoch: 3 / 10
+### Total reward: 0, Total loss: 0, Best reward: 76 at epoch 1, Best loss: 491.38315 at epoch 3
+
+saved the ckpt to checkpoints/exp0learn_policy_autopot_selfask_epsilon99/ckpt_3.pt
+saved the best loss ckpt to checkpoints/exp0learn_policy_autopot_selfask_epsilon99/ckpt_best_loss.pt
+Epoch: 4
+this epoch select 'Yes' 84/100,correct accuracy87/100
+Cand prob for sample[-1] in epoch: [0.87966, 0.12034]
+### reward for the epoch: 74
+### loss for the epoch: 953.016357421875
+
+============================================
+### Epoch: 4 / 10
+### Total reward: 0, Total loss: 0, Best reward: 76 at epoch 1, Best loss: 491.38315 at epoch 3
+
+saved the ckpt to checkpoints/exp0learn_policy_autopot_selfask_epsilon99/ckpt_4.pt
+Epoch: 5
+this epoch select 'Yes' 93/100,correct accuracy88/100
+Cand prob for sample[-1] in epoch: [0.95474, 0.04526]
+### reward for the epoch: 76
+### loss for the epoch: 603.1082763671875
+
+============================================
+### Epoch: 5 / 10
+### Total reward: 0, Total loss: 0, Best reward: 76 at epoch 1, Best loss: 491.38315 at epoch 3
+
+saved the ckpt to checkpoints/exp0learn_policy_autopot_selfask_epsilon99/ckpt_5.pt
+Epoch: 6
+this epoch select 'Yes' 95/100,correct accuracy87/100
+Cand prob for sample[-1] in epoch: [0.98256, 0.01744]
+### reward for the epoch: 74
+### loss for the epoch: 413.9167175292969
+
+============================================
+### Epoch: 6 / 10
+### Total reward: 0, Total loss: 0, Best reward: 76 at epoch 1, Best loss: 413.91672 at epoch 6
+
+saved the ckpt to checkpoints/exp0learn_policy_autopot_selfask_epsilon99/ckpt_6.pt
+saved the best loss ckpt to checkpoints/exp0learn_policy_autopot_selfask_epsilon99/ckpt_best_loss.pt
+Epoch: 7
+this epoch select 'Yes' 96/100,correct accuracy88/100
+Cand prob for sample[-1] in epoch: [0.98749, 0.01251]
+### reward for the epoch: 76
+### loss for the epoch: 438.4700012207031
+
+============================================
+### Epoch: 7 / 10
+### Total reward: 0, Total loss: 0, Best reward: 76 at epoch 1, Best loss: 413.91672 at epoch 6
+
+saved the ckpt to checkpoints/exp0learn_policy_autopot_selfask_epsilon99/ckpt_7.pt
+Epoch: 8
+this epoch select 'Yes' 99/100,correct accuracy88/100
+Cand prob for sample[-1] in epoch: [0.98382, 0.01618]
+### reward for the epoch: 76
+### loss for the epoch: 149.6686248779297
+
+============================================
+### Epoch: 8 / 10
+### Total reward: 0, Total loss: 0, Best reward: 76 at epoch 1, Best loss: 149.66862 at epoch 8
+
+saved the ckpt to checkpoints/exp0learn_policy_autopot_selfask_epsilon99/ckpt_8.pt
+saved the best loss ckpt to checkpoints/exp0learn_policy_autopot_selfask_epsilon99/ckpt_best_loss.pt
+Epoch: 9
+this epoch select 'Yes' 98/100,correct accuracy88/100
+Cand prob for sample[-1] in epoch: [0.98405, 0.01595]
+### reward for the epoch: 76
+### loss for the epoch: 231.99139404296875
+
+============================================
+### Epoch: 9 / 10
+### Total reward: 0, Total loss: 0, Best reward: 76 at epoch 1, Best loss: 149.66862 at epoch 8
+
+saved the ckpt to checkpoints/exp0learn_policy_autopot_selfask_epsilon99/ckpt_9.pt
+============================================
+

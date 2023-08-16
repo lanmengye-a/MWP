@@ -1,0 +1,741 @@
+{
+  "acc": 86.0,
+  "correct": 86,
+  "count": 100,
+  "args": {
+    "data_root": "../data/tabmwp",
+    "output_root": "results",
+    "model": "gpt3_rl",
+    "option_inds": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F"
+    ],
+    "label": "exp0learn_policy_autopot_selfask_epsilon99",
+    "test_split": "test",
+    "test_number": 100,
+    "save_every": 999,
+    "debug": false,
+    "prompt_format": "TQ-A",
+    "shot_number": 2,
+    "seed": 999,
+    "engine": "text-davinci-002",
+    "temperature": 0.0,
+    "max_tokens": 512,
+    "top_p": 1.0,
+    "frequency_penalty": 0.0,
+    "presence_penalty": 0.0,
+    "gpu": "0",
+    "model_config": "bert-base-uncased",
+    "cand_number": 20,
+    "embedding_size": 128,
+    "ckpt_root": "checkpoints",
+    "ckpt": "exp0learn_policy_autopot_selfask_epsilon99/ckpt_best_reward.pt",
+    "ckpt_path": "checkpoints/exp0learn_policy_autopot_selfask_epsilon99"
+  },
+  "results": {
+    "800": {
+      "shot_pids": 0,
+      "Answer": 5,
+      "Program": "\n# Passage: A waiter had 3 customers. After some left he still had 4 customers\n# Question:How many more customers stayed behind than those that left?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\ncustomers_initial = 3\ncustomers_final = 4\n# Follow up:How many customers left?\ncustomers_left = customers_initial - customers_final\n# Follow up:How many more customers stayed behind than those that left?\nans = customers_final - customers_left",
+      "Prediction": 5.0,
+      "true_false": true
+    },
+    "695": {
+      "shot_pids": 0,
+      "Answer": 22,
+      "Program": "\n# Passage: Dave had 11 apps and 3 files on his phone. After deleting some apps and files he had 24 files and 2 apps left\n# Question:How many more files than apps does he have left on the phone?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\napps_before = 11\nfiles_before = 3\napps_after = 2\nfiles_after = 24\n# Follow up:How many apps did he delete?\napps_deleted = apps_before - apps_after\n# Follow up:How many files did he delete?\nfiles_deleted = files_before - files_after\n# Follow up:How many more files than apps does he have left on the phone?\nans = files_after - apps_after",
+      "Prediction": 22.0,
+      "true_false": true
+    },
+    "81": {
+      "shot_pids": 0,
+      "Answer": 7,
+      "Program": "\n# Passage: Brenda's mother made 14 cookies for 2 guests\n# Question: If each of them had the same number of cookiesHow many did each of them have?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\ncookies_total = 14\nguests = 2\n# Follow up: If each of them had the same number of cookiesHow many did each of them have?\nans = cookies_total / guests",
+      "Prediction": 7.0,
+      "true_false": true
+    },
+    "917": {
+      "shot_pids": 0,
+      "Answer": 276,
+      "Program": "\n# Passage: Nell collects baseball cards. She had 528 cards while Jeff had 11 cards. She gave some of her cards to jeff and now has 252 cards left\n# Question:How many cards did Nell give to Jeff?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\nNell_cards = 528\nJeff_cards = 11\nNell_cards_left = 252\n# Follow up:How many cards did Nell give to Jeff?\nNell_cards_given = Nell_cards - Nell_cards_left\nans = Nell_cards_given",
+      "Prediction": 276.0,
+      "true_false": true
+    },
+    "893": {
+      "shot_pids": 0,
+      "Answer": 1,
+      "Program": "\n# Passage: There were 13 roses and 84 orchids in the vase. Jessica cut some more roses and orchids from her flower garden. There are now 91 orchids and 14 roses in the vase\n# Question:How many roses did she cut?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\nroses_before = 13\norchids_before = 84\norchids_after = 91\nroses_after = 14\n# Follow up:How many orchids did she cut?\norchids_cut = orchids_after - orchids_before\n# Follow up:How many roses did she cut?\nroses_cut = roses_after - roses_before\nans = roses_cut",
+      "Prediction": 1.0,
+      "true_false": true
+    },
+    "581": {
+      "shot_pids": 0,
+      "Answer": 7,
+      "Program": "\n# Passage: Every day Ryan spends 5 hours on learning chinese and some more hours on learning english\n# Question: If he spends 2 hours more on learning english than on learning chineseHow many hours does he spend on learning english?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\nhours_chinese = 5\n# Follow up:How many hours does he spend on learning english?\nhours_english = hours_chinese + 2\nans = hours_english",
+      "Prediction": 7.0,
+      "true_false": true
+    },
+    "587": {
+      "shot_pids": 0,
+      "Answer": 67,
+      "Program": "\n# Passage: Baker made 62 cakes. Then he made 149 more cakes. He sold 144 of them\n# Question:How many cakes would baker still have?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\ncakes_made = 62 + 149\ncakes_sold = 144\n# Follow up: How many cakes did baker make?\nans = cakes_made - cakes_sold",
+      "Prediction": 67.0,
+      "true_false": true
+    },
+    "546": {
+      "shot_pids": 0,
+      "Answer": 1,
+      "Program": "\n# Passage: Mary is baking a cake. The recipe calls for 6 cups of sugar and 9 cups of flour. She already put in 2 cups of flour\n# Question:How many more cups of flour than cups of sugar does she need to add now?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\n# Follow up:How many cups of sugar does she need to add now?\nsugar_needed = 6 - 2\n# Follow up:How many cups of flour does she need to add now?\nflour_needed = 9 - 2\n# Follow up:How many more cups of flour than cups of sugar does she need to add now?\nans = flour_needed - sugar_needed",
+      "Prediction": 3.0,
+      "true_false": false
+    },
+    "502": {
+      "shot_pids": 0,
+      "Answer": 5700,
+      "Program": "\n# Passage: Each Ferris wheel in paradise park has 19 seats. Each seat in a Ferris wheel can hold 15 people\n# Question:How many people can ride 20 Ferris wheels at the same time?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\nseats_per_wheel = 19\npeople_per_seat = 15\n# Follow up:How many seats are there in 20 Ferris wheels?\nseats_total = seats_per_wheel * 20\n# Follow up:How many people can ride 20 Ferris wheels at the same time?\npeople_total = seats_total * people_per_seat\nans = people_total",
+      "Prediction": 5700.0,
+      "true_false": true
+    },
+    "494": {
+      "shot_pids": 0,
+      "Answer": 4,
+      "Program": "\n# Passage: Zachary did 44 push-ups and 17 crunches in gym class today. David did 29 more push-ups but 13 less crunches than zachary\n# Question:How many crunches did David do?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\nZachary_pushups = 44\nZachary_crunches = 17\nDavid_pushups = 29\n# Follow up:How many pushups did David do?\nDavid_pushups = Zachary_pushups - David_pushups\n# Follow up:How many crunches did David do?\nDavid_crunches = Zachary_crunches - 13\nans = David_crunches",
+      "Prediction": 4.0,
+      "true_false": true
+    },
+    "135": {
+      "shot_pids": 0,
+      "Answer": 80,
+      "Program": "\n# Passage: A farmer had 175 tomatoes and 77 potatoes in his garden\n# Question: If he picked 172 potatoesHow many tomatoes and potatoes does he have left?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\ntomatoes = 175\npotatoes = 77\npotatoes_picked = 172\n# Follow up: How many tomatoes and potatoes does he have left?\ntomatoes_left = tomatoes - potatoes_picked\npotatoes_left = potatoes - potatoes_picked\nans = [tomatoes_left,potatoes_left]",
+      "Prediction": 3.0,
+      "true_false": false
+    },
+    "899": {
+      "shot_pids": 0,
+      "Answer": 23,
+      "Program": "\n# Passage: Randy uses 36 blocks to build a tower\n# Question: If he had 59 blocksHow many blocks are left?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\nblocks_total = 59\nblocks_used = 36\n# Follow up: How many blocks are left?\nblocks_left = blocks_total - blocks_used\nans = blocks_left",
+      "Prediction": 23.0,
+      "true_false": true
+    },
+    "817": {
+      "shot_pids": 0,
+      "Answer": 32,
+      "Program": "\n# Passage: Baker's friend bought 137 cakes from him\n# Question: If he had made 169 cakes initiallyHow many cakes would baker still have?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\ncakes_bought = 137\ncakes_made = 169\n# Follow up: How many cakes would baker still have?\nans = cakes_made - cakes_bought",
+      "Prediction": 32.0,
+      "true_false": true
+    },
+    "662": {
+      "shot_pids": 0,
+      "Answer": 5,
+      "Program": "\n# Passage: Ed had 12 more marbles than Doug. Ed lost 20 of his marbles at the playground\n# Question: If Ed had 17 marblesHow many marbles does Doug have now?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\n# Follow up: How many marbles did Ed have at first ?\nEd_first = 12 + 20\n# Follow up: How many marbles does Doug have now ?\nDoug_now = Ed_first - 20\nans = Doug_now",
+      "Prediction": 12.0,
+      "true_false": false
+    },
+    "325": {
+      "shot_pids": 0,
+      "Answer": 19,
+      "Program": "\n# Passage: Bryan took a look at his books as well. Each bookshelf contains 2 books\n# Question: If he has a total of 38 booksHow many bookshelves does he have?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\ntotal_books = 38\nbookshelves = total_books / 2\nans = bookshelves",
+      "Prediction": 19.0,
+      "true_false": true
+    },
+    "659": {
+      "shot_pids": 0,
+      "Answer": 1,
+      "Program": "\n# Passage: Allan brought 6 balloons and Jake brought 2 balloons to the park. Jake then bought 3 more balloons at the park\n# Question:How many more balloons did Allan have than Jake in the park?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\nAllan_balloons = 6\nJake_balloons = 2\n# Follow up:How many balloons did Jake have in total?\nJake_balloons_total = Jake_balloons + 3\n# Follow up:How many more balloons did Allan have than Jake in the park?\nans = Allan_balloons - Jake_balloons_total",
+      "Prediction": 1.0,
+      "true_false": true
+    },
+    "813": {
+      "shot_pids": 0,
+      "Answer": 33,
+      "Program": "\n# Passage: A book has 2 chapters. The first chapter is 60 pages long\n# Question: If there are a total of 93 pages in the bookHow many pages are in the second chapter?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\ntotal_pages = 93\nfirst_chapter = 60\n# Follow up: How many pages are in the second chapter?\nsecond_chapter = total_pages - first_chapter\nans = second_chapter",
+      "Prediction": 33.0,
+      "true_false": true
+    },
+    "658": {
+      "shot_pids": 0,
+      "Answer": 8,
+      "Program": "\n# Passage: 4 birds and 6 storks were sitting on the fence. 2 more storks came to join them\n# Question:How many storks are sitting on the fence?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\nbirds = 4\nstorks = 6\n# Follow up:How many storks are sitting on the fence?\nans = storks + 2",
+      "Prediction": 8.0,
+      "true_false": true
+    },
+    "865": {
+      "shot_pids": 0,
+      "Answer": 109,
+      "Program": "\n# Passage: Paul sold some books in a garage sale leaving him with 27 books\n# Question: If he had 136 books initiallyHow many books did he sell?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\nfinal_books = 27\ninitial_books = 136\n# Follow up: How many books did he sell?\nbooks_sold = initial_books - final_books\nans = books_sold",
+      "Prediction": 109.0,
+      "true_false": true
+    },
+    "838": {
+      "shot_pids": 0,
+      "Answer": 25,
+      "Program": "\n# Passage: Winter is almost here and most animals are migrating to warmer countries. There are 85 bird families living near the mountain\n# Question: If 23 bird families flew away to africa and 37 bird families flew away to asiaHow many bird families were left near the mountain?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\nbird_families_near_mountain = 85\nbird_families_to_africa = 23\nbird_families_to_asia = 37\n# Follow up: How many bird families were left near the mountain?\nbird_families_left_near_mountain = bird_families_near_mountain - bird_families_to_africa - bird_families_to_asia\nans = bird_families_left_near_mountain",
+      "Prediction": 25.0,
+      "true_false": true
+    },
+    "99": {
+      "shot_pids": 0,
+      "Answer": 15,
+      "Program": "\n# Passage: There are 20 different books in the ' crazy silly school ' series\n# Question: If you are yet to read 5 of the booksHow many books have you already read?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\ntotal_books = 20\nbooks_not_read = 5\n# Follow up:How many books have you already read?\nbooks_read = total_books - books_not_read\nans = books_read",
+      "Prediction": 15.0,
+      "true_false": true
+    },
+    "661": {
+      "shot_pids": 0,
+      "Answer": 5852,
+      "Program": "\n# Passage: The Razorback t-shirt shop sells each t-shirt for $ 201 dollars. During the Arkansas and Texas tech game they increased the prices by $ 217 per t-shirt and sold 14 t-shirts\n# Question:How much money did they make from selling the t-shirts?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\nprice_per_tshirt = 201\nprice_increase = 217\ntshirts_sold = 14\n# Follow up: How much money did they make from selling the t-shirts?\nans = tshirts_sold * (price_per_tshirt + price_increase)",
+      "Prediction": 5852.0,
+      "true_false": true
+    },
+    "857": {
+      "shot_pids": 0,
+      "Answer": 24,
+      "Program": "\n# Passage: 33 campers went rowing in the morning 34 campers went rowing in the afternoon and 10 campers went rowing in the evening\n# Question:How many more campers went rowing in the afternoon than in the evening?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\ncampers_morning = 33\ncampers_afternoon = 34\ncampers_evening = 10\n# Follow up:How many more campers went rowing in the afternoon than in the morning?\ncampers_afternoon_morning = campers_afternoon - campers_morning\n# Follow up:How many more campers went rowing in the afternoon than in the evening?\ncampers_afternoon_evening = campers_afternoon - campers_evening\nans = campers_afternoon_evening",
+      "Prediction": 24.0,
+      "true_false": true
+    },
+    "192": {
+      "shot_pids": 0,
+      "Answer": 2,
+      "Program": "\n# Passage: They decided to hold the party in their backyard. They have 4 sets of tables and each set has 3 chairs\n# Question: If a total of 14 people will attend the partyHow many more chairs will they have to buy?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\npeople = 14\ntables = 4\nchairs_per_table = 3\n# Follow up: How many chairs do they have in total?\nchairs_total = tables * chairs_per_table\n# Follow up: How many more chairs will they have to buy?\nchairs_needed = people - chairs_total\nans = chairs_needed",
+      "Prediction": 2.0,
+      "true_false": true
+    },
+    "152": {
+      "shot_pids": 0,
+      "Answer": 450,
+      "Program": "\n# Passage: Paige was helping her mom plant flowers and together they planted some seeds. They put 10 seeds in each flower bed\n# Question: If there are 45 flowerbedsHow many seeds did they plant?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\nseeds_per_flowerbed = 10\nflowerbeds = 45\n# Follow up: How many seeds did they plant?\nans = seeds_per_flowerbed * flowerbeds",
+      "Prediction": 450.0,
+      "true_false": true
+    },
+    "270": {
+      "shot_pids": 0,
+      "Answer": 7,
+      "Program": "\n# Passage: Jerry had 8 action figures on a shelf in his room. Later he added 4 more action figures to the shelf and removed 5 old ones\n# Question:How many action figures were on his shelf in all?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\ninitial_action_figures = 8\nadded_action_figures = 4\nremoved_action_figures = 5\n# Follow up: How many action figures are on his shelf now?\nans = initial_action_figures + added_action_figures - removed_action_figures",
+      "Prediction": 7.0,
+      "true_false": true
+    },
+    "584": {
+      "shot_pids": 0,
+      "Answer": 36,
+      "Program": "\n# Passage: Jessie weighed 92 kilograms. After she started to go jogging everyday she lost 56 kilograms in the first week and 99 kilograms in the second week\n# Question:How much did she weigh after the first week of jogging?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\n# Follow up:How much did she weigh after the first week of jogging?\nweight_after_first_week = 92 - 56\n# Follow up:How much did she weigh after the second week of jogging?\nweight_after_second_week = weight_after_first_week - 99\nans = weight_after_first_week",
+      "Prediction": 36.0,
+      "true_false": true
+    },
+    "54": {
+      "shot_pids": 0,
+      "Answer": 24,
+      "Program": "\n# Passage: A waiter had 12 customers. After some left he still had 14 customers\n# Question: Then he got 10 new customersHow many customers does he have now?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\noriginal_customers = 12\nleft_customers = 14\nnew_customers = 10\n# Follow up: How many customers does he have now?\nans = left_customers + new_customers",
+      "Prediction": 24.0,
+      "true_false": true
+    },
+    "718": {
+      "shot_pids": 0,
+      "Answer": 2,
+      "Program": "\n# Passage: White t - shirts can be purchased in packages\n# Question: If mom buys 28 packages which contain 56 white t - shirts in totalHow many white t - shirts does each package have?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\n# Follow up: If mom buys 28 packages which contain 56 white t - shirts in totalHow many white t - shirts does each package have?\nans = 56 / 28",
+      "Prediction": 2.0,
+      "true_false": true
+    },
+    "798": {
+      "shot_pids": 0,
+      "Answer": 9,
+      "Program": "\n# Passage: Ed had 6 more marbles than Doug. Doug lost 7 of his marbles at the playground\n# Question: If Ed had 22 marblesHow many marbles does Doug have now?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\nEd_marbles = 22\nmarbles_difference = 6\n# Follow up: How many marbles did Doug have at first?\nDoug_marbles_first = Ed_marbles - marbles_difference\n# Follow up: How many marbles does Doug have now?\nDoug_marbles_now = Doug_marbles_first - 7\nans = Doug_marbles_now",
+      "Prediction": 9.0,
+      "true_false": true
+    },
+    "259": {
+      "shot_pids": 0,
+      "Answer": 183,
+      "Program": "\n# Passage: Kelly gives away 91 nintendo games\n# Question:How many did she have initially if she still has 92 games left?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\ngames_left = 92\ngames_given_away = 91\n# Follow up:How many did she have initially?\ngames_initially = games_left + games_given_away\nans = games_initially",
+      "Prediction": 183.0,
+      "true_false": true
+    },
+    "407": {
+      "shot_pids": 0,
+      "Answer": 101,
+      "Program": "\n# Passage: Kelly has 46 nintendo games and 132 sony games\n# Question:How many sony games does she need to give away so that she will have 31 sony games left?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\nnintendo_games = 46\nsony_games = 132\n# Follow up:How many sony games does she need to give away?\nsony_games_away = sony_games - 31\nans = sony_games_away",
+      "Prediction": 101.0,
+      "true_false": true
+    },
+    "901": {
+      "shot_pids": 0,
+      "Answer": 10,
+      "Program": "\n# Passage: Haley grew 9 trees in her backyard. After a typhoon 4 died. Then she grew 5 more trees\n# Question:How many trees does she have left?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\ntrees_grown = 9\ntrees_died = 4\ntrees_grown_again = 5\n# Follow up: How many trees does she have left?\nans = trees_grown + trees_grown_again - trees_died",
+      "Prediction": 10.0,
+      "true_false": true
+    },
+    "802": {
+      "shot_pids": 0,
+      "Answer": 11,
+      "Program": "\n# Passage: Allan brought 5 balloons to the park\n# Question: If Jake brought 6 more balloons than the number of balloons that Allan broughtHow many balloons did Jake bring to the park?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\nAllan_balloons = 5\n# Follow up:How many balloons did Jake bring to the park?\nJake_balloons = Allan_balloons + 6\nans = Jake_balloons",
+      "Prediction": 11.0,
+      "true_false": true
+    },
+    "232": {
+      "shot_pids": 0,
+      "Answer": 8,
+      "Program": "\n# Passage: Edward spent $ 16 to buy books and $ 8 to buy pens. Now he has $ 19\n# Question:How much more did Edward spend on books than pens?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\nbooks = 16\npens = 8\n# Follow up: How much money does Edward have now?\nmoney = 19\n# Follow up: How much more did Edward spend on books than pens?\nans = books - pens",
+      "Prediction": 8.0,
+      "true_false": true
+    },
+    "853": {
+      "shot_pids": 0,
+      "Answer": 96,
+      "Program": "\n# Passage: Faye was placing her pencils and crayons into 16 rows with 6 crayons and 21 pencils in each row\n# Question:How many crayons does she have?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\nrows = 16\ncrayons_per_row = 6\npencils_per_row = 21\n# Follow up: How many pencils does she have?\npencils = rows * pencils_per_row\n# Follow up: How many crayons does she have?\ncrayons = rows * crayons_per_row\nans = crayons",
+      "Prediction": 96.0,
+      "true_false": true
+    },
+    "646": {
+      "shot_pids": 0,
+      "Answer": 522,
+      "Program": "\n# Passage: After eating a hearty meal they went to see the Buckingham palace. There. Rachel learned that 92 visitors came to the Buckingham palace that day\n# Question: If there were 419 visitors the previous day and 103 visitors the day before thatHow many visited the Buckingham palace before that day?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\n# Follow up:If there were 419 visitors the previous day and 103 visitors the day before thatHow many visited the Buckingham palace before that day?\nans = 419 + 103",
+      "Prediction": 522.0,
+      "true_false": true
+    },
+    "411": {
+      "shot_pids": 0,
+      "Answer": 7,
+      "Program": "\n# Passage: Rachel had to complete 9 pages of math homework. 2 pages of reading homework and 96 more pages of biology homework\n# Question:How many more pages of math homework than reading homework did she have?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\nmath_homework = 9\nreading_homework = 2\n# Follow up: How many pages of biology homework did she have?\nbiology_homework = 96\n# Follow up: How many more pages of math homework than reading homework did she have?\nans = math_homework - reading_homework",
+      "Prediction": 7.0,
+      "true_false": true
+    },
+    "76": {
+      "shot_pids": 0,
+      "Answer": 2,
+      "Program": "\n# Passage: Rachel had to complete 2 pages of reading homework and 4 pages of math homework\n# Question:How many more pages of math homework than reading homework did she have?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\nreading_homework = 2\nmath_homework = 4\n# Follow up:How many more pages of math homework than reading homework did she have?\nans = math_homework - reading_homework",
+      "Prediction": 2.0,
+      "true_false": true
+    },
+    "276": {
+      "shot_pids": 0,
+      "Answer": 217,
+      "Program": "\n# Passage: Baker made some cakes. He sold 145 of them\n# Question: If he still has 72 cakes leftHow many cakes did baker make?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\ncakes_sold = 145\ncakes_left = 72\n# Follow up: How many cakes did baker make?\ncakes_made = cakes_sold + cakes_left\nans = cakes_made",
+      "Prediction": 217.0,
+      "true_false": true
+    },
+    "24": {
+      "shot_pids": 0,
+      "Answer": 1,
+      "Program": "\n# Passage: Jerry had 3 action figures on a shelf in his room. Later he added 4 more action figures to the shelf and removed some of the old ones\n# Question: If there are 6 action figures on his shelf nowHow many action figures did he remove from the shelf?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\naction_figures_before = 3\naction_figures_after = 6\n# Follow up: How many action figures did he add to the shelf?\naction_figures_added = action_figures_after - action_figures_before\n# Follow up: How many action figures did he remove from the shelf?\naction_figures_removed = action_figures_before - action_figures_after\nans = action_figures_removed",
+      "Prediction": 3.0,
+      "true_false": false
+    },
+    "204": {
+      "shot_pids": 0,
+      "Answer": 1,
+      "Program": "\n# Passage: Allan brought 2 balloons to the park and then bought 3 more balloons there\n# Question: If Jake brought 6 balloons to the parkHow many more balloons did Jake have than Allan in the park?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\nAllan_balloons = 2 + 3\nJake_balloons = 6\n# Follow up: How many balloons did Allan bring to the park?\nans = Allan_balloons - Jake_balloons",
+      "Prediction": 1.0,
+      "true_false": true
+    },
+    "657": {
+      "shot_pids": 0,
+      "Answer": 19,
+      "Program": "\n# Passage: Jerry had 8 action figures and 9 books on a shelf in his room. Later he added 10 more books to the shelf\n# Question:How many books were on his shelf in all?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\nbooks_before = 9\nbooks_after = 10\n# Follow up:How many books were on his shelf in all?\nans = books_before + books_after",
+      "Prediction": 19.0,
+      "true_false": true
+    },
+    "894": {
+      "shot_pids": 0,
+      "Answer": 8066,
+      "Program": "\n# Passage: Debby bought some water bottles when they were on sale. She drank 109 bottles a day\n# Question: If the bottles lasted for 74 daysHow many bottles had she bought?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\nbottles_per_day = 109\ndays = 74\n# Follow up:How many bottles had she bought?\nans = bottles_per_day * days",
+      "Prediction": 8066.0,
+      "true_false": true
+    },
+    "512": {
+      "shot_pids": 0,
+      "Answer": 20,
+      "Program": "\n# Passage: David did 56 more push-ups than Zachary in gym class today\n# Question: If David did 38 push-upsHow many push-ups did Zachary and David do altogether?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\nDavid_pushups = 38\n# Follow up:How many push-ups did Zachary do?\nZachary_pushups = David_pushups - 56\n# Follow up:How many push-ups did Zachary and David do altogether?\ntotal_pushups = David_pushups + Zachary_pushups\nans = total_pushups",
+      "Prediction": 20.0,
+      "true_false": true
+    },
+    "213": {
+      "shot_pids": 0,
+      "Answer": 19,
+      "Program": "\n# Passage: There were 12 roses and 2 orchids in the vase. Jessica cut some more roses and orchids from her flower garden. There are now 10 roses and 21 orchids in the vase\n# Question:How many orchids did she cut?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\nroses_before = 12\norchids_before = 2\nroses_after = 10\norchids_after = 21\n# Follow up:How many roses did she cut?\nroses_cut = roses_before - roses_after\n# Follow up:How many orchids did she cut?\norchids_cut = orchids_after - orchids_before\nans = orchids_cut",
+      "Prediction": 19.0,
+      "true_false": true
+    },
+    "190": {
+      "shot_pids": 0,
+      "Answer": 76,
+      "Program": "\n# Passage: Baker made 43 cakes and 114 pastries\n# Question: If he sold 154 pastries and 78 cakesHow many more pastries than cakes did baker sell?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\ncakes = 43\npastries = 114\nsold_pastries = 154\nsold_cakes = 78\n# Follow up: How many more pastries than cakes did baker sell?\nans = sold_pastries - sold_cakes",
+      "Prediction": 76.0,
+      "true_false": true
+    },
+    "891": {
+      "shot_pids": 0,
+      "Answer": 1,
+      "Program": "\n# Passage: 7 red peaches. 71 yellow peaches and 8 green peaches are in the basket\n# Question:How many more green peaches than red peaches are in the basket?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\nred_peaches = 7\nyellow_peaches = 71\ngreen_peaches = 8\n# Follow up: How many more green peaches than red peaches are in the basket?\nans = green_peaches - red_peaches",
+      "Prediction": 1.0,
+      "true_false": true
+    },
+    "691": {
+      "shot_pids": 0,
+      "Answer": 146,
+      "Program": "\n# Passage: The Razorback shop makes $ 86 dollars off each t-shirt and $ 232 off each jersey. During the Arkansas and Texas tech game they sold 254 t-shirts and 43 jerseys\n# Question:How much more does a jersey cost than a t-shirt?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\nt_shirt_price = 86\njersey_price = 232\nt_shirt_sold = 254\njersey_sold = 43\n# Follow up:How much money did the shop make off t-shirts?\nt_shirt_total = t_shirt_price * t_shirt_sold\n# Follow up:How much money did the shop make off jerseys?\njersey_total = jersey_price * jersey_sold\n# Follow up:How much money did the shop make in total?\ntotal = t_shirt_total + jersey_total\n# Follow up:How much more does a jersey cost than a t-shirt?\nans = jersey_price - t_shirt_price",
+      "Prediction": 146.0,
+      "true_false": true
+    },
+    "338": {
+      "shot_pids": 0,
+      "Answer": 3,
+      "Program": "\n# Passage: He then went to see the oranges being harvested. He found out that they harvest 8 sacks per day\n# Question:How many days will it take to harvest 24 sacks of oranges?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\nsacks_per_day = 8\nsacks_needed = 24\n# Follow up:How many days will it take to harvest 24 sacks of oranges?\nans = sacks_needed / sacks_per_day",
+      "Prediction": 3.0,
+      "true_false": true
+    },
+    "168": {
+      "shot_pids": 0,
+      "Answer": 21,
+      "Program": "\n# Passage: Danny collects bottle caps. He found 63 bottle caps at the park while he threw away 51 old ones. Now he has 33 bottle caps in his collection\n# Question:How many bottle caps did danny have at first?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\nfound_at_park = 63\nthrew_away = 51\ncollection = 33\n# Follow up:How many bottle caps did danny have at first?\nans = found_at_park + threw_away",
+      "Prediction": 114.0,
+      "true_false": false
+    },
+    "906": {
+      "shot_pids": 0,
+      "Answer": 156,
+      "Program": "\n# Passage: An industrial machine can make 6 shirts a minute. It worked for 12 minutes yesterday and for 14 shirts today\n# Question:How many shirts did machine make altogether?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\nshirts_per_minute = 6\nminutes_worked_yesterday = 12\nshirts_made_yesterday = shirts_per_minute * minutes_worked_yesterday\nminutes_worked_today = 14\nshirts_made_today = shirts_per_minute * minutes_worked_today\n# Follow up:How many shirts did machine make yesterday?\nans = shirts_made_yesterday\n# Follow up:How many shirts did machine make today?\nans = shirts_made_today\n# Follow up:How many shirts did machine make altogether?\nans = shirts_made_yesterday + shirts_made_today",
+      "Prediction": 156.0,
+      "true_false": true
+    },
+    "88": {
+      "shot_pids": 0,
+      "Answer": 5,
+      "Program": "\n# Passage: Paco had 12 cookies. He ate 16 cookies and gave 21 of them to his friend\n# Question:How many more cookies did he give to his friend than those he ate?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\ncookies_ate = 16\ncookies_gave = 21\n# Follow up:How many cookies did he have in total?\ncookies_total = cookies_ate + cookies_gave\n# Follow up:How many more cookies did he give to his friend than those he ate?\nans = cookies_gave - cookies_ate",
+      "Prediction": 5.0,
+      "true_false": true
+    },
+    "565": {
+      "shot_pids": 0,
+      "Answer": 2,
+      "Program": "\n# Passage: You had 14 bags with equal number of cookies\n# Question: If you had 28 cookies and 86 candies in totalHow many bags of cookies do you have?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\ntotal_cookies = 28\ntotal_candies = 86\n# Follow up: If you had 28 cookies and 86 candies in totalHow many bags of cookies do you have?\ntotal_bags = total_cookies / 14\nans = total_bags",
+      "Prediction": 2.0,
+      "true_false": true
+    },
+    "904": {
+      "shot_pids": 0,
+      "Answer": 7,
+      "Program": "\n# Passage: Mary is baking a cake. The recipe calls for 9 cups of flour and 6 cups of sugar. She already put in 4 cups of sugar\n# Question:How many more cups of flour than cups of sugar does she need to add now?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\ncups_flour_recipe = 9\ncups_sugar_recipe = 6\ncups_sugar_added = 4\n# Follow up:How many cups of flour does she need to add now?\ncups_flour_needed = cups_flour_recipe - cups_sugar_added\n# Follow up:How many more cups of flour than cups of sugar does she need to add now?\nans = cups_flour_needed - cups_sugar_recipe",
+      "Prediction": 1.0,
+      "true_false": false
+    },
+    "609": {
+      "shot_pids": 0,
+      "Answer": 38,
+      "Program": "\n# Passage: A grocery store had 30 bottles of regular soda. 8 bottles of diet soda and 41 apples\n# Question:How many bottles did they have total?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\nregular_soda = 30\ndiet_soda = 8\n# Follow up:How many bottles did they have total?\nans = regular_soda + diet_soda",
+      "Prediction": 38.0,
+      "true_false": true
+    },
+    "477": {
+      "shot_pids": 0,
+      "Answer": 6,
+      "Program": "\n# Passage: Danny collects bottle caps. He threw away 54 of the old ones at the park while he found 48 bottle caps new ones. Now he has 52 bottle caps in his collection\n# Question:How many more bottle caps did danny throw away than those he found at the park?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\n# Follow up:How many bottle caps did danny throw away at the park?\nbottle_caps_thrown_away = 54\n# Follow up:How many bottle caps did danny find at the park?\nbottle_caps_found = 48\n# Follow up:How many more bottle caps did danny throw away than those he found at the park?\nans = bottle_caps_thrown_away - bottle_caps_found",
+      "Prediction": 6.0,
+      "true_false": true
+    },
+    "916": {
+      "shot_pids": 0,
+      "Answer": 123,
+      "Program": "\n# Passage: Baker made 134 pastries and 11 cakes\n# Question: If he sold 140 cakes and 92 pastriesHow many more pastries than cakes did baker make?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\npastries = 134\ncakes = 11\n# Follow up: How many pastries did he sell?\npastries_sold = 92\n# Follow up: How many cakes did he sell?\ncakes_sold = 140\n# Follow up: How many more pastries than cakes did baker make?\nans = pastries_sold - cakes_sold",
+      "Prediction": 48.0,
+      "true_false": false
+    },
+    "713": {
+      "shot_pids": 0,
+      "Answer": 25,
+      "Program": "\n# Passage: Randy has 97 blocks. He uses some blocks to build a tower\n# Question: If there are 72 blocks leftHow many blocks did he use to build the tower?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\nblocks_total = 97\nblocks_left = 72\n# Follow up: How many blocks did he use to build the tower?\nblocks_used = blocks_total - blocks_left\nans = blocks_used",
+      "Prediction": 25.0,
+      "true_false": true
+    },
+    "762": {
+      "shot_pids": 0,
+      "Answer": 28,
+      "Program": "\n# Passage: Jake has 11 fewer peaches than Steven. If Jake has 17 peaches\n# Question:How many peaches does Steven have?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\npeaches_Jake = 17\npeaches_difference = 11\n# Follow up:How many peaches does Steven have?\npeaches_Steven = peaches_Jake + peaches_difference\nans = peaches_Steven",
+      "Prediction": 28.0,
+      "true_false": true
+    },
+    "376": {
+      "shot_pids": 0,
+      "Answer": 6,
+      "Program": "\n# Passage: Baker made 8 cakes. He bought 139 new cakes and sold 145 cakes\n# Question:How many more cakes did baker sell than those he bought?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\ncakes_made = 8\ncakes_bought = 139\ncakes_sold = 145\n# Follow up:How many more cakes did baker sell than those he bought?\nans = cakes_sold - cakes_bought",
+      "Prediction": 6.0,
+      "true_false": true
+    },
+    "132": {
+      "shot_pids": 0,
+      "Answer": 60,
+      "Program": "\n# Passage: 22 children were riding on the bus. At the bus stop 40 children got on the bus while some got off the bus. Then there were 2 children altogether on the bus\n# Question:How many children got off the bus at the bus stop?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\nchildren_on_bus_before_stop = 22\nchildren_on_bus_after_stop = 2\n# Follow up:How many children got on the bus at the bus stop?\nchildren_got_on_bus = 40\n# Follow up:How many children got off the bus at the bus stop?\nchildren_got_off_bus = children_on_bus_before_stop - children_on_bus_after_stop\nans = children_got_off_bus",
+      "Prediction": 20.0,
+      "true_false": false
+    },
+    "677": {
+      "shot_pids": 0,
+      "Answer": 118,
+      "Program": "\n# Passage: Winter is almost here and most animals are migrating to warmer countries. There are 18 bird families living near the mountain\n# Question: If 38 bird families flew away to africa and 80 bird families flew away to asiaHow many bird families flew away for the winter?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\nbird_families_near_mountain = 18\nbird_families_to_africa = 38\nbird_families_to_asia = 80\n# Follow up: How many bird families are left near the mountain?\nbird_families_left = bird_families_near_mountain - bird_families_to_africa - bird_families_to_asia\n# Follow up: How many bird families flew away for the winter?\nbird_families_away = bird_families_to_africa + bird_families_to_asia\nans = bird_families_away",
+      "Prediction": 118.0,
+      "true_false": true
+    },
+    "669": {
+      "shot_pids": 0,
+      "Answer": 10,
+      "Program": "\n# Passage: 3 birds and 2 storks were sitting on the fence. 5 more birds came to join them\n# Question:How many birds and storks are sitting on the fence?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\nbirds_initial = 3\nstorks_initial = 2\nbirds_new = 5\n# Follow up:How many birds and storks are sitting on the fence?\nans = birds_initial + birds_new + storks_initial",
+      "Prediction": 10.0,
+      "true_false": true
+    },
+    "511": {
+      "shot_pids": 0,
+      "Answer": 367,
+      "Program": "\n# Passage: Paul got a box of 521 crayons and 66 erasers for his birthday. At the end of the school year he only had 154 left while not having lost a single erasers\n# Question:How many crayons had been lost or given away?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\ncrayons_total = 521\nerasers_total = 66\ncrayons_left = 154\nerasers_left = 66\n# Follow up:How many crayons had been lost or given away?\ncrayons_lost_or_given = crayons_total - crayons_left\n# Follow up:How many erasers had been lost or given away?\nerasers_lost_or_given = erasers_total - erasers_left\nans = crayons_lost_or_given",
+      "Prediction": 367.0,
+      "true_false": true
+    },
+    "476": {
+      "shot_pids": 0,
+      "Answer": 89,
+      "Program": "\n# Passage: Lewis earns $ 2 every week during the harvest\n# Question: If he earns a total of $ 178How many weeks did the harvest last?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\ntotal_money = 178\nmoney_per_week = 2\n# Follow up: How many weeks did the harvest last?\nweeks = total_money / money_per_week\nans = weeks",
+      "Prediction": 89.0,
+      "true_false": true
+    },
+    "15": {
+      "shot_pids": 0,
+      "Answer": 16,
+      "Program": "\n# Passage: Marco and his dad went strawberry picking. Together they collected strawberries that weighed 36 pounds. On the way back Marco ' dad lost 8 pounds of strawberries. Marco's strawberries now weighed 12 pounds\n# Question:How much did his dad's strawberries weigh now?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\nstrawberries_picked = 36\nstrawberries_lost = 8\n# Follow up:How much did Marco's strawberries weigh now?\nstrawberries_kept = strawberries_picked - strawberries_lost\nans = strawberries_kept",
+      "Prediction": 28.0,
+      "true_false": false
+    },
+    "766": {
+      "shot_pids": 0,
+      "Answer": 14,
+      "Program": "\n# Passage: Rebecca wants to split a collection of eggs into groups of 5. Rebecca has 20 eggs and 6 marbles\n# Question:How many more eggs does Rebecca have than marbles?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\nRebecca_eggs = 20\nRebecca_marbles = 6\n# Follow up:How many more eggs does Rebecca have than marbles?\nans = Rebecca_eggs - Rebecca_marbles",
+      "Prediction": 14.0,
+      "true_false": true
+    },
+    "56": {
+      "shot_pids": 0,
+      "Answer": 20,
+      "Program": "\n# Passage: 5 red peaches. 14 yellow peaches and 6 green peaches are in the basket\n# Question:How many green and yellow peaches are in the basket?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\nred_peaches = 5\nyellow_peaches = 14\ngreen_peaches = 6\n# Follow up:How many green and yellow peaches are in the basket?\nans = green_peaches + yellow_peaches",
+      "Prediction": 20.0,
+      "true_false": true
+    },
+    "248": {
+      "shot_pids": 0,
+      "Answer": 26,
+      "Program": "\n# Passage: A grocery store had 72 bottles of regular soda. 32 bottles of diet soda and 78 apples\n# Question:How many more bottles than apple did they have?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\nregular_soda = 72\ndiet_soda = 32\napples = 78\n# Follow up:How many bottles did they have in total?\ntotal_bottles = regular_soda + diet_soda\n# Follow up:How many more bottles than apple did they have?\nans = total_bottles - apples",
+      "Prediction": 26.0,
+      "true_false": true
+    },
+    "114": {
+      "shot_pids": 0,
+      "Answer": 84,
+      "Program": "\n# Passage: Faye was placing her pencils into rows with 22 pencils in each row. She had 6 packs of pencils each one having 14 pencils\n# Question:How many pencils does she have?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\npencils_per_pack = 14\npacks = 6\npencils_per_row = 22\n# Follow up:How many rows of pencils does she have?\nrows = packs * pencils_per_pack / pencils_per_row\n# Follow up:How many pencils does she have?\nans = rows * pencils_per_row",
+      "Prediction": 84.0,
+      "true_false": true
+    },
+    "739": {
+      "shot_pids": 0,
+      "Answer": 1,
+      "Program": "\n# Passage: There were 6 roses and 20 orchids in the vase. Jessica cut some more roses and orchids from her flower garden. There are now 21 orchids and 22 roses in the vase\n# Question:How many more roses than orchids are there in the vase now?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\nroses_before = 6\norchids_before = 20\nroses_after = 22\norchids_after = 21\n# Follow up: How many roses were cut?\nroses_cut = roses_after - roses_before\n# Follow up: How many orchids were cut?\norchids_cut = orchids_after - orchids_before\n# Follow up: How many more roses than orchids are there in the vase now?\nans = roses_after - orchids_after",
+      "Prediction": 1.0,
+      "true_false": true
+    },
+    "862": {
+      "shot_pids": 0,
+      "Answer": 6,
+      "Program": "\n# Passage: They decided to hold the party in their backyard. They have 2 sets of tables. each having the same number of chairs\n# Question: If there are a total of 12 chairs in the backyardHow many chairs are there for each table?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\ntotal_chairs = 12\ntables = 2\n# Follow up: How many chairs are there for each table?\nchairs_per_table = total_chairs / tables\nans = chairs_per_table",
+      "Prediction": 6.0,
+      "true_false": true
+    },
+    "936": {
+      "shot_pids": 0,
+      "Answer": 76,
+      "Program": "\n# Passage: Lewis earns a total of $ 1216 during the harvest\n# Question: If he earns $ 16 each weekHow many weeks did the harvest last?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\nearnings = 1216\nearnings_per_week = 16\n# Follow up: How many weeks did the harvest last?\nweeks = earnings / earnings_per_week\nans = weeks",
+      "Prediction": 76.0,
+      "true_false": true
+    },
+    "236": {
+      "shot_pids": 0,
+      "Answer": 482,
+      "Program": "\n# Passage: Helen the hippo and her friends are preparing for thanksgiving at Helen's house. Helen baked 144 chocolate chip cookies and 397 raisin cookies yesterday. And she baked 85 raisin cookies and 403 chocolate chip cookies this morning\n# Question:How many raisin cookies did Helen bake?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\n# Follow up: How many chocolate chip cookies did Helen bake yesterday?\nchocolate_chip_cookies_yesterday = 144\n# Follow up: How many chocolate chip cookies did Helen bake this morning?\nchocolate_chip_cookies_this_morning = 403\n# Follow up: How many raisin cookies did Helen bake yesterday?\nraisin_cookies_yesterday = 397\n# Follow up: How many raisin cookies did Helen bake this morning?\nraisin_cookies_this_morning = 85\n# Follow up: How many raisin cookies did Helen bake?\nans = raisin_cookies_yesterday + raisin_cookies_this_morning",
+      "Prediction": 482.0,
+      "true_false": true
+    },
+    "413": {
+      "shot_pids": 0,
+      "Answer": 8,
+      "Program": "\n# Passage: Josh had 4 marbles in his collection. He lost 16 marbles and found 8 new ones\n# Question:How many more marbles did he lose than those he found?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\nmarbles_before = 4\nmarbles_lost = 16\nmarbles_found = 8\n# Follow up: How many marbles does he have now?\nmarbles_now = marbles_before + marbles_found - marbles_lost\n# Follow up: How many more marbles did he lose than those he found?\nans = marbles_lost - marbles_found",
+      "Prediction": 8.0,
+      "true_false": true
+    },
+    "814": {
+      "shot_pids": 0,
+      "Answer": 1453,
+      "Program": "\n# Passage: Paul got a box of some crayons for his birthday. During the school year he gave 563 crayons to his friends while he lost 558 crayons\n# Question: If he only had 332 crayons leftHow many crayons did he get for his birthday?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\ncrayons_given_away = 563\ncrayons_lost = 558\ncrayons_left = 332\n# Follow up: How many crayons did he get for his birthday?\ncrayons_got = crayons_left + crayons_given_away - crayons_lost\nans = crayons_got",
+      "Prediction": 337.0,
+      "true_false": false
+    },
+    "942": {
+      "shot_pids": 0,
+      "Answer": 1,
+      "Program": "\n# Passage: There are 14 different movies and 15 different books in the ' crazy silly school ' series\n# Question: If you read 11 of the books and watched 40 of the moviesHow many more books than movies are there in the ' crazy silly school ' series?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\nbooks = 14\nmovies = 15\nread = 11\nwatched = 40\n# Follow up: How many more books than movies are there in the ' crazy silly school ' series?\nans = read - watched",
+      "Prediction": 29.0,
+      "true_false": false
+    },
+    "280": {
+      "shot_pids": 0,
+      "Answer": 211,
+      "Program": "\n# Passage: Jessie currently weighs 9 kilograms. After she started to go jogging everyday she lost 62 kilograms in the first week and 140 kilograms in the second week\n# Question:How much did she weigh before starting to jog?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\n# Follow up:How much did she weigh before starting to jog?\nans = 9 + 62 + 140",
+      "Prediction": 211.0,
+      "true_false": true
+    },
+    "870": {
+      "shot_pids": 0,
+      "Answer": 10,
+      "Program": "\n# Passage: Steven has 18 peaches. Jake has 12 fewer peaches than Steven who has 8 more peaches than Jill\n# Question:How many peaches does Jill have?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\nSteven_has = 18\nJake_has = 12\n# Follow up:How many peaches does Steven have?\nSteven_has = 18\n# Follow up:How many peaches does Jake have?\nJake_has = 12\n# Follow up:How many peaches does Jill have?\nJill_has = Steven_has - 8\nans = Jill_has",
+      "Prediction": 10.0,
+      "true_false": true
+    },
+    "513": {
+      "shot_pids": 0,
+      "Answer": 16,
+      "Program": "\n# Passage: Danny collects bottle caps and wrappers. He found 10 bottle caps and 62 wrappers at the park. Now he has 27 bottle caps and 43 wrappers in his collection\n# Question:How many more wrappers than bottle caps does danny have now?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\n# Follow up:How many bottle caps does danny have now?\ncaps_now = 27\n# Follow up:How many wrappers does danny have now?\nwrappers_now = 43\n# Follow up:How many more wrappers than bottle caps does danny have now?\nans = wrappers_now - caps_now",
+      "Prediction": 16.0,
+      "true_false": true
+    },
+    "365": {
+      "shot_pids": 0,
+      "Answer": 146,
+      "Program": "\n# Passage: Zachary did 44 push-ups in gym class today. David did 58 more push-ups than zachary\n# Question:How many push-ups did Zachary and David do altogether?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\nZachary = 44\n# Follow up:How many push-ups did David do?\nDavid = Zachary + 58\n# Follow up:How many push-ups did Zachary and David do altogether?\nZachary_and_David = Zachary + David\nans = Zachary_and_David",
+      "Prediction": 146.0,
+      "true_false": true
+    },
+    "43": {
+      "shot_pids": 0,
+      "Answer": 1,
+      "Program": "\n# Passage: 3 birds and 4 storks were sitting on the fence. 2 more birds came to join them\n# Question:How many more birds than storks are sitting on the fence?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\nbirds = 3\nstorks = 4\n# Follow up: How many birds are sitting on the fence now?\nans = birds + 2\n# Follow up: How many more birds than storks are sitting on the fence?\nans = ans - storks",
+      "Prediction": 1.0,
+      "true_false": true
+    },
+    "791": {
+      "shot_pids": 0,
+      "Answer": 5,
+      "Program": "\n# Passage: The Ferris wheel in paradise park has 4 seats\n# Question: If 20 people can ride the wheel at the same timeHow many people can each seat hold?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\nseats = 4\npeople = 20\n# Follow up:How many people can each seat hold?\nans = people / seats",
+      "Prediction": 5.0,
+      "true_false": true
+    },
+    "949": {
+      "shot_pids": 0,
+      "Answer": 7,
+      "Program": "\n# Passage: There were some roses in the vase. Jessica cut 16 more roses from her flower garden and put them in the vase. There are now 23 roses in the vase\n# Question:How many roses were there in the vase at the beginning?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\nroses_after_cut = 23\nroses_cut = 16\n# Follow up:How many roses were there in the vase at the beginning?\nroses_before_cut = roses_after_cut - roses_cut\nans = roses_before_cut",
+      "Prediction": 7.0,
+      "true_false": true
+    },
+    "464": {
+      "shot_pids": 0,
+      "Answer": 9,
+      "Program": "\n# Passage: Jake has 7 fewer peaches than Steven and 9 more peaches than Jill. Steven has 16 peaches\n# Question:How many peaches does Jake have?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\n# Follow up:How many peaches does Steven have?\nSteven = 16\n# Follow up:How many peaches does Jill have?\nJill = 7\n# Follow up:How many peaches does Jake have?\nJake = Steven - 7 + 9\nans = Jake",
+      "Prediction": 18.0,
+      "true_false": false
+    },
+    "835": {
+      "shot_pids": 0,
+      "Answer": 110,
+      "Program": "\n# Passage: A grocery store had 57 bottles of regular soda. 26 bottles of diet soda and 27 bottles of lite soda\n# Question:How many bottles did they have total?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\nregular_soda = 57\ndiet_soda = 26\nlite_soda = 27\n# Follow up: How many bottles of diet soda were there?\nans = diet_soda\n# Follow up: How many bottles of soda were there in total?\nans = regular_soda + diet_soda + lite_soda",
+      "Prediction": 110.0,
+      "true_false": true
+    },
+    "111": {
+      "shot_pids": 0,
+      "Answer": 1862,
+      "Program": "\n# Passage: He then went to see the oranges being harvested. He found out that they harvest 38 sacks per day and that each sack containes 42 oranges\n# Question:How many sacks of oranges will they have after 49 days of harvest?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\nsacks_per_day = 38\noranges_per_sack = 42\ndays = 49\n# Follow up:How many oranges will they have after 49 days of harvest?\noranges_total = sacks_per_day * oranges_per_sack * days\n# Follow up:How many sacks of oranges will they have after 49 days of harvest?\nsacks_total = sacks_per_day * days\nans = sacks_total",
+      "Prediction": 1862.0,
+      "true_false": true
+    },
+    "436": {
+      "shot_pids": 0,
+      "Answer": 14,
+      "Program": "\n# Passage: Rachel had to complete 8 pages of math homework\n# Question: If she had to complete 6 more pages of reading homework than math homeworkHow many pages of reading homework did she have to complete?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\nmath_homework = 8\n# Follow up: How many pages of reading homework did she have to complete?\nreading_homework = math_homework + 6\nans = reading_homework",
+      "Prediction": 14.0,
+      "true_false": true
+    },
+    "626": {
+      "shot_pids": 0,
+      "Answer": 22,
+      "Program": "\n# Passage: Edward spent $ 16 to buy 92 books each book costing him the same amount of money. Now he has $ 6\n# Question:How much did Edward have before he spent his money?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\nbooks_bought = 92\nmoney_spent = 16\nmoney_left = 6\n# Follow up:How much did Edward have before he spent his money?\nmoney_before_spent = money_spent + money_left\nans = money_before_spent",
+      "Prediction": 22.0,
+      "true_false": true
+    },
+    "566": {
+      "shot_pids": 0,
+      "Answer": 4,
+      "Program": "\n# Passage: Jerry had 2 action figures and 10 books on a shelf in his room. Later he added 4 more action figures to the shelf\n# Question:How many more books than action figures were on his shelf?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\nbooks = 10\naction_figures = 2\n# Follow up: How many action figures were on his shelf?\naction_figures = action_figures + 4\n# Follow up: How many more books than action figures were on his shelf?\nans = books - action_figures",
+      "Prediction": 4.0,
+      "true_false": true
+    },
+    "812": {
+      "shot_pids": 0,
+      "Answer": 1,
+      "Program": "\n# Passage: Jake has 16 fewer peaches than Steven. Steven has 15 more peaches than Jill\n# Question: If Jill has 12 peachesHow many more peaches does Jill have than Jake?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\npeaches_jake = 16\npeaches_steven = 15\npeaches_jill = 12\n# Follow up: How many peaches does Steven have?\npeaches_steven = peaches_jake + peaches_steven\n# Follow up: How many more peaches does Jill have than Jake?\npeaches_jill = peaches_jill - peaches_jake\nans = peaches_jill",
+      "Prediction": 4.0,
+      "true_false": false
+    },
+    "175": {
+      "shot_pids": 0,
+      "Answer": 18,
+      "Program": "\n# Passage: Josh had 20 marbles in his collection. He gave 2 marbles to Jack\n# Question:How many marbles does Josh have now?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\nmarbles_before = 20\nmarbles_given = 2\n# Follow up:How many marbles does Josh have now?\nmarbles_now = marbles_before - marbles_given\nans = marbles_now",
+      "Prediction": 18.0,
+      "true_false": true
+    },
+    "214": {
+      "shot_pids": 0,
+      "Answer": 22,
+      "Program": "\n# Passage: White t - shirts can be purchased in packages. If mom buys 66 white t - shirts where each package has 3 white t - shirts\n# Question:How many packages will she have?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\nwhite_tshirts = 66\ntshirts_per_package = 3\n# Follow up: How many white t-shirts will she have?\nans = white_tshirts\n# Follow up: How many packages will she have?\nans = white_tshirts / tshirts_per_package",
+      "Prediction": 22.0,
+      "true_false": true
+    },
+    "233": {
+      "shot_pids": 0,
+      "Answer": 2,
+      "Program": "\n# Passage: Emily is making bead necklaces for her friends. Each necklace takes 8 beads and she has 16 beads\n# Question:How many necklaces can Emily make?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\nbeads_per_necklace = 8\nbeads_total = 16\n# Follow up:How many beads does Emily have left over?\nbeads_leftover = beads_total % beads_per_necklace\n# Follow up:How many necklaces can Emily make?\nnecklaces = beads_total / beads_per_necklace\nans = necklaces",
+      "Prediction": 2.0,
+      "true_false": true
+    },
+    "104": {
+      "shot_pids": 0,
+      "Answer": 39,
+      "Program": "\n# Passage: A grocery store had 22 bottles of regular soda and 61 bottles of diet soda\n# Question:How many more bottles of diet soda than regular soda did they have?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\nregular_soda = 22\ndiet_soda = 61\n# Follow up:How many bottles of soda did they have in total?\ntotal_soda = regular_soda + diet_soda\n# Follow up:How many more bottles of diet soda than regular soda did they have?\nans = diet_soda - regular_soda",
+      "Prediction": 39.0,
+      "true_false": true
+    },
+    "923": {
+      "shot_pids": 0,
+      "Answer": 62,
+      "Program": "\n# Passage: Jesse has 18 square feet of carpet\n# Question: If her room is 4 feet long and 20 feet wideHow much more carpet does she need to cover the whole floor?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\ncarpet_area = 18\nroom_length = 4\nroom_width = 20\n# Follow up: How much more carpet does she need to cover the whole floor?\ncarpet_needed = room_length * room_width - carpet_area\nans = carpet_needed",
+      "Prediction": 62.0,
+      "true_false": true
+    },
+    "62": {
+      "shot_pids": 0,
+      "Answer": 2,
+      "Program": "\n# Passage: He also had 26 aquariums for saltwater animals. The aquarium had 52 saltwater animals in total and every aquarium had the same number of animals\n# Question:How many saltwater animals does each aquarium have?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\ntotal_aquariums = 26\ntotal_saltwater_animals = 52\n# Follow up:How many saltwater animals does each aquarium have?\nsaltwater_animals_per_aquarium = total_saltwater_animals / total_aquariums\nans = saltwater_animals_per_aquarium",
+      "Prediction": 2.0,
+      "true_false": true
+    },
+    "212": {
+      "shot_pids": 0,
+      "Answer": 68,
+      "Program": "\n# Passage: We ordered 17 pizzas. Each pizza has 4 slices\n# Question: If there are 25 of usHow many slices of pizza are there altogether?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\npizzas = 17\nslices_per_pizza = 4\n# Follow up: How many of us are there?\npeople = 25\n# Follow up: How many slices of pizza are there altogether?\nslices_total = pizzas * slices_per_pizza * people\nans = slices_total",
+      "Prediction": 1700.0,
+      "true_false": false
+    },
+    "16": {
+      "shot_pids": 0,
+      "Answer": 469,
+      "Program": "\n# Passage: In a school there are 697 girls and the rest are boys\n# Question: If there are 228 more girls than boysHow many boys are there in that school?\n# Thought:\nimport numpy as np\n# Are follow up questions needed here:Yes.\n# According to the question, we can define the variable:\ngirls = 697\n# Follow up:How many boys are there in that school?\nboys = girls - 228\nans = boys",
+      "Prediction": 469.0,
+      "true_false": true
+    }
+  }
+}

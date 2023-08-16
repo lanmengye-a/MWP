@@ -1,0 +1,10 @@
+10/100, correct: 9, acc: 90.0%, Yes:4/10,saved to results/gpt3_rl/exp0learn_policy_autopot_selfask_epsilon99_random_test_TQ-A_2_seed_1.json
+20/100, correct: 18, acc: 90.0%, Yes:9/20,saved to results/gpt3_rl/exp0learn_policy_autopot_selfask_epsilon99_random_test_TQ-A_2_seed_1.json
+30/100, correct: 27, acc: 90.0%, Yes:13/30,saved to results/gpt3_rl/exp0learn_policy_autopot_selfask_epsilon99_random_test_TQ-A_2_seed_1.json
+40/100, correct: 35, acc: 87.5%, Yes:17/40,saved to results/gpt3_rl/exp0learn_policy_autopot_selfask_epsilon99_random_test_TQ-A_2_seed_1.json
+50/100, correct: 43, acc: 86.0%, Yes:23/50,saved to results/gpt3_rl/exp0learn_policy_autopot_selfask_epsilon99_random_test_TQ-A_2_seed_1.json
+60/100, correct: 50, acc: 83.33%, Yes:29/60,saved to results/gpt3_rl/exp0learn_policy_autopot_selfask_epsilon99_random_test_TQ-A_2_seed_1.json
+70/100, correct: 59, acc: 84.29%, Yes:35/70,saved to results/gpt3_rl/exp0learn_policy_autopot_selfask_epsilon99_random_test_TQ-A_2_seed_1.json
+80/100, correct: 68, acc: 85.0%, Yes:37/80,saved to results/gpt3_rl/exp0learn_policy_autopot_selfask_epsilon99_random_test_TQ-A_2_seed_1.json
+90/100, correct: 76, acc: 84.44%, Yes:43/90,saved to results/gpt3_rl/exp0learn_policy_autopot_selfask_epsilon99_random_test_TQ-A_2_seed_1.json
+100/100, correct: 82, acc: 82.0%, Yes:49/100,saved to results/gpt3_rl/exp0learn_policy_autopot_selfask_epsilon99_random_test_TQ-A_2_seed_1.json
